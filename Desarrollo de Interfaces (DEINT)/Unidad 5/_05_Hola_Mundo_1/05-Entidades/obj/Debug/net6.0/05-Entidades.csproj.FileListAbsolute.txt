@@ -1,0 +1,12 @@
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\bin\Debug\net6.0\05-Entidades.deps.json
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\bin\Debug\net6.0\05-Entidades.dll
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\bin\Debug\net6.0\05-Entidades.pdb
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.csproj.AssemblyReference.cache
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.AssemblyInfoInputs.cache
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.AssemblyInfo.cs
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.dll
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\refint\05-Entidades.dll
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\05-Entidades.pdb
+C:\Users\johnb\Desktop\Unidad 5\_05_Hola_Mundo_1\05-Entidades\obj\Debug\net6.0\ref\05-Entidades.dll

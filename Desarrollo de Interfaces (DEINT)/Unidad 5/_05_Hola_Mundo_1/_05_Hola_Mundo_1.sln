@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_05_Hola_Mundo_1", "_05_Hola_Mundo_1\_05_Hola_Mundo_1.csproj", "{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-Entidades", "05-Entidades\05-Entidades.csproj", "{D08B2B52-25F5-4A98-B449-738766DBADBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD80F7DA-BA25-4413-BC3D-4D156AA532B7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D08B2B52-25F5-4A98-B449-738766DBADBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08B2B52-25F5-4A98-B449-738766DBADBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08B2B52-25F5-4A98-B449-738766DBADBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08B2B52-25F5-4A98-B449-738766DBADBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal
