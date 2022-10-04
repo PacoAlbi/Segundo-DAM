@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj": {}
+    "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
+    "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj",
         "projectName": "05-Entidades",
-        "projectPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj",
-        "packagesPath": "C:\\Users\\johnb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\obj\\",
+        "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj",
+        "packagesPath": "C:\\Users\\falbinana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\johnb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\falbinana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,21 +64,21 @@
         }
       }
     },
-    "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj": {
+    "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj",
+        "projectUniqueName": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj",
         "projectName": "_05_Hola_Mundo_1",
-        "projectPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj",
-        "packagesPath": "C:\\Users\\johnb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\obj\\",
+        "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1.csproj",
+        "packagesPath": "C:\\Users\\falbinana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\_05_Hola_Mundo_1\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\johnb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\falbinana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,32 +97,32 @@
           "net6.0-android31.0": {
             "targetAlias": "net6.0-android",
             "projectReferences": {
-              "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
-                "projectPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
+              "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
+                "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
               }
             }
           },
           "net6.0-ios15.4": {
             "targetAlias": "net6.0-ios",
             "projectReferences": {
-              "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
-                "projectPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
+              "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
+                "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
               }
             }
           },
           "net6.0-maccatalyst15.4": {
             "targetAlias": "net6.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
-                "projectPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
+              "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
+                "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
               }
             }
           },
           "net6.0-windows10.0.19041": {
             "targetAlias": "net6.0-windows10.0.19041.0",
             "projectReferences": {
-              "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
-                "projectPath": "C:\\Users\\johnb\\Desktop\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
+              "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj": {
+                "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\Unidad 5\\_05_Hola_Mundo_1\\05-Entidades\\05-Entidades.csproj"
               }
             }
           }
@@ -139,12 +139,12 @@
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             }
           },
@@ -183,12 +183,12 @@
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
@@ -232,12 +232,12 @@
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "System.Runtime.InteropServices.NFloat.Internal": {
@@ -282,12 +282,12 @@
           "dependencies": {
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[6.0.486, )",
+              "version": "[6.0.536, )",
               "autoReferenced": true
             },
             "Microsoft.Windows.SDK.BuildTools": {

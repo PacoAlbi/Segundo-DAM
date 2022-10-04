@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "03-Hello_World_WPF/1.0.0": {
+        "dependencies": {
+          "03-Hello_World_Entidades_Estandar": "1.0.0"
+        },
+        "runtime": {
+          "03-Hello_World_WPF.dll": {}
+        }
+      },
+      "03-Hello_World_Entidades_Estandar/1.0.0": {
+        "runtime": {
+          "03-Hello_World_Entidades_Estandar.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "03-Hello_World_WPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "03-Hello_World_Entidades_Estandar/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
