@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\Unidad 5\_05_Hola_Mundo_1\_05_Hola_Mundo_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-10-04T06:17:30.786</Modified>
+      <Modified>2022-10-04T06:32:54.308</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\Unidad 5\_05_Hola_Mundo_1\_05_Hola_Mundo_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-10-04T06:17:30.365</Modified>
+      <Modified>2022-10-04T06:32:53.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\Unidad 5\_05_Hola_Mundo_1\_05_Hola_Mundo_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\_05_Hola_Mundo_1.runtimeconfig.json">
       <PackagePath>_05_Hola_Mundo_1.runtimeconfig.json</PackagePath>
@@ -1067,7 +1067,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\Unidad 5\_05_Hola_Mundo_1\_05_Hola_Mundo_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\_05_Hola_Mundo_1.deps.json">
       <PackagePath>_05_Hola_Mundo_1.deps.json</PackagePath>
-      <Modified>2022-10-04T06:17:30.598</Modified>
+      <Modified>2022-10-04T06:32:54.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.536\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
