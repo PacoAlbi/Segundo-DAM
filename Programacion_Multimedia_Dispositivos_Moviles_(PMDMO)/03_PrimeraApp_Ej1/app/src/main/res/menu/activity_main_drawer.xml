@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_suma"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Suma" />
+        <item
+            android:id="@+id/nav_texto_color"
+            android:icon="?android:attr/textSelectHandle"
+            android:title="Texto color" />
+        <item
+            android:id="@+id/nav_texto_alinear"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="Texto alinear" />
+        <item
+            android:id="@+id/nav_texto_tamano"
+            android:icon="@android:drawable/btn_plus"
+            android:title="Texto tamaños" />
+        <item
+            android:id="@+id/nav_texto_check"
+            android:icon="@android:drawable/presence_offline"
+            android:title="Checks" />
+        <item
+            android:id="@+id/nav_imagenes"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Cambio de imágenes" />
+    </group>
+</menu>
