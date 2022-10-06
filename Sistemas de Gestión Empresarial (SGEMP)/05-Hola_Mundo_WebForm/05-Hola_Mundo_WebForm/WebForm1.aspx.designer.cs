@@ -51,12 +51,12 @@ namespace _05_Hola_Mundo_WebForm
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Control Label1.
+        /// Control texto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label texto;
     }
 }

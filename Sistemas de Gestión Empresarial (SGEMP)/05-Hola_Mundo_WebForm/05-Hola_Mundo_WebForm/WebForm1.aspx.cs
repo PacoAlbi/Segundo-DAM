@@ -16,7 +16,7 @@ namespace _05_Hola_Mundo_WebForm
         }
 
         /// <summary>
-        /// Propiedad que pilla el nombre y el apellido por textBox y saluda por pantalla, y si no hay alguno, muestra un mensaje de error
+        /// Evento asociado al clik del button1 que pilla el nombre y el apellido por textBox y saluda por pantalla, y si no hay alguno, muestra un mensaje de error
         /// Precondiciones: No tiene
         /// </summary>
         /// <param name="sender"></param>
@@ -25,12 +25,18 @@ namespace _05_Hola_Mundo_WebForm
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            clsPersona persona = new clsPersona();
+            clsPersona persona;
 
-            if (string.IsNullOrEmpty(persona.Nombre = entryNombre.Text) || string.IsNullOrEmpty(persona.Apellido = entryApellido.Text))
+            if (string.IsNullOrEmpty(entryNombre.Text) || string.IsNullOrEmpty(entryApellido.Text))
             {
 
+                texto.Text = "Debes introducir un nombre o un apellido";
+
+            }else
+            {
                 
+                persona = new clsPersona(entryNombre.Text, entryApellido.Text);
+                texto.Text = $"Hola {persona.Nombre} {persona.Apellido}";
 
             }
 
