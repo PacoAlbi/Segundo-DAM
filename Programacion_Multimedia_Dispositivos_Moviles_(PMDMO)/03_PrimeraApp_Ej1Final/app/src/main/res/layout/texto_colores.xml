@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appSuma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_home_24px"
+        app:title="Cambia el color del texto"
+        app:titleTextColor="#000000"
+        tools:layout_editor_absoluteX="19dp" />
+
+    <EditText
+        android:id="@+id/texto_a_colores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce un texto"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:text="@string/azul"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C33131"
+        android:text="@string/rojo"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:text="@string/verde"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

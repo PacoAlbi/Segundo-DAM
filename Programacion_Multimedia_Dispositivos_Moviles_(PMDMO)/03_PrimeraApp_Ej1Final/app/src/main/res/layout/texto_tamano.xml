@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/appMenu"
+        android:id="@+id/appSuma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFEB3B"
-        android:clickable="true"
+        android:background="#2196F3"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_list_24px"
-        app:title="Elige tu diversión de hoy"
+        app:navigationIcon="@drawable/ic_home_24px"
+        app:title="Cambia el tamaño del texto"
         app:titleTextColor="#000000"
         tools:layout_editor_absoluteX="19dp" />
 
-
+    <EditText
+        android:id="@+id/texto_tamano"
+        android:layout_width="263dp"
+        android:layout_height="114dp"
+        android:ems="10"
+        android:hint="Introduce un texto"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="172dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
