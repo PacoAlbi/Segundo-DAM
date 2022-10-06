@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_24px"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
@@ -26,11 +26,11 @@
             android:title="Texto alinear" />
         <item
             android:id="@+id/nav_texto_tamano"
-            android:icon="@android:drawable/btn_plus"
+            android:icon="?attr/actionModeCutDrawable"
             android:title="Texto tamaños" />
         <item
             android:id="@+id/nav_texto_check"
-            android:icon="@android:drawable/presence_offline"
+            android:icon="@drawable/ic_thumb_up_24px"
             android:title="Checks" />
         <item
             android:id="@+id/nav_imagenes"
