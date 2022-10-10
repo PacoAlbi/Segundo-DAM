@@ -28,4 +28,36 @@
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="172dp" />
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="367dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="443dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="438dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

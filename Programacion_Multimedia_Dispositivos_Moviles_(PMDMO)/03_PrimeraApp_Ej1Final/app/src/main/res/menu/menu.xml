@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu1"
+        android:title="Suma"
+        app:actionLayout="@layout/suma" />
+
+    <item
+        android:id="@+id/mnu2"
+        android:title="Menu2"
+        app:actionLayout="@layout/galeria_basica" />
+
+    <item
+        android:id="@+id/mnu3"
+        android:title="Menu3"
+        app:actionLayout="@layout/imagen_pulsada" />
+
+    <item
+        android:id="@+id/mnu4"
+        android:title="Menu4"
+        app:actionLayout="@layout/texto_alinear" />
+
+    <item
+        android:id="@+id/mnu5"
+        android:title="Menu5"
+        app:actionLayout="@layout/texto_colores" />
+
+    <item
+        android:id="@+id/mnu6"
+        android:title="Menu6"
+        app:actionLayout="@layout/texto_tamano" />
+
+    <item
+        android:id="@+id/mnu7"
+        android:title="Menu7"
+        app:actionLayout="@layout/texto_mix" />
+</menu>
