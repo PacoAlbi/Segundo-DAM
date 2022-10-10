@@ -3,7 +3,9 @@ namespace _06_Ejercicio;
 
 public partial class MainPage : ContentPage
 {
+    //bool existeBtn3 = false;
 
+    Button btn;
     /// <summary>
     /// Evento principal que inicializa los componenetes.
     /// Precondiciones: No tiene
@@ -21,25 +23,20 @@ public partial class MainPage : ContentPage
     /// <param name="sender"></param>
     /// <param name="e"></param>
     /// Postcondiciones: Genera un nuevo botón cada vez.
-    private void btn2_Clicked(object sender, EventArgs e)
+    private void btnBoton2_Clicked(object sender, EventArgs e)
     {
-        
-        Button btn = new Button
-        {
-            Text = "Boton4",
-            BackgroundColor = Colors.Blue,
-            WidthRequest = 200,
-            HeightRequest = 70,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center,
-            FontSize = 16,
-            FontAttributes = FontAttributes.Bold,
-            BorderColor = Colors.Yellow,
-            Margin = 30,
-        };
 
-        btn.Clicked += btn3_Clicked;
-        layout.Children.Add(btn);
+        String a = vslBotones.Children.Contains(btn) == true ? "Existe" : "No existe";
+
+        if (a == "Existe")
+        {
+            DisplayAlert("Alerta","Ya hay muchos botones","Ok");
+        }else
+        {
+
+            crearBoton3();
+            
+        }
     }
 
     /// <summary>
@@ -51,9 +48,35 @@ public partial class MainPage : ContentPage
     /// Postcondiciones: Genera un nuevo botón cada vez.
     private void btn3_Clicked(object sender, EventArgs e)
     {
-        layout.Children.Remove(btn1);
-        btn2.Text = "Crear controles mola como una gramola";
-        btn2.WidthRequest = 400;
+        vslBotones.Children.Remove(btnBoton1);
+        btnBoton2.Text = "Crear controles mola como una gramola";
+        btnBoton2.WidthRequest = 400;
     }
+
+    private void crearBoton3()
+    {
+
+        btn = new Button
+        {
+
+            Text = $"Boton 3",
+            BackgroundColor = Colors.Blue,
+            WidthRequest = 200,
+            HeightRequest = 70,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center,
+            FontSize = 16,
+            FontAttributes = FontAttributes.Bold,
+            BorderColor = Colors.Yellow,
+            BorderWidth = 10,
+            Margin = 30,
+        };
+
+        //existeBtn3 = true;
+        btn.Clicked += btn3_Clicked;
+        vslBotones.Children.Add(btn);
+
+    }
+
 }
 
