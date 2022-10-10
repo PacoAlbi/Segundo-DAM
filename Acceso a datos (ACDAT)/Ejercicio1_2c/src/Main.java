@@ -1,77 +1,85 @@
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 
 public class Main {
 
+
+
+    private static int punteroLeer =0;
+    private static char letra, num;
+
     public static void main(String[] args) {
-        File file = new File("src\\letras.txt");
-        File fileW = new File("src\\escritura.txt");
-        try {
-            RandomAccessFile rafW = new RandomAccessFile(fileW, "rw");
-            RandomAccessFile rafR = new RandomAccessFile(file, "r");
 
-            int a;
-            int j = 0;
-            while (j <= 4) {
-                rafR.seek(0);
-                a = rafR.read();
-                rafW.write(a);
-                j++;
-            }
+        //Declaro los ficheros de entrada y de salida
+        File lectura = new File("src/letras.txt");
+        File escritura = new File("src/escrituraInversa.txt");
 
+        leerFichero(lectura); //funciona de las pruebas en clase.
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        while (letra != '\uFFFF'){
+
+            escribirFichero(escritura);
+            leerFichero(lectura);
+
         }
     }
 
-    public static void burbuja(int[] A) {
-        int i, j, aux;
-        for (i = 0; i < A.length - 1; i++) {
-            for (j = 0; j < A.length - i - 1; j++) {
-                if (A[j + 1] < A[j]) {
-                    aux = A[j + 1];
-                    A[j + 1] = A[j];
-                    A[j] = aux;
-                }
-            }
-        }
-    }
-
-
-    public static void Eva() {
-
-
-        File file = new File("src\\abecedario.txt");
-        File file2 = new File("abecedarioAlReves.txt");
-
+    public static void leerFichero(File fichero){
 
         try {
+            RandomAccessFile lector = new RandomAccessFile(fichero,"r");
 
-            RandomAccessFile randomAccessFileLectura = new RandomAccessFile(file, "r");
-            RandomAccessFile randomAccessFileEscritura = new RandomAccessFile(file2, "rw");
-            int letra, texto;
-            int i = 0;
+            lector.seek(punteroLeer);
+            letra = (char)lector.read();
+            num = (char)lector.read();
 
-
-            while ((letra = randomAccessFileLectura.read()) != -1) {
-
-
-                if (i % 2 != 0) {
-                    randomAccessFileEscritura.writeBytes(System.lineSeparator());
-                    i++;
-                }
-
-
-                // conseguir que imprima al reves
-
-                randomAccessFileEscritura.write(letra);
-            }
-
-
+            //Cierro
+            lector.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Fichero no encontrado");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error de lectura/escritura");
         }
+
+        punteroLeer += 2;//Para que llegue al siguiente grupo de letras
+
     }
 
-    
+    public static void escribirFichero(File fichero){
+
+        //Variables auxiliares
+        int posicion;
+        char temp, numTemp;
+
+        try {
+
+            RandomAccessFile escribir = new RandomAccessFile(fichero,"rw");
+
+            //Posicionamos el puntero en la ultima letra
+            posicion = (int) escribir.length()-2;
+            //Avanzamos las posicion de todas la letras en dos
+            while(posicion>=0){
+                escribir.seek(posicion);
+                temp = (char)escribir.read();
+                numTemp = (char)escribir.read();
+                escribir.write(temp);
+                escribir.write(numTemp);
+                posicion -= 2; //Vuelvo para atrás
+            }
+
+            //Escribo
+            escribir.seek(0);
+            escribir.write(letra);
+            escribir.write(num);
+
+            //Cierro
+            escribir.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Fichero no encontrado");
+        } catch (IOException e) {
+            System.out.println("Error de lectura/escritura");
+        }
+    }
 }

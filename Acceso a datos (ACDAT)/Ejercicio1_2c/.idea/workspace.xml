@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="894516e1-9b61-4ce1-8fd5-0576ff1a7d05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/escritura.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/letras.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PruebasClase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/escrituraInversa.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ejercicio1_2c/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ejercicio1_2c/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ejercicio1_2c/escritura.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cincoA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/escritura.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +46,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/johnb/Desktop/Nueva carpeta/AscesoAleatorioEjercicioClase3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main2">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Ejercicio1_2c" />
@@ -63,9 +64,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PruebasClase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PruebasClase" />
+      <module name="Ejercicio1_2c" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main1" />
+        <item itemvalue="Application.Main2" />
       </list>
     </recent_temporary>
   </component>
@@ -78,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665130470954</updated>
       <workItem from="1665130473174" duration="3451000" />
+      <workItem from="1665423148531" duration="1932000" />
     </task>
     <servers />
   </component>
