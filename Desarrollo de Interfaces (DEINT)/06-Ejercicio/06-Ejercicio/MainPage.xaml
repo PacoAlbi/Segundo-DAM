@@ -5,6 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout
+            x:Name="layout"
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
@@ -27,7 +28,7 @@
                 Margin="30"
                 Clicked="btn2_Clicked"/>
 
-            <Button
+            <!--<Button
                 x:Name="btn3"
                 Text="Botón3"
                 BackgroundColor="Blue"
@@ -41,7 +42,7 @@
                 BorderWidth="10"
                 Margin="30"
                 IsVisible="false"
-                Clicked="btn3_Clicked"/>
+                Clicked="btn3_Clicked"/>-->
 
         </VerticalStackLayout>
     </ScrollView>
