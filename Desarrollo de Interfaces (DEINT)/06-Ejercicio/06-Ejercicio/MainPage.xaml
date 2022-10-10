@@ -9,30 +9,39 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <Button x:Name="btn1" Text="Botón1" BackgroundColor="Blue" WidthRequest="200" HeightRequest="70" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16"
+                FontAttributes="Bold" BorderColor="Yellow" Margin="30" BorderWidth="10" IsVisible="true"/>
+
             <Button
-                x:Name="btn1"
-                Text="Botón1"
+                x:Name="btn2"
+                Text="Botón2"
                 BackgroundColor="Blue"
                 WidthRequest="200"
                 HeightRequest="70"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 FontSize="16"
-                FontAttributes="Bold"/>
-
-            <Button
-                x:Name="btn2"
-                Text="Botón2"
-                BackgroundColor="Blue"
-            
-                HorizontalOptions="Center" />
+                FontAttributes="Bold"
+                BorderColor="Yellow"
+                BorderWidth="10"
+                Margin="30"
+                Clicked="btn2_Clicked"/>
 
             <Button
                 x:Name="btn3"
                 Text="Botón3"
                 BackgroundColor="Blue"
-              
-                HorizontalOptions="Center" />
+                WidthRequest="200"
+                HeightRequest="70"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="16"
+                FontAttributes="Bold"
+                BorderColor="Yellow"
+                BorderWidth="10"
+                Margin="30"
+                IsVisible="false"
+                Clicked="btn3_Clicked"/>
 
         </VerticalStackLayout>
     </ScrollView>
