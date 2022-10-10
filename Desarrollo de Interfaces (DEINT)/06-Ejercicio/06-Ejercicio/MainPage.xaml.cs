@@ -53,13 +53,17 @@ public partial class MainPage : ContentPage
         btnBoton2.WidthRequest = 400;
     }
 
+    /// <summary>
+    /// Precondición: Debe tener ul btn creado pero no instanciado.
+    /// Método que crea un botón, llamado Boton 3
+    /// </summary>
     private void crearBoton3()
     {
 
         btn = new Button
         {
 
-            Text = $"Boton 3",
+            Text = "Boton 3",
             BackgroundColor = Colors.Blue,
             WidthRequest = 200,
             HeightRequest = 70,
