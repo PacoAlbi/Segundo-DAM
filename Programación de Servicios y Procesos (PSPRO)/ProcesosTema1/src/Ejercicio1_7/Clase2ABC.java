@@ -7,14 +7,20 @@ public class Clase2ABC {
     public static void main(String[] args) {
 
         String ip;
-        String [] ipClaseA = new String[10];
-        String [] ipClaseB = new String[10];
-        String [] ipClaseC = new String[10];
         int ip1;
+        String [] primero;
 
         Scanner sc = new Scanner(System.in);
 
-        ip = sc.nextLine();
+        for (int i = 0; i < 10; i++) {
+            ip = sc.nextLine();
+            primero = ip.split("\\.");
+            ip1 = Integer.parseInt(primero[0]);
 
+            if (ip1<=223){
+                System.out.println(ip);
+            }
+        }
+        sc.close();
     }
 }

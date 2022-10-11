@@ -1,0 +1,11 @@
+La ip 173.7.52.226 es de clase B
+La ip 193.254.233.148 es de clase C
+La ip 40.24.134.219 es de clase A
+La ip 37.25.170.192 es de clase A
+La ip 66.199.34.40 es de clase A
+La ip 85.134.133.29 es de clase A
+La ip 10.164.22.161 es de clase A
+La ip 95.116.227.253 es de clase A
+Exception in thread "main" java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1656)
+	at Ejercicio1_7.Clase3Imprime.main(Clase3Imprime.java:17)

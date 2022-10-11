@@ -1,0 +1,10 @@
+La ip 67.43.8.90 es de clase A
+La ip 166.197.87.87 es de clase B
+La ip 85.85.93.62 es de clase A
+La ip 176.245.43.177 es de clase B
+La ip 147.218.94.58 es de clase B
+La ip 57.3.48.71 es de clase A
+La ip 24.184.231.79 es de clase A
+La ip 121.181.19.242 es de clase A
+La ip 68.203.199.41 es de clase A
+La ip 46.123.38.159 es de clase A
