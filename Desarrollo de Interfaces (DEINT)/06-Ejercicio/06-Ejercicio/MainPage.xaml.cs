@@ -18,7 +18,7 @@ public partial class MainPage : ContentPage
 
     /// <summary>
     /// Precondiciones: No tiene
-    /// Evento asociado al click del botón 2, que cada vez que lo pulsas te crea un nuevo botón.
+    /// Evento asociado al click del botón 2, que cada vez que lo pulsas te crea un nuevo botón y como máximo 3(1 más).
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
