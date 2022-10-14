@@ -1,9 +1,6 @@
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+package SAX;
+
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.*;
 import java.io.IOException;
@@ -11,12 +8,29 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        leerXmlDOM();
-
-
+        leerXmlSax();
     }
 
-    public static void leerXmlDOM () {
+    public static void leerXmlSax () {
+
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+
+        try {
+
+            SAXParser saxParser = factory.newSAXParser();
+            SaxHelper handler = new SaxHelper();
+            saxParser.parse("resources/compras.xml", handler);
+
+        } catch (ParserConfigurationException e) {
+            System.out.println("Error al parsear el fichero xml");
+        } catch (SAXException e) {
+            System.out.println("Error de SAX");
+        } catch (IOException e) {
+            System.out.println("Error de lectura/escritura");
+        }
+    }
+
+    /*public static void leerXmlDOM () {
         DocumentBuilderFactory fabricaCreadorDocumento = DocumentBuilderFactory.newDefaultInstance();
 
         try {
@@ -41,26 +55,5 @@ public class Main {
         } catch (SAXException e) {
             System.out.println("Error de SAX");
         }
-    }
-
-    public static void leerXmlSax () {
-        boolean fecha = false, descripcion = false, precio = false;
-
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        try {
-            SAXParser saxParser = factory.newSAXParser();
-            DefaultHandler handler = new DefaultHandler();
-
-
-
-
-        } catch (ParserConfigurationException e) {
-            System.out.println("Error al parsear el fichero xml");
-        } catch (SAXException e) {
-            System.out.println("Error de SAX");
-        }
-
-
-    }
-
+    }*/
 }
