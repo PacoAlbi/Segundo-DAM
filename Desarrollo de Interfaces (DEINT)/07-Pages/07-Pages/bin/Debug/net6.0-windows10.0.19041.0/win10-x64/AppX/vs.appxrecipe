@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-10-16T19:40:21.306</Modified>
+      <Modified>2022-10-16T22:19:22.378</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-10-16T19:40:21.049</Modified>
+      <Modified>2022-10-16T22:19:21.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\07-Pages.runtimeconfig.json">
       <PackagePath>07-Pages.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\07-Pages.dll">
       <PackagePath>07-Pages.dll</PackagePath>
-      <Modified>2022-10-16T19:40:20.418</Modified>
+      <Modified>2022-10-16T22:19:21.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>07-Pages.exe</PackagePath>
-      <Modified>2022-10-16T19:40:20.423</Modified>
+      <Modified>2022-10-16T22:19:21.158</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.10\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1063,7 +1063,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\07-Pages.deps.json">
       <PackagePath>07-Pages.deps.json</PackagePath>
-      <Modified>2022-10-16T19:40:21.215</Modified>
+      <Modified>2022-10-16T22:19:22.267</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.541\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1111,159 +1111,171 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-10-14T17:44:37.729</Modified>
+      <Modified>2022-10-16T21:48:18.580</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.730</Modified>
+      <Modified>2022-10-16T21:48:18.698</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.730</Modified>
+      <Modified>2022-10-16T21:48:18.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.730</Modified>
+      <Modified>2022-10-16T21:48:18.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.731</Modified>
+      <Modified>2022-10-16T21:48:18.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.731</Modified>
+      <Modified>2022-10-16T21:48:18.772</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.731</Modified>
+      <Modified>2022-10-16T21:48:18.586</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.731</Modified>
+      <Modified>2022-10-16T21:48:18.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.732</Modified>
+      <Modified>2022-10-16T21:48:18.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.732</Modified>
+      <Modified>2022-10-16T21:48:18.592</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.732</Modified>
+      <Modified>2022-10-16T21:48:18.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.733</Modified>
+      <Modified>2022-10-16T21:48:18.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.733</Modified>
+      <Modified>2022-10-16T21:48:18.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.733</Modified>
+      <Modified>2022-10-16T21:48:18.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.733</Modified>
+      <Modified>2022-10-16T21:48:18.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.734</Modified>
+      <Modified>2022-10-16T21:48:18.647</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.734</Modified>
+      <Modified>2022-10-16T21:48:18.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.734</Modified>
+      <Modified>2022-10-16T21:48:18.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.735</Modified>
+      <Modified>2022-10-16T21:48:18.612</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.735</Modified>
+      <Modified>2022-10-16T21:48:18.615</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.735</Modified>
+      <Modified>2022-10-16T21:48:18.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.735</Modified>
+      <Modified>2022-10-16T21:48:18.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.736</Modified>
+      <Modified>2022-10-16T21:48:18.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.736</Modified>
+      <Modified>2022-10-16T21:48:18.601</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.736</Modified>
+      <Modified>2022-10-16T21:48:18.603</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.737</Modified>
+      <Modified>2022-10-16T21:48:18.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.737</Modified>
+      <Modified>2022-10-16T21:48:18.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.737</Modified>
+      <Modified>2022-10-16T21:48:18.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.737</Modified>
+      <Modified>2022-10-16T21:48:18.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.738</Modified>
+      <Modified>2022-10-16T21:48:18.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.738</Modified>
+      <Modified>2022-10-16T21:48:18.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.738</Modified>
+      <Modified>2022-10-16T21:48:18.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.739</Modified>
+      <Modified>2022-10-16T21:48:18.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.739</Modified>
+      <Modified>2022-10-16T21:48:18.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.739</Modified>
+      <Modified>2022-10-16T21:48:18.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.740</Modified>
+      <Modified>2022-10-16T21:48:18.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons8_chess_pawn.scale-100.png">
       <PackagePath>icons8_chess_pawn.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.740</Modified>
+      <Modified>2022-10-14T17:44:34.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons8_nazar_amulet.scale-100.png">
       <PackagePath>icons8_nazar_amulet.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.740</Modified>
+      <Modified>2022-10-14T17:44:34.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons8_video_game.scale-100.png">
       <PackagePath>icons8_video_game.scale-100.png</PackagePath>
-      <Modified>2022-10-14T17:44:37.741</Modified>
+      <Modified>2022-10-14T17:44:34.813</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons_buey.scale-100.png">
+      <PackagePath>icons_buey.scale-100.png</PackagePath>
+      <Modified>2022-10-16T21:36:00.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons_japanese_dolls.scale-100.png">
+      <PackagePath>icons_japanese_dolls.scale-100.png</PackagePath>
+      <Modified>2022-10-16T21:35:32.808</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces %28DEINT%29\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons_pool_8_ball.scale-100.png">
+      <PackagePath>icons_pool_8_ball.scale-100.png</PackagePath>
+      <Modified>2022-10-16T21:35:44.954</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

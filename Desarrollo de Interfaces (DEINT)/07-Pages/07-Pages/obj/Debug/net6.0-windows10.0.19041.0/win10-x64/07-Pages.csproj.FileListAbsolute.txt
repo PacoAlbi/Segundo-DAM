@@ -694,3 +694,6 @@ C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-P
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons_buey.scale-100.png
+C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons_japanese_dolls.scale-100.png
+C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\icons_pool_8_ball.scale-100.png

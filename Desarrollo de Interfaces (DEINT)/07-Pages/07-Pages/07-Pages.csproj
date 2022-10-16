@@ -53,7 +53,7 @@
 	  <None Remove="Resources\Images\icons8_nazar_amulet.png" />
 	  <None Remove="Resources\Images\icons8_video_game.png" />
 	  <None Remove="Resources\Images\icons_buey.png" />
-	  <None Remove="Resources\Images\icons_japanese-dolls.png" />
+	  <None Remove="Resources\Images\icons_japanese_dolls.png" />
 	  <None Remove="Resources\Images\icons_pool_8_ball.png" />
 	</ItemGroup>
 
