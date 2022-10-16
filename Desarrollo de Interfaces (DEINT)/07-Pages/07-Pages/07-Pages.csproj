@@ -52,6 +52,9 @@
 	  <None Remove="Resources\Images\icons8_chess_pawn.png" />
 	  <None Remove="Resources\Images\icons8_nazar_amulet.png" />
 	  <None Remove="Resources\Images\icons8_video_game.png" />
+	  <None Remove="Resources\Images\icons_buey.png" />
+	  <None Remove="Resources\Images\icons_japanese-dolls.png" />
+	  <None Remove="Resources\Images\icons_pool_8_ball.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -64,6 +67,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\MenuFlyout\ContactsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MenuFlyout\FlyoutMenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MenuFlyout\FlyoutPageNavigation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MenuFlyout\ReminderPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MenuFlyout\TodoListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NavigationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Pagina3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

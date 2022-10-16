@@ -39,6 +39,42 @@ build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Resources.Styles
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/ContactsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.ContactsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\ContactsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\ContactsPage.xaml
+
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/FlyoutMenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.FlyoutMenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\FlyoutMenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\FlyoutMenuPage.xaml
+
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/FlyoutPageNavigation.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.FlyoutPageNavigation.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\FlyoutPageNavigation.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\FlyoutPageNavigation.xaml
+
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/ReminderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.ReminderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\ReminderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\ReminderPage.xaml
+
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/TodoListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.TodoListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\TodoListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\TodoListPage.xaml
+
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/NavigationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.NavigationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NavigationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NavigationPage.xaml
+
 [C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina1.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina1.xaml

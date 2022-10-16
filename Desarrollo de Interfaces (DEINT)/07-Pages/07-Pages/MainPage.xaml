@@ -35,6 +35,13 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Entry
+                x:Name="btnEntry"
+                Text="Escribe aquí"
+                HorizontalOptions="Center"
+                FontSize="20"
+                />
+
         </VerticalStackLayout>
     </ScrollView>
 
