@@ -7,93 +7,93 @@ build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _07_Pages
-build_property.ProjectDir = C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\
+build_property.ProjectDir = C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/App.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/AppShell.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/MainPage.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Resources/Styles/Colors.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Resources/Styles/Styles.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/ContactsPage.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/ContactsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.ContactsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\ContactsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\ContactsPage.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/FlyoutMenuPage.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/FlyoutMenuPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.FlyoutMenuPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\FlyoutMenuPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\FlyoutMenuPage.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/FlyoutPageNavigation.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/FlyoutPageNavigation.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.FlyoutPageNavigation.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\FlyoutPageNavigation.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\FlyoutPageNavigation.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/ReminderPage.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/ReminderPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.ReminderPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\ReminderPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\ReminderPage.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/TodoListPage.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/MenuFlyout/TodoListPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.MenuFlyout.TodoListPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuFlyout\TodoListPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuFlyout\TodoListPage.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/NavigationPage.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/NavigationPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.NavigationPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\NavigationPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\NavigationPage.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina1.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina1.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina1.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Pagina1.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pagina1.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina2.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina2.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina2.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Pagina2.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pagina2.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina3.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina3.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina3.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Pagina3.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pagina3.xaml
 
-[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/PaginaTabbed.xaml]
+[C:/Users/falbinana/Desktop/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/PaginaTabbed.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.PaginaTabbed.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PaginaTabbed.xaml
