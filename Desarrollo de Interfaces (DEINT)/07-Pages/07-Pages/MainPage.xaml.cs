@@ -12,8 +12,7 @@ public partial class MainPage : ContentPage
 	private async void OnCounterClicked(object sender, EventArgs e)
 	{
 
-        await Navigation.PushAsync(new _07_Pages.Views.Pagina1());
+        await Navigation.PushAsync(new Views.PaginaTabbed());
 
 	}
 }
-

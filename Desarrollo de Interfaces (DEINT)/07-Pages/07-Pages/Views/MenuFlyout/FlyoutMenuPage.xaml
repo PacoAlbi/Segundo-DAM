@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_07_Pages.Views.MenuFlyout.FlyoutMenuPage"
              xmlns:local="clr-namespace:_07_Pages.Views.MenuFlyout"
-             
              Padding="0,40,0,0"
              IconImageSource="icons_buey.png"
              Title="Personal Organiser">

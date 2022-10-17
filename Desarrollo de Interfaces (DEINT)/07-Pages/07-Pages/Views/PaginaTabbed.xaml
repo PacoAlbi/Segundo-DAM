@@ -4,13 +4,13 @@
              xmlns:vistas="clr-namespace:_07_Pages.Views"
              x:Class="_07_Pages.Views.PaginaTabbed"
              Title="PaginaTabbed">
-    <vistas:Pagina1 IconImageSource="icons8_chess_pawn" BackgroundColor="Aqua" BackgroundImageSource="dotnet_bot"></vistas:Pagina1>
-    <vistas:Pagina2 IconImageSource="icons8_nazar_amulet"></vistas:Pagina2>
-    <vistas:Pagina3 IconImageSource="icons8_video_game"></vistas:Pagina3>
-    <ContentPage  Title="Pagina 4" IconImageSource="icons8_video_game">
+    <!--<ContentPage  Title="Pagina 4" IconImageSource="icons8_video_game">
         <Label 
             Text="Esta es la página 4"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </ContentPage>
+    </ContentPage>-->
+    <vistas:Pagina1 IconImageSource="icons8_chess_pawn" BackgroundColor="Aqua" BackgroundImageSource="dotnet_bot"></vistas:Pagina1>
+    <vistas:Pagina2 IconImageSource="icons8_nazar_amulet"></vistas:Pagina2>
+    <vistas:Pagina3 IconImageSource="icons8_video_game"></vistas:Pagina3>
 </TabbedPage>

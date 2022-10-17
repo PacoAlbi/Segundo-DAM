@@ -1,6 +1,9 @@
 ﻿obj\Debug\net6.0-android\resizetizer\r\drawable\icons8_chess_pawn.png
 obj\Debug\net6.0-android\resizetizer\r\drawable\icons8_nazar_amulet.png
 obj\Debug\net6.0-android\resizetizer\r\drawable\icons8_video_game.png
+obj\Debug\net6.0-android\resizetizer\r\drawable\icons_buey.png
+obj\Debug\net6.0-android\resizetizer\r\drawable\icons_japanese_dolls.png
+obj\Debug\net6.0-android\resizetizer\r\drawable\icons_pool_8_ball.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\splash.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png

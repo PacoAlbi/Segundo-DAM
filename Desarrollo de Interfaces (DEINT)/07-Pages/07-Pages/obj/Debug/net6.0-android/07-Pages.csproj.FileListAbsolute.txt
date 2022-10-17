@@ -957,3 +957,6 @@ C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages
 C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\resizetizer\r\drawable\icons_buey.png
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\resizetizer\r\drawable\icons_japanese_dolls.png
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\resizetizer\r\drawable\icons_pool_8_ball.png

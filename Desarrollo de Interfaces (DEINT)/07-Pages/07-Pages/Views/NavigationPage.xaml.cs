@@ -4,21 +4,18 @@ public partial class NavigationPage : ContentPage
 {
 	
 	private MainPage mainPage;
+    private Page page;
 
-	public NavigationPage()
+    public NavigationPage()
 	{
 		InitializeComponent();
 		
-	}
-	public NavigationPage(MainPage mainPage)
-	{
-		this.mainPage = mainPage;
 	}
 
     private async void OnCounterClicked(object sender, EventArgs e)
     {
 
-        await Navigation.PushAsync(new _07_Pages.Views.Pagina1());
+        await Navigation.PushAsync(new PaginaTabbed());
 
     }
 

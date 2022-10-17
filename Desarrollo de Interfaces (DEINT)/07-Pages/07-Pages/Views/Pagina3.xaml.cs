@@ -6,4 +6,11 @@ public partial class Pagina3 : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void btnVolverOrigen(object sender, EventArgs e)
+    {
+
+        await Navigation.PopToRootAsync();
+
+    }
 }
