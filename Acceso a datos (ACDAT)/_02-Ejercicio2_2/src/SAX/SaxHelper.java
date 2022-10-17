@@ -5,8 +5,17 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SaxHelper extends DefaultHandler {
 
+  /*  private static String fecha;
+    private static double valorTotal = 0;
+    private static int cantidadProductos = 0;
+    private static double totalDescuentos = 0;
+    private static double precio = 0;
+    private static double unidades = 1;*/
+
+    private static Compra compra = new Compra();
+
     boolean esDescuento = false;
-    boolean esFecha = false;
+    static boolean esFecha = false;
     boolean esDescripcion = false;
     boolean esPrecioUnidad = false;
     boolean esUnidades = false;
@@ -34,9 +43,10 @@ public class SaxHelper extends DefaultHandler {
         }
     }
 
-    public void characters(char ch[], int inicio, int length) {
+    public void characters(char[] ch, int inicio, int length) {
         if (esFecha) {
             System.out.println("Fecha: " + new String(ch, inicio, length));
+            compra.setFecha(new String(ch, inicio, length));
             esFecha = false;
             return;
         }
@@ -47,28 +57,37 @@ public class SaxHelper extends DefaultHandler {
         }
         if (esPrecioUnidad) {
             System.out.println("Precio por unidad: " + new String(ch, inicio, length));
+            compra.setPrecio(compra.getPrecio()+sacarDoble(ch, inicio, length));
             esPrecioUnidad = false;
             return;
         }
         if (esDescuento) {
             System.out.println("Descuento: " + new String(ch, inicio, length));
+            compra.setTotalDescuentos(compra.getTotalDescuentos()+sacarDoble(ch, inicio, length));
             esDescuento = false;
             return;
         }
         if (esUnidades) {
             System.out.println("Unidades: " + new String(ch, inicio, length));
+            compra.setUnidades(compra.getUnidades()+sacarDoble(ch, inicio, length));
             esUnidades = false;
         }
     }
 
-    public void endElement(String uri, String localName, String elementos){
-        System.out.println("Fin del elemento: " + elementos);
+    private static Double sacarDoble (char[] ch, int inicio, int length){
+        return Double.parseDouble(new String(ch, inicio, length).replace(",","."));
     }
 
-    public Compra sacarObjeto (String cadena){
+    /*public void endElement(String uri, String localName, String elementos){
+        System.out.println("Fin del elemento: " + elementos);
+    }*/
 
+    public static void sacarTicket (){
+        Double totalPagar;
+        while (esFecha){
 
-
-        return null;
+            System.out.println(compra);
+            System.out.println();
+        }
     }
 }

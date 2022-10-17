@@ -20,6 +20,7 @@ public class Main {
             SAXParser saxParser = factory.newSAXParser();
             SaxHelper handler = new SaxHelper();
             saxParser.parse("resources/compras.xml", handler);
+            SaxHelper.sacarTicket();
 
         } catch (ParserConfigurationException e) {
             System.out.println("Error al parsear el fichero xml");
@@ -29,6 +30,24 @@ public class Main {
             System.out.println("Error de lectura/escritura");
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*public static void leerXmlDOM () {
         DocumentBuilderFactory fabricaCreadorDocumento = DocumentBuilderFactory.newDefaultInstance();
