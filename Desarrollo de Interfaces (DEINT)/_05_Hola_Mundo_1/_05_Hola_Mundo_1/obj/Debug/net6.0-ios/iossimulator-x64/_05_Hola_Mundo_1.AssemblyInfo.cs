@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("_05_Hola_Mundo_1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("_05_Hola_Mundo_1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS15.4")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS16.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("iOS14.2")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JIFzrwo5BcQSC8Mcr/bMfUCZTXx1u7ZXA5jIiyRe/3IPo9LHbp8XRAk65oggZGUejrnwA3tpCxwJuEg17Y8wPQ==",
+  "dgSpecHash": "1RlFhRcNDlRliRhcl3GF5zEsArKPPxyydGLoiVC8Bja7V2T+mhDV3rYnQQ5P5r7zhPBYk6xq3ALJaYLkW2qCsg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_Entidades_Estandar\\03-Hello_World_Entidades_Estandar.csproj",
+  "projectFilePath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_Entidades_Estandar\\03-Hello_World_Entidades_Estandar.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\falbinana\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\falbinana\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Paco\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Paco\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

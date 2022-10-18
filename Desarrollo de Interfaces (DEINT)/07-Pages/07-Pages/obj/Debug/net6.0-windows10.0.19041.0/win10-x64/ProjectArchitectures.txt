@@ -1,1 +1,1 @@
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\07-Pages.csproj;x64
+C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\07-Pages.csproj;x64

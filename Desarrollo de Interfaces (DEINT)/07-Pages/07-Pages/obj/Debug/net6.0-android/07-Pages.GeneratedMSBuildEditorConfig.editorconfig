@@ -93,6 +93,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina3.xa
 build_metadata.AdditionalFiles.TargetPath = Views\Pagina3.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Pagina3.xaml
 
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina4.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina4.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pagina4.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pagina4.xaml
+
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/Pagina5.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.Pagina5.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Pagina5.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Pagina5.xaml
+
 [C:/Users/Paco/Documents/GitHub/Segundo-DAM/Desarrollo de Interfaces (DEINT)/07-Pages/07-Pages/Views/PaginaTabbed.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _07_Pages.Views.PaginaTabbed.xaml

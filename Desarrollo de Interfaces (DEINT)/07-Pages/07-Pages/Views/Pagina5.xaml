@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_07_Pages.Modelos"
+             x:Class="_07_Pages.Views.Pagina5"
+             Title="Pagina5"
+             x:Name="pagina5"
+             BindingContext="{x:Reference }">
+    <VerticalStackLayout>
+        <Label
+            Text="El nombre"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            <Label.BindingContext>
+                <Binding>
+                    <x:Reference local:Persona.Name/>
+                </Binding>
+            </Label.BindingContext>
+
+        />
+    </VerticalStackLayout>
+</ContentPage>

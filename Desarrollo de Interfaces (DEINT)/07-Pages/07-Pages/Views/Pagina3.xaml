@@ -15,7 +15,9 @@
             x:Name="bntVolver"
             WidthRequest="100"
             HeightRequest="100"
-            Clicked="btnVolverOrigen"           
+            Clicked="btnVolverOrigen" 
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
     </VerticalStackLayout>
 </ContentPage>

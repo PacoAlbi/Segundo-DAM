@@ -6274,7 +6274,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -10341,18 +10341,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\falbinana\\.nuget\\packages\\": {},
+    "C:\\Users\\Paco\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_UWP\\03-Hello_World_UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_UWP\\03-Hello_World_UWP.csproj",
       "projectName": "03-Hello_World_UWP",
-      "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_UWP\\03-Hello_World_UWP.csproj",
-      "packagesPath": "C:\\Users\\falbinana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_UWP\\obj\\",
+      "projectPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_UWP\\03-Hello_World_UWP.csproj",
+      "packagesPath": "C:\\Users\\Paco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -10360,7 +10360,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\falbinana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Paco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10374,8 +10374,8 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_Entidades_Estandar\\03-Hello_World_Entidades_Estandar.csproj": {
-              "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_Entidades_Estandar\\03-Hello_World_Entidades_Estandar.csproj"
+            "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_Entidades_Estandar\\03-Hello_World_Entidades_Estandar.csproj": {
+              "projectPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\03-Hello_World\\03-Hello_World_Entidades_Estandar\\03-Hello_World_Entidades_Estandar.csproj"
             }
           }
         }
