@@ -6,15 +6,10 @@
              Title="Pagina4"
              x:Name="pagina4">
     <VerticalStackLayout>
-        
-        
-        
-        
-        
-        
-        
+    
         <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="lblPagina4"
+            Text="Esta es la página 4"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

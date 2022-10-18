@@ -4,19 +4,13 @@
              xmlns:local="clr-namespace:_07_Pages.Modelos"
              x:Class="_07_Pages.Views.Pagina5"
              Title="Pagina5"
-             x:Name="pagina5"
-             BindingContext="{x:Reference }">
+             x:Name="pagina5">
     <VerticalStackLayout>
         <Label
-            Text="El nombre"
+            x:Name="lblPagina5"
+            Text="{Binding Name}"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            <Label.BindingContext>
-                <Binding>
-                    <x:Reference local:Persona.Name/>
-                </Binding>
-            </Label.BindingContext>
-
         />
     </VerticalStackLayout>
 </ContentPage>
