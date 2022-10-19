@@ -6,11 +6,15 @@
              Title="Pagina5"
              x:Name="pagina5">
     <VerticalStackLayout>
-        <Label
-            x:Name="lblPagina5"
-            Text="{Binding Name}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-        />
+
+        <Label HorizontalOptions="Center" VerticalOptions="Center">
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0}{1}">
+                    <Binding Path="Name"/>
+                    <Binding Path="Apellidos"/>
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+   
     </VerticalStackLayout>
 </ContentPage>

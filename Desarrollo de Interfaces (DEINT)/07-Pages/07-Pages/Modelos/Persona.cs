@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _07_Pages.Modelos
 {
-    internal class Persona
+    public class Persona
     {
         private String _name;
         private String _apellidos;

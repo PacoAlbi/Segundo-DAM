@@ -6,14 +6,11 @@ namespace _07_Pages;
 
 public partial class MainPage : ContentPage
 {
-    Persona persona = new();
+    Persona persona = new Persona();
 
     public MainPage()
 	{
 		InitializeComponent();
-
-        entryNombre.BindingContext = persona.Name;
-        entryApellidos.BindingContext = persona.Apellidos;
 	}
 
 	private async void OnCounterClicked(object sender, EventArgs e)
@@ -23,12 +20,16 @@ public partial class MainPage : ContentPage
 
     private async void OnCounterClicked4(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Pagina4());
-        
+        persona.Name = entryNombre.Text;
+        persona.Apellidos = entryApellidos.Text;
+        await Navigation.PushAsync(new Pagina4(persona));
+        //await Navigation.PushAsync(new PaginaTabbed(new Pagina4(persona)));
     }
 
     private async void OnCounterClicked5(object sender, EventArgs e)
     {
+        persona.Name = entryNombre.Text;
+        persona.Apellidos = entryApellidos.Text;
         await Navigation.PushAsync(new Pagina5{ BindingContext = persona });
     }
 }

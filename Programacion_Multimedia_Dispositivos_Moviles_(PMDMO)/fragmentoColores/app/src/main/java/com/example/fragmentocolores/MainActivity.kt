@@ -10,6 +10,7 @@ import android.widget.Chronometer
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.IntegerRes
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity(), Comunicador {
 
@@ -27,9 +28,22 @@ class MainActivity : AppCompatActivity(), Comunicador {
     }
 
     override fun onClickVerdeResta() {
-        Toast.makeText(this, "Has pulsado", Toast.LENGTH_SHORT)
+        Toast.makeText(this, "Has pulsado", Toast.LENGTH_SHORT) //El toast no funciona por el contexto
         val valor = this.findViewById<TextView>(R.id.textView)
         val resto = Integer.parseInt(valor.text.toString())-1
-        valor.setText(resto.toString())
+        if (contador == 10){
+            AlertDialog.Builder(this)
+                .setTitle("¿Para Pesao!")
+                .setMessage("Ya van 10")
+                .setPositiveButton("Si, quiero rayarte"){dialog, which->
+                    valor.setText(contador.toString())
+                }
+                //Ponemos null y se cierra solo
+                .setNegativeButton("Paso", null)
+                .setIcon(android.R.drawable.btn_dialog)
+                .show()
+        }else{
+            valor.setText(resto.toString())
+        }
     }
 }

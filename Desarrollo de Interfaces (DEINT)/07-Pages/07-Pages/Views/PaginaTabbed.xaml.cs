@@ -6,4 +6,9 @@ public partial class PaginaTabbed : TabbedPage
 	{
 		InitializeComponent();
 	}
+
+    public PaginaTabbed(Page pagina)
+    {
+        InitializeComponent();
+    }
 }
