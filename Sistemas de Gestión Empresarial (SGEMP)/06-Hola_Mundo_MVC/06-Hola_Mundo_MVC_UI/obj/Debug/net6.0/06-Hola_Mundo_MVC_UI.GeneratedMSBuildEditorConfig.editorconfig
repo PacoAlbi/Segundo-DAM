@@ -8,17 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _06_Hola_Mundo_MVC_UI
 build_property.RootNamespace = _06_Hola_Mundo_MVC_UI
-build_property.ProjectDir = C:\Users\falbinana\Desktop\Segundo-DAM\Sistemas de Gestión Empresarial (SGEMP)\06-Hola_Mundo_MVC\06-Hola_Mundo_MVC_UI\
+build_property.ProjectDir = C:\Users\Paco\Documents\GitHub\Segundo-DAM\Sistemas de Gestión Empresarial (SGEMP)\06-Hola_Mundo_MVC\06-Hola_Mundo_MVC_UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\falbinana\Desktop\Segundo-DAM\Sistemas de Gestión Empresarial (SGEMP)\06-Hola_Mundo_MVC\06-Hola_Mundo_MVC_UI
+build_property.MSBuildProjectDirectory = C:\Users\Paco\Documents\GitHub\Segundo-DAM\Sistemas de Gestión Empresarial (SGEMP)\06-Hola_Mundo_MVC\06-Hola_Mundo_MVC_UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/falbinana/Desktop/Segundo-DAM/Sistemas de Gestión Empresarial (SGEMP)/06-Hola_Mundo_MVC/06-Hola_Mundo_MVC_UI/Views/Home/VistaHolaMundo.cshtml]
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Sistemas de Gestión Empresarial (SGEMP)/06-Hola_Mundo_MVC/06-Hola_Mundo_MVC_UI/Views/Home/VistaHolaMundo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXN0YUhvbGFNdW5kby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/falbinana/Desktop/Segundo-DAM/Sistemas de Gestión Empresarial (SGEMP)/06-Hola_Mundo_MVC/06-Hola_Mundo_MVC_UI/Views/Productos/ListadoProductos.cshtml]
+[C:/Users/Paco/Documents/GitHub/Segundo-DAM/Sistemas de Gestión Empresarial (SGEMP)/06-Hola_Mundo_MVC/06-Hola_Mundo_MVC_UI/Views/Productos/ListadoProductos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXExpc3RhZG9Qcm9kdWN0b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

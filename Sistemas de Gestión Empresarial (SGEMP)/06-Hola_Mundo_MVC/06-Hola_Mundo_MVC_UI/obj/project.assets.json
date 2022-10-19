@@ -8938,23 +8938,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\falbinana\\.nuget\\packages\\": {},
+    "C:\\Users\\Paco\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Sistemas de Gestión Empresarial (SGEMP)\\06-Hola_Mundo_MVC\\06-Hola_Mundo_MVC_UI\\06-Hola_Mundo_MVC_UI.csproj",
+      "projectUniqueName": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Sistemas de Gestión Empresarial (SGEMP)\\06-Hola_Mundo_MVC\\06-Hola_Mundo_MVC_UI\\06-Hola_Mundo_MVC_UI.csproj",
       "projectName": "06-Hola_Mundo_MVC_UI",
-      "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Sistemas de Gestión Empresarial (SGEMP)\\06-Hola_Mundo_MVC\\06-Hola_Mundo_MVC_UI\\06-Hola_Mundo_MVC_UI.csproj",
-      "packagesPath": "C:\\Users\\falbinana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Sistemas de Gestión Empresarial (SGEMP)\\06-Hola_Mundo_MVC\\06-Hola_Mundo_MVC_UI\\obj\\",
+      "projectPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Sistemas de Gestión Empresarial (SGEMP)\\06-Hola_Mundo_MVC\\06-Hola_Mundo_MVC_UI\\06-Hola_Mundo_MVC_UI.csproj",
+      "packagesPath": "C:\\Users\\Paco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Sistemas de Gestión Empresarial (SGEMP)\\06-Hola_Mundo_MVC\\06-Hola_Mundo_MVC_UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\falbinana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Paco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9006,7 +9006,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

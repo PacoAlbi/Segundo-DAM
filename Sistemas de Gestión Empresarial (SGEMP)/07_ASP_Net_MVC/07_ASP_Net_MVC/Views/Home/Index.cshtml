@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model namespace._07_ASP_Net_MVC.Models
+
+<div class="text-center">
+    @*<h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+    <h1>La fecha y hora actual son @ViewBag.FechaLarga</h1>
+    <h2>Hola @ViewData["Saludo"]</h2>
+    <p>¡Necesitamos más tiempo para estudiar Fernando!</p>
+
+    <h3>Para que lo consideres te pongo mis datos :P</h3>
+    <p>Mi nombre es @Model.Apellidos</p>
+
+</div>
