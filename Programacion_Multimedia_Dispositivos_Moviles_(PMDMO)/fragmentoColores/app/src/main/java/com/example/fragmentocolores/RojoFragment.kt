@@ -1,59 +1,96 @@
 package com.example.fragmentocolores
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RojoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RojoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    //private var btnSumar = null
+    //private var azulFragmentInstance: AzulFragment?=null
+    private var listener: Comunicador?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Infla la vista que hemos creado.
         return inflater.inflate(R.layout.fragment_rojo, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RojoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RojoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is Comunicador)
+            listener=context
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.btnSumar).setOnClickListener { listener?.onClickRojoSuma() }
+    }
+
+
 }
+/*
+        override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view: View = inflater.inflate(R.layout.fragment_rojo, container, false)
+        val senDataButton:  Button = view.findViewById(R.id.fragmentoRojo)
+        senDataButton.setOnClickListener {
+            senDataButton.setOnClickListener {
+                azulFragmentInstance?.setData(btnSumar)
+            }
+        }
+        // Infla la vista
+        return inflater.inflate(R.layout.fragment_rojo, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    private var sharedViewModelInstance: SharedViewModel? = null
+
+    private var editTextFromFragment1: EditText? = null
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view: View = inflater.inflate(R.layout.fragment_1, container, false)
+
+        val sendDataButton: Button = view.findViewById(R.id.send_button_fragment_1)
+        editTextFromFragment1 = view.findViewById(R.id.edit_text_from_fragment_1)
+
+        // as soon as the button is clicked
+        // send the data to ViewModel
+        // and the Live data will take care of
+        // updating the data inside another Fragment
+        sendDataButton.setOnClickListener {
+            sharedViewModelInstance?.setData(editTextFromFragment1!!.text)
+        }
+        return view
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        // create instances of the shared view model
+        // when the activity is created
+        sharedViewModelInstance = ViewModelProviders.of(activity!!).get(SharedViewModel::class.java)
+
+        // observe the data inside the view model that
+        // is mutable live of type CharSequence and
+        // set the data for edit text
+        sharedViewModelInstance!!.getData().observe(viewLifecycleOwner, Observer {
+            editTextFromFragment1!!.text = it as Editable?
+        })
+    }
+}*/

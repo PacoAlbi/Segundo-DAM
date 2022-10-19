@@ -8,6 +8,7 @@
     android:id="@+id/fragmentoRojo">
 
     <Button
+        android:id="@+id/btnSumar"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
