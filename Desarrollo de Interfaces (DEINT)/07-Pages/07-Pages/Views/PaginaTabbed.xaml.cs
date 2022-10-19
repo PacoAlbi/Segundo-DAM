@@ -1,3 +1,5 @@
+using _07_Pages.Modelos;
+
 namespace _07_Pages.Views;
 
 public partial class PaginaTabbed : TabbedPage
@@ -7,7 +9,7 @@ public partial class PaginaTabbed : TabbedPage
 		InitializeComponent();
 	}
 
-    public PaginaTabbed(Page pagina)
+    public PaginaTabbed(Persona persona)
     {
         InitializeComponent();
     }
