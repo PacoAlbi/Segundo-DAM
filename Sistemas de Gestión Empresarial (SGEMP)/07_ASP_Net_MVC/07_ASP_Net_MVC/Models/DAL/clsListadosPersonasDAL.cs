@@ -19,7 +19,7 @@ namespace _07_ASP_Net_MVC.Models.DAL
             lista.Add(new clsPersona("",""));
             lista.Add(new clsPersona("",""));
 
-            return new List<clsPersona>();
+            return lista;
         }
     }
 }

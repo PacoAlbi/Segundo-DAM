@@ -1,4 +1,4 @@
-	.file	"obj\Debug\net6.0-android\android\compressed_assemblies.x86.s"
+	.file	"obj\Debug\net6.0-android\android\compressed_assemblies.x86_64.s"
 
 	.section	.data, "aw", @progbits
 
@@ -9,10 +9,11 @@
 	.global	compressed_assemblies
 
 	.section	.data, "aw", @progbits
-	.p2align	2
+	.p2align	3
 compressed_assemblies:
 	.long	0x0	# count
-	.long	0	# descriptors
-	.size	compressed_assemblies, 8
+	.zero	4
+	.quad	0	# descriptors
+	.size	compressed_assemblies, 16
 
 	.ident	"Xamarin.Android remotes/origin/release/6.0.4xx @ af4a25d50f5a602c77d05c2ec8c8644c00cffbbd"

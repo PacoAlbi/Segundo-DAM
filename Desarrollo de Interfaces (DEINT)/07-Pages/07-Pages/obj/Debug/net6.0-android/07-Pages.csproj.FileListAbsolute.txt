@@ -1907,6 +1907,13 @@ C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-P
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\typemaps.x86.s
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\environment.x86.s
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\compressed_assemblies.x86.s
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\typemaps.x86.o
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\environment.x86.o
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\compressed_assemblies.x86.o
+C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\app_shared_libraries\x86\libxamarin-app.so
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\assets\mscorlib.dll
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\assets\System.Data.dll
@@ -1915,10 +1922,3 @@ C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-P
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
 C:\Users\Paco\Documents\GitHub\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\assets\System.Xml.dll
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\typemaps.x86.s
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\environment.x86.s
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\compressed_assemblies.x86.s
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\typemaps.x86.o
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\environment.x86.o
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\android\compressed_assemblies.x86.o
-C:\Users\falbinana\Desktop\Segundo-DAM\Desarrollo de Interfaces (DEINT)\07-Pages\07-Pages\obj\Debug\net6.0-android\app_shared_libraries\x86\libxamarin-app.so

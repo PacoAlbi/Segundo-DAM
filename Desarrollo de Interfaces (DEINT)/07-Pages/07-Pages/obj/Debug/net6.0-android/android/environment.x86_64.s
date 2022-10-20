@@ -1,2965 +1,3495 @@
-	.file	"obj\Debug\net6.0-android\android\environment.x86.s"
+	.file	"obj\Debug\net6.0-android\android\environment.x86_64.s"
 	.type	mono_aot_mode_name, @object
 	.global	mono_aot_mode_name
 
 	.section	.data.mono_aot_mode_name, "aw", @progbits
-	.p2align	2
+	.p2align	3
 mono_aot_mode_name:
-	.long	.L.autostr.0
-	.size	mono_aot_mode_name, 4
+	.quad	.L.autostr.0
+	.size	mono_aot_mode_name, 8
 
 	.type	app_environment_variables, @object
 	.global	app_environment_variables
 
 	.section	.data, "aw", @progbits
-	.p2align	2
+	.p2align	3
 app_environment_variables:
-	.long	.L.autostr.1
-	.long	.L.autostr.2
-	.long	.L.autostr.3
-	.long	.L.autostr.4
-	.long	.L.autostr.5
-	.long	.L.autostr.6
-	.long	.L.autostr.7
-	.long	.L.autostr.8
-	.long	.L.autostr.9
-	.long	.L.autostr.10
-	.long	.L.autostr.11
-	.long	.L.autostr.12
-	.size	app_environment_variables, 48
+	.quad	.L.autostr.1
+	.quad	.L.autostr.2
+	.quad	.L.autostr.3
+	.quad	.L.autostr.4
+	.quad	.L.autostr.5
+	.quad	.L.autostr.6
+	.quad	.L.autostr.7
+	.quad	.L.autostr.8
+	.quad	.L.autostr.9
+	.quad	.L.autostr.10
+	.quad	.L.autostr.11
+	.quad	.L.autostr.12
+	.size	app_environment_variables, 96
 
 	.section	.data, "aw", @progbits
 	.type	app_system_properties, @object
 	.global	app_system_properties
 app_system_properties:
 	.size	app_system_properties, 0
-	# Bundled assembly name buffers, all 62 bytes long
+	# Bundled assembly name buffers, all 65 bytes long
 
 	.section	.bss.bundled_assembly_names, "aw", @nobits
 	.type	.L.env.buf.0, @object
 .L.env.buf.0:
-	.zero	62
-	.size	.L.env.buf.0, 62
+	.zero	65
+	.size	.L.env.buf.0, 65
 	.type	.L.env.buf.1, @object
 .L.env.buf.1:
-	.zero	62
-	.size	.L.env.buf.1, 62
+	.zero	65
+	.size	.L.env.buf.1, 65
 	.type	.L.env.buf.2, @object
 .L.env.buf.2:
-	.zero	62
-	.size	.L.env.buf.2, 62
+	.zero	65
+	.size	.L.env.buf.2, 65
 	.type	.L.env.buf.3, @object
 .L.env.buf.3:
-	.zero	62
-	.size	.L.env.buf.3, 62
+	.zero	65
+	.size	.L.env.buf.3, 65
 	.type	.L.env.buf.4, @object
 .L.env.buf.4:
-	.zero	62
-	.size	.L.env.buf.4, 62
+	.zero	65
+	.size	.L.env.buf.4, 65
 	.type	.L.env.buf.5, @object
 .L.env.buf.5:
-	.zero	62
-	.size	.L.env.buf.5, 62
+	.zero	65
+	.size	.L.env.buf.5, 65
 	.type	.L.env.buf.6, @object
 .L.env.buf.6:
-	.zero	62
-	.size	.L.env.buf.6, 62
+	.zero	65
+	.size	.L.env.buf.6, 65
 	.type	.L.env.buf.7, @object
 .L.env.buf.7:
-	.zero	62
-	.size	.L.env.buf.7, 62
+	.zero	65
+	.size	.L.env.buf.7, 65
 	.type	.L.env.buf.8, @object
 .L.env.buf.8:
-	.zero	62
-	.size	.L.env.buf.8, 62
+	.zero	65
+	.size	.L.env.buf.8, 65
 	.type	.L.env.buf.9, @object
 .L.env.buf.9:
-	.zero	62
-	.size	.L.env.buf.9, 62
+	.zero	65
+	.size	.L.env.buf.9, 65
 	.type	.L.env.buf.10, @object
 .L.env.buf.10:
-	.zero	62
-	.size	.L.env.buf.10, 62
+	.zero	65
+	.size	.L.env.buf.10, 65
 	.type	.L.env.buf.11, @object
 .L.env.buf.11:
-	.zero	62
-	.size	.L.env.buf.11, 62
+	.zero	65
+	.size	.L.env.buf.11, 65
 	.type	.L.env.buf.12, @object
 .L.env.buf.12:
-	.zero	62
-	.size	.L.env.buf.12, 62
+	.zero	65
+	.size	.L.env.buf.12, 65
 	.type	.L.env.buf.13, @object
 .L.env.buf.13:
-	.zero	62
-	.size	.L.env.buf.13, 62
+	.zero	65
+	.size	.L.env.buf.13, 65
 	.type	.L.env.buf.14, @object
 .L.env.buf.14:
-	.zero	62
-	.size	.L.env.buf.14, 62
+	.zero	65
+	.size	.L.env.buf.14, 65
 	.type	.L.env.buf.15, @object
 .L.env.buf.15:
-	.zero	62
-	.size	.L.env.buf.15, 62
+	.zero	65
+	.size	.L.env.buf.15, 65
 	.type	.L.env.buf.16, @object
 .L.env.buf.16:
-	.zero	62
-	.size	.L.env.buf.16, 62
+	.zero	65
+	.size	.L.env.buf.16, 65
 	.type	.L.env.buf.17, @object
 .L.env.buf.17:
-	.zero	62
-	.size	.L.env.buf.17, 62
+	.zero	65
+	.size	.L.env.buf.17, 65
 	.type	.L.env.buf.18, @object
 .L.env.buf.18:
-	.zero	62
-	.size	.L.env.buf.18, 62
+	.zero	65
+	.size	.L.env.buf.18, 65
 	.type	.L.env.buf.19, @object
 .L.env.buf.19:
-	.zero	62
-	.size	.L.env.buf.19, 62
+	.zero	65
+	.size	.L.env.buf.19, 65
 	.type	.L.env.buf.20, @object
 .L.env.buf.20:
-	.zero	62
-	.size	.L.env.buf.20, 62
+	.zero	65
+	.size	.L.env.buf.20, 65
 	.type	.L.env.buf.21, @object
 .L.env.buf.21:
-	.zero	62
-	.size	.L.env.buf.21, 62
+	.zero	65
+	.size	.L.env.buf.21, 65
 	.type	.L.env.buf.22, @object
 .L.env.buf.22:
-	.zero	62
-	.size	.L.env.buf.22, 62
+	.zero	65
+	.size	.L.env.buf.22, 65
 	.type	.L.env.buf.23, @object
 .L.env.buf.23:
-	.zero	62
-	.size	.L.env.buf.23, 62
+	.zero	65
+	.size	.L.env.buf.23, 65
 	.type	.L.env.buf.24, @object
 .L.env.buf.24:
-	.zero	62
-	.size	.L.env.buf.24, 62
+	.zero	65
+	.size	.L.env.buf.24, 65
 	.type	.L.env.buf.25, @object
 .L.env.buf.25:
-	.zero	62
-	.size	.L.env.buf.25, 62
+	.zero	65
+	.size	.L.env.buf.25, 65
 	.type	.L.env.buf.26, @object
 .L.env.buf.26:
-	.zero	62
-	.size	.L.env.buf.26, 62
+	.zero	65
+	.size	.L.env.buf.26, 65
 	.type	.L.env.buf.27, @object
 .L.env.buf.27:
-	.zero	62
-	.size	.L.env.buf.27, 62
+	.zero	65
+	.size	.L.env.buf.27, 65
 	.type	.L.env.buf.28, @object
 .L.env.buf.28:
-	.zero	62
-	.size	.L.env.buf.28, 62
+	.zero	65
+	.size	.L.env.buf.28, 65
 	.type	.L.env.buf.29, @object
 .L.env.buf.29:
-	.zero	62
-	.size	.L.env.buf.29, 62
+	.zero	65
+	.size	.L.env.buf.29, 65
 	.type	.L.env.buf.30, @object
 .L.env.buf.30:
-	.zero	62
-	.size	.L.env.buf.30, 62
+	.zero	65
+	.size	.L.env.buf.30, 65
 	.type	.L.env.buf.31, @object
 .L.env.buf.31:
-	.zero	62
-	.size	.L.env.buf.31, 62
+	.zero	65
+	.size	.L.env.buf.31, 65
 	.type	.L.env.buf.32, @object
 .L.env.buf.32:
-	.zero	62
-	.size	.L.env.buf.32, 62
+	.zero	65
+	.size	.L.env.buf.32, 65
 	.type	.L.env.buf.33, @object
 .L.env.buf.33:
-	.zero	62
-	.size	.L.env.buf.33, 62
+	.zero	65
+	.size	.L.env.buf.33, 65
 	.type	.L.env.buf.34, @object
 .L.env.buf.34:
-	.zero	62
-	.size	.L.env.buf.34, 62
+	.zero	65
+	.size	.L.env.buf.34, 65
 	.type	.L.env.buf.35, @object
 .L.env.buf.35:
-	.zero	62
-	.size	.L.env.buf.35, 62
+	.zero	65
+	.size	.L.env.buf.35, 65
 	.type	.L.env.buf.36, @object
 .L.env.buf.36:
-	.zero	62
-	.size	.L.env.buf.36, 62
+	.zero	65
+	.size	.L.env.buf.36, 65
 	.type	.L.env.buf.37, @object
 .L.env.buf.37:
-	.zero	62
-	.size	.L.env.buf.37, 62
+	.zero	65
+	.size	.L.env.buf.37, 65
 	.type	.L.env.buf.38, @object
 .L.env.buf.38:
-	.zero	62
-	.size	.L.env.buf.38, 62
+	.zero	65
+	.size	.L.env.buf.38, 65
 	.type	.L.env.buf.39, @object
 .L.env.buf.39:
-	.zero	62
-	.size	.L.env.buf.39, 62
+	.zero	65
+	.size	.L.env.buf.39, 65
 	.type	.L.env.buf.40, @object
 .L.env.buf.40:
-	.zero	62
-	.size	.L.env.buf.40, 62
+	.zero	65
+	.size	.L.env.buf.40, 65
 	.type	.L.env.buf.41, @object
 .L.env.buf.41:
-	.zero	62
-	.size	.L.env.buf.41, 62
+	.zero	65
+	.size	.L.env.buf.41, 65
 	.type	.L.env.buf.42, @object
 .L.env.buf.42:
-	.zero	62
-	.size	.L.env.buf.42, 62
+	.zero	65
+	.size	.L.env.buf.42, 65
 	.type	.L.env.buf.43, @object
 .L.env.buf.43:
-	.zero	62
-	.size	.L.env.buf.43, 62
+	.zero	65
+	.size	.L.env.buf.43, 65
 	.type	.L.env.buf.44, @object
 .L.env.buf.44:
-	.zero	62
-	.size	.L.env.buf.44, 62
+	.zero	65
+	.size	.L.env.buf.44, 65
 	.type	.L.env.buf.45, @object
 .L.env.buf.45:
-	.zero	62
-	.size	.L.env.buf.45, 62
+	.zero	65
+	.size	.L.env.buf.45, 65
 	.type	.L.env.buf.46, @object
 .L.env.buf.46:
-	.zero	62
-	.size	.L.env.buf.46, 62
+	.zero	65
+	.size	.L.env.buf.46, 65
 	.type	.L.env.buf.47, @object
 .L.env.buf.47:
-	.zero	62
-	.size	.L.env.buf.47, 62
+	.zero	65
+	.size	.L.env.buf.47, 65
 	.type	.L.env.buf.48, @object
 .L.env.buf.48:
-	.zero	62
-	.size	.L.env.buf.48, 62
+	.zero	65
+	.size	.L.env.buf.48, 65
 	.type	.L.env.buf.49, @object
 .L.env.buf.49:
-	.zero	62
-	.size	.L.env.buf.49, 62
+	.zero	65
+	.size	.L.env.buf.49, 65
 	.type	.L.env.buf.50, @object
 .L.env.buf.50:
-	.zero	62
-	.size	.L.env.buf.50, 62
+	.zero	65
+	.size	.L.env.buf.50, 65
 	.type	.L.env.buf.51, @object
 .L.env.buf.51:
-	.zero	62
-	.size	.L.env.buf.51, 62
+	.zero	65
+	.size	.L.env.buf.51, 65
 	.type	.L.env.buf.52, @object
 .L.env.buf.52:
-	.zero	62
-	.size	.L.env.buf.52, 62
+	.zero	65
+	.size	.L.env.buf.52, 65
 	.type	.L.env.buf.53, @object
 .L.env.buf.53:
-	.zero	62
-	.size	.L.env.buf.53, 62
+	.zero	65
+	.size	.L.env.buf.53, 65
 	.type	.L.env.buf.54, @object
 .L.env.buf.54:
-	.zero	62
-	.size	.L.env.buf.54, 62
+	.zero	65
+	.size	.L.env.buf.54, 65
 	.type	.L.env.buf.55, @object
 .L.env.buf.55:
-	.zero	62
-	.size	.L.env.buf.55, 62
+	.zero	65
+	.size	.L.env.buf.55, 65
 	.type	.L.env.buf.56, @object
 .L.env.buf.56:
-	.zero	62
-	.size	.L.env.buf.56, 62
+	.zero	65
+	.size	.L.env.buf.56, 65
 	.type	.L.env.buf.57, @object
 .L.env.buf.57:
-	.zero	62
-	.size	.L.env.buf.57, 62
+	.zero	65
+	.size	.L.env.buf.57, 65
 	.type	.L.env.buf.58, @object
 .L.env.buf.58:
-	.zero	62
-	.size	.L.env.buf.58, 62
+	.zero	65
+	.size	.L.env.buf.58, 65
 	.type	.L.env.buf.59, @object
 .L.env.buf.59:
-	.zero	62
-	.size	.L.env.buf.59, 62
+	.zero	65
+	.size	.L.env.buf.59, 65
 	.type	.L.env.buf.60, @object
 .L.env.buf.60:
-	.zero	62
-	.size	.L.env.buf.60, 62
+	.zero	65
+	.size	.L.env.buf.60, 65
 	.type	.L.env.buf.61, @object
 .L.env.buf.61:
-	.zero	62
-	.size	.L.env.buf.61, 62
+	.zero	65
+	.size	.L.env.buf.61, 65
 	.type	.L.env.buf.62, @object
 .L.env.buf.62:
-	.zero	62
-	.size	.L.env.buf.62, 62
+	.zero	65
+	.size	.L.env.buf.62, 65
 	.type	.L.env.buf.63, @object
 .L.env.buf.63:
-	.zero	62
-	.size	.L.env.buf.63, 62
+	.zero	65
+	.size	.L.env.buf.63, 65
 	.type	.L.env.buf.64, @object
 .L.env.buf.64:
-	.zero	62
-	.size	.L.env.buf.64, 62
+	.zero	65
+	.size	.L.env.buf.64, 65
 	.type	.L.env.buf.65, @object
 .L.env.buf.65:
-	.zero	62
-	.size	.L.env.buf.65, 62
+	.zero	65
+	.size	.L.env.buf.65, 65
 	.type	.L.env.buf.66, @object
 .L.env.buf.66:
-	.zero	62
-	.size	.L.env.buf.66, 62
+	.zero	65
+	.size	.L.env.buf.66, 65
 	.type	.L.env.buf.67, @object
 .L.env.buf.67:
-	.zero	62
-	.size	.L.env.buf.67, 62
+	.zero	65
+	.size	.L.env.buf.67, 65
 	.type	.L.env.buf.68, @object
 .L.env.buf.68:
-	.zero	62
-	.size	.L.env.buf.68, 62
+	.zero	65
+	.size	.L.env.buf.68, 65
 	.type	.L.env.buf.69, @object
 .L.env.buf.69:
-	.zero	62
-	.size	.L.env.buf.69, 62
+	.zero	65
+	.size	.L.env.buf.69, 65
 	.type	.L.env.buf.70, @object
 .L.env.buf.70:
-	.zero	62
-	.size	.L.env.buf.70, 62
+	.zero	65
+	.size	.L.env.buf.70, 65
 	.type	.L.env.buf.71, @object
 .L.env.buf.71:
-	.zero	62
-	.size	.L.env.buf.71, 62
+	.zero	65
+	.size	.L.env.buf.71, 65
 	.type	.L.env.buf.72, @object
 .L.env.buf.72:
-	.zero	62
-	.size	.L.env.buf.72, 62
+	.zero	65
+	.size	.L.env.buf.72, 65
 	.type	.L.env.buf.73, @object
 .L.env.buf.73:
-	.zero	62
-	.size	.L.env.buf.73, 62
+	.zero	65
+	.size	.L.env.buf.73, 65
 	.type	.L.env.buf.74, @object
 .L.env.buf.74:
-	.zero	62
-	.size	.L.env.buf.74, 62
+	.zero	65
+	.size	.L.env.buf.74, 65
 	.type	.L.env.buf.75, @object
 .L.env.buf.75:
-	.zero	62
-	.size	.L.env.buf.75, 62
+	.zero	65
+	.size	.L.env.buf.75, 65
 	.type	.L.env.buf.76, @object
 .L.env.buf.76:
-	.zero	62
-	.size	.L.env.buf.76, 62
+	.zero	65
+	.size	.L.env.buf.76, 65
 	.type	.L.env.buf.77, @object
 .L.env.buf.77:
-	.zero	62
-	.size	.L.env.buf.77, 62
+	.zero	65
+	.size	.L.env.buf.77, 65
 	.type	.L.env.buf.78, @object
 .L.env.buf.78:
-	.zero	62
-	.size	.L.env.buf.78, 62
+	.zero	65
+	.size	.L.env.buf.78, 65
 	.type	.L.env.buf.79, @object
 .L.env.buf.79:
-	.zero	62
-	.size	.L.env.buf.79, 62
+	.zero	65
+	.size	.L.env.buf.79, 65
 	.type	.L.env.buf.80, @object
 .L.env.buf.80:
-	.zero	62
-	.size	.L.env.buf.80, 62
+	.zero	65
+	.size	.L.env.buf.80, 65
 	.type	.L.env.buf.81, @object
 .L.env.buf.81:
-	.zero	62
-	.size	.L.env.buf.81, 62
+	.zero	65
+	.size	.L.env.buf.81, 65
 	.type	.L.env.buf.82, @object
 .L.env.buf.82:
-	.zero	62
-	.size	.L.env.buf.82, 62
+	.zero	65
+	.size	.L.env.buf.82, 65
 	.type	.L.env.buf.83, @object
 .L.env.buf.83:
-	.zero	62
-	.size	.L.env.buf.83, 62
+	.zero	65
+	.size	.L.env.buf.83, 65
 	.type	.L.env.buf.84, @object
 .L.env.buf.84:
-	.zero	62
-	.size	.L.env.buf.84, 62
+	.zero	65
+	.size	.L.env.buf.84, 65
 	.type	.L.env.buf.85, @object
 .L.env.buf.85:
-	.zero	62
-	.size	.L.env.buf.85, 62
+	.zero	65
+	.size	.L.env.buf.85, 65
 	.type	.L.env.buf.86, @object
 .L.env.buf.86:
-	.zero	62
-	.size	.L.env.buf.86, 62
+	.zero	65
+	.size	.L.env.buf.86, 65
 	.type	.L.env.buf.87, @object
 .L.env.buf.87:
-	.zero	62
-	.size	.L.env.buf.87, 62
+	.zero	65
+	.size	.L.env.buf.87, 65
 	.type	.L.env.buf.88, @object
 .L.env.buf.88:
-	.zero	62
-	.size	.L.env.buf.88, 62
+	.zero	65
+	.size	.L.env.buf.88, 65
 	.type	.L.env.buf.89, @object
 .L.env.buf.89:
-	.zero	62
-	.size	.L.env.buf.89, 62
+	.zero	65
+	.size	.L.env.buf.89, 65
 	.type	.L.env.buf.90, @object
 .L.env.buf.90:
-	.zero	62
-	.size	.L.env.buf.90, 62
+	.zero	65
+	.size	.L.env.buf.90, 65
 	.type	.L.env.buf.91, @object
 .L.env.buf.91:
-	.zero	62
-	.size	.L.env.buf.91, 62
+	.zero	65
+	.size	.L.env.buf.91, 65
 	.type	.L.env.buf.92, @object
 .L.env.buf.92:
-	.zero	62
-	.size	.L.env.buf.92, 62
+	.zero	65
+	.size	.L.env.buf.92, 65
 	.type	.L.env.buf.93, @object
 .L.env.buf.93:
-	.zero	62
-	.size	.L.env.buf.93, 62
+	.zero	65
+	.size	.L.env.buf.93, 65
 	.type	.L.env.buf.94, @object
 .L.env.buf.94:
-	.zero	62
-	.size	.L.env.buf.94, 62
+	.zero	65
+	.size	.L.env.buf.94, 65
 	.type	.L.env.buf.95, @object
 .L.env.buf.95:
-	.zero	62
-	.size	.L.env.buf.95, 62
+	.zero	65
+	.size	.L.env.buf.95, 65
 	.type	.L.env.buf.96, @object
 .L.env.buf.96:
-	.zero	62
-	.size	.L.env.buf.96, 62
+	.zero	65
+	.size	.L.env.buf.96, 65
 	.type	.L.env.buf.97, @object
 .L.env.buf.97:
-	.zero	62
-	.size	.L.env.buf.97, 62
+	.zero	65
+	.size	.L.env.buf.97, 65
 	.type	.L.env.buf.98, @object
 .L.env.buf.98:
-	.zero	62
-	.size	.L.env.buf.98, 62
+	.zero	65
+	.size	.L.env.buf.98, 65
 	.type	.L.env.buf.99, @object
 .L.env.buf.99:
-	.zero	62
-	.size	.L.env.buf.99, 62
+	.zero	65
+	.size	.L.env.buf.99, 65
 	.type	.L.env.buf.100, @object
 .L.env.buf.100:
-	.zero	62
-	.size	.L.env.buf.100, 62
+	.zero	65
+	.size	.L.env.buf.100, 65
 	.type	.L.env.buf.101, @object
 .L.env.buf.101:
-	.zero	62
-	.size	.L.env.buf.101, 62
+	.zero	65
+	.size	.L.env.buf.101, 65
 	.type	.L.env.buf.102, @object
 .L.env.buf.102:
-	.zero	62
-	.size	.L.env.buf.102, 62
+	.zero	65
+	.size	.L.env.buf.102, 65
 	.type	.L.env.buf.103, @object
 .L.env.buf.103:
-	.zero	62
-	.size	.L.env.buf.103, 62
+	.zero	65
+	.size	.L.env.buf.103, 65
 	.type	.L.env.buf.104, @object
 .L.env.buf.104:
-	.zero	62
-	.size	.L.env.buf.104, 62
+	.zero	65
+	.size	.L.env.buf.104, 65
 	.type	.L.env.buf.105, @object
 .L.env.buf.105:
-	.zero	62
-	.size	.L.env.buf.105, 62
+	.zero	65
+	.size	.L.env.buf.105, 65
 	.type	.L.env.buf.106, @object
 .L.env.buf.106:
-	.zero	62
-	.size	.L.env.buf.106, 62
+	.zero	65
+	.size	.L.env.buf.106, 65
 	.type	.L.env.buf.107, @object
 .L.env.buf.107:
-	.zero	62
-	.size	.L.env.buf.107, 62
+	.zero	65
+	.size	.L.env.buf.107, 65
 	.type	.L.env.buf.108, @object
 .L.env.buf.108:
-	.zero	62
-	.size	.L.env.buf.108, 62
+	.zero	65
+	.size	.L.env.buf.108, 65
 	.type	.L.env.buf.109, @object
 .L.env.buf.109:
-	.zero	62
-	.size	.L.env.buf.109, 62
+	.zero	65
+	.size	.L.env.buf.109, 65
 	.type	.L.env.buf.110, @object
 .L.env.buf.110:
-	.zero	62
-	.size	.L.env.buf.110, 62
+	.zero	65
+	.size	.L.env.buf.110, 65
 	.type	.L.env.buf.111, @object
 .L.env.buf.111:
-	.zero	62
-	.size	.L.env.buf.111, 62
+	.zero	65
+	.size	.L.env.buf.111, 65
 	.type	.L.env.buf.112, @object
 .L.env.buf.112:
-	.zero	62
-	.size	.L.env.buf.112, 62
+	.zero	65
+	.size	.L.env.buf.112, 65
 	.type	.L.env.buf.113, @object
 .L.env.buf.113:
-	.zero	62
-	.size	.L.env.buf.113, 62
+	.zero	65
+	.size	.L.env.buf.113, 65
 	.type	.L.env.buf.114, @object
 .L.env.buf.114:
-	.zero	62
-	.size	.L.env.buf.114, 62
+	.zero	65
+	.size	.L.env.buf.114, 65
 	.type	.L.env.buf.115, @object
 .L.env.buf.115:
-	.zero	62
-	.size	.L.env.buf.115, 62
+	.zero	65
+	.size	.L.env.buf.115, 65
 	.type	.L.env.buf.116, @object
 .L.env.buf.116:
-	.zero	62
-	.size	.L.env.buf.116, 62
+	.zero	65
+	.size	.L.env.buf.116, 65
 	.type	.L.env.buf.117, @object
 .L.env.buf.117:
-	.zero	62
-	.size	.L.env.buf.117, 62
+	.zero	65
+	.size	.L.env.buf.117, 65
 	.type	.L.env.buf.118, @object
 .L.env.buf.118:
-	.zero	62
-	.size	.L.env.buf.118, 62
+	.zero	65
+	.size	.L.env.buf.118, 65
 	.type	.L.env.buf.119, @object
 .L.env.buf.119:
-	.zero	62
-	.size	.L.env.buf.119, 62
+	.zero	65
+	.size	.L.env.buf.119, 65
 	.type	.L.env.buf.120, @object
 .L.env.buf.120:
-	.zero	62
-	.size	.L.env.buf.120, 62
+	.zero	65
+	.size	.L.env.buf.120, 65
 	.type	.L.env.buf.121, @object
 .L.env.buf.121:
-	.zero	62
-	.size	.L.env.buf.121, 62
+	.zero	65
+	.size	.L.env.buf.121, 65
 	.type	.L.env.buf.122, @object
 .L.env.buf.122:
-	.zero	62
-	.size	.L.env.buf.122, 62
+	.zero	65
+	.size	.L.env.buf.122, 65
 	.type	.L.env.buf.123, @object
 .L.env.buf.123:
-	.zero	62
-	.size	.L.env.buf.123, 62
+	.zero	65
+	.size	.L.env.buf.123, 65
 	.type	.L.env.buf.124, @object
 .L.env.buf.124:
-	.zero	62
-	.size	.L.env.buf.124, 62
+	.zero	65
+	.size	.L.env.buf.124, 65
 	.type	.L.env.buf.125, @object
 .L.env.buf.125:
-	.zero	62
-	.size	.L.env.buf.125, 62
+	.zero	65
+	.size	.L.env.buf.125, 65
 	.type	.L.env.buf.126, @object
 .L.env.buf.126:
-	.zero	62
-	.size	.L.env.buf.126, 62
+	.zero	65
+	.size	.L.env.buf.126, 65
 	.type	.L.env.buf.127, @object
 .L.env.buf.127:
-	.zero	62
-	.size	.L.env.buf.127, 62
+	.zero	65
+	.size	.L.env.buf.127, 65
 	.type	.L.env.buf.128, @object
 .L.env.buf.128:
-	.zero	62
-	.size	.L.env.buf.128, 62
+	.zero	65
+	.size	.L.env.buf.128, 65
 	.type	.L.env.buf.129, @object
 .L.env.buf.129:
-	.zero	62
-	.size	.L.env.buf.129, 62
+	.zero	65
+	.size	.L.env.buf.129, 65
 	.type	.L.env.buf.130, @object
 .L.env.buf.130:
-	.zero	62
-	.size	.L.env.buf.130, 62
+	.zero	65
+	.size	.L.env.buf.130, 65
 	.type	.L.env.buf.131, @object
 .L.env.buf.131:
-	.zero	62
-	.size	.L.env.buf.131, 62
+	.zero	65
+	.size	.L.env.buf.131, 65
 	.type	.L.env.buf.132, @object
 .L.env.buf.132:
-	.zero	62
-	.size	.L.env.buf.132, 62
+	.zero	65
+	.size	.L.env.buf.132, 65
 	.type	.L.env.buf.133, @object
 .L.env.buf.133:
-	.zero	62
-	.size	.L.env.buf.133, 62
+	.zero	65
+	.size	.L.env.buf.133, 65
 	.type	.L.env.buf.134, @object
 .L.env.buf.134:
-	.zero	62
-	.size	.L.env.buf.134, 62
+	.zero	65
+	.size	.L.env.buf.134, 65
 	.type	.L.env.buf.135, @object
 .L.env.buf.135:
-	.zero	62
-	.size	.L.env.buf.135, 62
+	.zero	65
+	.size	.L.env.buf.135, 65
 	.type	.L.env.buf.136, @object
 .L.env.buf.136:
-	.zero	62
-	.size	.L.env.buf.136, 62
+	.zero	65
+	.size	.L.env.buf.136, 65
 	.type	.L.env.buf.137, @object
 .L.env.buf.137:
-	.zero	62
-	.size	.L.env.buf.137, 62
+	.zero	65
+	.size	.L.env.buf.137, 65
 	.type	.L.env.buf.138, @object
 .L.env.buf.138:
-	.zero	62
-	.size	.L.env.buf.138, 62
+	.zero	65
+	.size	.L.env.buf.138, 65
 	.type	.L.env.buf.139, @object
 .L.env.buf.139:
-	.zero	62
-	.size	.L.env.buf.139, 62
+	.zero	65
+	.size	.L.env.buf.139, 65
 	.type	.L.env.buf.140, @object
 .L.env.buf.140:
-	.zero	62
-	.size	.L.env.buf.140, 62
+	.zero	65
+	.size	.L.env.buf.140, 65
 	.type	.L.env.buf.141, @object
 .L.env.buf.141:
-	.zero	62
-	.size	.L.env.buf.141, 62
+	.zero	65
+	.size	.L.env.buf.141, 65
 	.type	.L.env.buf.142, @object
 .L.env.buf.142:
-	.zero	62
-	.size	.L.env.buf.142, 62
+	.zero	65
+	.size	.L.env.buf.142, 65
 	.type	.L.env.buf.143, @object
 .L.env.buf.143:
-	.zero	62
-	.size	.L.env.buf.143, 62
+	.zero	65
+	.size	.L.env.buf.143, 65
 	.type	.L.env.buf.144, @object
 .L.env.buf.144:
-	.zero	62
-	.size	.L.env.buf.144, 62
+	.zero	65
+	.size	.L.env.buf.144, 65
 	.type	.L.env.buf.145, @object
 .L.env.buf.145:
-	.zero	62
-	.size	.L.env.buf.145, 62
+	.zero	65
+	.size	.L.env.buf.145, 65
 	.type	.L.env.buf.146, @object
 .L.env.buf.146:
-	.zero	62
-	.size	.L.env.buf.146, 62
+	.zero	65
+	.size	.L.env.buf.146, 65
 	.type	.L.env.buf.147, @object
 .L.env.buf.147:
-	.zero	62
-	.size	.L.env.buf.147, 62
+	.zero	65
+	.size	.L.env.buf.147, 65
 	.type	.L.env.buf.148, @object
 .L.env.buf.148:
-	.zero	62
-	.size	.L.env.buf.148, 62
+	.zero	65
+	.size	.L.env.buf.148, 65
 	.type	.L.env.buf.149, @object
 .L.env.buf.149:
-	.zero	62
-	.size	.L.env.buf.149, 62
+	.zero	65
+	.size	.L.env.buf.149, 65
 	.type	.L.env.buf.150, @object
 .L.env.buf.150:
-	.zero	62
-	.size	.L.env.buf.150, 62
+	.zero	65
+	.size	.L.env.buf.150, 65
 	.type	.L.env.buf.151, @object
 .L.env.buf.151:
-	.zero	62
-	.size	.L.env.buf.151, 62
+	.zero	65
+	.size	.L.env.buf.151, 65
 	.type	.L.env.buf.152, @object
 .L.env.buf.152:
-	.zero	62
-	.size	.L.env.buf.152, 62
+	.zero	65
+	.size	.L.env.buf.152, 65
 	.type	.L.env.buf.153, @object
 .L.env.buf.153:
-	.zero	62
-	.size	.L.env.buf.153, 62
+	.zero	65
+	.size	.L.env.buf.153, 65
 	.type	.L.env.buf.154, @object
 .L.env.buf.154:
-	.zero	62
-	.size	.L.env.buf.154, 62
+	.zero	65
+	.size	.L.env.buf.154, 65
 	.type	.L.env.buf.155, @object
 .L.env.buf.155:
-	.zero	62
-	.size	.L.env.buf.155, 62
+	.zero	65
+	.size	.L.env.buf.155, 65
 	.type	.L.env.buf.156, @object
 .L.env.buf.156:
-	.zero	62
-	.size	.L.env.buf.156, 62
+	.zero	65
+	.size	.L.env.buf.156, 65
 	.type	.L.env.buf.157, @object
 .L.env.buf.157:
-	.zero	62
-	.size	.L.env.buf.157, 62
+	.zero	65
+	.size	.L.env.buf.157, 65
 	.type	.L.env.buf.158, @object
 .L.env.buf.158:
-	.zero	62
-	.size	.L.env.buf.158, 62
+	.zero	65
+	.size	.L.env.buf.158, 65
 	.type	.L.env.buf.159, @object
 .L.env.buf.159:
-	.zero	62
-	.size	.L.env.buf.159, 62
+	.zero	65
+	.size	.L.env.buf.159, 65
 	.type	.L.env.buf.160, @object
 .L.env.buf.160:
-	.zero	62
-	.size	.L.env.buf.160, 62
+	.zero	65
+	.size	.L.env.buf.160, 65
 	.type	.L.env.buf.161, @object
 .L.env.buf.161:
-	.zero	62
-	.size	.L.env.buf.161, 62
+	.zero	65
+	.size	.L.env.buf.161, 65
 	.type	.L.env.buf.162, @object
 .L.env.buf.162:
-	.zero	62
-	.size	.L.env.buf.162, 62
+	.zero	65
+	.size	.L.env.buf.162, 65
 	.type	.L.env.buf.163, @object
 .L.env.buf.163:
-	.zero	62
-	.size	.L.env.buf.163, 62
+	.zero	65
+	.size	.L.env.buf.163, 65
 	.type	.L.env.buf.164, @object
 .L.env.buf.164:
-	.zero	62
-	.size	.L.env.buf.164, 62
+	.zero	65
+	.size	.L.env.buf.164, 65
 	.type	.L.env.buf.165, @object
 .L.env.buf.165:
-	.zero	62
-	.size	.L.env.buf.165, 62
+	.zero	65
+	.size	.L.env.buf.165, 65
 	.type	.L.env.buf.166, @object
 .L.env.buf.166:
-	.zero	62
-	.size	.L.env.buf.166, 62
+	.zero	65
+	.size	.L.env.buf.166, 65
 	.type	.L.env.buf.167, @object
 .L.env.buf.167:
-	.zero	62
-	.size	.L.env.buf.167, 62
+	.zero	65
+	.size	.L.env.buf.167, 65
 	.type	.L.env.buf.168, @object
 .L.env.buf.168:
-	.zero	62
-	.size	.L.env.buf.168, 62
+	.zero	65
+	.size	.L.env.buf.168, 65
 	.type	.L.env.buf.169, @object
 .L.env.buf.169:
-	.zero	62
-	.size	.L.env.buf.169, 62
+	.zero	65
+	.size	.L.env.buf.169, 65
 	.type	.L.env.buf.170, @object
 .L.env.buf.170:
-	.zero	62
-	.size	.L.env.buf.170, 62
+	.zero	65
+	.size	.L.env.buf.170, 65
 	.type	.L.env.buf.171, @object
 .L.env.buf.171:
-	.zero	62
-	.size	.L.env.buf.171, 62
+	.zero	65
+	.size	.L.env.buf.171, 65
 	.type	.L.env.buf.172, @object
 .L.env.buf.172:
-	.zero	62
-	.size	.L.env.buf.172, 62
+	.zero	65
+	.size	.L.env.buf.172, 65
 	.type	.L.env.buf.173, @object
 .L.env.buf.173:
-	.zero	62
-	.size	.L.env.buf.173, 62
+	.zero	65
+	.size	.L.env.buf.173, 65
 	.type	.L.env.buf.174, @object
 .L.env.buf.174:
-	.zero	62
-	.size	.L.env.buf.174, 62
+	.zero	65
+	.size	.L.env.buf.174, 65
 	.type	.L.env.buf.175, @object
 .L.env.buf.175:
-	.zero	62
-	.size	.L.env.buf.175, 62
+	.zero	65
+	.size	.L.env.buf.175, 65
 	.type	.L.env.buf.176, @object
 .L.env.buf.176:
-	.zero	62
-	.size	.L.env.buf.176, 62
+	.zero	65
+	.size	.L.env.buf.176, 65
 	.type	.L.env.buf.177, @object
 .L.env.buf.177:
-	.zero	62
-	.size	.L.env.buf.177, 62
+	.zero	65
+	.size	.L.env.buf.177, 65
 	.type	.L.env.buf.178, @object
 .L.env.buf.178:
-	.zero	62
-	.size	.L.env.buf.178, 62
+	.zero	65
+	.size	.L.env.buf.178, 65
 	.type	.L.env.buf.179, @object
 .L.env.buf.179:
-	.zero	62
-	.size	.L.env.buf.179, 62
+	.zero	65
+	.size	.L.env.buf.179, 65
 	.type	.L.env.buf.180, @object
 .L.env.buf.180:
-	.zero	62
-	.size	.L.env.buf.180, 62
+	.zero	65
+	.size	.L.env.buf.180, 65
 	.type	.L.env.buf.181, @object
 .L.env.buf.181:
-	.zero	62
-	.size	.L.env.buf.181, 62
+	.zero	65
+	.size	.L.env.buf.181, 65
 	.type	.L.env.buf.182, @object
 .L.env.buf.182:
-	.zero	62
-	.size	.L.env.buf.182, 62
+	.zero	65
+	.size	.L.env.buf.182, 65
 	.type	.L.env.buf.183, @object
 .L.env.buf.183:
-	.zero	62
-	.size	.L.env.buf.183, 62
+	.zero	65
+	.size	.L.env.buf.183, 65
 	.type	.L.env.buf.184, @object
 .L.env.buf.184:
-	.zero	62
-	.size	.L.env.buf.184, 62
+	.zero	65
+	.size	.L.env.buf.184, 65
 	.type	.L.env.buf.185, @object
 .L.env.buf.185:
-	.zero	62
-	.size	.L.env.buf.185, 62
+	.zero	65
+	.size	.L.env.buf.185, 65
 	.type	.L.env.buf.186, @object
 .L.env.buf.186:
-	.zero	62
-	.size	.L.env.buf.186, 62
+	.zero	65
+	.size	.L.env.buf.186, 65
 	.type	.L.env.buf.187, @object
 .L.env.buf.187:
-	.zero	62
-	.size	.L.env.buf.187, 62
+	.zero	65
+	.size	.L.env.buf.187, 65
 	.type	.L.env.buf.188, @object
 .L.env.buf.188:
-	.zero	62
-	.size	.L.env.buf.188, 62
+	.zero	65
+	.size	.L.env.buf.188, 65
 	.type	.L.env.buf.189, @object
 .L.env.buf.189:
-	.zero	62
-	.size	.L.env.buf.189, 62
+	.zero	65
+	.size	.L.env.buf.189, 65
 	.type	.L.env.buf.190, @object
 .L.env.buf.190:
-	.zero	62
-	.size	.L.env.buf.190, 62
+	.zero	65
+	.size	.L.env.buf.190, 65
 	.type	.L.env.buf.191, @object
 .L.env.buf.191:
-	.zero	62
-	.size	.L.env.buf.191, 62
+	.zero	65
+	.size	.L.env.buf.191, 65
 	.type	.L.env.buf.192, @object
 .L.env.buf.192:
-	.zero	62
-	.size	.L.env.buf.192, 62
+	.zero	65
+	.size	.L.env.buf.192, 65
 	.type	.L.env.buf.193, @object
 .L.env.buf.193:
-	.zero	62
-	.size	.L.env.buf.193, 62
+	.zero	65
+	.size	.L.env.buf.193, 65
 	.type	.L.env.buf.194, @object
 .L.env.buf.194:
-	.zero	62
-	.size	.L.env.buf.194, 62
+	.zero	65
+	.size	.L.env.buf.194, 65
 	.type	.L.env.buf.195, @object
 .L.env.buf.195:
-	.zero	62
-	.size	.L.env.buf.195, 62
+	.zero	65
+	.size	.L.env.buf.195, 65
 	.type	.L.env.buf.196, @object
 .L.env.buf.196:
-	.zero	62
-	.size	.L.env.buf.196, 62
+	.zero	65
+	.size	.L.env.buf.196, 65
 	.type	.L.env.buf.197, @object
 .L.env.buf.197:
-	.zero	62
-	.size	.L.env.buf.197, 62
+	.zero	65
+	.size	.L.env.buf.197, 65
 	.type	.L.env.buf.198, @object
 .L.env.buf.198:
-	.zero	62
-	.size	.L.env.buf.198, 62
+	.zero	65
+	.size	.L.env.buf.198, 65
 	.type	.L.env.buf.199, @object
 .L.env.buf.199:
-	.zero	62
-	.size	.L.env.buf.199, 62
+	.zero	65
+	.size	.L.env.buf.199, 65
 	.type	.L.env.buf.200, @object
 .L.env.buf.200:
-	.zero	62
-	.size	.L.env.buf.200, 62
+	.zero	65
+	.size	.L.env.buf.200, 65
 	.type	.L.env.buf.201, @object
 .L.env.buf.201:
-	.zero	62
-	.size	.L.env.buf.201, 62
+	.zero	65
+	.size	.L.env.buf.201, 65
 	.type	.L.env.buf.202, @object
 .L.env.buf.202:
-	.zero	62
-	.size	.L.env.buf.202, 62
+	.zero	65
+	.size	.L.env.buf.202, 65
 	.type	.L.env.buf.203, @object
 .L.env.buf.203:
-	.zero	62
-	.size	.L.env.buf.203, 62
+	.zero	65
+	.size	.L.env.buf.203, 65
 	.type	.L.env.buf.204, @object
 .L.env.buf.204:
-	.zero	62
-	.size	.L.env.buf.204, 62
+	.zero	65
+	.size	.L.env.buf.204, 65
 	.type	.L.env.buf.205, @object
 .L.env.buf.205:
-	.zero	62
-	.size	.L.env.buf.205, 62
+	.zero	65
+	.size	.L.env.buf.205, 65
 	.type	.L.env.buf.206, @object
 .L.env.buf.206:
-	.zero	62
-	.size	.L.env.buf.206, 62
+	.zero	65
+	.size	.L.env.buf.206, 65
 	.type	.L.env.buf.207, @object
 .L.env.buf.207:
-	.zero	62
-	.size	.L.env.buf.207, 62
+	.zero	65
+	.size	.L.env.buf.207, 65
 	.type	.L.env.buf.208, @object
 .L.env.buf.208:
-	.zero	62
-	.size	.L.env.buf.208, 62
+	.zero	65
+	.size	.L.env.buf.208, 65
 	.type	.L.env.buf.209, @object
 .L.env.buf.209:
-	.zero	62
-	.size	.L.env.buf.209, 62
+	.zero	65
+	.size	.L.env.buf.209, 65
 	.type	.L.env.buf.210, @object
 .L.env.buf.210:
-	.zero	62
-	.size	.L.env.buf.210, 62
+	.zero	65
+	.size	.L.env.buf.210, 65
 	.type	.L.env.buf.211, @object
 .L.env.buf.211:
-	.zero	62
-	.size	.L.env.buf.211, 62
+	.zero	65
+	.size	.L.env.buf.211, 65
 	.type	.L.env.buf.212, @object
 .L.env.buf.212:
-	.zero	62
-	.size	.L.env.buf.212, 62
+	.zero	65
+	.size	.L.env.buf.212, 65
 	.type	.L.env.buf.213, @object
 .L.env.buf.213:
-	.zero	62
-	.size	.L.env.buf.213, 62
+	.zero	65
+	.size	.L.env.buf.213, 65
 	.type	.L.env.buf.214, @object
 .L.env.buf.214:
-	.zero	62
-	.size	.L.env.buf.214, 62
+	.zero	65
+	.size	.L.env.buf.214, 65
 	.type	.L.env.buf.215, @object
 .L.env.buf.215:
-	.zero	62
-	.size	.L.env.buf.215, 62
+	.zero	65
+	.size	.L.env.buf.215, 65
 	.type	.L.env.buf.216, @object
 .L.env.buf.216:
-	.zero	62
-	.size	.L.env.buf.216, 62
+	.zero	65
+	.size	.L.env.buf.216, 65
 	.type	.L.env.buf.217, @object
 .L.env.buf.217:
-	.zero	62
-	.size	.L.env.buf.217, 62
+	.zero	65
+	.size	.L.env.buf.217, 65
 	.type	.L.env.buf.218, @object
 .L.env.buf.218:
-	.zero	62
-	.size	.L.env.buf.218, 62
+	.zero	65
+	.size	.L.env.buf.218, 65
 	.type	.L.env.buf.219, @object
 .L.env.buf.219:
-	.zero	62
-	.size	.L.env.buf.219, 62
+	.zero	65
+	.size	.L.env.buf.219, 65
 	.type	.L.env.buf.220, @object
 .L.env.buf.220:
-	.zero	62
-	.size	.L.env.buf.220, 62
+	.zero	65
+	.size	.L.env.buf.220, 65
 	.type	.L.env.buf.221, @object
 .L.env.buf.221:
-	.zero	62
-	.size	.L.env.buf.221, 62
+	.zero	65
+	.size	.L.env.buf.221, 65
 	.type	.L.env.buf.222, @object
 .L.env.buf.222:
-	.zero	62
-	.size	.L.env.buf.222, 62
+	.zero	65
+	.size	.L.env.buf.222, 65
 	.type	.L.env.buf.223, @object
 .L.env.buf.223:
-	.zero	62
-	.size	.L.env.buf.223, 62
+	.zero	65
+	.size	.L.env.buf.223, 65
 	.type	.L.env.buf.224, @object
 .L.env.buf.224:
-	.zero	62
-	.size	.L.env.buf.224, 62
+	.zero	65
+	.size	.L.env.buf.224, 65
 	.type	.L.env.buf.225, @object
 .L.env.buf.225:
-	.zero	62
-	.size	.L.env.buf.225, 62
+	.zero	65
+	.size	.L.env.buf.225, 65
 	.type	.L.env.buf.226, @object
 .L.env.buf.226:
-	.zero	62
-	.size	.L.env.buf.226, 62
+	.zero	65
+	.size	.L.env.buf.226, 65
 	.type	.L.env.buf.227, @object
 .L.env.buf.227:
-	.zero	62
-	.size	.L.env.buf.227, 62
+	.zero	65
+	.size	.L.env.buf.227, 65
 	.type	.L.env.buf.228, @object
 .L.env.buf.228:
-	.zero	62
-	.size	.L.env.buf.228, 62
+	.zero	65
+	.size	.L.env.buf.228, 65
 	.type	.L.env.buf.229, @object
 .L.env.buf.229:
-	.zero	62
-	.size	.L.env.buf.229, 62
+	.zero	65
+	.size	.L.env.buf.229, 65
 	.type	.L.env.buf.230, @object
 .L.env.buf.230:
-	.zero	62
-	.size	.L.env.buf.230, 62
+	.zero	65
+	.size	.L.env.buf.230, 65
 	.type	.L.env.buf.231, @object
 .L.env.buf.231:
-	.zero	62
-	.size	.L.env.buf.231, 62
+	.zero	65
+	.size	.L.env.buf.231, 65
 	.type	.L.env.buf.232, @object
 .L.env.buf.232:
-	.zero	62
-	.size	.L.env.buf.232, 62
+	.zero	65
+	.size	.L.env.buf.232, 65
 	.type	.L.env.buf.233, @object
 .L.env.buf.233:
-	.zero	62
-	.size	.L.env.buf.233, 62
+	.zero	65
+	.size	.L.env.buf.233, 65
 	.type	.L.env.buf.234, @object
 .L.env.buf.234:
-	.zero	62
-	.size	.L.env.buf.234, 62
+	.zero	65
+	.size	.L.env.buf.234, 65
 	.type	.L.env.buf.235, @object
 .L.env.buf.235:
-	.zero	62
-	.size	.L.env.buf.235, 62
+	.zero	65
+	.size	.L.env.buf.235, 65
 	.type	.L.env.buf.236, @object
 .L.env.buf.236:
-	.zero	62
-	.size	.L.env.buf.236, 62
+	.zero	65
+	.size	.L.env.buf.236, 65
 	.type	.L.env.buf.237, @object
 .L.env.buf.237:
-	.zero	62
-	.size	.L.env.buf.237, 62
+	.zero	65
+	.size	.L.env.buf.237, 65
 	.type	.L.env.buf.238, @object
 .L.env.buf.238:
-	.zero	62
-	.size	.L.env.buf.238, 62
+	.zero	65
+	.size	.L.env.buf.238, 65
 	.type	.L.env.buf.239, @object
 .L.env.buf.239:
-	.zero	62
-	.size	.L.env.buf.239, 62
+	.zero	65
+	.size	.L.env.buf.239, 65
 	.type	.L.env.buf.240, @object
 .L.env.buf.240:
-	.zero	62
-	.size	.L.env.buf.240, 62
+	.zero	65
+	.size	.L.env.buf.240, 65
 	.type	.L.env.buf.241, @object
 .L.env.buf.241:
-	.zero	62
-	.size	.L.env.buf.241, 62
+	.zero	65
+	.size	.L.env.buf.241, 65
 	.type	.L.env.buf.242, @object
 .L.env.buf.242:
-	.zero	62
-	.size	.L.env.buf.242, 62
+	.zero	65
+	.size	.L.env.buf.242, 65
 	.type	.L.env.buf.243, @object
 .L.env.buf.243:
-	.zero	62
-	.size	.L.env.buf.243, 62
+	.zero	65
+	.size	.L.env.buf.243, 65
 	.type	.L.env.buf.244, @object
 .L.env.buf.244:
-	.zero	62
-	.size	.L.env.buf.244, 62
+	.zero	65
+	.size	.L.env.buf.244, 65
 	.type	.L.env.buf.245, @object
 .L.env.buf.245:
-	.zero	62
-	.size	.L.env.buf.245, 62
+	.zero	65
+	.size	.L.env.buf.245, 65
 	.type	.L.env.buf.246, @object
 .L.env.buf.246:
-	.zero	62
-	.size	.L.env.buf.246, 62
+	.zero	65
+	.size	.L.env.buf.246, 65
 	.type	.L.env.buf.247, @object
 .L.env.buf.247:
-	.zero	62
-	.size	.L.env.buf.247, 62
+	.zero	65
+	.size	.L.env.buf.247, 65
 	.type	.L.env.buf.248, @object
 .L.env.buf.248:
-	.zero	62
-	.size	.L.env.buf.248, 62
+	.zero	65
+	.size	.L.env.buf.248, 65
 	.type	.L.env.buf.249, @object
 .L.env.buf.249:
-	.zero	62
-	.size	.L.env.buf.249, 62
+	.zero	65
+	.size	.L.env.buf.249, 65
 	.type	.L.env.buf.250, @object
 .L.env.buf.250:
-	.zero	62
-	.size	.L.env.buf.250, 62
+	.zero	65
+	.size	.L.env.buf.250, 65
 	.type	.L.env.buf.251, @object
 .L.env.buf.251:
-	.zero	62
-	.size	.L.env.buf.251, 62
+	.zero	65
+	.size	.L.env.buf.251, 65
 	.type	.L.env.buf.252, @object
 .L.env.buf.252:
-	.zero	62
-	.size	.L.env.buf.252, 62
+	.zero	65
+	.size	.L.env.buf.252, 65
 	.type	.L.env.buf.253, @object
 .L.env.buf.253:
-	.zero	62
-	.size	.L.env.buf.253, 62
+	.zero	65
+	.size	.L.env.buf.253, 65
 	.type	.L.env.buf.254, @object
 .L.env.buf.254:
-	.zero	62
-	.size	.L.env.buf.254, 62
+	.zero	65
+	.size	.L.env.buf.254, 65
 	.type	.L.env.buf.255, @object
 .L.env.buf.255:
-	.zero	62
-	.size	.L.env.buf.255, 62
+	.zero	65
+	.size	.L.env.buf.255, 65
 	.type	.L.env.buf.256, @object
 .L.env.buf.256:
-	.zero	62
-	.size	.L.env.buf.256, 62
+	.zero	65
+	.size	.L.env.buf.256, 65
 	.type	.L.env.buf.257, @object
 .L.env.buf.257:
-	.zero	62
-	.size	.L.env.buf.257, 62
+	.zero	65
+	.size	.L.env.buf.257, 65
 	.type	.L.env.buf.258, @object
 .L.env.buf.258:
-	.zero	62
-	.size	.L.env.buf.258, 62
+	.zero	65
+	.size	.L.env.buf.258, 65
 	.type	.L.env.buf.259, @object
 .L.env.buf.259:
-	.zero	62
-	.size	.L.env.buf.259, 62
+	.zero	65
+	.size	.L.env.buf.259, 65
 	.type	.L.env.buf.260, @object
 .L.env.buf.260:
-	.zero	62
-	.size	.L.env.buf.260, 62
+	.zero	65
+	.size	.L.env.buf.260, 65
 	.type	.L.env.buf.261, @object
 .L.env.buf.261:
-	.zero	62
-	.size	.L.env.buf.261, 62
+	.zero	65
+	.size	.L.env.buf.261, 65
 	.type	.L.env.buf.262, @object
 .L.env.buf.262:
-	.zero	62
-	.size	.L.env.buf.262, 62
+	.zero	65
+	.size	.L.env.buf.262, 65
 	.type	.L.env.buf.263, @object
 .L.env.buf.263:
-	.zero	62
-	.size	.L.env.buf.263, 62
+	.zero	65
+	.size	.L.env.buf.263, 65
 	.type	.L.env.buf.264, @object
 .L.env.buf.264:
-	.zero	62
-	.size	.L.env.buf.264, 62
+	.zero	65
+	.size	.L.env.buf.264, 65
 	# Bundled assemblies data
 
 	.type	bundled_assemblies, @object
 	.global	bundled_assemblies
 
 	.section	.data, "aw", @progbits
-	.p2align	2
+	.p2align	3
 bundled_assemblies:
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.0	# name
+	.zero	4
+	.quad	.L.env.buf.0	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.1	# name
+	.zero	4
+	.quad	.L.env.buf.1	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.2	# name
+	.zero	4
+	.quad	.L.env.buf.2	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.3	# name
+	.zero	4
+	.quad	.L.env.buf.3	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.4	# name
+	.zero	4
+	.quad	.L.env.buf.4	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.5	# name
+	.zero	4
+	.quad	.L.env.buf.5	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.6	# name
+	.zero	4
+	.quad	.L.env.buf.6	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.7	# name
+	.zero	4
+	.quad	.L.env.buf.7	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.8	# name
+	.zero	4
+	.quad	.L.env.buf.8	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.9	# name
+	.zero	4
+	.quad	.L.env.buf.9	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.10	# name
+	.zero	4
+	.quad	.L.env.buf.10	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.11	# name
+	.zero	4
+	.quad	.L.env.buf.11	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.12	# name
+	.zero	4
+	.quad	.L.env.buf.12	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.13	# name
+	.zero	4
+	.quad	.L.env.buf.13	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.14	# name
+	.zero	4
+	.quad	.L.env.buf.14	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.15	# name
+	.zero	4
+	.quad	.L.env.buf.15	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.16	# name
+	.zero	4
+	.quad	.L.env.buf.16	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.17	# name
+	.zero	4
+	.quad	.L.env.buf.17	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.18	# name
+	.zero	4
+	.quad	.L.env.buf.18	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.19	# name
+	.zero	4
+	.quad	.L.env.buf.19	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.20	# name
+	.zero	4
+	.quad	.L.env.buf.20	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.21	# name
+	.zero	4
+	.quad	.L.env.buf.21	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.22	# name
+	.zero	4
+	.quad	.L.env.buf.22	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.23	# name
+	.zero	4
+	.quad	.L.env.buf.23	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.24	# name
+	.zero	4
+	.quad	.L.env.buf.24	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.25	# name
+	.zero	4
+	.quad	.L.env.buf.25	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.26	# name
+	.zero	4
+	.quad	.L.env.buf.26	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.27	# name
+	.zero	4
+	.quad	.L.env.buf.27	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.28	# name
+	.zero	4
+	.quad	.L.env.buf.28	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.29	# name
+	.zero	4
+	.quad	.L.env.buf.29	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.30	# name
+	.zero	4
+	.quad	.L.env.buf.30	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.31	# name
+	.zero	4
+	.quad	.L.env.buf.31	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.32	# name
+	.zero	4
+	.quad	.L.env.buf.32	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.33	# name
+	.zero	4
+	.quad	.L.env.buf.33	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.34	# name
+	.zero	4
+	.quad	.L.env.buf.34	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.35	# name
+	.zero	4
+	.quad	.L.env.buf.35	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.36	# name
+	.zero	4
+	.quad	.L.env.buf.36	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.37	# name
+	.zero	4
+	.quad	.L.env.buf.37	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.38	# name
+	.zero	4
+	.quad	.L.env.buf.38	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.39	# name
+	.zero	4
+	.quad	.L.env.buf.39	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.40	# name
+	.zero	4
+	.quad	.L.env.buf.40	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.41	# name
+	.zero	4
+	.quad	.L.env.buf.41	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.42	# name
+	.zero	4
+	.quad	.L.env.buf.42	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.43	# name
+	.zero	4
+	.quad	.L.env.buf.43	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.44	# name
+	.zero	4
+	.quad	.L.env.buf.44	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.45	# name
+	.zero	4
+	.quad	.L.env.buf.45	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.46	# name
+	.zero	4
+	.quad	.L.env.buf.46	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.47	# name
+	.zero	4
+	.quad	.L.env.buf.47	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.48	# name
+	.zero	4
+	.quad	.L.env.buf.48	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.49	# name
+	.zero	4
+	.quad	.L.env.buf.49	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.50	# name
+	.zero	4
+	.quad	.L.env.buf.50	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.51	# name
+	.zero	4
+	.quad	.L.env.buf.51	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.52	# name
+	.zero	4
+	.quad	.L.env.buf.52	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.53	# name
+	.zero	4
+	.quad	.L.env.buf.53	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.54	# name
+	.zero	4
+	.quad	.L.env.buf.54	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.55	# name
+	.zero	4
+	.quad	.L.env.buf.55	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.56	# name
+	.zero	4
+	.quad	.L.env.buf.56	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.57	# name
+	.zero	4
+	.quad	.L.env.buf.57	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.58	# name
+	.zero	4
+	.quad	.L.env.buf.58	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.59	# name
+	.zero	4
+	.quad	.L.env.buf.59	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.60	# name
+	.zero	4
+	.quad	.L.env.buf.60	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.61	# name
+	.zero	4
+	.quad	.L.env.buf.61	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.62	# name
+	.zero	4
+	.quad	.L.env.buf.62	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.63	# name
+	.zero	4
+	.quad	.L.env.buf.63	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.64	# name
+	.zero	4
+	.quad	.L.env.buf.64	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.65	# name
+	.zero	4
+	.quad	.L.env.buf.65	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.66	# name
+	.zero	4
+	.quad	.L.env.buf.66	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.67	# name
+	.zero	4
+	.quad	.L.env.buf.67	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.68	# name
+	.zero	4
+	.quad	.L.env.buf.68	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.69	# name
+	.zero	4
+	.quad	.L.env.buf.69	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.70	# name
+	.zero	4
+	.quad	.L.env.buf.70	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.71	# name
+	.zero	4
+	.quad	.L.env.buf.71	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.72	# name
+	.zero	4
+	.quad	.L.env.buf.72	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.73	# name
+	.zero	4
+	.quad	.L.env.buf.73	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.74	# name
+	.zero	4
+	.quad	.L.env.buf.74	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.75	# name
+	.zero	4
+	.quad	.L.env.buf.75	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.76	# name
+	.zero	4
+	.quad	.L.env.buf.76	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.77	# name
+	.zero	4
+	.quad	.L.env.buf.77	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.78	# name
+	.zero	4
+	.quad	.L.env.buf.78	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.79	# name
+	.zero	4
+	.quad	.L.env.buf.79	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.80	# name
+	.zero	4
+	.quad	.L.env.buf.80	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.81	# name
+	.zero	4
+	.quad	.L.env.buf.81	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.82	# name
+	.zero	4
+	.quad	.L.env.buf.82	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.83	# name
+	.zero	4
+	.quad	.L.env.buf.83	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.84	# name
+	.zero	4
+	.quad	.L.env.buf.84	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.85	# name
+	.zero	4
+	.quad	.L.env.buf.85	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.86	# name
+	.zero	4
+	.quad	.L.env.buf.86	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.87	# name
+	.zero	4
+	.quad	.L.env.buf.87	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.88	# name
+	.zero	4
+	.quad	.L.env.buf.88	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.89	# name
+	.zero	4
+	.quad	.L.env.buf.89	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.90	# name
+	.zero	4
+	.quad	.L.env.buf.90	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.91	# name
+	.zero	4
+	.quad	.L.env.buf.91	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.92	# name
+	.zero	4
+	.quad	.L.env.buf.92	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.93	# name
+	.zero	4
+	.quad	.L.env.buf.93	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.94	# name
+	.zero	4
+	.quad	.L.env.buf.94	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.95	# name
+	.zero	4
+	.quad	.L.env.buf.95	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.96	# name
+	.zero	4
+	.quad	.L.env.buf.96	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.97	# name
+	.zero	4
+	.quad	.L.env.buf.97	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.98	# name
+	.zero	4
+	.quad	.L.env.buf.98	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.99	# name
+	.zero	4
+	.quad	.L.env.buf.99	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.100	# name
+	.zero	4
+	.quad	.L.env.buf.100	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.101	# name
+	.zero	4
+	.quad	.L.env.buf.101	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.102	# name
+	.zero	4
+	.quad	.L.env.buf.102	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.103	# name
+	.zero	4
+	.quad	.L.env.buf.103	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.104	# name
+	.zero	4
+	.quad	.L.env.buf.104	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.105	# name
+	.zero	4
+	.quad	.L.env.buf.105	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.106	# name
+	.zero	4
+	.quad	.L.env.buf.106	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.107	# name
+	.zero	4
+	.quad	.L.env.buf.107	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.108	# name
+	.zero	4
+	.quad	.L.env.buf.108	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.109	# name
+	.zero	4
+	.quad	.L.env.buf.109	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.110	# name
+	.zero	4
+	.quad	.L.env.buf.110	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.111	# name
+	.zero	4
+	.quad	.L.env.buf.111	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.112	# name
+	.zero	4
+	.quad	.L.env.buf.112	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.113	# name
+	.zero	4
+	.quad	.L.env.buf.113	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.114	# name
+	.zero	4
+	.quad	.L.env.buf.114	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.115	# name
+	.zero	4
+	.quad	.L.env.buf.115	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.116	# name
+	.zero	4
+	.quad	.L.env.buf.116	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.117	# name
+	.zero	4
+	.quad	.L.env.buf.117	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.118	# name
+	.zero	4
+	.quad	.L.env.buf.118	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.119	# name
+	.zero	4
+	.quad	.L.env.buf.119	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.120	# name
+	.zero	4
+	.quad	.L.env.buf.120	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.121	# name
+	.zero	4
+	.quad	.L.env.buf.121	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.122	# name
+	.zero	4
+	.quad	.L.env.buf.122	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.123	# name
+	.zero	4
+	.quad	.L.env.buf.123	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.124	# name
+	.zero	4
+	.quad	.L.env.buf.124	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.125	# name
+	.zero	4
+	.quad	.L.env.buf.125	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.126	# name
+	.zero	4
+	.quad	.L.env.buf.126	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.127	# name
+	.zero	4
+	.quad	.L.env.buf.127	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.128	# name
+	.zero	4
+	.quad	.L.env.buf.128	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.129	# name
+	.zero	4
+	.quad	.L.env.buf.129	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.130	# name
+	.zero	4
+	.quad	.L.env.buf.130	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.131	# name
+	.zero	4
+	.quad	.L.env.buf.131	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.132	# name
+	.zero	4
+	.quad	.L.env.buf.132	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.133	# name
+	.zero	4
+	.quad	.L.env.buf.133	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.134	# name
+	.zero	4
+	.quad	.L.env.buf.134	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.135	# name
+	.zero	4
+	.quad	.L.env.buf.135	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.136	# name
+	.zero	4
+	.quad	.L.env.buf.136	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.137	# name
+	.zero	4
+	.quad	.L.env.buf.137	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.138	# name
+	.zero	4
+	.quad	.L.env.buf.138	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.139	# name
+	.zero	4
+	.quad	.L.env.buf.139	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.140	# name
+	.zero	4
+	.quad	.L.env.buf.140	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.141	# name
+	.zero	4
+	.quad	.L.env.buf.141	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.142	# name
+	.zero	4
+	.quad	.L.env.buf.142	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.143	# name
+	.zero	4
+	.quad	.L.env.buf.143	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.144	# name
+	.zero	4
+	.quad	.L.env.buf.144	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.145	# name
+	.zero	4
+	.quad	.L.env.buf.145	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.146	# name
+	.zero	4
+	.quad	.L.env.buf.146	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.147	# name
+	.zero	4
+	.quad	.L.env.buf.147	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.148	# name
+	.zero	4
+	.quad	.L.env.buf.148	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.149	# name
+	.zero	4
+	.quad	.L.env.buf.149	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.150	# name
+	.zero	4
+	.quad	.L.env.buf.150	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.151	# name
+	.zero	4
+	.quad	.L.env.buf.151	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.152	# name
+	.zero	4
+	.quad	.L.env.buf.152	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.153	# name
+	.zero	4
+	.quad	.L.env.buf.153	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.154	# name
+	.zero	4
+	.quad	.L.env.buf.154	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.155	# name
+	.zero	4
+	.quad	.L.env.buf.155	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.156	# name
+	.zero	4
+	.quad	.L.env.buf.156	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.157	# name
+	.zero	4
+	.quad	.L.env.buf.157	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.158	# name
+	.zero	4
+	.quad	.L.env.buf.158	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.159	# name
+	.zero	4
+	.quad	.L.env.buf.159	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.160	# name
+	.zero	4
+	.quad	.L.env.buf.160	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.161	# name
+	.zero	4
+	.quad	.L.env.buf.161	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.162	# name
+	.zero	4
+	.quad	.L.env.buf.162	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.163	# name
+	.zero	4
+	.quad	.L.env.buf.163	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.164	# name
+	.zero	4
+	.quad	.L.env.buf.164	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.165	# name
+	.zero	4
+	.quad	.L.env.buf.165	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.166	# name
+	.zero	4
+	.quad	.L.env.buf.166	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.167	# name
+	.zero	4
+	.quad	.L.env.buf.167	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.168	# name
+	.zero	4
+	.quad	.L.env.buf.168	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.169	# name
+	.zero	4
+	.quad	.L.env.buf.169	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.170	# name
+	.zero	4
+	.quad	.L.env.buf.170	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.171	# name
+	.zero	4
+	.quad	.L.env.buf.171	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.172	# name
+	.zero	4
+	.quad	.L.env.buf.172	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.173	# name
+	.zero	4
+	.quad	.L.env.buf.173	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.174	# name
+	.zero	4
+	.quad	.L.env.buf.174	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.175	# name
+	.zero	4
+	.quad	.L.env.buf.175	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.176	# name
+	.zero	4
+	.quad	.L.env.buf.176	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.177	# name
+	.zero	4
+	.quad	.L.env.buf.177	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.178	# name
+	.zero	4
+	.quad	.L.env.buf.178	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.179	# name
+	.zero	4
+	.quad	.L.env.buf.179	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.180	# name
+	.zero	4
+	.quad	.L.env.buf.180	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.181	# name
+	.zero	4
+	.quad	.L.env.buf.181	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.182	# name
+	.zero	4
+	.quad	.L.env.buf.182	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.183	# name
+	.zero	4
+	.quad	.L.env.buf.183	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.184	# name
+	.zero	4
+	.quad	.L.env.buf.184	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.185	# name
+	.zero	4
+	.quad	.L.env.buf.185	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.186	# name
+	.zero	4
+	.quad	.L.env.buf.186	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.187	# name
+	.zero	4
+	.quad	.L.env.buf.187	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.188	# name
+	.zero	4
+	.quad	.L.env.buf.188	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.189	# name
+	.zero	4
+	.quad	.L.env.buf.189	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.190	# name
+	.zero	4
+	.quad	.L.env.buf.190	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.191	# name
+	.zero	4
+	.quad	.L.env.buf.191	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.192	# name
+	.zero	4
+	.quad	.L.env.buf.192	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.193	# name
+	.zero	4
+	.quad	.L.env.buf.193	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.194	# name
+	.zero	4
+	.quad	.L.env.buf.194	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.195	# name
+	.zero	4
+	.quad	.L.env.buf.195	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.196	# name
+	.zero	4
+	.quad	.L.env.buf.196	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.197	# name
+	.zero	4
+	.quad	.L.env.buf.197	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.198	# name
+	.zero	4
+	.quad	.L.env.buf.198	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.199	# name
+	.zero	4
+	.quad	.L.env.buf.199	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.200	# name
+	.zero	4
+	.quad	.L.env.buf.200	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.201	# name
+	.zero	4
+	.quad	.L.env.buf.201	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.202	# name
+	.zero	4
+	.quad	.L.env.buf.202	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.203	# name
+	.zero	4
+	.quad	.L.env.buf.203	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.204	# name
+	.zero	4
+	.quad	.L.env.buf.204	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.205	# name
+	.zero	4
+	.quad	.L.env.buf.205	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.206	# name
+	.zero	4
+	.quad	.L.env.buf.206	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.207	# name
+	.zero	4
+	.quad	.L.env.buf.207	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.208	# name
+	.zero	4
+	.quad	.L.env.buf.208	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.209	# name
+	.zero	4
+	.quad	.L.env.buf.209	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.210	# name
+	.zero	4
+	.quad	.L.env.buf.210	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.211	# name
+	.zero	4
+	.quad	.L.env.buf.211	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.212	# name
+	.zero	4
+	.quad	.L.env.buf.212	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.213	# name
+	.zero	4
+	.quad	.L.env.buf.213	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.214	# name
+	.zero	4
+	.quad	.L.env.buf.214	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.215	# name
+	.zero	4
+	.quad	.L.env.buf.215	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.216	# name
+	.zero	4
+	.quad	.L.env.buf.216	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.217	# name
+	.zero	4
+	.quad	.L.env.buf.217	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.218	# name
+	.zero	4
+	.quad	.L.env.buf.218	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.219	# name
+	.zero	4
+	.quad	.L.env.buf.219	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.220	# name
+	.zero	4
+	.quad	.L.env.buf.220	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.221	# name
+	.zero	4
+	.quad	.L.env.buf.221	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.222	# name
+	.zero	4
+	.quad	.L.env.buf.222	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.223	# name
+	.zero	4
+	.quad	.L.env.buf.223	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.224	# name
+	.zero	4
+	.quad	.L.env.buf.224	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.225	# name
+	.zero	4
+	.quad	.L.env.buf.225	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.226	# name
+	.zero	4
+	.quad	.L.env.buf.226	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.227	# name
+	.zero	4
+	.quad	.L.env.buf.227	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.228	# name
+	.zero	4
+	.quad	.L.env.buf.228	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.229	# name
+	.zero	4
+	.quad	.L.env.buf.229	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.230	# name
+	.zero	4
+	.quad	.L.env.buf.230	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.231	# name
+	.zero	4
+	.quad	.L.env.buf.231	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.232	# name
+	.zero	4
+	.quad	.L.env.buf.232	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.233	# name
+	.zero	4
+	.quad	.L.env.buf.233	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.234	# name
+	.zero	4
+	.quad	.L.env.buf.234	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.235	# name
+	.zero	4
+	.quad	.L.env.buf.235	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.236	# name
+	.zero	4
+	.quad	.L.env.buf.236	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.237	# name
+	.zero	4
+	.quad	.L.env.buf.237	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.238	# name
+	.zero	4
+	.quad	.L.env.buf.238	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.239	# name
+	.zero	4
+	.quad	.L.env.buf.239	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.240	# name
+	.zero	4
+	.quad	.L.env.buf.240	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.241	# name
+	.zero	4
+	.quad	.L.env.buf.241	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.242	# name
+	.zero	4
+	.quad	.L.env.buf.242	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.243	# name
+	.zero	4
+	.quad	.L.env.buf.243	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.244	# name
+	.zero	4
+	.quad	.L.env.buf.244	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.245	# name
+	.zero	4
+	.quad	.L.env.buf.245	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.246	# name
+	.zero	4
+	.quad	.L.env.buf.246	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.247	# name
+	.zero	4
+	.quad	.L.env.buf.247	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.248	# name
+	.zero	4
+	.quad	.L.env.buf.248	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.249	# name
+	.zero	4
+	.quad	.L.env.buf.249	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.250	# name
+	.zero	4
+	.quad	.L.env.buf.250	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.251	# name
+	.zero	4
+	.quad	.L.env.buf.251	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.252	# name
+	.zero	4
+	.quad	.L.env.buf.252	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.253	# name
+	.zero	4
+	.quad	.L.env.buf.253	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.254	# name
+	.zero	4
+	.quad	.L.env.buf.254	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.255	# name
+	.zero	4
+	.quad	.L.env.buf.255	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.256	# name
+	.zero	4
+	.quad	.L.env.buf.256	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.257	# name
+	.zero	4
+	.quad	.L.env.buf.257	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.258	# name
+	.zero	4
+	.quad	.L.env.buf.258	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.259	# name
+	.zero	4
+	.quad	.L.env.buf.259	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.260	# name
+	.zero	4
+	.quad	.L.env.buf.260	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.261	# name
+	.zero	4
+	.quad	.L.env.buf.261	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.262	# name
+	.zero	4
+	.quad	.L.env.buf.262	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.263	# name
+	.zero	4
+	.quad	.L.env.buf.263	# name
 
 	.long	0xffffffff	# apk_fd
 	.long	0x0	# data_offset
 	.long	0x0	# data_size
-	.long	0x0	# data
+	.zero	4
+	.quad	0x0	# data
 	.long	0x0	# name_length
-	.long	.L.env.buf.264	# name
+	.zero	4
+	.quad	.L.env.buf.264	# name
 
-	.size	bundled_assemblies, 6360
+	.size	bundled_assemblies, 10600
 	# Assembly store individual assembly data
 	.type	assembly_store_bundled_assemblies, @object
 	.global	assembly_store_bundled_assemblies
@@ -2975,201 +3505,201 @@ assembly_stores:
 	.global	dso_cache
 
 	.section	.data, "aw", @progbits
-	.p2align	2
+	.p2align	3
 dso_cache:
-	.quad	0x5e00610	# hash, from name: libxamarin-debug-app-helper.so
+	.quad	0x9f1c8f01343d9f5	# hash, from name: mono-component-debugger
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.13	# name: libxamarin-debug-app-helper.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.13	# name: libmono-component-debugger.so
+	.quad	0x0	# handle
 
-	.quad	0x93625cd	# hash, from name: libSystem.Security.Cryptography.Native.Android
+	.quad	0x14ceaea6ae80c29d	# hash, from name: libSystem.Security.Cryptography.Native.Android
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.14	# name: libSystem.Security.Cryptography.Native.Android.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.14	# name: libSystem.Security.Cryptography.Native.Android.so
+	.quad	0x0	# handle
 
-	.quad	0xdaac0a4	# hash, from name: monodroid.so
+	.quad	0x2525308b79a4c498	# hash, from name: xamarin-debug-app-helper.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.15	# name: libmonodroid.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.15	# name: libxamarin-debug-app-helper.so
+	.quad	0x0	# handle
 
-	.quad	0x113ac2a1	# hash, from name: libmono-component-debugger
+	.quad	0x318a1887b586c370	# hash, from name: libmono-component-hot_reload
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.16	# name: libmono-component-debugger.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.16	# name: libmono-component-hot_reload.so
+	.quad	0x0	# handle
 
-	.quad	0x1dd6b3a3	# hash, from name: System.Native.so
+	.quad	0x4e4f7fd9c4797a21	# hash, from name: libmono-component-hot_reload.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.17	# name: libSystem.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.17	# name: libmono-component-hot_reload.so
+	.quad	0x0	# handle
 
-	.quad	0x2a81d481	# hash, from name: libxamarin-debug-app-helper
+	.quad	0x51e4357ecbccbaba	# hash, from name: System.Security.Cryptography.Native.Android.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.18	# name: libxamarin-debug-app-helper.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.18	# name: libSystem.Security.Cryptography.Native.Android.so
+	.quad	0x0	# handle
 
-	.quad	0x2c9b28d2	# hash, from name: monodroid
+	.quad	0x528f0afdb0921c40	# hash, from name: libSystem.Native.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.19	# name: libmonodroid.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.19	# name: libSystem.Native.so
+	.quad	0x0	# handle
 
-	.quad	0x30366e51	# hash, from name: libmono-component-hot_reload.so
+	.quad	0x544895645d121a38	# hash, from name: libmono-component-debugger
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.20	# name: libmono-component-hot_reload.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.20	# name: libmono-component-debugger.so
+	.quad	0x0	# handle
 
-	.quad	0x33e41c10	# hash, from name: System.Security.Cryptography.Native.Android.so
+	.quad	0x578abc5300e958b7	# hash, from name: libSystem.Native
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.21	# name: libSystem.Security.Cryptography.Native.Android.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.21	# name: libSystem.Native.so
+	.quad	0x0	# handle
 
-	.quad	0x50f66170	# hash, from name: mono-component-hot_reload
+	.quad	0x5c15a2333b0a0c84	# hash, from name: libxamarin-debug-app-helper.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.22	# name: libmono-component-hot_reload.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.22	# name: libxamarin-debug-app-helper.so
+	.quad	0x0	# handle
 
-	.quad	0x5360f89d	# hash, from name: System.Security.Cryptography.Native.Android
+	.quad	0x5ff274549d146133	# hash, from name: System.IO.Compression.Native.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.23	# name: libSystem.Security.Cryptography.Native.Android.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.23	# name: libSystem.IO.Compression.Native.so
+	.quad	0x0	# handle
 
-	.quad	0x5a5d38a3	# hash, from name: xamarin-debug-app-helper.so
+	.quad	0x65d94d818a60a3a7	# hash, from name: monodroid.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.24	# name: libxamarin-debug-app-helper.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.24	# name: libmonodroid.so
+	.quad	0x0	# handle
 
-	.quad	0x5b9ade60	# hash, from name: libSystem.Native
+	.quad	0x6a0685fd2cfebf80	# hash, from name: libSystem.IO.Compression.Native.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.25	# name: libSystem.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.25	# name: libSystem.IO.Compression.Native.so
+	.quad	0x0	# handle
 
-	.quad	0x74cebc58	# hash, from name: System.IO.Compression.Native
+	.quad	0x6b6b0562539657f0	# hash, from name: libmonosgen-2.0
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.26	# name: libSystem.IO.Compression.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.26	# name: libmonosgen-2.0.so
+	.quad	0x0	# handle
 
-	.quad	0x79d6a0ba	# hash, from name: libSystem.Native.so
+	.quad	0x6cf9239740e64f9d	# hash, from name: libxamarin-debug-app-helper
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.27	# name: libSystem.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.27	# name: libxamarin-debug-app-helper.so
+	.quad	0x0	# handle
 
-	.quad	0x7b8c1361	# hash, from name: System.IO.Compression.Native.so
+	.quad	0x74778f1b27881b01	# hash, from name: libmonodroid.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.28	# name: libSystem.IO.Compression.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.28	# name: libmonodroid.so
+	.quad	0x0	# handle
 
-	.quad	0x7d3da8be	# hash, from name: libSystem.Security.Cryptography.Native.Android.so
+	.quad	0x77b800a1f4c5abd8	# hash, from name: System.Native
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.29	# name: libSystem.Security.Cryptography.Native.Android.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.29	# name: libSystem.Native.so
+	.quad	0x0	# handle
 
-	.quad	0x84e63f2e	# hash, from name: xamarin-debug-app-helper
+	.quad	0x7daaf3a073c44dd7	# hash, from name: monodroid
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.30	# name: libxamarin-debug-app-helper.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.30	# name: libmonodroid.so
+	.quad	0x0	# handle
 
-	.quad	0x94c7a87b	# hash, from name: libmonosgen-2.0
+	.quad	0x905f33cea45eb056	# hash, from name: mono-component-debugger.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.31	# name: libmonosgen-2.0.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.31	# name: libmono-component-debugger.so
+	.quad	0x0	# handle
 
-	.quad	0x99abd194	# hash, from name: System.Native
+	.quad	0x918196231499ae33	# hash, from name: xamarin-debug-app-helper
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.32	# name: libSystem.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.32	# name: libxamarin-debug-app-helper.so
+	.quad	0x0	# handle
 
-	.quad	0x9e770032	# hash, from name: monosgen-2.0.so
+	.quad	0x9af167ab9cbda4bd	# hash, from name: System.Security.Cryptography.Native.Android
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.33	# name: libmonosgen-2.0.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.33	# name: libSystem.Security.Cryptography.Native.Android.so
+	.quad	0x0	# handle
 
-	.quad	0xaf29a07d	# hash, from name: libSystem.IO.Compression.Native.so
+	.quad	0x9fe56834a335f553	# hash, from name: libmonodroid
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.34	# name: libSystem.IO.Compression.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.34	# name: libmonodroid.so
+	.quad	0x0	# handle
 
-	.quad	0xafe3142c	# hash, from name: libSystem.IO.Compression.Native
+	.quad	0xc82f57facf333f6a	# hash, from name: monosgen-2.0.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.35	# name: libSystem.IO.Compression.Native.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.35	# name: libmonosgen-2.0.so
+	.quad	0x0	# handle
 
-	.quad	0xbde425c4	# hash, from name: libmono-component-hot_reload
+	.quad	0xcf53f28e7cc47248	# hash, from name: mono-component-hot_reload
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.36	# name: libmono-component-hot_reload.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.36	# name: libmono-component-hot_reload.so
+	.quad	0x0	# handle
 
-	.quad	0xcbfba5ef	# hash, from name: libmonodroid.so
+	.quad	0xe1d7771458b10685	# hash, from name: System.Native.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.37	# name: libmonodroid.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.37	# name: libSystem.Native.so
+	.quad	0x0	# handle
 
-	.quad	0xd8bef4d7	# hash, from name: libmonodroid
+	.quad	0xe7ff637b8de7a85b	# hash, from name: libmonosgen-2.0.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.38	# name: libmonodroid.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.38	# name: libmonosgen-2.0.so
+	.quad	0x0	# handle
 
-	.quad	0xde7f8575	# hash, from name: mono-component-hot_reload.so
+	.quad	0xe935f11a41b02b22	# hash, from name: monosgen-2.0
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.39	# name: libmono-component-hot_reload.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.39	# name: libmonosgen-2.0.so
+	.quad	0x0	# handle
 
-	.quad	0xe1ed3ce0	# hash, from name: monosgen-2.0
+	.quad	0xf3eec4cd80c0a45d	# hash, from name: System.IO.Compression.Native
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.40	# name: libmonosgen-2.0.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.40	# name: libSystem.IO.Compression.Native.so
+	.quad	0x0	# handle
 
-	.quad	0xe391d1b5	# hash, from name: libmonosgen-2.0.so
+	.quad	0xf9d134ddbd8dbeb4	# hash, from name: mono-component-hot_reload.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.41	# name: libmonosgen-2.0.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.41	# name: libmono-component-hot_reload.so
+	.quad	0x0	# handle
 
-	.quad	0xf77ff36c	# hash, from name: libmono-component-debugger.so
+	.quad	0xfa5300a1deb9e9c7	# hash, from name: libmono-component-debugger.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.42	# name: libmono-component-debugger.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.42	# name: libmono-component-debugger.so
+	.quad	0x0	# handle
 
-	.quad	0xf96764cc	# hash, from name: mono-component-debugger.so
+	.quad	0xfbd30111a3b6e09a	# hash, from name: libSystem.IO.Compression.Native
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.43	# name: libmono-component-debugger.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.43	# name: libSystem.IO.Compression.Native.so
+	.quad	0x0	# handle
 
-	.quad	0xff99af58	# hash, from name: mono-component-debugger
+	.quad	0xfd5e3c67ff65dc86	# hash, from name: libSystem.Security.Cryptography.Native.Android.so
 	.byte	0x0	# ignore
-	.zero	3
-	.long	.L.autostr.44	# name: libmono-component-debugger.so
-	.long	0x0	# handle
+	.zero	7
+	.quad	.L.autostr.44	# name: libSystem.Security.Cryptography.Native.Android.so
+	.quad	0x0	# handle
 
-	.size	dso_cache, 640
+	.size	dso_cache, 1024
 
 	#
 	# Generated from instance of: Xamarin.Android.Tasks.ApplicationConfig, Xamarin.Android.Build.Tasks, Version=12.3.99.76, Culture=neutral, PublicKeyToken=84e04ff9cfb79065
@@ -3178,7 +3708,7 @@ dso_cache:
 	.global	application_config
 
 	.section	.data, "aw", @progbits
-	.p2align	2
+	.p2align	3
 application_config:
 	.byte	0x0	# uses_mono_llvm
 	.byte	0x1	# uses_mono_aot
@@ -3196,12 +3726,13 @@ application_config:
 	.long	0xc	# environment_variable_count
 	.long	0x0	# system_property_count
 	.long	0x109	# number_of_assemblies_in_apk
-	.long	0x3e	# bundled_assembly_name_width
+	.long	0x41	# bundled_assembly_name_width
 	.long	0x2	# number_of_assembly_store_files
 	.long	0x20	# number_of_dso_cache_entries
 	.long	0x3	# mono_components_mask
-	.long	.L.autostr.45	# android_package_name
-	.size	application_config, 48
+	.zero	4
+	.quad	.L.autostr.45	# android_package_name
+	.size	application_config, 56
 
 
 	.section	.rodata.autostr, "aMS", @progbits, 1
@@ -3247,7 +3778,7 @@ application_config:
 
 	.type	.L.autostr.8, @object
 .L.autostr.8:
-	.asciz	"c8f04c63-0c39-4cf5-84c7-71ff821c8b19"
+	.asciz	"6a842333-bcf0-45a8-9d10-994512e134a5"
 	.size	.L.autostr.8, 37
 
 	.type	.L.autostr.9, @object
@@ -3272,8 +3803,8 @@ application_config:
 
 	.type	.L.autostr.13, @object
 .L.autostr.13:
-	.asciz	"libxamarin-debug-app-helper.so"
-	.size	.L.autostr.13, 31
+	.asciz	"libmono-component-debugger.so"
+	.size	.L.autostr.13, 30
 
 	.type	.L.autostr.14, @object
 .L.autostr.14:
@@ -3282,108 +3813,108 @@ application_config:
 
 	.type	.L.autostr.15, @object
 .L.autostr.15:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.15, 16
+	.asciz	"libxamarin-debug-app-helper.so"
+	.size	.L.autostr.15, 31
 
 	.type	.L.autostr.16, @object
 .L.autostr.16:
-	.asciz	"libmono-component-debugger.so"
-	.size	.L.autostr.16, 30
+	.asciz	"libmono-component-hot_reload.so"
+	.size	.L.autostr.16, 32
 
 	.type	.L.autostr.17, @object
 .L.autostr.17:
-	.asciz	"libSystem.Native.so"
-	.size	.L.autostr.17, 20
+	.asciz	"libmono-component-hot_reload.so"
+	.size	.L.autostr.17, 32
 
 	.type	.L.autostr.18, @object
 .L.autostr.18:
-	.asciz	"libxamarin-debug-app-helper.so"
-	.size	.L.autostr.18, 31
+	.asciz	"libSystem.Security.Cryptography.Native.Android.so"
+	.size	.L.autostr.18, 50
 
 	.type	.L.autostr.19, @object
 .L.autostr.19:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.19, 16
+	.asciz	"libSystem.Native.so"
+	.size	.L.autostr.19, 20
 
 	.type	.L.autostr.20, @object
 .L.autostr.20:
-	.asciz	"libmono-component-hot_reload.so"
-	.size	.L.autostr.20, 32
+	.asciz	"libmono-component-debugger.so"
+	.size	.L.autostr.20, 30
 
 	.type	.L.autostr.21, @object
 .L.autostr.21:
-	.asciz	"libSystem.Security.Cryptography.Native.Android.so"
-	.size	.L.autostr.21, 50
+	.asciz	"libSystem.Native.so"
+	.size	.L.autostr.21, 20
 
 	.type	.L.autostr.22, @object
 .L.autostr.22:
-	.asciz	"libmono-component-hot_reload.so"
-	.size	.L.autostr.22, 32
+	.asciz	"libxamarin-debug-app-helper.so"
+	.size	.L.autostr.22, 31
 
 	.type	.L.autostr.23, @object
 .L.autostr.23:
-	.asciz	"libSystem.Security.Cryptography.Native.Android.so"
-	.size	.L.autostr.23, 50
+	.asciz	"libSystem.IO.Compression.Native.so"
+	.size	.L.autostr.23, 35
 
 	.type	.L.autostr.24, @object
 .L.autostr.24:
-	.asciz	"libxamarin-debug-app-helper.so"
-	.size	.L.autostr.24, 31
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.24, 16
 
 	.type	.L.autostr.25, @object
 .L.autostr.25:
-	.asciz	"libSystem.Native.so"
-	.size	.L.autostr.25, 20
+	.asciz	"libSystem.IO.Compression.Native.so"
+	.size	.L.autostr.25, 35
 
 	.type	.L.autostr.26, @object
 .L.autostr.26:
-	.asciz	"libSystem.IO.Compression.Native.so"
-	.size	.L.autostr.26, 35
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.26, 19
 
 	.type	.L.autostr.27, @object
 .L.autostr.27:
-	.asciz	"libSystem.Native.so"
-	.size	.L.autostr.27, 20
+	.asciz	"libxamarin-debug-app-helper.so"
+	.size	.L.autostr.27, 31
 
 	.type	.L.autostr.28, @object
 .L.autostr.28:
-	.asciz	"libSystem.IO.Compression.Native.so"
-	.size	.L.autostr.28, 35
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.28, 16
 
 	.type	.L.autostr.29, @object
 .L.autostr.29:
-	.asciz	"libSystem.Security.Cryptography.Native.Android.so"
-	.size	.L.autostr.29, 50
+	.asciz	"libSystem.Native.so"
+	.size	.L.autostr.29, 20
 
 	.type	.L.autostr.30, @object
 .L.autostr.30:
-	.asciz	"libxamarin-debug-app-helper.so"
-	.size	.L.autostr.30, 31
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.30, 16
 
 	.type	.L.autostr.31, @object
 .L.autostr.31:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.31, 19
+	.asciz	"libmono-component-debugger.so"
+	.size	.L.autostr.31, 30
 
 	.type	.L.autostr.32, @object
 .L.autostr.32:
-	.asciz	"libSystem.Native.so"
-	.size	.L.autostr.32, 20
+	.asciz	"libxamarin-debug-app-helper.so"
+	.size	.L.autostr.32, 31
 
 	.type	.L.autostr.33, @object
 .L.autostr.33:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.33, 19
+	.asciz	"libSystem.Security.Cryptography.Native.Android.so"
+	.size	.L.autostr.33, 50
 
 	.type	.L.autostr.34, @object
 .L.autostr.34:
-	.asciz	"libSystem.IO.Compression.Native.so"
-	.size	.L.autostr.34, 35
+	.asciz	"libmonodroid.so"
+	.size	.L.autostr.34, 16
 
 	.type	.L.autostr.35, @object
 .L.autostr.35:
-	.asciz	"libSystem.IO.Compression.Native.so"
-	.size	.L.autostr.35, 35
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.35, 19
 
 	.type	.L.autostr.36, @object
 .L.autostr.36:
@@ -3392,28 +3923,28 @@ application_config:
 
 	.type	.L.autostr.37, @object
 .L.autostr.37:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.37, 16
+	.asciz	"libSystem.Native.so"
+	.size	.L.autostr.37, 20
 
 	.type	.L.autostr.38, @object
 .L.autostr.38:
-	.asciz	"libmonodroid.so"
-	.size	.L.autostr.38, 16
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.38, 19
 
 	.type	.L.autostr.39, @object
 .L.autostr.39:
-	.asciz	"libmono-component-hot_reload.so"
-	.size	.L.autostr.39, 32
+	.asciz	"libmonosgen-2.0.so"
+	.size	.L.autostr.39, 19
 
 	.type	.L.autostr.40, @object
 .L.autostr.40:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.40, 19
+	.asciz	"libSystem.IO.Compression.Native.so"
+	.size	.L.autostr.40, 35
 
 	.type	.L.autostr.41, @object
 .L.autostr.41:
-	.asciz	"libmonosgen-2.0.so"
-	.size	.L.autostr.41, 19
+	.asciz	"libmono-component-hot_reload.so"
+	.size	.L.autostr.41, 32
 
 	.type	.L.autostr.42, @object
 .L.autostr.42:
@@ -3422,13 +3953,13 @@ application_config:
 
 	.type	.L.autostr.43, @object
 .L.autostr.43:
-	.asciz	"libmono-component-debugger.so"
-	.size	.L.autostr.43, 30
+	.asciz	"libSystem.IO.Compression.Native.so"
+	.size	.L.autostr.43, 35
 
 	.type	.L.autostr.44, @object
 .L.autostr.44:
-	.asciz	"libmono-component-debugger.so"
-	.size	.L.autostr.44, 30
+	.asciz	"libSystem.Security.Cryptography.Native.Android.so"
+	.size	.L.autostr.44, 50
 
 	.type	.L.autostr.45, @object
 .L.autostr.45:
