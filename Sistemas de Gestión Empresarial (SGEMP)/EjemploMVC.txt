@@ -1,0 +1,29 @@
+ENTIDADES :
+
+	clsPersona:
+
+		-String -> nombre,apellido,dni
+		-int -> idPersona,idDepartamento
+
+	clsDepartamento:
+
+		-int -> idDepartamento
+		-String -> nombreDepartamento
+
+DAL :
+
+	clsListadosDepartamentos:
+		-List<clsDepartamentos> ListadoCompletoDepartamentos()
+
+	clsManejadoraPersonas:
+		-clsPersona obtenerPersonaPorId(int id)
+		-int guardarPersona(clsPersona p)
+
+UI :
+
+	(VM) VIEWMODEL : 
+		
+		clsEditarPersonaVM()
+
+			-List<clsDepartamento> listaDepartamentos
+			-clsPersona persona

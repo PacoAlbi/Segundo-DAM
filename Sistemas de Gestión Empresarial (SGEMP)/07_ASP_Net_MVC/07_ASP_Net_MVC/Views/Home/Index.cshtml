@@ -1,7 +1,8 @@
-﻿@{
+﻿@model clsPersona
+@*@model List<_07_ASP_Net_MVC.clsPersona>*@
+@{
     ViewData["Title"] = "Home Page";
 }
-@model namespace._07_ASP_Net_MVC.Models
 
 <div class="text-center">
     @*<h1 class="display-4">Welcome</h1>
@@ -11,6 +12,11 @@
     <p>¡Necesitamos más tiempo para estudiar Fernando!</p>
 
     <h3>Para que lo consideres te pongo mis datos :P</h3>
-    <p>Mi nombre es @Model.Apellidos</p>
+    <p>Mi nombre es @Model.Name
+        Mi apellido es @Model.Apellidos
+        Mi direccion es @Model.Direccion
+        Nace hace eones el dia de @Model.FechaNac
+    
+    </p>
 
 </div>

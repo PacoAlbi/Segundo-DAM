@@ -1,0 +1,11 @@
+entidades: clsPersona 
+		string nombre;
+		string apellidos;
+		Date fecha;
+		...
+		
+
+Capa DAL
+	clsListadosPersonasDAL
+	public List<clsPersona> listadoCompletoPersonas ()
+		
