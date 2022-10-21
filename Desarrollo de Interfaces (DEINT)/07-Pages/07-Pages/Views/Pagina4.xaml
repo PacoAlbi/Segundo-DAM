@@ -12,5 +12,11 @@
             Text="Esta es la página 4"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Label 
+            x:Name="lblPagina4_"
+            Text="{Binding Name}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

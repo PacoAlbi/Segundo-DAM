@@ -9,8 +9,8 @@ public partial class PaginaTabbed : TabbedPage
 		InitializeComponent();
 	}
 
-    public PaginaTabbed(Persona persona)
-    {
-        InitializeComponent();
-    }
+    //public PaginaTabbed(Persona persona)
+    //{
+    //    InitializeComponent();
+    //}
 }

@@ -10,7 +10,7 @@ public partial class Pagina4 : ContentPage
 	{
 		InitializeComponent();
 
-		lblPagina4.Text = $"Hola {persona.Name} {persona.Apellidos}";
+		//lblPagina4.Text = $"Hola {persona.Name} {persona.Apellidos}";
 		//lblPagina4.SetBinding(Label.ScaleProperty, new Binding("Text", source: nombre+" "+apellido));
 	}
 }

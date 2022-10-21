@@ -24567,24 +24567,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Paco\\.nuget\\packages\\": {},
+    "C:\\Users\\falbinana\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\07-Pages\\07-Pages\\07-Pages.csproj",
+      "projectUniqueName": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\07-Pages\\07-Pages\\07-Pages.csproj",
       "projectName": "07-Pages",
-      "projectPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\07-Pages\\07-Pages\\07-Pages.csproj",
-      "packagesPath": "C:\\Users\\Paco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\07-Pages\\07-Pages\\obj\\",
+      "projectPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\07-Pages\\07-Pages\\07-Pages.csproj",
+      "packagesPath": "C:\\Users\\falbinana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\falbinana\\Desktop\\Segundo-DAM\\Desarrollo de Interfaces (DEINT)\\07-Pages\\07-Pages\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Paco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\falbinana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
