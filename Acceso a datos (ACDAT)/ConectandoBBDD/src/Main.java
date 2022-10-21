@@ -542,7 +542,7 @@ public class Main {
     }
 
     public static void crearColumna (){
-        String colum = "ALTER TABLE ad2223.falbinana ADD laboral varchar(20)";
+        String colum = "ALTER TABLE ad2223.falbinana ADD laboral ENUM('Estudiante','Ocupado','Parado','Jubilado') NOT NULL AFTER edad";
         try {
             st.executeUpdate(colum);
         } catch (SQLException e) {
