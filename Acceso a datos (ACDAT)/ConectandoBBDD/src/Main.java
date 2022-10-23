@@ -526,6 +526,7 @@ public class Main {
      * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
      * Método para ver los datos ordenador por edad. Usa el método querySQL para ello.
      * Postcondiciones: Presenta por pantalla los datos ordenados por edad.
+     * @see public static void querySQL()
      */
     public static void ordenarPorEdad (){
         String sql = "SELECT nombre, edad FROM ad2223.falbinana ORDER BY edad";
