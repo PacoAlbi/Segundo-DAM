@@ -2,9 +2,10 @@ import java.sql.*;
 
 public class Main {
 
+    //Variables globales para facilitar la conexión
     private static Statement st = null;
     private static Connection con;
-    private static String conexionUrl = "jdbc:mysql://dns11036.phdns11.es";
+    private static final String conexionUrl = "jdbc:mysql://dns11036.phdns11.es";
 
     public static void main(String[] args) {
 
@@ -40,6 +41,13 @@ public class Main {
         }
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para crear una tabla en una base de datos SQL.
+     * @param tabla String de entrada con el nombre de la tabla.
+     * @param nombresCampos String de entrada con los nombres de los campos.
+     * Postcondiciones: La tabla se crea en la base de datos.
+     */
     public static void crearTabla(String tabla, String[] nombresCampos) {
 
         String create = "CREATE TABLE ad2223." + tabla + " (";
@@ -59,6 +67,11 @@ public class Main {
         }
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para insertar datos en la BBDD con un solo INSERT
+     * Postcondiciones: La tabla se llena con todos los datos aportados.
+     */
     public static void insertarDatos (){
         String datos = "insert into ad2223.falbinana (nombre, apellidos, edad) values ('Kellsie', 'Daskiewicz', 55)," +
                 " ('Alvina', 'Farragher', 78)," +
@@ -269,6 +282,12 @@ public class Main {
         }
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para insertar datos en la BBDD con un array de String y múltiples INSERT
+     * @param statement Recibe un statement de entrada pero podría no recibirlo y usar el global. Estaba probando.
+     * Postcondiciones: La tabla se llena con todos los datos aportados.
+     */
     public static void insertarDatosArray (Statement statement){
         String datos[] = {"insert into ad2223.falbinana (nombre, apellidos, edad) values ('Kellsie', 'Daskiewicz', 55);",
                 "insert into ad2223.falbinana (nombre, apellidos, edad) values ('Alvina', 'Farragher', 78);" ,
@@ -481,8 +500,14 @@ public class Main {
         }
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para hacer una query a una BBDD SQL que solo necesita recibirla en un String y lo imprime por pantalla.
+     * @param sqlSentence Un String de entrada con la query de búsqueda escrita en sql.
+     * Postcondiciones: Devuelve los datos de la Query, y los muestra por pantalla normal.
+     */
     public static void querySQL (String sqlSentence) {
-        ResultSet lista = null;
+        ResultSet lista;
 
         try {
             lista = st.executeQuery(sqlSentence);
@@ -497,54 +522,126 @@ public class Main {
         }
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para ver los datos ordenador por edad. Usa el método querySQL para ello.
+     * Postcondiciones: Presenta por pantalla los datos ordenados por edad.
+     */
     public static void ordenarPorEdad (){
         String sql = "SELECT nombre, edad FROM ad2223.falbinana ORDER BY edad";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para ver los datos ordenados por apellidos. Usa el método querySQL para ello.
+     * Postcondiciones: Presenta por pantalla los datos ordenados por apellido.
+     */
     public static void ordenarPorApellidos (){
         String sql = "SELECT nombre, apellidos FROM ad2223.falbinana ORDER BY apellidos";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para ver los datos de los mayores de 30. Usa el método querySQL para ello.
+     * Postcondiciones: Presenta por pantalla los datos de los mayores de 30.
+     */
     public static void mayoresDe30 (){
         String sql = "SELECT nombre, edad FROM ad2223.falbinana WHERE edad > 30";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para ver los datos de las personas cuyos nombres empiezan por J y ordenados por apellidos.
+     * Postcondiciones: Presenta por pantalla los datos de las personas cuyos nombres empiezan por J ordenados por apellidos.
+     */
     public static void nombresPorJ () {
         String sql = "SELECT nombre, apellidos FROM ad2223.falbinana WHERE nombre like 'J%' ORDER BY apellidos";
         querySQL(sql);
     }
+
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para ver los datos de las personas cuyos nombre y apellidos empiecen por A y C respectivamente ordenados por edad descente.
+     * Postcondiciones: Presenta por pantalla los datos de las personas cuyos nombre y apellidos empiecen por A y C respectivamente ordenados por edad descente.
+     */
     public static void nombresCapellidosAmayoramenor (){
         String sql = "SELECT nombre, apellidos FROM ad2223.falbinana WHERE nombre like 'A%' and apellidos like 'C%' ORDER BY edad desc";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para ver la media de edad de todas las personas usando el SELECT con el avg.
+     * Postcondiciones: Presenta por pantalla la media de edad de las personas.
+     */
     public static void mediaEdad (){
         String sql = "SELECT avg(edad) FROM ad2223.falbinana";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método que busca en la BBDD las personas cuyos nombre y apellidos contengan 'ph' y 'ma' respectivamente.
+     * Postcondiciones: Presenta por pantalla las personas cuyos nombre y apellidos contengan 'ph' y 'ma' respectivamente.
+     */
     public static void buscaOHyMA (){
         String sql = "SELECT nombre, apellidos FROM ad2223.falbinana WHERE nombre like '%ph%' or apellidos like '%ma%'";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para buscar a las personas cuya edad esté en la franja de 24 y 32 años.
+     * Postcondiciones: Presenta por pantalla las personas cuya edad esté en la franja de 24 y 32 años.
+     */
     public static void franjaEdad24y32 (){
         String sql = "SELECT nombre, edad FROM ad2223.falbinana WHERE edad > 23 and edad <33";;
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para buscar en la BBDD a los mayores de 65 años.
+     * Postcondiciones: Presenta por pantalla todas las personas mayores de 65 años.
+     */
     public static void mayores65 (){
         String sql = "SELECT nombre, edad FROM ad2223.falbinana WHERE edad > 65";
         querySQL(sql);
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para agregar una columna 'laboral' con un ENUM de datos como opción después de la columna edad.
+     * Postcondiciones: Agrega una columna 'laboral' a mi BBDD con un ENUM de datos.
+     */
     public static void crearColumna (){
         String colum = "ALTER TABLE ad2223.falbinana ADD laboral ENUM('Estudiante','Ocupado','Parado','Jubilado') NOT NULL AFTER edad";
         try {
             st.executeUpdate(colum);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para insertar datos en la columna ENUM clasificando a las personas por edades.
+     * Postcondiciones: Inserta todos los datos 'laboral' de las personas según su edad.
+     */
+    public static void actualizarLabolar (){
+        String insertEstudiantes = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Estudiante') WHERE edad < 19";
+        String insertOcupados = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Ocupado') WHERE edad >18 and edad <66 and (edad%2)=0";
+        String insertParados = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Parado') WHERE edad >18 and edad <66 and (edad%2)!=0";
+        String insertJubilados = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Jubilado') WHERE edad > 65";
+
+        try {
+            st.executeUpdate(insertEstudiantes);
+            st.executeUpdate(insertOcupados);
+            st.executeUpdate(insertParados);
+            st.executeUpdate(insertJubilados);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
