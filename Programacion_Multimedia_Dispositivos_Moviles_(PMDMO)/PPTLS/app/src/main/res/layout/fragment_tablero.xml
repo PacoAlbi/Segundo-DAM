@@ -6,6 +6,24 @@
     tools:context=".Tablero"
     android:id="@+id/tablero">
 
+    .
 
+    <TextView
+        android:id="@+id/txtMarcador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marcador" />
+
+    <TextView
+        android:id="@+id/txtMarcJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/txtMarcMaquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
 
 </FrameLayout>
