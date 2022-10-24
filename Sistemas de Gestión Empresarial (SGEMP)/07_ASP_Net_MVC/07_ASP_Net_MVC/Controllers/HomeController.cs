@@ -1,5 +1,7 @@
 ﻿using _07_ASP_Net_MVC.Models;
+using _07_ASP_Net_MVC.Models.DAL;
 using _07_ASP_Net_MVC.Models.Entidades;
+using _07_ASP_Net_MVC.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic;
 using System.Diagnostics;
@@ -17,6 +19,7 @@ namespace _07_ASP_Net_MVC.Controllers
 
         public IActionResult Index()
         {
+            //Ejercicio 1
             string saludo;
             if(DateTime.Now.Hour >=7 && DateTime.Now.Hour < 12)
                 saludo = "Buenos dias";
@@ -28,18 +31,20 @@ namespace _07_ASP_Net_MVC.Controllers
             ViewBag.FechaLarga = DateAndTime.Now;
 
             clsPersona paco = new clsPersona();
-            paco.Name = "Paco";
+            paco.Nombre = "Paco";
             paco.Apellidos = "Albiñana Ruiz";
             paco.Direccion = "Aquí al lao";
             paco.Telefono = "616058828";
             paco.FechaNac = new DateOnly(1980, 05, 05);
 
-            return View(paco);
+            //Ejercicio 2
+            
+            return View(clsListadosPersonasDAL.listadoPersonasCompleto());
         }
 
-        public ActionResult Editar()
+        public IActionResult EditarPersona()
         {
-
+          
             return View();
         }
 

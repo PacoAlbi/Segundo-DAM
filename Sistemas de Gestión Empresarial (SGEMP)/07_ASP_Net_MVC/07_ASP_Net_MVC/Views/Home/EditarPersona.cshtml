@@ -1,0 +1,22 @@
+﻿@model _07_ASP_Net_MVC.Models.Entidades.clsDepartamento
+
+<div class="text-center">
+
+    <h1>Agrega una persona</h1>
+
+    <form>
+        <label>Nombre</label>
+        <input type="text" />
+        <select name="Departamento">
+            @*<optgroup>Modelos</optgroup>*@
+            <option>Marketing</option>
+
+
+        </select>
+        @Html.TextBox("Nombre Departamento")
+        @Html.TextBoxFor(m=>m.NombreDepartamento)
+    </form>
+    <input type="submit" />
+</div>
+@*Este link te devuelve al Home*@
+<div class="text-center">@Html.ActionLink("Home","Index","Home")</div>

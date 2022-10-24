@@ -1,22 +1,38 @@
-﻿@model _07_ASP_Net_MVC.Models.Entidades
-@*@model List<_07_ASP_Net_MVC.clsPersona>*@
+﻿@*@model _07_ASP_Net_MVC.Models.Entidades   model del ejercicio 1*@
+@model List<_07_ASP_Net_MVC.Models.Entidades.clsPersona>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Pagina Casera";
 }
 
 <div class="text-center">
+
+    @*Ejercicio1*@
     @*<h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
-    <h1>La fecha y hora actual son @ViewBag.FechaLarga</h1>
+    @*<h1>La fecha y hora actual son @ViewBag.FechaLarga</h1>
     <h2>Hola @ViewData["Saludo"]</h2>
-    <p>¡Necesitamos más tiempo para estudiar Fernando!</p>
+    <p>¡Necesitamos más tiempo para estudiar Fernando!</p>*@
 
-    <h3>Para que lo consideres te pongo mis datos :P</h3>
-    <p>Mi nombre es @Model.Name
-        Mi apellido es @Model.Apellidos
-        Mi direccion es @Model.Direccion
-        Nace hace eones el dia de @Model.FechaNac
-    
-    </p>
 
+    @*Ejercicio2*@
+    <h1> Listado de personas</h1>
+
+    <table style="border:solid 2px black" border="1" align="center">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Apellidos</td>
+            </tr>
+        </thead>
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td style="border:solid 1px black">@Model[i].Nombre</td>
+                <td style="border:solid 1px black">@Model[i].Apellidos</td>
+            </tr>
+        }
+    </table>
+
+      
 </div>

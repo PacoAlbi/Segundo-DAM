@@ -16,8 +16,8 @@ namespace _07_ASP_Net_MVC.Models.DAL
             lista.Add(new clsPersona("Eva","Ramos"));
             lista.Add(new clsPersona("Pepe","Gutierrez"));
             lista.Add(new clsPersona("Ana","Lopez"));
-            lista.Add(new clsPersona("",""));
-            lista.Add(new clsPersona("",""));
+            lista.Add(new clsPersona("Manuel","Lopez"));
+            lista.Add(new clsPersona("Fatima","Hamida"));
 
             return lista;
         }

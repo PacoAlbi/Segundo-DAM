@@ -2,17 +2,12 @@
 {
     public class clsPersona
     {
-        private string _nombre;
-        private string _apellidos;
-        private DateOnly _fechaNac;
-        private string _telefono;
-        private string _direccion;
-
-        public string Name { get; set; }
+        public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public DateOnly FechaNac { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+        public int idDepartamento { get; set; }
 
         public clsPersona()
         {
@@ -20,17 +15,16 @@
 
         public clsPersona(string nombre, string apellidos)
         {
-            _nombre = nombre;
-            _apellidos = apellidos;
+            Nombre = nombre;
+            Apellidos = apellidos;
         }
 
-        public clsPersona(string nombre, string apellidos, DateOnly fechaNac, string telefono, string direccion)
+        public clsPersona(string nombre, string apellidos, DateOnly fechaNac, string telefono, string direccion, int idDepartamento) : this(nombre, apellidos)
         {
-            _nombre = nombre;
-            _apellidos = apellidos;
-            _fechaNac = fechaNac;
-            _telefono = telefono;
-            _direccion = direccion;
+            FechaNac = fechaNac;
+            Telefono = telefono;
+            Direccion = direccion;
+            this.idDepartamento = idDepartamento;
         }
     }
 }
