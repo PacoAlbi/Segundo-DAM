@@ -17,7 +17,7 @@ public class Clase3Imprime {
             ip = sc.nextLine();
             primero = ip.split("\\.");
             ip1 = Integer.parseInt(primero[0]);
-
+            //ip1 = Integer.parseInt(ip.split("\\.")[0]);   Una forma de unir las dos sentencias de arriba en una sola.
             if (ip1 <= 127){
                 System.out.printf("La ip %s es de clase A" + System.lineSeparator(),ip);
             } else if (ip1 <= 191) {
