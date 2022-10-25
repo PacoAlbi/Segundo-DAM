@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_08_VariosLayouts.MainPage">
 
-    <StackLayout Orientation="Vertical" Spacing="10" >
-        <Grid>
+    <StackLayout Margin="10,10">
+        <Grid RowSpacing="10" ColumnSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -17,7 +17,7 @@
             <Label Grid.Row="0" Grid.Column="0" Text="CABECERA" HorizontalTextAlignment="Start" BackgroundColor="Aqua"/>
             <Label Grid.Row="1" Grid.Column="0" Text="Suspendisse placerat aliquam tincidunt. Proin convallis vehicula lorem, ut consectetur odio sollicitudin nec. Proin ac risus neque. Aliquam placerat massa vel sem efficitur sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam finibus aliquet dui eu aliquam. Suspendisse id velit nisl. Nulla cursus auctor varius. Integer scelerisque molestie felis." BackgroundColor="Purple"/>
             <Label Grid.Row="3" Grid.Column="0" Text="PIE DE PÁGINA" BackgroundColor="DarkOrchid"/>
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" RowSpacing="10" ColumnSpacing="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
