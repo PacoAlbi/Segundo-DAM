@@ -21,7 +21,7 @@ public class Main {
                 System.out.println("Conexion a base de datos correcta.");
                 System.out.println(con.toString());
                 //CON UN STATETMENT NORMAL BÁSICO
-                //st = con.createStatement();
+                st = con.createStatement();
                 /*String[] campos = {"id int PRIMARY KEY AUTO_INCREMENT,", "nombre varchar(255),", "apellidos varchar(255),", "edad int"};
                 crearTabla("falbinana", campos);*/  //Crea la tabla con el nombre y el array de los campos
                 //insertarDatos();  // Inserta datos en la tabla de una vez
@@ -51,6 +51,11 @@ public class Main {
         }
     }
 
+    /**
+     * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
+     * Método para cambiar la contraseña de la BBDD.
+     * Postcondiciones: La constraseña se cambia por la nueva
+     */
     public static void cambiarPassword (){
         try {
             st = con.createStatement();
@@ -59,8 +64,6 @@ public class Main {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     /**
@@ -307,7 +310,7 @@ public class Main {
     /**
      * Precondiciones: Debe haber conexión con el gestor de BBDD para que funcione.
      * Método para insertar datos en la BBDD con un array de String y múltiples INSERT
-     * @param statement Recibe un statement de entrada pero podría no recibirlo y usar el global. Estaba probando.
+     * @param statement Recibe un statement de entrada, pero podría no recibirlo y usar el global. Estaba probando.
      * Postcondiciones: La tabla se llena con todos los datos aportados.
      */
     public static void insertarDatosArray (Statement statement){
