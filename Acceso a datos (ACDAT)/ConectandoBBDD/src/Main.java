@@ -4,8 +4,9 @@ public class Main {
 
     //Variables globales para facilitar la conexión
     private static Statement st = null;
+    private static PreparedStatement prst = null;
     private static Connection con;
-    private static final String conexionUrl = "jdbc:mysql://dns11036.phdns11.es";
+    private static final String CONEXIONURL = "jdbc:mysql://dns11036.phdns11.es";
 
     public static void main(String[] args) {
 
@@ -13,19 +14,28 @@ public class Main {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con = DriverManager.getConnection(conexionUrl, "ad2223", "nervion");
+            con = DriverManager.getConnection(CONEXIONURL, "falbinana", "654321");
 
             if (con != null) {
 
                 System.out.println("Conexion a base de datos correcta.");
                 System.out.println(con.toString());
-                st = con.createStatement();
+                //CON UN STATETMENT NORMAL BÁSICO
+                //st = con.createStatement();
                 /*String[] campos = {"id int PRIMARY KEY AUTO_INCREMENT,", "nombre varchar(255),", "apellidos varchar(255),", "edad int"};
                 crearTabla("falbinana", campos);*/  //Crea la tabla con el nombre y el array de los campos
                 //insertarDatos();  // Inserta datos en la tabla de una vez
                 //insertarDatosArray(st); //Inserta los datos
                 //st.executeUpdate("DELETE FROM ad2223.falbinana");  //Aqui borro los datos de la tabla y la dejo vacia
-                crearColumna();
+
+
+                //CON UN PREPARESTATEMENT
+                /*prst = con.prepareStatement("SELECT nombre, apellidos FROM ad2223.falbinana WHERE nombre like ? ORDER BY apellidos");
+                prst.setString(1, "J%");
+                querySQL(prst);*/
+
+
+
 
             }
 
@@ -39,6 +49,18 @@ public class Main {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void cambiarPassword (){
+        try {
+            st = con.createStatement();
+            st.executeUpdate("SET PASSWORD FOR 'falbinana'@'%' = password('654321')");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     /**
@@ -633,10 +655,10 @@ public class Main {
      * Postcondiciones: Inserta todos los datos 'laboral' de las personas según su edad.
      */
     public static void actualizarLabolar (){
-        String insertEstudiantes = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Estudiante') WHERE edad < 19";
-        String insertOcupados = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Ocupado') WHERE edad >18 and edad <66 and (edad%2)=0";
-        String insertParados = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Parado') WHERE edad >18 and edad <66 and (edad%2)!=0";
-        String insertJubilados = "INSERT INTO ad2223.falbinana (laboral) VALUES ('Jubilado') WHERE edad > 65";
+        String insertEstudiantes = "UPDATE ad2223.falbinana SET laboral = 'Estudiante' WHERE edad < 18";
+        String insertOcupados = "UPDATE ad2223.falbinana SET laboral = 'Ocupado' WHERE edad >18 and edad <66 and (edad%2)=0";
+        String insertParados = "UPDATE ad2223.falbinana SET laboral = 'Parado' WHERE edad >18 and edad <66 and (edad%2)!=0";
+        String insertJubilados = "UPDATE ad2223.falbinana SET laboral = 'Jubilado' WHERE edad > 65";
 
         try {
             st.executeUpdate(insertEstudiantes);
