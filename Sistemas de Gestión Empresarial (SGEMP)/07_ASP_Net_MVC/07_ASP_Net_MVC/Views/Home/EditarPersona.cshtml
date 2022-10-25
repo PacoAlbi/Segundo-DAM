@@ -1,10 +1,10 @@
-﻿@model _07_ASP_Net_MVC.Models.Entidades.clsDepartamento
-
+﻿@using _07_ASP_Net_MVC.Models.ViewModels
+@model clsEditarPersonaViewModel
 <div class="text-center">
 
     <h1>Agrega una persona</h1>
 
-    <form>
+    <form method="post">
         <label>Nombre</label>
         <input type="text" />
         <select name="Departamento">
@@ -14,7 +14,7 @@
 
         </select>
         @Html.TextBox("Nombre Departamento")
-        @Html.TextBoxFor(m=>m.NombreDepartamento)
+        @Html.TextBoxFor()
     </form>
     <input type="submit" />
 </div>
