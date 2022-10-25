@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_08_FlexLayOut.MainPage">
+
+    <FlexLayout Direction="Column">
+        <Label
+            x:Name="lbl1"
+            Text="HEADER"
+            BackgroundColor="LightBlue"
+            HorizontalTextAlignment="Center"
+            />
+        <FlexLayout FlexLayout.Grow="1">
+            <BoxView
+                FlexLayout.Basis="5%" BackgroundColor="DarkBlue"/>
+            <Label
+                FlexLayout.Basis="Auto" BackgroundColor="Grey" Text="CONTENT" FlexLayout.Grow="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <BoxView
+                FlexLayout.Basis="5%" BackgroundColor="Green"/>
+        </FlexLayout>
+        <Label
+            x:Name="lbl2"
+            Text="FOOTER"
+            BackgroundColor="MistyRose"
+            HorizontalTextAlignment="Center"
+            />
+    </FlexLayout>
+    
+</ContentPage>
