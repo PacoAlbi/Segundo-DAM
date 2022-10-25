@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_08_VariosLayouts.MainPage">
+
+    <StackLayout Orientation="Vertical" Spacing="10" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="CABECERA" HorizontalTextAlignment="Start" BackgroundColor="Aqua"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Suspendisse placerat aliquam tincidunt. Proin convallis vehicula lorem, ut consectetur odio sollicitudin nec. Proin ac risus neque. Aliquam placerat massa vel sem efficitur sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam finibus aliquet dui eu aliquam. Suspendisse id velit nisl. Nulla cursus auctor varius. Integer scelerisque molestie felis." BackgroundColor="Purple"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="PIE DE PÁGINA" BackgroundColor="DarkOrchid"/>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <AbsoluteLayout Grid.Row="2" Grid.Column="0" Margin="10,10" >
+                    <BoxView
+                    Color="Orange"
+                    AbsoluteLayout.LayoutBounds="0,0,100,100"/>
+                    <BoxView
+                    Color="Cyan"
+                    AbsoluteLayout.LayoutBounds="110,0,100,100"/>
+                    <BoxView
+                    Color="LightGreen"
+                    AbsoluteLayout.LayoutBounds="0,110,100,100"/>
+                </AbsoluteLayout>
+                <VerticalStackLayout Grid.Row="2" Grid.Column="1" Spacing="10">
+                    <Label Text="Fusce dignissim eget ex quis sollicitudin. Vivamus eleifend arcu quis nisi bibendum consectetur. Quisque porttitor metus sit amet faucibus aliquam."/>
+                    <Label Text="Sed ac nisl mollis, pulvinar felis eget, viverra augue. Ut metus augue, porta nec posuere vel, sodales quis justo. Cras eu orci tincidunt, sodales enim ac, elementum velit. Maecenas non leo tempus, ornare nulla quis, porta ipsum. In et arcu a felis fringilla tincidunt."/>
+                    <Label Text="Aliquam iaculis lorem in semper tristique. Duis varius venenatis suscipit. Nulla tempor a turpis sit amet blandit. Vestibulum dapibus libero at sapien vestibulum suscipit. Mauris ut quam dignissim, finibus lorem id, bibendum felis."/>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>
