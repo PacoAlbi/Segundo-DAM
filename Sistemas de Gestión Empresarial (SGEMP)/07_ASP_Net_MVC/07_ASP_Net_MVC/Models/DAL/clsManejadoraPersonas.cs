@@ -10,11 +10,11 @@ namespace _07_ASP_Net_MVC.Models.DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns>clsPersona</returns>
-        public clsPersona obtenerPersonaPorId(int id)
+        public static clsPersona obtenerPersonaPorId(int id)
         {
+            List<clsPersona> listaPersonas = clsListadosPersonasDAL.listadoPersonasCompleto();
 
-
-            return new clsPersona();
+            return listaPersonas.Find(modelodepersona=>modelodepersona.Id == id);
         }
 
         /// <summary>

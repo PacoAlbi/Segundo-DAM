@@ -44,8 +44,8 @@ namespace _07_ASP_Net_MVC.Controllers
 
         public IActionResult EditarPersona()
         {
-          
-            return View();
+            clsEditarPersonaViewModel viewModel = new clsEditarPersonaViewModel();
+            return View(viewModel);
         }
 
         public IActionResult Privacy()

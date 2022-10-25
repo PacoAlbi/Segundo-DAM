@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace _07_ASP_Net_MVC.Models.DAL
 {
-    public class clsListadoDepartamentos
+    public static class clsListadoDepartamentos
     {
 
         public static List<clsDepartamento> listarDepartamentos()

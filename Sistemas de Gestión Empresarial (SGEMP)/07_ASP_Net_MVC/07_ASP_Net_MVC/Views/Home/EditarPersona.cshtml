@@ -14,7 +14,7 @@
 
         </select>
         @Html.TextBox("Nombre Departamento")
-        @Html.TextBoxFor()
+        @Html.TextBoxFor(m=>m.persona.Id)
     </form>
     <input type="submit" />
 </div>

@@ -5,13 +5,17 @@ namespace _07_ASP_Net_MVC.Models.ViewModels
 {
     public class clsEditarPersonaViewModel
     {
-        public static List<clsDepartamento> listaDepartamentos { get; set; }
-        public static clsPersona persona { get; set; }
+        #region Atributos autoimplementados
+        public List<clsDepartamento> listaDepartamentos { get; }
+        public clsPersona persona { get; set; }
+        #endregion
 
-        public clsEditarPersonaViewModel(clsPersona editarpersona, List<clsDepartamento> lista)
+        #region Constructores
+        public clsEditarPersonaViewModel()
         {
-            persona = editarpersona;
-            listaDepartamentos = lista;
+            listaDepartamentos = clsListadoDepartamentos.listarDepartamentos();
+            persona = clsManejadoraPersonas.obtenerPersonaPorId(2);
         }
+        #endregion
     }
 }
