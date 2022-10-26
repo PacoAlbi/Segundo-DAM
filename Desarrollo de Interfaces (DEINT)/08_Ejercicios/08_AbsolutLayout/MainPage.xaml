@@ -3,20 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_08_AbsolutLayout.MainPage">
 
-    <AbsoluteLayout Scale="10">
+    <AbsoluteLayout>
 
         <BoxView
             Color="Red"
-            AbsoluteLayout.LayoutBounds="0,0,100,100"/>
+            AbsoluteLayout.LayoutBounds="0,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"/>
         <BoxView
             Color="Blue"
-            AbsoluteLayout.LayoutBounds="100,0,200,100"/>
-        <BoxView
-            Color="Green"
-            AbsoluteLayout.LayoutBounds="0,100,300,100"/>
+            AbsoluteLayout.LayoutBounds="0.50,0,0.50,0.25"
+            AbsoluteLayout.LayoutFlags="All"/>
         <BoxView
             Color="Yellow"
-            AbsoluteLayout.LayoutBounds="100,200,400,200"/>
+            AbsoluteLayout.LayoutBounds="1,1,0.75,0.50"
+            AbsoluteLayout.LayoutFlags="All"/>
+        <BoxView
+            Color="Green"
+            AbsoluteLayout.LayoutBounds="0,0.333,0.75,0.25"
+            AbsoluteLayout.LayoutFlags="All"/>
         
     </AbsoluteLayout>
 

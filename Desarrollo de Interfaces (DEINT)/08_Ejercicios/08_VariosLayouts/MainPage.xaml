@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_08_VariosLayouts.MainPage">
 
-    <StackLayout Margin="10,10">
+    <FlexLayout>
         <Grid RowSpacing="10" ColumnSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -43,5 +43,5 @@
                 </VerticalStackLayout>
             </Grid>
         </Grid>
-    </StackLayout>
+    </FlexLayout>
 </ContentPage>
