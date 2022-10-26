@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_08_AbsolutLayout.MainPage">
 
-    <AbsoluteLayout>
+    <AbsoluteLayout Scale="10">
 
         <BoxView
             Color="Red"
