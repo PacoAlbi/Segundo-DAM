@@ -13,18 +13,18 @@ namespace _08_ASP_MVC_Ejercicio2.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// escribir [HttpPost] antes del controlador para indicar que estamos recibiendo
+        ///  una petición POST e indica lo que se debe hacer cuando el usuario ha pulsado algún
+        /// botón tipo “Submit”
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
 
-        /// <summary>
-        /// escribir [HttpPost] antes del controlador para indicar que estamos recibiendo
-        ///  una petición POST e indica lo que se debe hacer cuando el usuario ha pulsado algún
-        /// botón tipo “Submit”
-                /// </summary>
-                /// <param name="nombre"></param>
-                /// <returns></returns>
          [HttpPost]
         public IActionResult Index(string nombre)
         {
