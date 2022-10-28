@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_07_Ejercicio123.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+            <Entry
+            x:Name="txtNombre"
+            Text="Nombre"/>
+            <Entry
+            x:Name="txtApellido"
+            Text="Apellido"/>
+
+            <Button
+            x:Name="btnPagina"
+            Clicked="irTabbedPage"
+            Text="Ir a tabbedPage"
+            />
+            <Button
+            x:Name="btnPagina4"
+            Clicked="irPagina4"
+            Text="Ir a pagina 4"
+            />
+            <Button
+            x:Name="btnPagina5"
+            Clicked="irPagina5"
+            Text="Ir a pagina 5"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
