@@ -1,0 +1,28 @@
+﻿@*
+    Creacion del formulario de la vista Agregar, en el cual le pasamos los getters de la clsPersona por los distintos
+    textBoxFor, inputs o TextBox. Creando un submit que al pulsarlo llevara a cabo una accion definida
+    Para poder usar la clase persona, debemos poner el @model con el namespace hasta llegar a la clase
+*@
+@model _08_ASP_MVC_Ejercicio3.Models.Entidades.clsPersona
+
+<form action="/Home/Agregar" method="post">
+    <label>Nombre</label>
+    <input type="text" name="Nombre" value="@Model.Nombre" />
+    <br/>
+    <br/>
+    <label>Primer Apellido</label>
+   @Html.TextBoxFor(x=>x.PrimerApellido);
+    <br/>
+    <br/>
+    <label>Segundo Apellido</label>
+    @Html.TextBox("SegundoApellido")
+    <br/>
+    <br/>
+    <label>Edad</label>
+    @Html.TextBoxFor(x=>x.Edad)
+    <br/>
+    <br/>
+    <input type="submit" value="Modificar" />
+    
+
+</form>

@@ -1,0 +1,18 @@
+﻿@*
+    html de la Vista PersonaModificada, por la que a traves de los ViewBag declarados en el HomeController
+    poder mostrar los datos modificados en la Vista Agregar
+*@
+
+<label>Nombre: @ViewBag.Nombre</label>
+<br/>
+<br />
+<label>Primer Apellido: @ViewBag.PrimerApellido</label>
+<br />
+<br />
+<label>Segundo Apellido: @ViewBag.SegundoApellido</label>
+<br />
+<br />
+<label>Edad: @ViewBag.Edad</label>
+<br />
+<br /> 
+@Html.ActionLink("Volver","Agregar","Home")
