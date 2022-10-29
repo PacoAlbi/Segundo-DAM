@@ -49,6 +49,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\lapiz.png" />
+	  <None Remove="Resources\Images\mas.png" />
+	  <None Remove="Resources\Images\residuos.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\DAL\DAL.csproj" />
 	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
 	</ItemGroup>

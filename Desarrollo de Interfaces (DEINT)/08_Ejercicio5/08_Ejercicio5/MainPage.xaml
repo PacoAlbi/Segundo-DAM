@@ -29,45 +29,35 @@
                 </ListView>
             </StackLayout>
         </ScrollView>
-
         <HorizontalStackLayout
                 VerticalOptions="End"
                 HorizontalOptions="End"
                 Spacing="20"
                 Margin="20">
             <Button 
-                ImageSource="pencil.png"
+                ImageSource="lapiz.png"
                 WidthRequest="75"
                 HeightRequest="75"
-                BackgroundColor="#D2C1DE"
+                BackgroundColor="#BBFF33"
                 BorderColor="Black"
                 BorderWidth="3"
                 Padding="8,5,0,5"/>
             <Button 
-                ImageSource="trash.png"
+                ImageSource="residuos.png"
                 WidthRequest="75"
                 HeightRequest="75"
-                BackgroundColor="#D2C1DE"
+                BackgroundColor="#BBFF33"
                  BorderColor="Black"
                 BorderWidth="3"
                 Padding="8,5,0,5"/>
             <Button 
-                ImageSource="plus.png"
+                ImageSource="mas.png"
                 WidthRequest="75"
                 HeightRequest="75"
-                BackgroundColor="#D2C1DE"
+                BackgroundColor="#BBFF33"
                  BorderColor="Black"
                 BorderWidth="3"
                 Padding="8,5,0,5"/>
         </HorizontalStackLayout>
     </Grid>
-    
-    
-    <!--<ListView x:Name="FruitListView" ItemsSource="{Binding Personas}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Nombre}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>-->
 </ContentPage>
