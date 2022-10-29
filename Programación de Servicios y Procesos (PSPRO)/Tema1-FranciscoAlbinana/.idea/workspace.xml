@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tema1-FranciscoAlbinana.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio1/Procesos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio3/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resources/CuentaCaracteres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resources/Ejercicio1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resources/texto_largo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/SinEsperas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +36,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Programación de Servicios y Procesos (PSPRO)\Tema1-FranciscoAlbinana\src\Resources" />
@@ -85,6 +83,9 @@
       <option name="presentableId" value="Default" />
       <updated>1667047887108</updated>
       <workItem from="1667047888368" duration="233000" />
+      <workItem from="1667048207145" duration="671000" />
+      <workItem from="1667054644322" duration="836000" />
+      <workItem from="1667055742876" duration="38000" />
     </task>
     <servers />
   </component>
