@@ -12,7 +12,7 @@ public class SinEsperas {
         char[] vocales = new char[]{'a','e','i','o','u'};
         //Array de procesos
         Process[] procesos = new Process[5];
-/*
+
         try{
             //Lanzamos el proceso 5 veces, una por vocal y sin esperar.
             for (int i = 0; i < 5; i++) {
@@ -36,7 +36,7 @@ public class SinEsperas {
             System.out.println("--------------------");
             e.printStackTrace();
             System.exit(3);
-        }*/
+        }
         //Escribimos el tiempo que ha tardado.
         System.out.println("El tiempo de ejecución ha sido de " + (System.currentTimeMillis()-tmpInicio));
     }
