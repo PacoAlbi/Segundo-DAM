@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Procesos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Procesos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/CuentaLineas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/CuentaLineas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarConEsperas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarConEsperas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarSinEsperas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarSinEsperas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio1/Procesos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio1/Procesos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio2/CuentaLineas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio2/CuentaLineas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/ContarSinEsperas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarSinEsperas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +143,7 @@
       <workItem from="1667130030349" duration="730000" />
       <workItem from="1667145145086" duration="3988000" />
       <workItem from="1667149185327" duration="4532000" />
+      <workItem from="1667154114667" duration="47000" />
     </task>
     <servers />
   </component>
