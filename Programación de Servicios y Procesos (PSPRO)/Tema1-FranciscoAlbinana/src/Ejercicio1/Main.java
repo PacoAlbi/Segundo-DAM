@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    //Abro mi lectura estandar.
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

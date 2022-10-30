@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Procesos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio1/Procesos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/CuentaLineas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/CuentaLineas.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/SinEsperas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Resources/CuentaCaracteres.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Resources/CuentaCaracteres.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarConEsperas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarConEsperas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarSinEsperas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tema1-FranciscoAlbinana/Ejercicio3/ContarSinEsperas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ejercicio1/Procesos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio1/Procesos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ejercicio2/CuentaLineas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio2/CuentaLineas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ejercicio2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/SinEsperas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarSinEsperas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/CuentaCaracteres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/CuentaCaracteres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/ContarSinEsperas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarSinEsperas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
       <recent name="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Programación de Servicios y Procesos (PSPRO)\Tema1-FranciscoAlbinana\src\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ContarSinEsperas">
+  <component name="RunManager" selected="Application.Ejercicio2.Main">
     <configuration name="ContarConEsperas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ejercicio3.ContarConEsperas" />
       <module name="Tema1-FranciscoAlbinana" />
@@ -129,10 +132,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ContarSinEsperas" />
-        <item itemvalue="Application.ContarConEsperas" />
-        <item itemvalue="Application.CuentaCaracteres" />
         <item itemvalue="Application.Ejercicio2.Main" />
+        <item itemvalue="Application.ContarConEsperas" />
+        <item itemvalue="Application.ContarSinEsperas" />
+        <item itemvalue="Application.CuentaCaracteres" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -154,6 +157,7 @@
       <workItem from="1667066310698" duration="40000" />
       <workItem from="1667130030349" duration="730000" />
       <workItem from="1667145145086" duration="3988000" />
+      <workItem from="1667149185327" duration="4532000" />
     </task>
     <servers />
   </component>
