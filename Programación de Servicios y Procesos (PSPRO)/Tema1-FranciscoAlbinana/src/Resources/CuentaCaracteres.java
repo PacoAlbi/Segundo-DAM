@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class CuentaCaracteres {
 	
-	private final static String RUTA_FICHERO = "C:\\ficheros\\texto_largo.txt";
+	private final static String RUTA_FICHERO = "C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Programación de Servicios y Procesos (PSPRO)\\Tema1-FranciscoAlbinana\\src\\Resources\\texto_largo.txt";
 
 	public static void main(String[] args) {
 		try {

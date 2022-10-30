@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Procesos {
 
     /**
-     *
+     * Precondiciones: No tiene.
+     * Método que mediante la consola de comandos crea un directorio en una ruta dada por el usuario.
+     * Postcondiciones: No tiene.
      */
     public static void crearCarpeta(){
         Scanner sc = new Scanner(System.in);
@@ -35,7 +37,9 @@ public class Procesos {
     }
 
     /**
-     *
+     * Precondiciones: No tiene.
+     * Método que mediante la consola de comandos crea un fichero en una ruta y con un nombre dados por el usuario.
+     * Postcondiciones: No tiene.
      */
     public static void crearFichero(){
         Scanner sc = new Scanner(System.in);
@@ -64,7 +68,9 @@ public class Procesos {
     }
 
     /**
-     *
+     * Precondiciones: No tiene.
+     * Método que muestra un tree de la ruta introducida por el usuario, y si no, la ruta actual.
+     * Postcondiciones: No tiene.
      */
     public static void mostrarContenido(){
         Scanner sc = new Scanner(System.in);

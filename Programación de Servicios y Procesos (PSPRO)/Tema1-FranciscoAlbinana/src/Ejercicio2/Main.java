@@ -2,22 +2,25 @@ package Ejercicio2;
 
 import Ejercicio1.Procesos;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
     public static void main(String[] args) {
-        String[] comando1 = {"cmd","/C","type","nul",">","C:\Users\manul\Desktop\2--DAM\Procesos\EjercicioPracticoUD1\src\ejercicio2\numLineas.txt"};
+        /*String[] comando1 = {"cmd","/C","type","nul",">","C:\Users\manul\Desktop\2--DAM\Procesos\EjercicioPracticoUD1\src\ejercicio2\numLineas.txt"};
         ProcessBuilder pb1 = new ProcessBuilder(comando1);
 
         pb1.redirectError(ProcessBuilder.Redirect.INHERIT);
 
-        pb1.inheritIO();
+        pb1.inheritIO();*/
 
-        String[] comando2 = {"notepad","C:\Users\manul\Desktop\2--DAM\Procesos\EjercicioPracticoUD1\src\ejercicio2\numLineas.txt"};
+        String[] comando2 = {"notepad","C:\\Users\\Paco\\Documents\\GitHub\\Segundo-DAM\\Programación de Servicios y Procesos (PSPRO)\\Tema1-FranciscoAlbinana\\src\\Ejercicio2\\numLineas.txt"};
         ProcessBuilder pb2 = new ProcessBuilder(comando2);
 
-        pb2.redirectInput(new File("src\ejercicio2\numLineas.txt"));
+        pb2.redirectInput(new File("src/Ejercicio2/numLineas.txt"));
 
         pb2.inheritIO();
 
@@ -27,15 +30,15 @@ public class Main {
         pb3.inheritIO();
 
         try {
-            Process p1 = pb1.start();
-            p1.waitFor();
+            /*Process p1 = pb1.start();
+            p1.waitFor();*/
             Process p2 = pb2.start();
-            if(p2.waitFor(10,TimeUnit.SECONDS)){
+            if(p2.waitFor(10, TimeUnit.SECONDS)){
                 Process p3 = pb3.start();
                 p3.waitFor();
             }else{
                 System.out.println("Has tardado mas de 30 segundos");
-                p1.destroy();
+                //p1.destroy();
                 p2.destroy();
             }
 
@@ -52,9 +55,5 @@ public class Main {
             e.printStackTrace();
             System.exit(3);
         }
-
-        Enviar mensaje a Manuulc~, EvaSomi
-
     }
-
 }
