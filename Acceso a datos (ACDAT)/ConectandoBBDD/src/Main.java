@@ -14,7 +14,7 @@ public class Main {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con = DriverManager.getConnection(CONEXIONURL, "falbinana", "654321");
+            con = DriverManager.getConnection(CONEXIONURL, "falbinana", "87654321");
 
             if (con != null) {
 
@@ -34,7 +34,7 @@ public class Main {
                 prst.setString(1, "J%");
                 querySQL(prst);*/
 
-
+                cambiarPassword();
 
 
             }
@@ -59,7 +59,7 @@ public class Main {
     public static void cambiarPassword (){
         try {
             st = con.createStatement();
-            st.executeUpdate("SET PASSWORD FOR 'falbinana'@'%' = password('654321')");
+            st.executeUpdate("SET PASSWORD FOR 'falbinana'@'%' = password('87654321')");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
