@@ -40,7 +40,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
         Connection con = null;
         Statement st = null;
         ResultSet rs = null;
-        ArrayList<Usuario> listaUsuarios = new ArrayList<>();
+        List<Usuario> listaUsuarios = new ArrayList<>();
         String sql = "SELECT * FROM ad2223_falbinana.Usuarios ORDER BY id";
         try {
             con = Conexion.conectar();

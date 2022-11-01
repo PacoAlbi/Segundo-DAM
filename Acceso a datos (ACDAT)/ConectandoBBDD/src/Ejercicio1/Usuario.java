@@ -9,13 +9,13 @@ public class Usuario {
     //Constructores.
     public Usuario() {}
 
-    public Usuario(int id, String nombre, String apellidos, String username, String password, String email) {
+    public Usuario(int id, String nombre, String apellidos, String username, String email, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.username = username;
-        this.password = password;
         this.email = email;
+        this.password = password;
     }
 
     public Usuario(String nombre, String apellidos, String username, String password, String email) {
