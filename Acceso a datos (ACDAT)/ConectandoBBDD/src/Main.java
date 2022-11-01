@@ -28,14 +28,10 @@ public class Main {
                 //insertarDatosArray(st); //Inserta los datos
                 //st.executeUpdate("DELETE FROM ad2223.falbinana");  //Aqui borro los datos de la tabla y la dejo vacia
 
-
                 //CON UN PREPARESTATEMENT
                 /*prst = con.prepareStatement("SELECT nombre, apellidos FROM ad2223.falbinana WHERE nombre like ? ORDER BY apellidos");
                 prst.setString(1, "J%");
                 querySQL(prst);*/
-
-                cambiarPassword();
-
 
             }
 
