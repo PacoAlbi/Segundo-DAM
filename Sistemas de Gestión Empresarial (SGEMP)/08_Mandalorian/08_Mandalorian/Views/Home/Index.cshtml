@@ -1,20 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model _08_Mandalorian.Models.IndexViewModel
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-
+    <h1 class="display-4">NUEVA REPÚBLICA GALÁCTICA</h1>
     <form method="post">
-
-
-
-
-
+    <table align="center">
+        <tr>
+            <th>Misiones de la nueva República</th>
+        </tr>
+            <tr>           
+            <td>               
+             @Html.DropDownListFor(m=>m.Mision.Id, new SelectList(Model.ListaMisiones,"Id","NombreMision",Model.Mision))
+            </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Ver Detalles de la Misión"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>@Model.Mision.Descripcion</label>
+                </td>
+            </tr>        
+    </table>
     </form>
-
-
-
 </div>
