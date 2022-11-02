@@ -8,7 +8,23 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-         
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Label
+                    Text="Nombre"
+                    />
+                <Entry
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Label
+                    Text="Password"
+                    />
+                <Entry
+                    IsPassword="True"/>
+            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
