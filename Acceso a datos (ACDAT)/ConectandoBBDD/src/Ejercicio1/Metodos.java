@@ -14,6 +14,8 @@ public class Metodos {
 
     public static void main(String[] args) {
         conectarBBDD();
+        crearTablas();
+        insertarMisTablas();
         desconectarBBDD();
     }
 

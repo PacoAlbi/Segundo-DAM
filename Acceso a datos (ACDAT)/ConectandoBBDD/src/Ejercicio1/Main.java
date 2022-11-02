@@ -12,7 +12,7 @@ public class Main {
         controller.registrarUsuario(usuario);
 
         // ver clientes
-        controller.verClientes();
+        controller.verUsuarios();
 
         // editar un cliente por medio del id
         usuario.setId(1);
@@ -20,7 +20,7 @@ public class Main {
         controller.actualizar(usuario);
 
         // eliminar un cliente por medio del id
-        usuario.setId(1);
+       usuario.setId(1);
         controller.eliminar(usuario);
     }
 }

@@ -28,7 +28,7 @@ public class ControllerUsuario {
     }
 
     //llama al DAO para obtener todos los clientes y luego los muestra en la vista
-    public void verClientes(){
+    public void verUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
         IUsuarioDao dao = new UsuarioDaoImpl();
         usuarios=dao.obtener();
