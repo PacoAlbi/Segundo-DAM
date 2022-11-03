@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_09_Ejercicio1.MainPage">
+
+        <VerticalStackLayout
+            Spacing="200"
+            Padding="30,0">
+
+            <Slider 
+                x:Name="slider"
+                Minimum="0"
+                Maximum="100"
+                Value="50"
+                VerticalOptions="Start"/>
+
+            <Label
+                x:Name="label"
+                Text="Hola Hola"
+                BindingContext="{Reference entry}"
+                FontSize="{Binding Text}"
+                HorizontalOptions="Start" 
+                VerticalOptions="Center"/>
+
+            <Entry
+                x:Name="entry"
+                Text="{Binding Value, Mode=TwoWay}"
+                BindingContext="{Reference slider}"
+                MaxLength="3"
+                VerticalOptions="End"
+                TextChanged="entry_TextChanged"/>
+
+        </VerticalStackLayout>
+
+</ContentPage>
