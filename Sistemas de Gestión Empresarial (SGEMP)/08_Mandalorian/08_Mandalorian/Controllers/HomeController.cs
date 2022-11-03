@@ -8,27 +8,31 @@ namespace _08_Mandalorian.Controllers
 {
     public class HomeController : Controller
     {
-        private IndexViewModel ivm;
+        
 
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
-            ivm = new IndexViewModel(new clsMision(), clsListaMisiones.getListaCompletaMisiones());
             _logger = logger;
         }
 
-        //Le paso a la vista una lista de las misiones, que he declarado antes del viewmodel antes para poder usarla en todo el controlador.
+        /// <summary>
+        /// Le paso a la vista una lista de las misiones, que he declarado antes del viewmodel antes para poder usarla en todo el controlador.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
-        {           
+        {
+            IndexViewModel ivm = new IndexViewModel(new clsMision(), clsListaMisiones.getListaCompletaMisiones());
             return View(ivm);
         }
         [HttpPost]
-        public IActionResult Index(IndexViewModel ivmPost)
+        public IActionResult Index(int IdMisionSeleccionada)
         {   //Recibo de la vista el Id de la misión seleccionada, y le devuelvo la lista con la descripción de la misión.
-            ivmPost.ListaMisiones = clsListaMisiones.getListaCompletaMisiones();
-            ivmPost.Mision = obtenerMision.obtenerMisionId(ivmPost.Mision.Id);
-            return View(ivmPost);
+            IndexViewModel ivm = new IndexViewModel();
+            ivm.ListaMisiones = clsListaMisiones.getListaCompletaMisiones();
+            ivm.Mision = obtenerMision.obtenerMisionId(IdMisionSeleccionada);
+            return View(ivm);
         }
 
         public IActionResult Privacy()

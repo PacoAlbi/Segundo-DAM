@@ -8,8 +8,8 @@
             <th>Misiones de la nueva República</th>
         </tr>
             <tr>           
-            <td>               
-             @Html.DropDownListFor(m=>m.Mision.Id, new SelectList(Model.ListaMisiones,"Id","NombreMision",Model.Mision))
+            <td>
+                    @Html.DropDownListFor(m=>m.Mision.Id, new SelectList(Model.ListaMisiones,"Id","NombreMision",Model.Mision))
             </td>
             </tr>
             <tr>
