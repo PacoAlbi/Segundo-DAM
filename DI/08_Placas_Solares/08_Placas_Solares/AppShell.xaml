@@ -13,13 +13,16 @@
         
         <ShellContent Title="Foto"
                       Icon="photo.png"
-                      ContentTemplate="{DataTemplate views:Fotos}" />
+                      ContentTemplate="{DataTemplate views:Fotos}"/>
         <ShellContent Title="Localizar"
                       Icon="localizar.png"
                       ContentTemplate="{DataTemplate views:Localizar}" />
         <ShellContent Title="Notas"
                       Icon="guardar.png"
                       ContentTemplate="{DataTemplate views:Notas}" />
+        <ShellContent Title="Citas"
+                      Icon="calendario.png"
+                      ContentTemplate="{DataTemplate views:Citas}" />
     </FlyoutItem>
     
 

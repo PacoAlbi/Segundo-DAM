@@ -15,15 +15,32 @@
                     Text="Nombre"
                     />
                 <Entry
+                    x:Name="nombre"
+                    Placeholder="NOMBRE"
                     />
             </HorizontalStackLayout>
             <HorizontalStackLayout
-                HorizontalOptions="Center">
+                HorizontalOptions="Center"
+                Padding="20">
                 <Label
                     Text="Password"
                     />
                 <Entry
-                    IsPassword="True"/>
+                    x:Name="password"
+                    IsPassword="True"
+                    Placeholder="PASS"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Padding="20"
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="btnLog"
+                    Text="Log In"
+                    BorderWidth="4"
+                    BorderColor="Yellow"
+                    BackgroundColor="Aqua"
+                    Clicked="btnLog_Clicked"
+                    />
             </HorizontalStackLayout>
 
         </VerticalStackLayout>

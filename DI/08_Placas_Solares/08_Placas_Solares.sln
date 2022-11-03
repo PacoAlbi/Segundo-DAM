@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_Placas_Solares", "08_Pla
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{01CC1589-6108-4952-8932-640C6E901D5E}"
 	ProjectSection(SolutionItems) = preProject
-		TextFile1.txt = TextFile1.txt
+		Cambios.txt = Cambios.txt
 	EndProjectSection
 EndProject
 Global

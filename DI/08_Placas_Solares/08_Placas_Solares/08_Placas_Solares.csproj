@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\calendario.png" />
 	  <None Remove="Resources\Images\guardar.png" />
 	  <None Remove="Resources\Images\localizar.png" />
 	  <None Remove="Resources\Images\photo.png" />
@@ -67,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Citas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\FotosPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -4,4 +4,5 @@
     -Si he entrado al mapa desde una cita, no tiene sentido volver al listado de citas.
     -El botón para volver en el mapa es demasiado grande.
     -Las fotos deberían verse en el informe. No se sabe muy bien si se han guardado o no.
-    -No me gusta que al pulsar "Conceder" o "Denegar" navegue directamente al listado. Debería haber un check y botón "Guardar"
+    -No me gusta que al pulsar "Conceder" o "Denegar" navegue directamente al listado. 
+    Debería haber un check y botón "Guardar"

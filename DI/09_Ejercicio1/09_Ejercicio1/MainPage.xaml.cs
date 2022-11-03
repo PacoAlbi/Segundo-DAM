@@ -15,10 +15,12 @@ public partial class MainPage : ContentPage
 			entry.Text = "1";
 		}else
 		{
-            double entrada = Convert.ToDouble(entry.Text);
-            int entero = Convert.ToInt32(entrada);
-            entry.Text = Convert.ToString(entero);
-        }
+			double entrada = Convert.ToDouble(entry.Text);
+			int entero = Convert.ToInt32(entrada);
+			entry.Text = Convert.ToString(entero);
+			//var numero = Convert.ToInt32(entry.Text);
+			//entry.Text = Convert.ToString(numero);
+		}
 	}
 }
 
