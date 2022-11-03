@@ -17,6 +17,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
             con = Conexion.conectar();
             st = con.createStatement();
             st.execute(sql);
+            System.out.println("Usuario insertado correctamente.");
             registrar = true;
         } catch (SQLException e) {
             System.out.println("Error insertando el usuario en la BBDD." + System.lineSeparator() + e.getMessage());
@@ -87,6 +88,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
             con = Conexion.conectar();
             st = con.createStatement();
             st.execute(sql);
+            System.out.println("Usuario actualizado correctamente.");
             actualizar = true;
         } catch (SQLException e) {
             System.out.println("Error actualizando el usuario de la BBDD." + System.lineSeparator() + e.getMessage());
@@ -115,6 +117,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
             con = Conexion.conectar();
             st = con.createStatement();
             st.execute(sql);
+            System.out.println("Usuario borrado correctamente.");
             eliminar = true;
         } catch (SQLException e) {
             System.out.println("Error eliminado al usuario de la BBDD." + System.lineSeparator() + e.getMessage());

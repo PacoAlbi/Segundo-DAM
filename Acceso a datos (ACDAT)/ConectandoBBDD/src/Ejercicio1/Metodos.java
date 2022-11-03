@@ -70,10 +70,10 @@ public class Metodos {
         String[] camposUsuarios = {"id int PRIMARY KEY AUTO_INCREMENT,", "nombre varchar(45),", "apellidos varchar(45),", "username varchar(20),", "email varchar(50),", "password varchar(128)"};
         crearTabla(tablaUsuarios,camposUsuarios);
         String tablaPosts = "Posts";
-        String[] camposPosts = {"idPosts int PRIMARY KEY AUTO_INCREMENT,", "idUsuarios int,", "created_at date,", "updated_at date,", "FOREIGN KEY (idUsuarios) REFERENCES Usuarios (id)"};
+        String[] camposPosts = {"idPosts int PRIMARY KEY AUTO_INCREMENT,", "idUsuarios int,", "created_at date,", "updated_at date,", "FOREIGN KEY (idUsuarios) REFERENCES Usuarios (id) ON DELETE CASCADE ON UPDATE CASCADE"};
         crearTabla(tablaPosts,camposPosts);
         String tablaLikes = "Likes";
-        String[] camposLikes = {"idLikes int PRIMARY KEY AUTO_INCREMENT,", "idUsuarios int,", "idPosts int,", "FOREIGN KEY (idUsuarios) REFERENCES Usuarios (id),", "FOREIGN KEY (idPosts) REFERENCES Posts (idPosts)"};
+        String[] camposLikes = {"idLikes int PRIMARY KEY AUTO_INCREMENT,", "idUsuarios int,", "idPosts int,", "FOREIGN KEY (idUsuarios) REFERENCES Usuarios (id) ON DELETE CASCADE ON UPDATE CASCADE,", "FOREIGN KEY (idPosts) REFERENCES Posts (idPosts) ON DELETE CASCADE ON UPDATE CASCADE"};
         crearTabla(tablaLikes,camposLikes);
     }
 
@@ -91,10 +91,10 @@ public class Metodos {
         }
         create += ")";
         System.out.println(create);
-        System.out.println("Campos para la tabla " + tabla + " creados correctamente.");
         try {
             st = con.createStatement();
             st.executeUpdate(create);
+            System.out.println("Campos para la tabla " + tabla + " creados correctamente.");
         } catch (SQLException e) {
             System.out.println("Error creando la tabla." + System.lineSeparator() + e.getMessage());
         }

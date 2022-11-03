@@ -19,8 +19,8 @@ public class Main {
         usuario.setNombre("Paco");
         controller.actualizar(usuario);
 
-        // eliminar un cliente por medio del id
-       usuario.setId(1);
+        // eliminar un cliente por medio de su id
+        usuario.setId(1);
         controller.eliminar(usuario);
     }
 }
