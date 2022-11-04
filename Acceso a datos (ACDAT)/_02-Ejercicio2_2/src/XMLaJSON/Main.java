@@ -9,7 +9,7 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) {
-        transformaraJSON();
+        //transformaraJSON();
         transformaraXML();
     }
 
@@ -28,7 +28,6 @@ public class Main {
             JSONObject json = XML.toJSONObject(leerXML);
             String jsonFormateado = json.toString();
             bw.write(jsonFormateado);
-
             br.close();
             bw.close();
             leerXML.close();
