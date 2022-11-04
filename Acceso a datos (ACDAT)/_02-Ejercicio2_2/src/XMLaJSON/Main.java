@@ -9,7 +9,7 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) {
-        //transformaraJSON();
+        transformaraJSON();
         transformaraXML();
     }
 
@@ -52,7 +52,7 @@ public class Main {
             BufferedReader br = new BufferedReader(leerJSON);
             FileWriter escribirXML = new FileWriter("src/XMLaJSON/comprasTransformado.xml");
             BufferedWriter bw = new BufferedWriter(escribirXML);
-            JSONObject json = new JSONObject(leerJSON);
+            JSONObject json = new JSONObject();
 
             while (!json.isEmpty()){
                 String xmlSalida = json.toString();

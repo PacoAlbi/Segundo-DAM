@@ -10,17 +10,23 @@ public partial class MainPage : ContentPage
 
 	private void entry_TextChanged(object sender, TextChangedEventArgs e)
 	{
-		if (entry.Text == "")
+		//if (entry.Text == "")
+		//{
+		//	entry.Text = "1";
+		//}else
+		//{
+		//	double entrada = Convert.ToDouble(entry.Text);
+		//	int entero = Convert.ToInt32(entrada);
+		//	entry.Text = Convert.ToString(entero);
+		//	//var numero = Convert.ToInt32(entry.Text);
+		//	//entry.Text = Convert.ToString(numero);
+		//}
+
+		if (!int.TryParse(e.NewTextValue, out int value))
 		{
-			entry.Text = "1";
-		}else
-		{
-			double entrada = Convert.ToDouble(entry.Text);
-			int entero = Convert.ToInt32(entrada);
-			entry.Text = Convert.ToString(entero);
-			//var numero = Convert.ToInt32(entry.Text);
-			//entry.Text = Convert.ToString(numero);
-		}
+			//((Entry)sender).Text = e.OldTextValue;
+			entry.Text = e.OldTextValue;
+        }
 	}
 }
 
