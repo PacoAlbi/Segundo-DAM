@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/Controles/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/ResourceSQL/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/08_Placas_Solares.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/08_Placas_Solares.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/MainPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/Resources/Images/calendario.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/Resources/Images/calendario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio1/Ejercicio1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio2/CuentaLineas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio2/Ejercicio2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio3/CuentaCaracteres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio3/Ejercicio3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +155,7 @@
       <workItem from="1667231372183" duration="10000" />
       <workItem from="1667467409018" duration="182000" />
       <workItem from="1667585735478" duration="27000" />
+      <workItem from="1667757870565" duration="305000" />
     </task>
     <servers />
   </component>
