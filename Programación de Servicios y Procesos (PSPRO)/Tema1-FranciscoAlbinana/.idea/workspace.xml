@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="" />
+    <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/Controles/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/ResourceSQL/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso a datos (ACDAT)/ConectandoBBDD/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/08_Placas_Solares.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/08_Placas_Solares.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/AppShell.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/MainPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/Resources/Images/calendario.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../DI/08_Placas_Solares/08_Placas_Solares/Resources/Images/calendario.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,20 +42,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/falbinana/Desktop/Segundo-DAM/Programación de Servicios y Procesos (PSPRO)/Tema1-FranciscoAlbinana",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/falbinana/Desktop/Segundo-DAM/Programación de Servicios y Procesos (PSPRO)/Tema1-FranciscoAlbinana&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Paco\Documents\GitHub\Segundo-DAM\Programación de Servicios y Procesos (PSPRO)\Tema1-FranciscoAlbinana\src\Resources" />
@@ -148,6 +159,7 @@
       <workItem from="1667154264930" duration="43000" />
       <workItem from="1667231372183" duration="10000" />
       <workItem from="1667467409018" duration="182000" />
+      <workItem from="1667585735478" duration="27000" />
     </task>
     <servers />
   </component>

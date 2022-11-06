@@ -77,6 +77,47 @@ public class UsuarioDaoImpl implements IUsuarioDao {
         return listaUsuarios;
     }
 
+    public List<Usuario> obtenerUsuario(String nombre) {
+        Connection con = null;
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        List<Usuario> listaUsuarios = new ArrayList<>();
+        String sql = "SELECT * FROM ad2223_falbinana.Usuarios ORDER BY ?";
+        try {
+            con = Conexion.conectar();
+            pst = con.prepareStatement(sql);
+            pst.setString(1,nombre);
+            rs = pst.executeQuery();
+            while (rs.next()){
+                Usuario usuario = new Usuario();
+                usuario.setId(rs.getInt(1));
+                usuario.setNombre(rs.getString(2));
+                usuario.setApellidos(rs.getString(3));
+                usuario.setUsername(rs.getString(4));
+                usuario.setEmail(rs.getString(5));
+                usuario.setPassword(rs.getString(6));
+                listaUsuarios.add(usuario);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error, usuario no encontrado." + System.lineSeparator() + e.getMessage());
+        } finally {
+            try {
+                if (pst!=null){
+                    pst.close();
+                }
+                if (con!=null){
+                    con.close();
+                }
+                if (rs!=null){
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Error desconectando de SQL." + System.lineSeparator() + e.getMessage());
+            }
+        }
+        return listaUsuarios;
+    }
+
     @Override
     public boolean actualizar(Usuario usuario) {
         boolean actualizar = false;

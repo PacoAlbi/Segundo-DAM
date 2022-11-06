@@ -3,10 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_08_Placas_Solares.Views.Citas"
              Title="Citas">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="5">
+            <HorizontalStackLayout
+                Spacing="30"
+                HorizontalOptions="Center">
+                <Image
+                    Source="tile_1.png"/>
+                <Image
+                    Source="tile_2.png"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="30"
+                HorizontalOptions="Center">
+                <Image
+                    Source="tile_3.png"/>
+                <Image
+                    Source="tile_4.png"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="30"
+                HorizontalOptions="Center">
+                <Image
+                    Source="tile_5.png"/>
+                <Image
+                    Source="tile_6.png"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Spacing="30"
+                HorizontalOptions="Center">
+                <Image
+                    Source="tile_7.png"/>
+                <Image
+                    Source="tile_8.png"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

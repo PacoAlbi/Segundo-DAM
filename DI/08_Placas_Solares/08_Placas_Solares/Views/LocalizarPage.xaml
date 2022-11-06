@@ -4,10 +4,16 @@
              x:Class="_08_Placas_Solares.Views.Localizar"
              Title="Localizar"
              x:Name="LocalizarPage">
+    <ScrollView
+     Orientation="Horizontal">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Label 
+                Text="Seleccionar Cliente"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="Medium"/>
+            <Image
+            Source="mapa.JPG"/>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

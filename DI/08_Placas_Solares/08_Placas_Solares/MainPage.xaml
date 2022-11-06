@@ -5,44 +5,43 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
+            Spacing="60"
             VerticalOptions="Center">
-
+            <Label
+                Text="VOLT INC."
+                TextColor="Blue"
+                FontAttributes="Bold"
+                FontSize="Header"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"/>
             <HorizontalStackLayout
-                HorizontalOptions="Center">
+                HorizontalOptions="Center"
+                Spacing="20">
                 <Label
-                    Text="Nombre"
-                    />
+                    Text="Nombre:"/>
                 <Entry
-                    x:Name="nombre"
-                    Placeholder="NOMBRE"
-                    />
+                    x:Name="nombre"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout
                 HorizontalOptions="Center"
-                Padding="20">
+                Spacing="20">
                 <Label
-                    Text="Password"
-                    />
+                    Text="Password:"/>
                 <Entry
                     x:Name="password"
-                    IsPassword="True"
-                    Placeholder="PASS"/>
+                    IsPassword="True"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout
-                Padding="20"
-                HorizontalOptions="Center">
+                HorizontalOptions="Center"
+                Padding="10">
                 <Button
                     x:Name="btnLog"
                     Text="Log In"
-                    BorderWidth="4"
+                    BorderWidth="2"
                     BorderColor="Yellow"
                     BackgroundColor="Aqua"
-                    Clicked="btnLog_Clicked"
-                    />
+                    Clicked="btnLog_Clicked"/>
             </HorizontalStackLayout>
-
         </VerticalStackLayout>
     </ScrollView>
 
