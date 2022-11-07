@@ -1,0 +1,153 @@
+1.Un programa:
+Seleccione una:
+a. Se almacena en un medio de almacenamiento secundario, e incluye instrucciones y datos. --> CORRECTA 
+b. Incluye todos los datos con los que va a trabajar en la memoria principal.
+c. Puede ejecutarse en varios procesadores a la vez, lo que hace aumentar su rendimiento.
+d. Tiene una parte de código común cargado en la memoria para cualquier proceso que se cree para él, y una parte de datos que se crea para cada proceso.
+
+2.Con respecto a los servicios:
+Seleccione una:
+a. Son un componente fundamental de los sistemas distribuidos. --> CORRECTA 
+b. Proporcionan servicios a otros procesos de otros ordenadores, nunca a procesos del mismo ordenador.
+c. No se puede tener información acerca de su ejecución puesto que no permiten la redirección por salida estándar.
+d. No son un tipo de procesos.
+
+3.¿Cuál de las siguientes afirmaciones sobre sistemas distribuidos es falsa?
+Seleccione una:
+a. No hay memoria compartida.
+b. No es posible la ejecución de varios procesos concurrentes. --> CORRECTA 
+c. La red de conexión entre los distintos ordenadores no es específica.
+d. La comunicación entre procesos se realiza mediante mensajes a través de la red.
+
+4.Los distintos procesos que se ejecutan en un ordenador:
+Seleccione una:
+a. Solo pueden comunicarse entre sí a través de almacenamiento secundario, dado que no comparten memoria.
+b. Se planifican de manera independiente a los hilos.
+c. Se les debe ceder el procesador de cuando en cuando
+d. Se pueden ejecutar simultáneamente en sistemas multiprocesadores. --> CORRECTA 
+
+5.Los hilos:
+Seleccione una:
+a. Tienen menos prioridad que los procesos.
+b. Solo existen para un proceso si el mismo proceso los crea explícitamente.
+c. Comparten memoria con otros hilos del mismo proceso. --> CORRECTA 
+d. Se planifican por parte del planificador a corto plazo de manera independiente a los procesos.
+
+6.¿Cuál de las siguientes afirmaciones sobre hilos es falsa?
+Seleccione una:
+a. Si un hilo de un proceso modifica un objeto situado en la memoria, los demás hilos del mismo proceso pueden ver los cambios realizados.
+b. No se necesitan mecanismos de sincronización entre hilos. --> CORRECTA 
+c. El planificador a corto plazo gestiona de manera independiente los distintos hilos de un mismo proceso.
+d. La creación de un nuevo hilo para un proceso ya existente no requiere reservar e inicializar espacio en la memoria.
+
+7.La programación concurrente:
+Seleccione una:
+a. Solo es posible en sistemas multiprocesadores
+b. Requiere utilizar técnicas de comunicación y sincronización entre procesos  --> CORRECTA 
+c. No siempre permite conseguir una mejora en el tiempo de ejecución 
+d. No requiere de técnicas específicas de programación
+
+8.Los sistemas multiprocesadores fuertemente acoplados:
+Seleccione una:
+a. Sólo comparten la memoria a través de un bus.
+b. Sólo comparten la memoria a través de una red de comunicaciones.
+c. Comparten tanto la memoria como el sistema de E/S a través de una red de comunicaciones.
+d. Comparten tanto la memoria como el sistema de E/S a través de un bus.  --> CORRECTA 
+
+9.Cuál de las siguientes afirmaciones no es un inconveniente de los sistemas distribuidos:
+Seleccione una:
+a. La velocidad de la red se puede convertir en un cuello de botella para la comunicación entre procesos.
+b. Difícil escalabilidad.  --> CORRECTA 
+c. Sincronización entre procesos complicada.
+d. Sistemas difíciles de mantener por la heterogeneidad. 
+
+10.El procesamiento que se ejecuta en diferentes ordenadores independientes, pero conectados y sincronizados se denomina:
+Seleccione una:
+a. Monohilo
+b. Concurrente 
+c. Paralelo
+d. Distribuido  --> CORRECTA 
+
+11.¿Cuál de las siguientes afirmaciones no es una ventaja de la programación concurrente?
+Seleccione una:
+a. Al distribuir el tiempo del procesador entre todos los procesos, se disminuye el tiempo de respuesta.
+b. Permite incrementar el rendimiento del sistema.
+c. Es fácil implementar mecanismos de sincronización y comunicación entre procesos.  --> CORRECTA 
+d. Permite escalabilidad con la instalación de nuevos procesadores.
+
+12.La ejecución de un proceso termina:
+Seleccione una:
+a. sin tener que finalizar la ejecución de sus hilos.
+b. cuando finaliza la ejecución de todos sus hilos. --> CORRECTA 
+c. cuando finaliza la ejecución de todos sus subprocesos.
+d. cuando finaliza alguno de sus hilos, éste ya informará a los demás hilos de la terminación del proceso para que paren su ejecución.
+
+13.¿Cuál de las siguientes afirmaciones sobre servicios es falsa?
+Seleccione una:
+a. Pueden crear hilos para mejorar su tiempo de respuesta ante nuevas peticiones.
+b. Solo pueden actuar como servicio y no como cliente. --> CORRECTA 
+c. Se pueden configurar para que arranque automáticamente cuando arranca el sistema operativo.
+d. Se ejecutan en segundo plano.
+
+14.Un proceso bloqueado:
+Seleccione una:
+a. Se puede desbloquear cuando termina la operación de E/S de la que estaba pendiente. --> CORRECTA 
+b. Es gestionado por el planificador a medio plazo.
+c. Puede pasar directamente a estado terminado si pasa mucho tiempo sin que termine la operación de E/S.
+d. No puede pasar a la memoria secundaria hasta que no termine la operación de E/S de la que está pendiente.
+
+15.Un cambio de contexto:
+Seleccione una:
+a. No requiere salvaguardar el estado de ejecución si el cambio es a otro hilo del proceso actualmente en ejecución.
+b. Lo realiza el núcleo del sistema operativo.  --> CORRECTA 
+c. Solo se realiza en sistemas monoprocesadores, porque en los sistemas multiprocesadores cada proceso se ejecuta en un procesador diferente. 
+d. Puede afectar negativamente al rendimiento si el proceso al que se cede el procesador está a la espera de que finalice una operación de E/S.
+
+16.¿Cuál es el estado al que puede pasar un proceso que está en estado Listo?
+Seleccione una:
+a. Bloqueado
+b. En ejecución --> CORRECTA 
+c. Nuevo
+d. Finalizado
+
+17.En computación, se entiende por multitarea:
+Seleccione una:
+a. La capacidad que tiene un ordenador de ejecutar varios programas al mismo tiempo.
+b. La capacidad que tiene un ordenador de ejecutar un programa detrás de otro.
+c. La capacidad que tiene un ordenador de realizar tareas sincronizadas entre sí. --> CORRECTA 
+d. La capacidad que tiene un ordenador de realizar tareas complejas.
+
+18.Un proceso:
+Seleccione una:
+a. Es un objeto estático, debido al tipo de datos que maneja.
+b. Puede ejecutarse en varios procesadores a la vez, para aumentar el rendimiento.
+c. Puede no tener ningún hilo.
+d. Se inicia con la carga de un programa en la memoria y su posterior ejecución. --> CORRECTA 
+
+19.Un proceso que se encuentra en estado "Suspendido listo":
+
+Seleccione una:
+a. Viene del estado "Bloqueado" por tener que realizar operaciones de E/S.
+b. Se encuentra en este momento en la memoria principal. 
+c. La siguiente fase a la que puede pasar es "Listo".  --> CORRECTA 
+d. Puede pasar directamente al estado "En ejecución".
+
+20.La principal diferencia entre la programación concurrente y distribuida es:
+
+Seleccione una:
+a. En la programación concurrente se ejecutan varios procesos concurrentes en distintos procesadores de distintos sistemas/equipos, 
+mientras que en la programación distribuida se ejecutan varios procesos concurrentes en un mismo procesador o en distintos procesadores de un mismo sistema.
+b. En la programación concurrente se ejecutan varios procesos concurrentes en distintos procesadores de distintos sistemas/equipos, 
+mientras que en la programación distribuida se ejecutan varios procesos concurrentes siempre en distintos procesadores de un mismo sistema/equipo. 
+c. En la programación concurrente se ejecutan varios procesos concurrentes siempre en distintos procesadores de un mismo sistema/equipo, 
+mientras que en la programación distribuida se ejecutan varios procesos concurrentes en distintos procesadores de distintos sistemas/equipos.
+d. En la programación concurrente se ejecutan varios procesos concurrentes en un mismo procesador o en distintos procesadores de un mismo sistema, 
+mientras que en la programación distribuida se ejecutan varios procesos concurrentes en distintos procesadores de distintos sistemas/equipos.   --> CORRECTA 
+
+21.En los sistemas distribuidos:
+
+Seleccione una:
+a. Los procesadores se encuentran en ordenadores independientes pero con el mismo hardware. Pueden estar conectados por una LAN, por una WAN o incluso a través de Internet.
+b. Los procesadores se encuentran en ordenadores independientes y pueden tener distinto hardware entre sí. Deben estar conectados por una LAN, no permitiéndose redes de mayor tamaño.
+c. Los procesadores se encuentran en ordenadores independientes y pueden tener distinto hardware entre sí. Pueden estar conectados por una LAN, por una WAN o incluso a través de Internet. --> CORRECTA 
+d. Los procesadores se encuentran en ordenadores independientes pero con el mismo hardware. Deben estar conectados por una LAN, no permitiéndose redes de mayor tamaño.

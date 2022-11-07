@@ -16,7 +16,7 @@ public class Ejercicio3 {
         String[] vocales = { "a", "e", "i", "o", "u" };
 
         // Comando que ejecuta la clase CuentaCaracteres
-        String comando = "java ejercicio3.CuentaCaracteres";
+        String comando = "java CuentaCaracteres.java";
 
         // Creo una lista donde voy a guardar todos los procesos que se lancen
         List<Process> listaProcesos = new ArrayList<Process>();
@@ -26,7 +26,7 @@ public class Ejercicio3 {
             for (int i = 0; i < vocales.length; i++) {
                 // Añadimos la vocal al final del comando
                 ProcessBuilder pb = new ProcessBuilder((comando + " " + vocales[i]).split(" "));
-                pb.directory(new File("bin"));
+                pb.directory(new File("src/Resources/"));
                 pb.inheritIO();
                 Process p = pb.start();
                 listaProcesos.add(p);
