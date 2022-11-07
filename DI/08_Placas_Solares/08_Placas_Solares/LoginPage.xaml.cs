@@ -3,7 +3,6 @@
 public partial class MainPage : ContentPage
 {
 
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -13,7 +12,7 @@ public partial class MainPage : ContentPage
 	{
 		if (nombre.Text is not null && password.Text is not null)
 		{
-            await Navigation.PushAsync(new AppShell());
+			Application.Current.MainPage = new AppShell();
         }
         else
         {

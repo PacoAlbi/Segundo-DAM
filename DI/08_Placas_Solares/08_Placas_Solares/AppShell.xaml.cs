@@ -7,4 +7,8 @@ public partial class AppShell : Shell
 		InitializeComponent();
 	}
 
+	private void MenuItem_Clicked(object sender, EventArgs e)
+	{
+
+	}
 }

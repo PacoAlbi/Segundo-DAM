@@ -7,13 +7,13 @@
     xmlns:views="clr-namespace:_08_Placas_Solares.Views"
     Shell.FlyoutBehavior="Flyout"
     Shell.TitleColor="Beige">
-    
-    
+   
+
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        
+
         <ShellContent Title="Citas"
                       Icon="calendario.png"
-                      ContentTemplate="{DataTemplate views:Citas}" />
+                      ContentTemplate="{DataTemplate views:Citas}"/>
         <ShellContent Title="Foto"
                       Icon="photo.png"
                       ContentTemplate="{DataTemplate views:Fotos}"/>
@@ -23,8 +23,10 @@
         <ShellContent Title="Notas"
                       Icon="guardar.png"
                       ContentTemplate="{DataTemplate views:Notas}" />
-        
-    </FlyoutItem>
-    
 
+    </FlyoutItem>
+
+    <MenuItem
+        Text="Salir"
+        Clicked="MenuItem_Clicked"/>
 </Shell>

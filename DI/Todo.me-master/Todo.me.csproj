@@ -6,17 +6,17 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>_08_Placas_Solares</RootNamespace>
+		<RootNamespace>Todo.me</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>08_Placas_Solares</ApplicationTitle>
+		<ApplicationTitle>Todo.me</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname._08_placas_solares</ApplicationId>
-		<ApplicationIdGuid>15AD6236-7997-4740-AA6C-1DA052D78ED9</ApplicationIdGuid>
+		<ApplicationId>com.companyname.todo.me</ApplicationId>
+		<ApplicationIdGuid>03AA372A-048A-4A60-B36C-1AF9C96A4C4E</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -29,6 +29,33 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-android|AnyCPU'">
+	  <AndroidPackageFormat>aab</AndroidPackageFormat>
+	  <AndroidUseAapt2>True</AndroidUseAapt2>
+	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+	  <DebugSymbols>True</DebugSymbols>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios|AnyCPU'">
+	  <DebugSymbols>True</DebugSymbols>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-maccatalyst|AnyCPU'">
+	  <DebugSymbols>True</DebugSymbols>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows10.0.19041.0|AnyCPU'">
+	  <DebugSymbols>True</DebugSymbols>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'" />
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'" />
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-maccatalyst|AnyCPU'" />
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows10.0.19041.0|AnyCPU'" />
 
 	<ItemGroup>
 		<!-- App Icon -->
@@ -49,49 +76,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\calendario.png" />
-	  <None Remove="Resources\Images\guardar.png" />
-	  <None Remove="Resources\Images\localizar.png" />
-	  <None Remove="Resources\Images\logo.png" />
-	  <None Remove="Resources\Images\mapa.JPG" />
-	  <None Remove="Resources\Images\photo.png" />
-	  <None Remove="Resources\Images\rayo.png" />
-	  <None Remove="Resources\Images\tile_1.png" />
-	  <None Remove="Resources\Images\tile_2.png" />
-	  <None Remove="Resources\Images\tile_3.png" />
-	  <None Remove="Resources\Images\tile_4.png" />
-	  <None Remove="Resources\Images\tile_5.png" />
-	  <None Remove="Resources\Images\tile_6.png" />
-	  <None Remove="Resources\Images\tile_7.png" />
-	  <None Remove="Resources\Images\tile_8.png" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="1.2.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="LoginPage.xaml.cs">
-	    <DependentUpon>LoginPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\FotosPage.xaml.cs">
-	    <DependentUpon>FotosPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\LocalizarPage.xaml.cs">
-	    <DependentUpon>LocalizarPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\NotasPage.xaml.cs">
-	    <DependentUpon>NotasPage.xaml</DependentUpon>
+	  <Compile Update="View\SprintDetailsView.xaml.cs">
+	    <DependentUpon>SprintDetailsView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Citas.xaml">
+	  <MauiXaml Update="View\SprintDetailsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\FotosPage.xaml">
+	  <MauiXaml Update="View\SprintView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\LocalizarPage.xaml">
+	  <MauiXaml Update="View\TodoDetailsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\NotasPage.xaml">
+	  <MauiXaml Update="View\TodoView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

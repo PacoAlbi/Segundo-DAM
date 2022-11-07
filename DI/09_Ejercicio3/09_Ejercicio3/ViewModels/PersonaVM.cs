@@ -15,6 +15,7 @@ namespace _09_Ejercicio3.ViewModels
             set
             {
                 nombre = value;
+                this.persona.Nombre = nombre;
                 NotifyPropertyChanged();
             }
         }
@@ -22,8 +23,7 @@ namespace _09_Ejercicio3.ViewModels
         public PersonaVM()
         {
             persona = new clsPersona();
-            this.nombre = "Paco";
-            this.persona.Nombre = nombre;
+            this.nombre = "Paco";            
         }
 
      
