@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio1/Ejercicio1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio2/CuentaLineas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio2/Ejercicio2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio3/CuentaCaracteres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/correccionesElena/Ejercicio3/Ejercicio3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PSP-Soluciones-T1-master/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PSP-Soluciones-T1-master/.idea/PSP-Soluciones-T1-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PSP-Soluciones-T1-master/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PSP-Soluciones-T1-master/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProcesosTema1/src/Ejercicio1_10/Proceso1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProcesosTema1/src/Ejercicio1_11/LeerFichero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProcesosTema1/src/Ejercicio1_11/Procesos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProcesosTema1/src/Ejercicio1_10/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProcesosTema1/src/Ejercicio1_11/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProcesosTema1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProcesosTema1/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio3/ContarConEsperas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +165,8 @@
       <workItem from="1667467409018" duration="182000" />
       <workItem from="1667585735478" duration="27000" />
       <workItem from="1667757870565" duration="305000" />
+      <workItem from="1667843970313" duration="9000" />
+      <workItem from="1667844522859" duration="837000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,8 @@
+//Crea una clase que lance los siguientes procesos y que sincronice la ejecución entre ellos:
+//Proceso 1: Creación por línea de comandos de una carpeta de nombre “carpeta1” en la ruta C:\pruebas. Si esta carpeta no existe créala.
+//Proceso 2: Creación por línea de comandos un fichero en blanco en la carpeta creada en el Proceso 1. Llama al fichero “fichero1.txt”.  Deberá esperar a que termine correctamente el Proceso 1 antes de crear el fichero.
+//Proceso 3: Abre el fichero creado en el Proceso 2 con el bloc de notas (el comando es notepad). Antes de abrir el fichero tiene que esperar a que termine el Proceso 2.
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
