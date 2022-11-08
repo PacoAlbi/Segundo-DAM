@@ -22,21 +22,15 @@ public class OrdenaNombres {
 
 		// Creo el Scanner para leer de la entrada estándar
 		Scanner sc = new Scanner(System.in);
-
+		List<String> lista = new ArrayList<>();
+		String alumno;
 		// Mientras haya líneas que leer seguiremos leyendo
 		while (sc.hasNextLine()) {
 			linea = sc.nextLine();
-
-			//No me acuerdo como sacarle la edad con un escaner, y he probado de todo y no sale nada.....
-
-			// TODO: Añade el código necesario para obtener los nombres
-			// con el formato "Nombre Apellido1 Apellido2"
-
+			alumno = linea.split(", ")[1];
+			alumno += " " + linea.split(", ")[0];
+			System.out.println(alumno);
 		}
-
-		// TODO: Añade el código necesario para imprimir por consola los nombres de los
-		// alumnos ordenados por su nombre
-
 		sc.close();
 	}
 }

@@ -13,18 +13,17 @@ public class MayoresEdad {
 		// Línea que contendrá los datos de un línea.
 		// La voy a ir leyendo de la entrada estándar
 		String linea;
-
 		// Creo el Scanner para leer de la entrada estándar
 		Scanner sc = new Scanner(System.in);
-
 		// Mientras haya líneas que leer seguiremos leyendo
 		while (sc.hasNextLine()) {
 			linea = sc.nextLine();
-
-			String[] nombre = linea.split("; ");
-			System.out.println(nombre);
-			// TODO: Añade el código necesario para que se impriman únicamente los nombres
-			// de aquellos alumnos que son mayores de edad
+			int edad = Integer.parseInt(linea.split(";")[1]);
+			String nombre = linea.split(";")[0];
+			//Busco los alumnos mayores de edad y los imprimo por pantalla.
+			if (edad >=18 ){
+				System.out.println(nombre);
+			}
 		}
 		sc.close();
 	}

@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/Examen-Tema1-FranciscoAlbinana.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio1/Calculadora.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio1/Ejercicio1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/Ejercicio2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/MayoresEdad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/OrdenaNombres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/alumnos.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/Ejercicio3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/MediaNumeros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/NumerosAleatorios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/SumaNumeros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f06466bb-805b-4993-a5dd-ee47bef8ce03" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,6 +160,7 @@
       <workItem from="1667892305808" duration="28000" />
       <workItem from="1667906070227" duration="6784000" />
       <workItem from="1667914899475" duration="43000" />
+      <workItem from="1667924624690" duration="33000" />
     </task>
     <servers />
   </component>
