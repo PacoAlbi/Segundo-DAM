@@ -18,10 +18,10 @@ public class MayoresEdad {
 		// Mientras haya líneas que leer seguiremos leyendo
 		while (sc.hasNextLine()) {
 			linea = sc.nextLine();
-			int edad = Integer.parseInt(linea.split(";")[1]);
 			String nombre = linea.split(";")[0];
+			int edad = Integer.parseInt(linea.split(";")[1]);
 			//Busco los alumnos mayores de edad y los imprimo por pantalla.
-			if (edad >=18 ){
+			if ( edad >=18 ){
 				System.out.println(nombre);
 			}
 		}

@@ -19,18 +19,19 @@ public class OrdenaNombres {
 		// Línea que contendrá los datos de un línea.
 		// La voy a ir leyendo de la entrada estándar
 		String linea;
-
 		// Creo el Scanner para leer de la entrada estándar
 		Scanner sc = new Scanner(System.in);
 		List<String> lista = new ArrayList<>();
-		String alumno;
 		// Mientras haya líneas que leer seguiremos leyendo
 		while (sc.hasNextLine()) {
+			String alumno;
 			linea = sc.nextLine();
 			alumno = linea.split(", ")[1];
 			alumno += " " + linea.split(", ")[0];
-			System.out.println(alumno);
+			lista.add(alumno);
 		}
+		Collections.sort(lista);
+		System.out.println(lista);
 		sc.close();
 	}
 }
