@@ -1,4 +1,6 @@
-﻿namespace _08_ASP_MVC_Ejercicio3.Models.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace _08_ASP_MVC_Ejercicio3.Models.Entidades
 {
     /// <summary>
     /// Creacion de la clase persona con sus atributos privados, sus propiedades publicas y sus constructores
@@ -14,6 +16,7 @@
         #endregion
 
         #region Propiedades
+        [Required(ErrorMessage = "Campo obligatorio")]
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string PrimerApellido { get { return primerApellido; } set { primerApellido = value; } }
         public string SegundoApellido { get { return segundoApellido; } set { segundoApellido = value; } }

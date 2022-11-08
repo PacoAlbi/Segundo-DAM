@@ -8,6 +8,7 @@
 <form action="/Home/Agregar" method="post">
     <label>Nombre</label>
     <input type="text" name="Nombre" value="@Model.Nombre" />
+    @Html.ValidationMessageFor(model=>model.Nombre)
     <br/>
     <br/>
     <label>Primer Apellido</label>

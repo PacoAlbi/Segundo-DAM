@@ -16,9 +16,7 @@ namespace _08_ASP_MVC_Ejercicio3.Controllers
 
         public IActionResult Index()
         {
-            return View();
-          
-           
+            return View();        
         }
        
         /// <summary>
@@ -45,16 +43,21 @@ namespace _08_ASP_MVC_Ejercicio3.Controllers
         /// <param name="Edad"></param>
         /// <returns>Un String de la vista AgregarPersona</returns>
         [HttpPost]
-        public ActionResult Agregar(string Nombre, string PrimerApellido, String SegundoApellido, int Edad)
+        public ActionResult Agregar(String Nombre, String PrimerApellido, String SegundoApellido, int Edad)
         {
-
-            ViewBag.Nombre = Nombre;
-            ViewBag.PrimerApellido = PrimerApellido;
-            ViewBag.SegundoApellido = SegundoApellido;
-            ViewBag.Edad = Edad;
-
+            clsPersona persona = new clsPersona(Nombre, PrimerApellido, SegundoApellido, Edad);
+            if (!ModelState.IsValid) 
+            { 
+                return View(persona);
+            }
+            else
+            {
+                ViewBag.Nombre = Nombre;
+                ViewBag.PrimerApellido = PrimerApellido;
+                ViewBag.SegundoApellido = SegundoApellido;
+                ViewBag.Edad = Edad;
+            }           
             return View("PersonaModificada") ;
-
         }
 
         public IActionResult Privacy()
