@@ -3,42 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_08_Placas_Solares.Views.Citas"
              Title="Citas">
-    
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="5">
-            <HorizontalStackLayout
-                Spacing="30"
-                HorizontalOptions="Center">
-                <Image
-                    Source="tile_1.png"/>
-                <Image
-                    Source="tile_2.png"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
-                Spacing="30"
-                HorizontalOptions="Center">
-                <Image
-                    Source="tile_3.png"/>
-                <Image
-                    Source="tile_4.png"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
-                Spacing="30"
-                HorizontalOptions="Center">
-                <Image
-                    Source="tile_5.png"/>
-                <Image
-                    Source="tile_6.png"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
-                Spacing="30"
-                HorizontalOptions="Center">
-                <Image
-                    Source="tile_7.png"/>
-                <Image
-                    Source="tile_8.png"/>
-            </HorizontalStackLayout>
+        <VerticalStackLayout>
+            <SearchBar Placeholder="Buscar Cliente"
+           CancelButtonColor="Red"
+           PlaceholderColor="Black"
+           TextColor="Orange"
+           TextTransform="Lowercase"
+           HorizontalTextAlignment="Center"
+           FontSize="Medium"
+           FontAttributes="Italic"/>
+            <ListView
+        x:Name="lstImagenes"
+        RowHeight="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout
+                        HorizontalOptions="Center">
+                                <ImageButton
+                        Source="{Binding Ruta}"
+                        Clicked="ImageButton_Clicked"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

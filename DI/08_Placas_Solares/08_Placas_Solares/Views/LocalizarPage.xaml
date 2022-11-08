@@ -8,7 +8,7 @@
      Orientation="Horizontal">
     <VerticalStackLayout>
             <Label 
-                Text="Seleccionar Cliente"
+                Text="Maria del Pilar"
                 HorizontalOptions="Center"
                 FontAttributes="Bold"
                 FontSize="Medium"/>

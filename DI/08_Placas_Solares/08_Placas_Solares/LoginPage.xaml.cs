@@ -1,9 +1,10 @@
-﻿namespace _08_Placas_Solares;
+﻿using _08_Placas_Solares.Views;
+namespace _08_Placas_Solares;
 
-public partial class MainPage : ContentPage
+public partial class LoginPage : ContentPage
 {
 
-	public MainPage()
+	public LoginPage()
 	{
 		InitializeComponent();
 	}
@@ -12,7 +13,7 @@ public partial class MainPage : ContentPage
 	{
 		if (nombre.Text is not null && password.Text is not null)
 		{
-			Application.Current.MainPage = new AppShell();
+			await Navigation.PushAsync(new Citas());
         }
         else
         {

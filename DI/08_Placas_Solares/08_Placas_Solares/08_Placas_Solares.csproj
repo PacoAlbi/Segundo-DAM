@@ -56,6 +56,7 @@
 	  <None Remove="Resources\Images\mapa.JPG" />
 	  <None Remove="Resources\Images\photo.png" />
 	  <None Remove="Resources\Images\rayo.png" />
+	  <None Remove="Resources\Images\salir.png" />
 	  <None Remove="Resources\Images\tile_1.png" />
 	  <None Remove="Resources\Images\tile_2.png" />
 	  <None Remove="Resources\Images\tile_3.png" />
@@ -64,6 +65,11 @@
 	  <None Remove="Resources\Images\tile_6.png" />
 	  <None Remove="Resources\Images\tile_7.png" />
 	  <None Remove="Resources\Images\tile_8.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DAL\DAL.csproj" />
+	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

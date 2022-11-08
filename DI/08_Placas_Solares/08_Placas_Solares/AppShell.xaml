@@ -7,26 +7,33 @@
     xmlns:views="clr-namespace:_08_Placas_Solares.Views"
     Shell.FlyoutBehavior="Flyout"
     Shell.TitleColor="Beige">
+    
    
-
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
 
-        <ShellContent Title="Citas"
-                      Icon="calendario.png"
-                      ContentTemplate="{DataTemplate views:Citas}"/>
-        <ShellContent Title="Foto"
-                      Icon="photo.png"
-                      ContentTemplate="{DataTemplate views:Fotos}"/>
+        
         <ShellContent Title="Localizar"
                       Icon="localizar.png"
-                      ContentTemplate="{DataTemplate views:Localizar}" />
+                      ContentTemplate="{DataTemplate views:Localizar}"
+                      FlyoutItemIsVisible="False"/>
+        <ShellContent Title="Foto"
+                      Icon="photo.png"
+                      ContentTemplate="{DataTemplate views:Fotos}"
+                      FlyoutItemIsVisible="False"/>
         <ShellContent Title="Notas"
                       Icon="guardar.png"
-                      ContentTemplate="{DataTemplate views:Notas}" />
+                      ContentTemplate="{DataTemplate views:Notas}"
+                      FlyoutItemIsVisible="False"/>
 
     </FlyoutItem>
 
     <MenuItem
-        Text="Salir"
-        Clicked="MenuItem_Clicked"/>
+        Text="Volver a Citas"
+        Clicked="vlvCitas_Clicked"
+        IconImageSource="rayo.png"/>
+    <MenuItem
+        Text="Salir de la App"
+        Clicked="MenuItem_Clicked"
+        IconImageSource="salir.png"/>
+
 </Shell>
