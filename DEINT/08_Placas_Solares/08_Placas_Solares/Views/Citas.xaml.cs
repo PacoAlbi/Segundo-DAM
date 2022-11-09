@@ -6,8 +6,8 @@ public partial class Citas : ContentPage
 	public Citas()
 	{
 		InitializeComponent();
-		lstImagenes.ItemsSource = clsListadoImagenesDAL.obtenerImagenes();
-	}
+        lstImagenes.ItemsSource = clsListadoImagenesDAL.obtenerImagenes();
+    }
 
 	private void ImageButton_Clicked(object sender, EventArgs e)
 	{
@@ -19,5 +19,10 @@ public partial class Citas : ContentPage
         Navigation.InsertPageBefore(new LoginPage(), Navigation.NavigationStack[0]);
         Navigation.RemovePage(Navigation.NavigationStack[1]);
         return base.OnBackButtonPressed();
+    }
+
+    private void abrirMapa(object sender, EventArgs e)
+    {
+        Command command = new Command(() => Map.Default.OpenAsync(new Location(), new MapLaunchOptions { NavigationMode = NavigationMode.Driving }));
     }
 }

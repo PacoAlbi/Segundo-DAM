@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlacasSolares.Views.Notas"
+             Title="Notas"
+             x:Name="NotasPage">
+    <Grid BackgroundColor="Cyan">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout>
+                <Border
+                    Stroke="Black"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 5,5,5,5">
+                    <Label
+                        Padding="5"
+                        Text="La casa está situada en una ubicación perfecta para instalar las placas. El sol da a una zona todo el día y es viable."
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                </Border>
+                <Border
+                    Stroke="Black"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 5,5,5,5">
+                    <Label
+                        Padding="5"
+                        Text="Necesitará 2,5KW de instalación incial, que serán unas 15 placas de tamaño medio."
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                </Border>
+                <Border
+                    Stroke="Black"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 5,5,5,5">
+                    <Label
+                        Padding="5"
+                        Text="En la segunda fase, en la parcela de al lado de unas 2 hectáreas, se intalarán 20 placas más para aportar una reserva extra."
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" />
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Button Grid.Row="0"
+                Text="Añadir Nota"
+                FontSize="Caption"
+                ImageSource="rayo.png"
+                BorderWidth="1" 
+                BackgroundColor="#4ba862" 
+                TextColor="White" 
+                HorizontalOptions="End" 
+                WidthRequest="140" 
+                HeightRequest="70" 
+                Margin="0,0,20,20" 
+                VerticalOptions="End"/>
+    </Grid>
+</ContentPage>

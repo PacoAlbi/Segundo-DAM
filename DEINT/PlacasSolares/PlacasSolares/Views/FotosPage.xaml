@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlacasSolares.Views.Fotos"
+             Title="Fotos"
+             x:Name="FotosPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <FlexLayout x:Name="flexLayout"
+                        Wrap="Wrap"
+                        JustifyContent="SpaceAround" />
+        </ScrollView>
+
+        <ActivityIndicator x:Name="activityIndicator"
+                           IsRunning="True"
+                           VerticalOptions="Center" />
+
+        <ImageButton x:Name="btnFoto"
+                Grid.Row="0"
+                Source="photo.png"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Clicked="btnFoto_Clicked"
+                HeightRequest="60"
+                WidthRequest="60"
+                Padding="0,0,20,20"/>
+    </Grid>
+</ContentPage>

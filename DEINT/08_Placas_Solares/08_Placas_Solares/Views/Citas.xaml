@@ -19,11 +19,12 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <HorizontalStackLayout
-                        HorizontalOptions="Center">
+                            <HorizontalStackLayout>
                                 <ImageButton
                         Source="{Binding Ruta}"
                         Clicked="ImageButton_Clicked"/>
+                                <ImageButton
+                                    Clicked="abrirMapa"/>
                             </HorizontalStackLayout>
                         </ViewCell>
                     </DataTemplate>
