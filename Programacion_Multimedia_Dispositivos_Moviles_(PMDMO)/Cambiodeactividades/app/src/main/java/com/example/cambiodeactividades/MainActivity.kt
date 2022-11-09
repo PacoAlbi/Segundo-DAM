@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, OtraActividad::class.java)
             startActivity(intent)
         }
-        btnLanzarSegundaActividad.setOnClickListener {
+        btnCambiarSaludo.setOnClickListener {
             val intent = Intent(this, OtraActividad::class.java)   // Declaramos un Intent para cambiar a la "Otra" actividad
             findViewById<Button>(R.id.btnCambiarSaludo).setOnClickListener { // Asociamos el cambio de pantalla a un botón
                 Log.d("MainActivity", "voy") // Mostramos un Log para ver que se realiza el cambio

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mandaloriano_MAUI.Views.VistaMisiones"
+             Title="VistaMisiones">
+    <VerticalStackLayout>
+        <Label
+            Text="Misiones Disponibles"
+            FontSize="Header"/>
+        <Picker
+            ItemsSource="{Binding}"/>
+        <Label
+            Text="{}"/>
+        <Button
+            Text="Ver Detalles de la Misión."/>
+    </VerticalStackLayout>
+</ContentPage>
