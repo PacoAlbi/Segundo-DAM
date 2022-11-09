@@ -1,1 +1,0 @@
-C:\Users\falbinana\Desktop\SEGUNDO DAM\Desarrollo de Interfaces (DEINT)\03-Hello_World\03-Hello_World_UWP\03-Hello_World_UWP.csproj;x64
