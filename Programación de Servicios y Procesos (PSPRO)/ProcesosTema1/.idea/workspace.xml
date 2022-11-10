@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fcfb31f-3b12-41b2-aaa9-448ce3939eca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/Examen-Tema1-FranciscoAlbinana.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio1/Calculadora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio1/Ejercicio1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/Ejercicio2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/MayoresEdad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/OrdenaNombres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio2/alumnos.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/Ejercicio3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/MediaNumeros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/NumerosAleatorios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen-Tema1-FranciscoAlbinana/src/Ejercicio3/SumaNumeros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tema1-FranciscoAlbinana/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tema1-FranciscoAlbinana/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Fz7a5taqTXadl2q6CNOUe3Apg0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/falbinana/Desktop/Segundo-DAM/Programación de Servicios y Procesos (PSPRO)/ProcesosTema1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Clase1Aleatoria" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1_7.Clase1Aleatoria" />
+      <module name="ProcesosTema1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ejercicio1_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio1_8.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1_8.Main" />
+      <module name="ProcesosTema1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ejercicio1_8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1_9.Main" />
+      <module name="ProcesosTema1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ejercicio1_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PreguntaNombre" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1_5.PreguntaNombre" />
+      <module name="ProcesosTema1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ejercicio1_5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcesosTuberia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1_7.ProcesosTuberia" />
+      <module name="ProcesosTema1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ejercicio1_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ejercicio1_8.Prueba" />
+      <module name="ProcesosTema1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ejercicio1_8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Clase1Aleatoria" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Ejercicio1_8.Main" />
+      <item itemvalue="Application.PreguntaNombre" />
+      <item itemvalue="Application.ProcesosTuberia" />
+      <item itemvalue="Application.Prueba" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PreguntaNombre" />
+        <item itemvalue="Application.Ejercicio1_8.Main" />
+        <item itemvalue="Application.Prueba" />
+        <item itemvalue="Application.ProcesosTuberia" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fcfb31f-3b12-41b2-aaa9-448ce3939eca" name="Changes" comment="" />
+      <created>1665483118826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665483118826</updated>
+      <workItem from="1665483120408" duration="240000" />
+      <workItem from="1665483372947" duration="3572000" />
+      <workItem from="1665488083840" duration="3925000" />
+      <workItem from="1665649294167" duration="2546000" />
+      <workItem from="1665728156882" duration="16000" />
+      <workItem from="1666255160636" duration="1538000" />
+      <workItem from="1666256850863" duration="32000" />
+      <workItem from="1666333361291" duration="8000" />
+      <workItem from="1666333963435" duration="4000" />
+      <workItem from="1666695228844" duration="2800000" />
+      <workItem from="1666698249898" duration="24000" />
+      <workItem from="1666766688715" duration="46000" />
+      <workItem from="1667467302127" duration="13000" />
+      <workItem from="1667892187427" duration="21000" />
+      <workItem from="1667909832008" duration="686000" />
+      <workItem from="1667912028302" duration="538000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
