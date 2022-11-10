@@ -29,7 +29,7 @@ namespace _5_9_Tarea_Obligatoria.Controllers
             editada.Persona = editarVM.Persona;
             editada.Departamento = clsManejadoraDepartamentosDAL.ObtenerDepartamentoPorSuId(editada.Persona.IdDepartamento);
 
-            return View("PersonaEditada",editarVM);
+            return View("PersonaEditada",editada);
         }
 
         

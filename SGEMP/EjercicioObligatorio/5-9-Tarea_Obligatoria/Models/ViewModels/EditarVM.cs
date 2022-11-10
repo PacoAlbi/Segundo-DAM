@@ -20,7 +20,7 @@ namespace _5_9_Tarea_Obligatoria.Models.ViewModels
         public EditarVM()
         {
             Departamentos = clsListadoDepartamentosDAL.ObtenerListadoCompletoDepartamentos();
-            Persona = new clsPersona("Manu", "Lopez", 20, 1);
+            Persona = new clsPersona("Paco", "Albiñana", 42, 4);
         }
 
         #endregion
