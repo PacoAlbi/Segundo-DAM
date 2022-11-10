@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             val recoveryTask = MisNotasApp.database.taskDao().getTaskById(id)
             tasks.add(recoveryTask)
             adapter.notifyItemInserted(tasks.size)
+            Log.d("Pruebas",id.toString())
             clearFocus()
             hideKeyboard()
         }
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
     fun clearFocus(){
         findViewById<EditText>(R.id.etTask).setText("")
     }
+
     fun Context.hideKeyboard() {
         val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
@@ -50,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         launch {
             tasks = MisNotasApp.database.taskDao().getAllTasks()
             setUpRecyclerView(tasks)
+            Log.d("Pruebas",tasks.toString())
         }
     }
 
