@@ -77,7 +77,6 @@ public partial class Fotos : ContentPage
 
             if (photo != null)
             {
-                // save the file into local storage
                 string localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
                 ImageButton image = new ImageButton
                 {
@@ -92,10 +91,7 @@ public partial class Fotos : ContentPage
                 {
                     flexLayout.Children.Add(image);
                 }
-                //Aqui se debería preguntar al usuario si nquiere añadir la foto
-
-
-                //Aqui se guarda la foto en la memoria interna
+                //Aqui se guarda la foto en la memoria interna.
                 using Stream sourceStream = await photo.OpenReadAsync();
                 using FileStream localFileStream = File.OpenWrite(localFilePath);
 

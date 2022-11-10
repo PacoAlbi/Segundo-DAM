@@ -5,8 +5,9 @@
              BackgroundColor="Cyan">
 
     <VerticalStackLayout
-            Spacing="60"
-            VerticalOptions="Center">
+            Spacing="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
         <Image Source="logo.png"
                HeightRequest="150"
                WidthRequest="150"/>
@@ -17,43 +18,36 @@
                 FontSize="Large"
                 HorizontalOptions="Center"
                 VerticalOptions="Start"/>
-        <HorizontalStackLayout
+
+        <Label  Text="Nombre:"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        <Border StrokeThickness="2" Stroke="Black" StrokeShape="RoundRectangle 10,10,10,10">
+            <Entry
+                x:Name="nombre"
+                IsEnabled="True"
+                WidthRequest="100"/>
+        </Border>
+
+        <Label  Text="Password:"
+                VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Spacing="20">
-            <Label
-                    Text="Nombre:"
-                    VerticalOptions="Center"/>
-            <Border StrokeThickness="2" Stroke="Black" StrokeShape="RoundRectangle 10,10,10,10">
-                <Entry
-                    x:Name="nombre"
-                    IsEnabled="True"
-                    WidthRequest="100"/>
-            </Border>
-        </HorizontalStackLayout>
-        <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="20">
-            <Label
-                    Text="Password:"
-                    VerticalOptions="Center"/>
-            <Border StrokeThickness="2" Stroke="Black" StrokeShape="RoundRectangle 10,10,10,10">
-                <Entry
-                    x:Name="password"
-                    IsPassword="True"
-                    IsEnabled="True"
-                    WidthRequest="100"/>
-            </Border>
-        </HorizontalStackLayout>
-        <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Padding="10">
-            <Button
-                    x:Name="btnLog"
-                    Text="Log In"
-                    BorderWidth="2"
-                    BorderColor="Yellow"
-                    BackgroundColor="Blue"
-                    Clicked="btnLog_Clicked"/>
-        </HorizontalStackLayout>
+                FontAttributes="Bold"/>
+        <Border StrokeThickness="2" Stroke="Black" StrokeShape="RoundRectangle 10,10,10,10">
+            <Entry
+                x:Name="password"
+                IsPassword="True"
+                IsEnabled="True"
+                WidthRequest="100"/>
+        </Border>
+
+        <Button
+                x:Name="btnLog"
+                Text="Log In"
+                BorderWidth="2"
+                BorderColor="Yellow"
+                BackgroundColor="Blue"
+                Clicked="btnLog_Clicked"/>
+
     </VerticalStackLayout>
 </ContentPage>
