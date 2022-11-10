@@ -1,0 +1,34 @@
+﻿@* Esta vista recibe un ViewModel con una persona y una lista de los departamentos disponibles para elegir/asignar, en ella 
+    podemos cambiar el nombre,apellidos, la edad y su departamento.
+*@
+
+@model _5_9_Tarea_Obligatoria.Models.ViewModels.EditarVM
+
+<h1>Editar</h1>
+
+    <form action="/Home/Editar" method="post">
+
+    <label>Nombre : </label> @Html.TextBoxFor(x=>x.Persona.Nombre)
+        
+        <br />
+        <br />
+
+    <label>Apellidos : </label> @Html.TextBoxFor(x=>x.Persona.Apellido)
+        
+        <br />
+        <br />
+
+        <label>Edad : </label> @Html.TextBoxFor(x=>x.Persona.Edad)
+
+        <br/>
+        <br/>
+
+
+    @Html.DropDownListFor(m => m.Persona.IdDepartamento,new SelectList(Model.Departamentos,"IdDepartamento","NombreDepartamento"),Model.Persona)
+
+        <br />
+        <br />
+
+        <input type="submit" value="Editar" />
+
+    </form>

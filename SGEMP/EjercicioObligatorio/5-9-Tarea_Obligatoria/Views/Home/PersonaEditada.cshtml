@@ -1,0 +1,24 @@
+﻿@*En esta vista recibimos un ViewModel con la persona editada, aparecera su nombre,apellidos,edad y el nombre del departamento
+    al que pertenece
+*@
+
+@model _5_9_Tarea_Obligatoria.Models.ViewModels.PersonaEditadaVM
+
+<label>Nombre : @Model.Persona.Nombre </label>
+<br />
+<br />
+<label>Apellidos : @Model.Persona.Apellido </label>
+<br />
+<br />
+<label>Edad : @Model.Persona.Edad </label>
+<br />
+<br />
+<label>Nombre del departamento : @Model.Departamento.NombreDepartamento</label>
+
+<br />
+<br />
+
+
+@Html.ActionLink("Volver a editar","Editar","Home")
+
+

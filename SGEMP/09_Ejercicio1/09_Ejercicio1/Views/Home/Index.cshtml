@@ -1,0 +1,41 @@
+﻿@model Entidades.clsPersona
+
+<form action="/Home/Index" method="post">
+    <label>Nombre: </label>
+    <input type="text" name="Nombre" value="@Model.Nombre"/>
+    <label style="color:#FF0000">@Html.ValidationMessageFor(model=>model.Nombre)</label>
+    <br />
+    <br />
+    <label>Primer Apellido: </label>
+    @Html.TextBoxFor(x=>x.PrimerApellido)
+    <label style="color:#FF0000">@Html.ValidationMessageFor(model=>model.PrimerApellido)</label>
+    <br />
+    <br />
+    <label>Segundo Apellido: </label>
+    @Html.TextBoxFor(x=>x.SegundoApellido)
+    <label style="color:#FF0000">@Html.ValidationMessageFor(model=>model.SegundoApellido)</label>
+    <br />
+    <br />
+    <label>Edad: </label>
+    @Html.TextBoxFor(x=>x.Edad)
+    <br />
+    <br />
+    <label>Fecha de Nacimiento: </label>
+    @Html.TextBoxFor(x=>x.FechaNac)
+    <label style="color:#FF0000">@Html.ValidationMessageFor(model=>model.FechaNac)</label>
+    <br />
+    <br />
+    <label>Dirección: </label>
+    @Html.TextBoxFor(x=>x.Direccion)
+    <label style="color:#FF0000">@Html.ValidationMessageFor(model=>model.Direccion)</label>
+    <br />
+    <br />
+    <label>Teléfono: </label>
+    @Html.TextBoxFor(x=>x.Telefono)
+    <label style="color:#FF0000">@Html.ValidationMessageFor(model=>model.Telefono)</label>
+    <br />
+    <input type="submit" value="Modificar" />
+    <br />
+    <label style="color:#FF0000">@Html.ValidationSummary()</label>
+    
+</form>
