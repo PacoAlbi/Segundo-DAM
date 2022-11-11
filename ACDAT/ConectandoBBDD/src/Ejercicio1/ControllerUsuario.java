@@ -1,6 +1,7 @@
 package Ejercicio1;
 
-import java.util.ArrayList;
+import Usuario.Usuario;
+
 import java.util.List;
 
 public class ControllerUsuario {

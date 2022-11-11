@@ -5,18 +5,30 @@ import java.sql.*;
 
 public class Metodos {
 
-    private static final String USER = "falbinana";
+    private static final String USER = "ad2223_falbinana";
     private static final String PASS = "87654321";
-    private static final String CONEXIONURL = "jdbc:mysql://dns11036.phdns11.es";
+    private static final String CONEXIONURL = "jdbc:mysql://dns11036.phdns11.es/ad2223_falbinana";
     private static Connection con;
     private static Statement st = null;
     private static PreparedStatement prst = null;
 
     public static void main(String[] args) {
         conectarBBDD();
-        crearTablas();
-        insertarMisTablas();
+
         desconectarBBDD();
+    }
+
+    /**
+     * Método para cambiar la contraseña de la BBDD
+     */
+    public static void cambiarPassword (){
+        try {
+            st = con.createStatement();
+            st.executeUpdate("SET PASSWORD FOR 'ad2223_falbinana'@'%' = password('12345678')");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**

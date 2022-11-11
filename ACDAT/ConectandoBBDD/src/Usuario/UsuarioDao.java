@@ -1,13 +1,13 @@
-package Ejercicio1;
+package Usuario;
 
 import Controles.Conexion;
-import Usuario.Usuario;
+import Ejercicio1.IUsuarioDao;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioDaoImpl implements IUsuarioDao {
+public class UsuarioDao implements IUsuarioDao {
 
     @Override
     public boolean registrar(Usuario usuario) {

@@ -1,5 +1,7 @@
 package Ejercicio1;
 
+import Usuario.Usuario;
+
 import java.util.List;
 
 public interface IUsuarioDao {
