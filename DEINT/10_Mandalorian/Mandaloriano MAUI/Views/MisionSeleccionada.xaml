@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Mandaloriano_MAUI.ViewModels"
+             x:Class="Mandaloriano_MAUI.Views.MisionSeleccionada"
+             Title="MisionSeleccionada">
+    <ContentPage.BindingContext>
+        <model:VistaMisionesVM/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <ListView x:Name="lstListadoMisiones"
+                  ItemsSource="{Binding ListadoMisionesCompleto}"
+                  SelectedItem="{Binding MisionSeleccionada}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding NombreMision}"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnMostrarDetalles"
+                Command="{Binding MostrarDetallesCommand}"/>
+        <Label x:Name="lblNombreMision"
+               Text="{Binding MisionSeleccionada.NombreMision}"
+               IsVisible="{Binding DatosMisionEsVisible}"/>
+        <Label x:Name="lblDescripcionMision"
+               Text="{Binding MisionSeleccionada.Descripcion}"
+               IsVisible="{Binding DatosMisionEsVisible}"/>
+        <Label x:Name="lblRecompensa"
+               
+               IsVisible="{Binding DatosMisionEsVisible}"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -54,6 +54,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\MisionSeleccionada.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\VistaMisiones.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
