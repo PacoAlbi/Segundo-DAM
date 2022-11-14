@@ -40,6 +40,6 @@ public partial class Citas : ContentPage
     /// <param name="e"></param>
     private void abrirMapa(object sender, EventArgs e)
     {
-        Map.Default.OpenAsync(new Location(34.074276327653294, -118.61553001991057), new MapLaunchOptions { NavigationMode = NavigationMode.Driving });
+        Map.Default.OpenAsync(new Location(37.36681850074017, -5.934129049246128), new MapLaunchOptions { NavigationMode = NavigationMode.Driving });
     }
 }

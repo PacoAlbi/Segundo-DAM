@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Likes;
 
 public class Likes {
 

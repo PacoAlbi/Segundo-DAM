@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="85443514-b33f-4f06-911d-040a466a3c4a" name="Mi BBDD Mapping">
+      <data-sources db="0e8116b3-2adf-4466-93fb-20f99807d136" ddl="8a335092-c397-4b22-ba08-2385447fe9b7" />
+      <scope>
+        <node kind="database" negative="1">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

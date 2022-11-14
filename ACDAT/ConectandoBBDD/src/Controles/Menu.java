@@ -1,5 +1,9 @@
 package Controles;
 
+import Likes.ControllerLikes;
+import Posts.ControllerPosts;
+import Usuario.ControllerUsuario;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -8,6 +12,7 @@ public class Menu {
 //    System.out.println("\033[93;1;4mEn Construcción\033[0m"); //Amarillo
 //    System.out.println("\033[92;1;4mEn Construcción\033[0m"); //Verde
 
+    private static Scanner sc = new Scanner(System.in);
     /**
      * Precondiciones: No tiene.
      * Método que crea la estructura del menú para imprimirla.
@@ -16,14 +21,13 @@ public class Menu {
     public static void pintarMenu() {
         System.out.println("""
                 
-                ------Bienvenido a mi menú de hoy, ¿Que desea hacer?------
-                [1] Mostrar Tablas.
-                [2] Mostrar Datos de una tabla.
-                [3] Buscar.
-                [4] Insertar.
-                [5] Borrar.
+                ---Bienvenido a mi menú de hoy, ¿Que desea hacer?---
+                [1] Mostrar Datos.
+                [2] Actualizar.
+                [3] Insertar.
+                [4] Borrar.
                 [0] Salir.
-                ----------------------------------------------------------""");
+                ----------------------------------------------------""");
     }
 
     /**
@@ -32,18 +36,16 @@ public class Menu {
      * Postcondiciones: Lanza un proceso u otro según la opción elegida.
      */
     public static void menuPrincipal() {
-        Scanner sc = new Scanner(System.in);
         String menu;
         boolean salir = false;
         do {
             pintarMenu();
             menu = sc.next();
             switch (menu) {
-                case "1" -> System.out.println("En Construcción");
-                case "2" -> mostrarTabla();
-                case "3" -> System.out.println("\033[31;1;4mEn Construcción\033[0m"); //Para poner el texto en rojo; negrita; subrayado por ese orden dentro de los ;
-                case "4" -> System.out.println("\033[93;1;4mEn Construcción\033[0m"); //Amarillo
-                case "5" -> System.out.println("\033[92;1;4mEn Construcción\033[0m"); //Verde
+                case "1" -> mostrarTablas();
+                case "2" -> mostrarActualizar();
+                case "3" -> mostrarInsertar();
+                case "4" -> mostrarBorrar();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
@@ -52,86 +54,86 @@ public class Menu {
     }
 
 
-    public static void pintarMostrarTabla() {
+    public static void pinntar3Tablas() {
         System.out.println("""
                 
-                -------Elija una tabla-------
+                ---Elija una tabla---
                 [1] Usuarios.
                 [2] Posts.
                 [3] Likes.
                 [0] Salir.
-                -----------------------------""");
+                ---------------------""");
     }
 
-    public static void mostrarTabla() {
-        Scanner sc = new Scanner(System.in);
+    public static void pinntar2Tablas() {
+        System.out.println("""
+                
+                ---Elija una tabla---
+                [1] Usuarios.
+                [2] Posts.
+                [0] Salir.
+                ---------------------""");
+    }
+
+    public static void mostrarTablas() {
         String menu;
         boolean salir = false;
         do {
-            pintarMostrarTabla();
+            pinntar3Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> System.out.println("En Construcción");
-                case "2" -> System.out.println("En Construcción");
-                case "3" -> System.out.println("En Construcción");
+                case "1" -> ControllerUsuario.verUsuarios();
+                case "2" -> ControllerPosts.verPosts();
+                case "3" -> ControllerLikes.verLikes();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
         } while (!salir);
-        sc.close();
     }
 
-    public static void mostrarBuscar() {
-        Scanner sc = new Scanner(System.in);
+    public static void mostrarActualizar() {
         String menu;
         boolean salir = false;
         do {
-            pintarMostrarTabla();
+            pinntar2Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> System.out.println("En Construcción");
-                case "2" -> System.out.println("En Construcción");
-                case "3" -> System.out.println("En Construcción");
+                case "1" -> ControllerUsuario.actualizar();
+                case "2" -> ControllerPosts.actualizarPost();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
         } while (!salir);
-        sc.close();
     }
 
     public static void mostrarInsertar() {
-        Scanner sc = new Scanner(System.in);
         String menu;
         boolean salir = false;
         do {
-            pintarMostrarTabla();
+            pinntar2Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> System.out.println("En Construcción");
-                case "2" -> System.out.println("En Construcción");
-                case "3" -> System.out.println("En Construcción");
+                case "1" -> ControllerUsuario.registrarUsuario();
+                case "2" -> ControllerPosts.registrarPost();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
         } while (!salir);
-        sc.close();
     }
 
     public static void mostrarBorrar() {
-        Scanner sc = new Scanner(System.in);
         String menu;
         boolean salir = false;
         do {
-            pintarMostrarTabla();
+            pinntar3Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> System.out.println("En Construcción");
-                case "2" -> System.out.println("En Construcción");
-                case "3" -> System.out.println("En Construcción");
+                case "1" -> ControllerUsuario.eliminar();
+                case "2" -> ControllerPosts.eliminar();
+                case "3" -> ControllerLikes.eliminar();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
         } while (!salir);
-        sc.close();
     }
 }

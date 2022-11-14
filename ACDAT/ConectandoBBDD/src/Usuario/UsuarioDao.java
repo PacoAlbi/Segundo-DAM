@@ -7,15 +7,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioDao implements IUsuarioDao {
+public class UsuarioDao {
 
-    @Override
-    public boolean registrar(Usuario usuario) {
+    public static boolean registrar(Usuario usuario) {
         boolean registrar = false;
-        Connection con = null;
+        Connection con;
         Statement st = null;
-        String sql = "INSERT INTO ad2223_falbinana.Usuarios VALUES (NULL," + usuario.getNombre() + "," + usuario.getApellidos() + "," +
-                usuario.getUsername() + "," + usuario.getEmail() + "," + usuario.getPassword() + ")";
+        String sql = "INSERT INTO Usuarios VALUES (NULL,'" + usuario.getNombre() + "','" + usuario.getApellidos() + "','" +
+                usuario.getUsername() + "','" + usuario.getEmail() + "','" + usuario.getPassword() + "')";
         try {
             con = Conexion.conectar();
             st = con.createStatement();
@@ -29,23 +28,20 @@ public class UsuarioDao implements IUsuarioDao {
                 if (st!=null){
                     st.close();
                 }
-                if (con!=null){
-                    con.close();
-                }
             } catch (SQLException e) {
                 System.out.println("Error desconectando de SQL." + System.lineSeparator() + e.getMessage());
             }
         }
+        Conexion.desconectarBBDD();
         return registrar;
     }
 
-    @Override
-    public List<Usuario> obtener() {
-        Connection con = null;
+    public static List<Usuario> obtener() {
+        Connection con;
         Statement st = null;
         ResultSet rs = null;
         List<Usuario> listaUsuarios = new ArrayList<>();
-        String sql = "SELECT * FROM ad2223_falbinana.Usuarios ORDER BY id";
+        String sql = "SELECT * FROM Usuarios ORDER BY id";
         try {
             con = Conexion.conectar();
             st = con.createStatement();
@@ -61,14 +57,11 @@ public class UsuarioDao implements IUsuarioDao {
                 listaUsuarios.add(usuario);
             }
         } catch (SQLException e) {
-            System.out.println("Error, usuario no encontrado." + System.lineSeparator() + e.getMessage());
+            System.out.println("Error, lista no encontrada." + System.lineSeparator() + e.getMessage());
         } finally {
             try {
                 if (st!=null){
                     st.close();
-                }
-                if (con!=null){
-                    con.close();
                 }
                 if (rs!=null){
                     rs.close();
@@ -77,15 +70,16 @@ public class UsuarioDao implements IUsuarioDao {
                 System.out.println("Error desconectando de SQL." + System.lineSeparator() + e.getMessage());
             }
         }
+        Conexion.desconectarBBDD();
         return listaUsuarios;
     }
 
-    public List<Usuario> obtenerUsuario(String nombre) {
-        Connection con = null;
+    public static List<Usuario> obtenerUsuario(String nombre) {
+        Connection con;
         PreparedStatement pst = null;
         ResultSet rs = null;
         List<Usuario> listaUsuarios = new ArrayList<>();
-        String sql = "SELECT * FROM ad2223_falbinana.Usuarios ORDER BY ?";
+        String sql = "SELECT * FROM Usuarios ORDER BY ?";
         try {
             con = Conexion.conectar();
             pst = con.prepareStatement(sql);
@@ -108,9 +102,6 @@ public class UsuarioDao implements IUsuarioDao {
                 if (pst!=null){
                     pst.close();
                 }
-                if (con!=null){
-                    con.close();
-                }
                 if (rs!=null){
                     rs.close();
                 }
@@ -118,15 +109,15 @@ public class UsuarioDao implements IUsuarioDao {
                 System.out.println("Error desconectando de SQL." + System.lineSeparator() + e.getMessage());
             }
         }
+        Conexion.desconectarBBDD();
         return listaUsuarios;
     }
 
-    @Override
-    public boolean actualizar(Usuario usuario) {
+    public static boolean actualizar(Usuario usuario) {
         boolean actualizar = false;
-        Connection con = null;
+        Connection con;
         Statement st = null;
-        String sql="UPDATE ad2223_falbinana.Usuarios SET nombre='"+usuario.getNombre()+"', apellidos='"+usuario.getApellidos()+"', username='"+usuario.getUsername()
+        String sql="UPDATE Usuarios SET nombre='"+usuario.getNombre()+"', apellidos='"+usuario.getApellidos()+"', username='"+usuario.getUsername()
                 +"', email='"+usuario.getEmail()+"', password='"+usuario.getPassword()+"'" +" WHERE id="+usuario.getId();
         try {
             con = Conexion.conectar();
@@ -141,28 +132,23 @@ public class UsuarioDao implements IUsuarioDao {
                 if (st!=null){
                     st.close();
                 }
-                if (con!=null){
-                    con.close();
-                }
             } catch (SQLException e) {
                 System.out.println("Error desconectando de SQL." + System.lineSeparator() + e.getMessage());
             }
         }
+        Conexion.desconectarBBDD();
         return actualizar;
     }
 
-    @Override
-    public boolean eliminar(Usuario usuario) {
-        boolean eliminar = false;
-        Connection con = null;
+    public static void eliminar(Usuario usuario) {
+        Connection con;
         Statement st = null;
-        String sql="DELETE FROM ad2223_falbinana.Usuarios WHERE ID=" + usuario.getId();
+        String sql="DELETE FROM Usuarios WHERE ID=" + usuario.getId();
         try {
             con = Conexion.conectar();
             st = con.createStatement();
             st.execute(sql);
             System.out.println("Usuario borrado correctamente.");
-            eliminar = true;
         } catch (SQLException e) {
             System.out.println("Error eliminado al usuario de la BBDD." + System.lineSeparator() + e.getMessage());
         } finally {
@@ -170,13 +156,10 @@ public class UsuarioDao implements IUsuarioDao {
                 if (st!=null){
                     st.close();
                 }
-                if (con!=null){
-                    con.close();
-                }
             } catch (SQLException e) {
                 System.out.println("Error desconectando de SQL." + System.lineSeparator() + e.getMessage());
             }
         }
-        return eliminar;
+        Conexion.desconectarBBDD();
     }
 }

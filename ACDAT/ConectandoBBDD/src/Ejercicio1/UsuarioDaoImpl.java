@@ -7,9 +7,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioDaoImpl implements IUsuarioDao {
+public class UsuarioDaoImpl{
 
-    @Override
+
     public boolean registrar(Usuario usuario) {
         boolean registrar = false;
         Connection con = null;
@@ -39,7 +39,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
         return registrar;
     }
 
-    @Override
+
     public List<Usuario> obtener() {
         Connection con = null;
         Statement st = null;
@@ -121,7 +121,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
         return listaUsuarios;
     }
 
-    @Override
+
     public boolean actualizar(Usuario usuario) {
         boolean actualizar = false;
         Connection con = null;
@@ -151,7 +151,7 @@ public class UsuarioDaoImpl implements IUsuarioDao {
         return actualizar;
     }
 
-    @Override
+
     public boolean eliminar(Usuario usuario) {
         boolean eliminar = false;
         Connection con = null;
