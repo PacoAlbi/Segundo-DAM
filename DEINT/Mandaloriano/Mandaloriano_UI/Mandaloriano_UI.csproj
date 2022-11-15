@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mandaloriano_DAL\Mandaloriano_DAL.csproj" />
+    <ProjectReference Include="..\Mandaloriano_Entidades\Mandaloriano_Entidades.csproj" />
+  </ItemGroup>
+
+</Project>

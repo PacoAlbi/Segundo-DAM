@@ -1,0 +1,36 @@
+﻿@model Mandaloriano_UI.Models.ViewModels.clsListadoMisionesYMisionSeleccioneadaVM
+@{
+    <label>Seleccione una mision para ver los detalles:</label>
+    <br/>
+    <form method="post">
+        <select name="Id">
+            @{
+                for (var i = 0; i < Model.listadoMisiones.Count; i++)//Recorreremos la lista de misiones
+                {
+                    if (Model.misionSeleccionada.Id == @Model.listadoMisiones[i].Id)//Pondremos como selecionada la ulitma mision que se seleccionos
+                    {
+                        <option selected value="@Model.listadoMisiones[i].Id">@Model.listadoMisiones[i].Nombre</option>
+                    }
+                    else
+                    {
+                        <option value="@Model.listadoMisiones[i].Id">@Model.listadoMisiones[i].Nombre</option>
+
+                    }
+                }
+            }
+
+        </select>
+        <input type="submit"/>
+        @{
+            if(Model.misionSeleccionada.Id!=-1){//En el caso de que hay alguna mision seleccionada, mostramos la informacion
+                <br />
+                <label><b>@Model.misionSeleccionada.Nombre</b></label>
+                <br/>
+                <label>@Model.misionSeleccionada.Descripcion</label>
+                <br />
+                <label>Recompensa: @Model.misionSeleccionada.Recompensa</label>
+            }
+        }
+    </form>
+    
+}

@@ -1,0 +1,33 @@
+CAPA Entidades:
+	clsMision
+		Int idMision
+		Strng Nombre
+		String Descripcion
+		Int Recompensa
+
+CAPA DAL:
+	clsListadoMisiones()
+		List<clsMision> obtenerListadoTotalMisiones()
+	
+	clsManejarMision()
+		clsMision obtenerMisionPorId(int id)
+
+CAPA UI:
+	
+	Models:
+		clsListadoMisionesYMisionSeleccionadaVM()
+			List<clsMision> listadoDeMisionesDisponibles;
+			clsMision misionElejida
+
+
+	Controller:
+		MisionesDisponibles()
+			return View(List<clsMision> listadoDeMisionesDisponibles)
+		
+		[HttpPost]
+		MisionesDisponibles(int id)
+			return View(clsListadoMisionesYMisionSeleccionadaVM model)
+
+	//Mostrara un listado con las misiones disponibles y un label de la misiones seleccionada en el caso de que haya alguna seleccionada
+	Vistas:
+		MisionesDisponibles
