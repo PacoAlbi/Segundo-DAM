@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="894516e1-9b61-4ce1-8fd5-0576ff1a7d05" name="Changes" comment="" />
+    <list default="true" id="894516e1-9b61-4ce1-8fd5-0576ff1a7d05" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ejercicio1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio1/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Paco/Documents/GitHub/Segundo-DAM/Acceso a datos (ACDAT)/Ejercicio1_2c",
+    "last_opened_file_path": "C:/Users/falbinana/Desktop/Segundo-DAM/ACDAT/Ejercicio1_2c",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,6 +78,7 @@
       <workItem from="1665423148531" duration="1932000" />
       <workItem from="1665469386567" duration="606000" />
       <workItem from="1666541676555" duration="92000" />
+      <workItem from="1668601688055" duration="9000" />
     </task>
     <servers />
   </component>

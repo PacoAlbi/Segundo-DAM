@@ -4,22 +4,33 @@
              xmlns:model="clr-namespace:_10_Ejercicio1.ViewModels"
              x:Class="_10_Ejercicio1.MainPage">
 
-    <ScrollView>
+    <ContentPage.BindingContext>
+        <model:MainPageVM/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Entry
+                x:Name="ntrBuscador"/>
+            <Button
+                x:Name="btnLupa"/>
+        </HorizontalStackLayout>
         <ListView>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout
-                            Orientation="Vertical"
-                            HorizontalOptions="Center">
-
-                            
-
-                        </StackLayout>
+                        <HorizontalStackLayout>
+                            <Label
+                                x:Name="lblNombre"
+                                Text="{Binding }"/>
+                            <Label
+                                x:Name="lblApellido"
+                                Text="{Binding }"/>
+                        </HorizontalStackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>

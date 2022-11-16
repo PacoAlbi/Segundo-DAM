@@ -49,6 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\borrar.png" />
+	  <None Remove="Resources\Images\busqueda.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\DAL\DAL.csproj" />
 	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
 	</ItemGroup>
