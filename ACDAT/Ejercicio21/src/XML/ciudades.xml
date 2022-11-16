@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Ciudades>
+    <ciudades Descripcion = "Idioma: Inglés">
+        <Nombre>Manila</Nombre>
+        <País>Filipinas</País>
+        <Continente>Asia</Continente>
+    </ciudades>
+
+    <ciudades Descripcion = "Idioma: Ucraniano">
+        <Nombre>Kiev</Nombre>
+        <País>Ucrania</País>
+        <Continente>Europa</Continente>
+    </ciudades>
+
+    <ciudades Descripcion = "Idioma: Español">
+        <Nombre>La Habana</Nombre>
+        <País>Cuba</País>
+        <Continente>América</Continente>
+    </ciudades>
+
+    <ciudades Descripcion = "Idioma: Árabe">
+        <Nombre>El Cairo</Nombre>
+        <País>Egipto</País>
+        <Continente>África</Continente>
+    </ciudades>
+
+</Ciudades>
