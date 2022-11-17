@@ -22,25 +22,35 @@ namespace _10_Ejercicio1_ASP.Controllers
         {
             return View();
         }
+
+
         [HttpPost]
         [ActionName ("Index")]
         public IActionResult IndexPost()
         {
-            //Instancio la conexión a sql
+            
             SqlConnection miConexion = new SqlConnection();
             try
+
             {
-                //String de conexión
-                miConexion.ConnectionString = "server=falbinana.database.windows.net;database=PacoBBDD;uid=falbinana;pwd=Paquete6";
+
+                miConexion.ConnectionString = "server=falbinana.database.windows.net;database=PacoBBDD;uid=falbinana;pwd=Mandaloriano69";
                 miConexion.Open();
                 ViewBag.estadoConexion = miConexion.State;
 
             }
             catch (Exception e)
             {
-                ViewBag.estadoConexion = miConexion.State;
+                return View(); //Mandaré a una vista de error para que el cliente no tenga información extra.
+                //ViewBag.estadoConexion = e.Message;
             }
             finally { miConexion?.Close(); }
+            return View();
+        }
+
+        public ActionResult ListadoPersona()
+        {
+
             return View();
         }
 
