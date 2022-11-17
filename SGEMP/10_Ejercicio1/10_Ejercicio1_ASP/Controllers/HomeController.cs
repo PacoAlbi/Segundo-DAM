@@ -34,15 +34,23 @@ namespace _10_Ejercicio1_ASP.Controllers
 
             {
 
-                miConexion.ConnectionString = "server=falbinana.database.windows.net;database=PacoBBDD;uid=falbinana;pwd=Paquete6";
+                miConexion.ConnectionString = "server=falbinana.database.windows.net;database=PacoBBDD;uid=falbinana;pwd=Mandaloriano69";
                 miConexion.Open();
                 ViewBag.estadoConexion = miConexion.State;
 
             }
             catch (Exception e)
-            { //TO DO
+            {
+                return View(); //Mandaré a una vista de error para que el cliente no tenga información extra.
+                //ViewBag.estadoConexion = e.Message;
             }
             finally { miConexion?.Close(); }
+            return View();
+        }
+
+        public ActionResult ListadoPersona()
+        {
+
             return View();
         }
 
