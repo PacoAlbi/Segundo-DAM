@@ -1,36 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:_10_Ejercicio1.ViewModels"
+             xmlns:VM="clr-namespace:_10_Ejercicio1.ViewModels"
              x:Class="_10_Ejercicio1.MainPage">
 
     <ContentPage.BindingContext>
-        <model:MainPageVM/>
+        <VM:MainPageVM/>
     </ContentPage.BindingContext>
 
     <VerticalStackLayout>
         <HorizontalStackLayout>
             <Entry
-                x:Name="ntrBuscador"/>
+                x:Name="ntrBuscador"
+                Text="{Binding Cadena}"/>
             <Button
-                x:Name="btnLupa"/>
+                x:Name="btnLupa"
+                Command="{Binding BuscarCommand}"
+                ImageSource="busqueda.png"/>
         </HorizontalStackLayout>
-        <ListView>
+        <ListView
+            ItemsSource="{Binding ListadoDePersonasCompleto}"
+            SelectedItem="{Binding PersonaSeleccionada}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <HorizontalStackLayout>
                             <Label
                                 x:Name="lblNombre"
-                                Text="{Binding }"/>
+                                Text="{Binding Nombre}"/>
                             <Label
                                 x:Name="lblApellido"
-                                Text="{Binding }"/>
+                                Text="{Binding Apellido}"/>
                         </HorizontalStackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button
+            x:Name="btnEliminar"
+            Command="{Binding EliminarCommand}"
+            ImageSource="borrar.png"/>
     </VerticalStackLayout>
 
 </ContentPage>

@@ -22,25 +22,23 @@ namespace _10_Ejercicio1_ASP.Controllers
         {
             return View();
         }
-
-
         [HttpPost]
         [ActionName ("Index")]
         public IActionResult IndexPost()
         {
-            
+            //Instancio la conexión a sql
             SqlConnection miConexion = new SqlConnection();
             try
-
             {
-
+                //String de conexión
                 miConexion.ConnectionString = "server=falbinana.database.windows.net;database=PacoBBDD;uid=falbinana;pwd=Paquete6";
                 miConexion.Open();
                 ViewBag.estadoConexion = miConexion.State;
 
             }
             catch (Exception e)
-            { //TO DO
+            {
+                ViewBag.estadoConexion = miConexion.State;
             }
             finally { miConexion?.Close(); }
             return View();
