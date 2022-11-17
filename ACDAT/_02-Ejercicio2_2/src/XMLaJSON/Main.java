@@ -52,13 +52,16 @@ public class Main {
             BufferedReader br = new BufferedReader(leerJSON);
             FileWriter escribirXML = new FileWriter("src/XMLaJSON/comprasTransformado.xml");
             BufferedWriter bw = new BufferedWriter(escribirXML);
-            JSONObject json = new JSONObject();
 
-            while (!json.isEmpty()){
-                String xmlSalida = json.toString();
-                bw.write(xmlSalida);
-                System.out.println(xmlSalida);
-            }
+            String jsonStr = br.readLine();
+            JSONObject json = new JSONObject(jsonStr);
+
+            String xmlSalida = XML.toString(json);
+
+
+            bw.write(xmlSalida);
+            System.out.println(xmlSalida);
+
 
             bw.close();
             br.close();
