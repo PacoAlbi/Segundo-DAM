@@ -24,6 +24,7 @@ namespace _10_Ejercicio1.ViewModels
         #region Constructores
         public MainPageVM()
         {
+            eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasCompleto());
             listadoDePersonasMostrado = null;
             cadena = null;
@@ -87,7 +88,6 @@ namespace _10_Ejercicio1.ViewModels
 
             get
             {
-                eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
                 return eliminarCommand;
             }
         }

@@ -9,12 +9,12 @@ public class NumeroOculto extends Thread {
          if (num == numeroOculto){
              resultado = 1;
              acertado = true;
-             //interrupted();
+             interrupted();
              //Interrumpir. O interrumpo aqui en este metodo, y uso while true, o interrumpo en el run, y uso while (res == 0)
          }
          if (acertado) {
              resultado = -1;
-             //interrupted();
+             interrupted();
              //Interrumpir
          }
         return resultado;
@@ -32,7 +32,7 @@ public class NumeroOculto extends Thread {
             numero = (int) (Math.random() * 101);
             res = propuestaNumero(numero);
             System.out.println("Ha gando el hilo " + Thread.currentThread().getName());
-            interrupted();
+            //interrupted();
         }
         //Interrumpo en cualquier caso
         //Si ponemos una pausa, no siempre gana el 1. Probar.
