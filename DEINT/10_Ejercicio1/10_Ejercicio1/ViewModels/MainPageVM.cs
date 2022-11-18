@@ -26,7 +26,7 @@ namespace _10_Ejercicio1.ViewModels
         {
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasCompleto());
-            listadoDePersonasMostrado = null;
+            listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
             cadena = null;
             personaSeleccionada= null;
         }
@@ -53,6 +53,7 @@ namespace _10_Ejercicio1.ViewModels
             set
             {
                 personaSeleccionada = value;
+                NotifyPropertyChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
             }
         }
