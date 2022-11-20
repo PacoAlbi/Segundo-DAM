@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.Data.SqlClient;
-using Microsoft.Data.SqlClient;
-
-
+using System.Collections.ObjectModel;
+using _10_Ejercicio1_ASP.Models.Entidades;
+using _10_Ejercicio1_ASP.Models.DAL;
 
 namespace _10_Ejercicio1_ASP.Controllers
 {
@@ -50,8 +50,9 @@ namespace _10_Ejercicio1_ASP.Controllers
 
         public ActionResult ListadoPersona()
         {
-
-            return View();
+            ObservableCollection<clsPersona> lista = new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasDAL());
+            //IEnumerable<clsPersona> lista = clsListadoPersonasDAL.getListadoPersonasDAL();
+            return View(lista);
         }
 
         public IActionResult Privacy()

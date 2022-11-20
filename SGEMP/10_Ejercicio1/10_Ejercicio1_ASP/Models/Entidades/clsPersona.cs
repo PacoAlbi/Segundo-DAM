@@ -14,7 +14,7 @@
         #endregion
 
         #region Propiedades
-        public int Id { get { return id; } }
+        public int Id { get { return id; } set { id = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Apellidos { get { return apellidos; } set { apellidos = value; } }
         public string Telefono { get { return telefono; } set { telefono = value; } }
