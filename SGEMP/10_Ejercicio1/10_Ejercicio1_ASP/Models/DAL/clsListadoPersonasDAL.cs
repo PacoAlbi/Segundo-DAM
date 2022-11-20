@@ -12,7 +12,7 @@ namespace _10_Ejercicio1_ASP.Models.DAL
             SqlConnection miConexion = new SqlConnection();
             miConexion.ConnectionString = "server=falbinana.database.windows.net;database=PacoBBDD;uid=falbinana;pwd=Mandaloriano69";
             SqlCommand miComando = new SqlCommand();
-            SqlDataReader miLector;
+            SqlDataReader miLector = null;
             clsPersona persona;
             try
             {
@@ -43,10 +43,7 @@ namespace _10_Ejercicio1_ASP.Models.DAL
 
                     }
                 }
-
-                miLector.Close();
-                miConexion.Close();
-                
+       
             }
             catch (SqlException e)
             {
@@ -58,6 +55,7 @@ namespace _10_Ejercicio1_ASP.Models.DAL
             }
             finally
             {
+                miLector?.Close();
                 miConexion?.Close();
             }
             return listadoPersonasDAL;

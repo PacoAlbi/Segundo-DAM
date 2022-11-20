@@ -13,7 +13,7 @@ namespace DAL.Listados
     public class clsListadoPersonasDAL
     {
 
-        public List<clsPersona> getListadoPersonasDAL() 
+        public static List<clsPersona> getListadoPersonasDAL() 
         {   
             DataSet miDataSet = new DataSet();
             List<clsPersona> listadoPersonasDAL = new List<clsPersona>();
@@ -37,23 +37,32 @@ namespace DAL.Listados
                     {
                         miPersona = new clsPersona();
 
+                        miPersona.Id = (int)miLector["Id"];
+                        miPersona.Nombre = (String)miLector["Nombre"];
+                        miPersona.Apellidos = (String)miLector["Apellidos"];
+                        miPersona.Telefono = (String)miLector["Telefono"];
+                        miPersona.Direccion = (String)miLector["Direccion"];
+                        miPersona.Foto = (String)miLector["Foto"];
+                        if (miLector["FechaNacimiento"] != DBNull.Value)
+                        {
+                            miPersona.FechaNacimiento = (DateTime)miLector["FechaNacimiento"];
+                        }
 
-
+                        miPersona.IdDepartamento = (int)miLector["IdDepartamento"];
+                        listadoPersonasDAL.Add(miPersona);
 
                     }
-
-                } else
-                {
-                    
                 }
+                miLector.Close();
+                conexion.Close();
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-                throw ex;
+                throw;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
             return listadoPersonasDAL;
         }
