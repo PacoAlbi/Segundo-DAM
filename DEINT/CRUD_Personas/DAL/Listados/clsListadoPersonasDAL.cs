@@ -18,7 +18,6 @@ namespace DAL.Listados
             DataSet miDataSet = new DataSet();
             List<clsPersona> listadoPersonasDAL = new List<clsPersona>();
 
-
             clsMyConnection miConexion = new clsMyConnection();
             SqlConnection conexion = new SqlConnection();
             SqlCommand miComando = new SqlCommand();
@@ -54,7 +53,7 @@ namespace DAL.Listados
                     }
                 }
                 miLector.Close();
-                conexion.Close();
+                miConexion.closeConnection(ref conexion);
             }
             catch (SqlException)
             {

@@ -53,4 +53,10 @@
 	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\ListadoPersonas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

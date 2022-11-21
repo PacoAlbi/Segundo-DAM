@@ -41,7 +41,7 @@ namespace DAL.Listados
                     }
                 }
                 miLector.Close();
-                conexion.Close();
+                miConexion.closeConnection(ref conexion);
             }
             catch (SqlException)
             {

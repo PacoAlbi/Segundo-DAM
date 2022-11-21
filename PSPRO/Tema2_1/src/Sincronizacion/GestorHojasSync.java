@@ -14,7 +14,7 @@ public class GestorHojasSync extends Thread {
 	 */
 	public static synchronized void escritorSincronizado(){
 		//Uso una lista sincronizada, aunque si la quitas y usas una normal, también vale ya que el mismo método lo
-		//sincroniza todo.
+		//sincroniza todo. Solo estoy probando cosas.
 		List<String> listaSincronizada = Collections.synchronizedList(lista);
 		for (int i = 0; i < 10; i++) {
 			listaSincronizada.add("Texto" + i);
@@ -23,6 +23,7 @@ public class GestorHojasSync extends Thread {
 		for (String string : listaSincronizada) {
 			System.out.println(string);
 		}
+		listaSincronizada.clear();
 	}
 
 	@Override

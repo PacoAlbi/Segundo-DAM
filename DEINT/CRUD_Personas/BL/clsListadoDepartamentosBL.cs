@@ -4,6 +4,7 @@ using Entidades;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,9 @@ namespace BL
 {
     public class clsListadoDepartamentosBL
     {
-        public static List<clsDepartamentos> getListadoDepartamentosBL()
+        public static ObservableCollection<clsDepartamentos> getListadoDepartamentosBL()
         {
-            List<clsDepartamentos> listadoDepartamentosBL = clsListadoDepartamentosDAL.getListadoDepartamentosDAL();
+            ObservableCollection<clsDepartamentos> listadoDepartamentosBL = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosDAL.getListadoDepartamentosDAL());
             return listadoDepartamentosBL;
         }
     }

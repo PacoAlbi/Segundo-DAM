@@ -2,15 +2,16 @@
 using DAL.Listados;
 using Entidades;
 using Microsoft.Data.SqlClient;
+using System.Collections.ObjectModel;
 using System.Data;
 
 namespace BL
 {
     public class clsListadoPersonasBL
     {
-        public static List<clsPersona> getListadoPersonasBL()
+        public static ObservableCollection<clsPersona> getListadoPersonasBL()
         {
-            List<clsPersona> listadoPersonasBL = clsListadoPersonasDAL.getListadoPersonasDAL();
+            ObservableCollection<clsPersona> listadoPersonasBL = new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasDAL());
             return listadoPersonasBL;
         }
     }

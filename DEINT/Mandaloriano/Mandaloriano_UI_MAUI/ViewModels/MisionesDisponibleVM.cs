@@ -34,10 +34,15 @@ namespace Mandaloriano_UI_MAUI.ViewModels
 
         public bool VisivilidadDescripcion { 
             get 
-            { return visivilidadDescripcion; } 
-            set { visivilidadDescripcion = value;
+            { 
+                return visivilidadDescripcion; 
+            } 
+            set 
+            { 
+                visivilidadDescripcion = value;
                 NotifyPropertyChanged("VisivilidadDescripcion");
-            } } 
+            } 
+        } 
         public clsMisiones MisionSeleccionada
         {
             get
@@ -48,6 +53,7 @@ namespace Mandaloriano_UI_MAUI.ViewModels
             {
                 misionSeleccionada = value;
                 mostrarDescripcion.RaiseCanExecuteChanged();
+                //NotifyPropertyChanged("MisionSeleccionada"); Si lo pongo, ya es como si pulsara validar, por eso lo quito, para usar el boton
             }
         }
 
