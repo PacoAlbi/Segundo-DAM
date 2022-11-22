@@ -3,37 +3,23 @@ package Sincronizacion;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class GestorHojas extends Thread {
 
-	//private static List<String> lista = new ArrayList<String>();
-	private static CopyOnWriteArrayList<String> lista = new CopyOnWriteArrayList();
-	//private static ConcurrentHashMap<Integer, String> listaS = new ConcurrentHashMap<>();
+	private static List<String> lista = new ArrayList<>();
+	private static List<String> listaSincronizada = Collections.synchronizedList(lista);
 
-	//Otra forma de intentar solucionar el problema, pero no me ha dado buenos resultados totales.
 	@Override
 	public void run() {
-		//ConcurrentMap<Integer, String> listaS = new ConcurrentHashMap<>();
-
 		for (int i = 0; i < 10; i++) {
-//			try {
-//				Thread.sleep(200);
-//			} catch (InterruptedException e) {
-//				System.out.println("Error: " + e.getMessage() + " causado por " + e.getCause());
-//			}
-			lista.add("Texto" + i);
-			//lista.add("Texto" + i);
+			listaSincronizada.add("Texto" + i);
 		}
 
-		System.out.println("Separación de hilo");
-		for (String string : lista) {
-
-			System.out.println(string);
+		synchronized (listaSincronizada) {
+			for (String string : listaSincronizada) {
+				System.out.println(string);
+			}
 		}
-		//listaS.clear();
 	}
 
 	public static void main(String[] args) {

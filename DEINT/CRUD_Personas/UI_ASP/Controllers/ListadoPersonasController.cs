@@ -1,8 +1,6 @@
 ﻿using BL;
-using DAL.Listados;
 using Entidades;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using System.Collections.ObjectModel;
 
 namespace UI_ASP.Controllers
@@ -17,18 +15,18 @@ namespace UI_ASP.Controllers
             return View(lista);
         }
 
-        public IActionResult EditarPersona()
+        public IActionResult EditarPersona(clsPersona persona)
         {
-            ObservableCollection<clsPersona> lista = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
+            
 
-            return View(lista);
+            return View();
         }
 
-        public IActionResult BorrarPersona()
+        public IActionResult BorrarPersona(int id)
         {
-            ObservableCollection<clsPersona> lista = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
+           
 
-            return View(lista);
+            return View();
         }
     }
 }

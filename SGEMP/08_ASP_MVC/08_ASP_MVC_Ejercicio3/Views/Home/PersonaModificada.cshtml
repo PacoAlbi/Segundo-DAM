@@ -1,18 +1,20 @@
-﻿@*
+﻿@model _08_ASP_MVC_Ejercicio3.Models.Entidades.clsPersona
+
+@*
     html de la Vista PersonaModificada, por la que a traves de los ViewBag declarados en el HomeController
     poder mostrar los datos modificados en la Vista Agregar
 *@
 
-<label>Nombre: @ViewBag.Nombre</label>
+<label>Nombre: @Model.Nombre</label>
 <br/>
 <br />
-<label>Primer Apellido: @ViewBag.PrimerApellido</label>
+<label>Primer Apellido: @Model.PrimerApellido</label>
 <br />
 <br />
-<label>Segundo Apellido: @ViewBag.SegundoApellido</label>
+<label>Segundo Apellido: @Model.SegundoApellido</label>
 <br />
 <br />
-<label>Edad: @ViewBag.Edad</label>
+<label>Edad: @Model.Edad</label>
 <br />
 <br /> 
 @Html.ActionLink("Volver","Agregar","Home")
