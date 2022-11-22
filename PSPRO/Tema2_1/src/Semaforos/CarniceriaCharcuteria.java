@@ -42,8 +42,9 @@ public class CarniceriaCharcuteria implements Runnable {
     @Override
     public void run() {
         while (true) {
-            if (semaforoCarne.availablePermits() > 0)
+            if (semaforoCarne.availablePermits() > 0) {
                 pedirVezCarniceria();
+            }
             else {
                 perdirVezCharcuteria();
             }
