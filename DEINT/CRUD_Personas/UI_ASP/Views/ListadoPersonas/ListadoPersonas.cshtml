@@ -27,9 +27,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Direccion)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Foto)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.FechaNacimiento)
             </th>
@@ -57,9 +57,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Direccion)
             </td>
-            <td>
+            @*<td>             
                 <img src="@item.Foto" height="100"/>
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.FechaNacimiento)
             </td>
@@ -67,8 +67,8 @@
                 @Html.DisplayFor(modelItem => item.IdDepartamento)
             </td>
             <td>
+                @Html.ActionLink("Foto o Detalles?", "FotoPersona", new { id=item.Id }) |
                 @Html.ActionLink("Editar", "EditarPersona", new { id=item.Id }) |
-                @Html.ActionLink("Detalles", "DetallesPersona", new { id=item.Id }) |
                 @Html.ActionLink("Borrar", "BorrarPersona", new { id=item.Id })
             </td>
         </tr>
