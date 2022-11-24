@@ -3,7 +3,7 @@ using DAL.Listados;
 using Entidades;
 using System.Collections.ObjectModel;
 
-namespace BL
+namespace BL.Listados
 {
     public class clsListadoPersonasBL
     {
@@ -24,7 +24,7 @@ namespace BL
         /// <returns></returns>
         public static clsPersona obtenerPersonaPorIdBL(int Id)
         {
-            List<clsPersona> personaBuscada = getListadoPersonasDAL();
+            List<clsPersona> personaBuscada = clsListadoPersonasDAL.getListadoPersonasDAL();
             return personaBuscada.Find(x => x.Id == Id);
         }
     }

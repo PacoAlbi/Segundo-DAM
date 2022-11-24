@@ -3,7 +3,7 @@ using DAL.Listados;
 using Entidades;
 using System.Collections.ObjectModel;
 
-namespace BL
+namespace BL.Listados
 {
     public class clsListadoDepartamentosBL
     {
@@ -24,7 +24,7 @@ namespace BL
         /// <returns></returns>
         public static clsDepartamentos obtenerDepartamentoPorIdBL(int Id)
         {
-            List<clsDepartamentos> departamentoBuscado = getListadoDepartamentosDAL();
+            List<clsDepartamentos> departamentoBuscado = clsListadoDepartamentosDAL.getListadoDepartamentosDAL();
             return departamentoBuscado.Find(x => x.Id == Id);
         }
     }

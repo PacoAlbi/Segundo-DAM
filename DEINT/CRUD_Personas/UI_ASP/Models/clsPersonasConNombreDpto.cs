@@ -1,4 +1,5 @@
 ﻿using BL;
+using BL.Listados;
 using DAL.Listados;
 using Entidades;
 
@@ -15,10 +16,7 @@ namespace UI_ASP.Models
         #endregion
 
         #region Constructor
-        public clsPersonasConNombreDpto() 
-        {
-            
-        }
+        public clsPersonasConNombreDpto() { }
         #endregion
     }
 }

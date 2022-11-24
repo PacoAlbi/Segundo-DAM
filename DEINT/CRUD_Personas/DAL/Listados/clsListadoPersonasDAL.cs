@@ -8,9 +8,9 @@ namespace DAL.Listados
     public class clsListadoPersonasDAL
     {
         /// <summary>
-        /// 
+        /// Conecto con la BBDD y saco un lista de personas de la tabla Personas para mandar a la BL.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List de personas</returns>
         public static List<clsPersona> getListadoPersonasDAL()
         {
             //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
@@ -65,10 +65,10 @@ namespace DAL.Listados
         }
 
         /// <summary>
-        /// 
+        /// Busco en la lista creada antes una persona por su Id.
         /// </summary>
-        /// <param name="Id"></param>
-        /// <returns></returns>
+        /// <param name="Id">Entero que representa el Id de la persona a buscar.</param>
+        /// <returns>Devuelve una clsPersona encontrada por su Id</returns>
         public static clsPersona obtenerPersonaPorIdDAL (int Id)
         {
             List<clsPersona> personaBuscada = getListadoPersonasDAL();

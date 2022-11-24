@@ -6,9 +6,9 @@ namespace DAL.Listados
     public class clsListadoDepartamentosDAL
     {
         /// <summary>
-        /// 
+        /// Conecto con la BBDD y saco un lista de departamentos de la tabla Departamentos para mandar a la BL.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List de departamentos</returns>
         public static List<clsDepartamentos> getListadoDepartamentosDAL()
         {
             //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
@@ -52,10 +52,10 @@ namespace DAL.Listados
         }
 
         /// <summary>
-        /// 
+        /// Busco en la lista creada antes un departamento por su Id.
         /// </summary>
-        /// <param name="Id"></param>
-        /// <returns></returns>
+        /// <param name="Id">Paso el Id del departamento a buscar</param>
+        /// <returns>Devuelvo un clsDepartamento si lo hemos encontrado</returns>
         public static clsDepartamentos obtenerDepartamentoPorIdDAL(int Id)
         {
             List<clsDepartamentos> departamentoBuscado = getListadoDepartamentosDAL();
