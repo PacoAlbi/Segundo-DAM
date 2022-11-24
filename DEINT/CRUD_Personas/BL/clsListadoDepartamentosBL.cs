@@ -1,23 +1,31 @@
 ﻿using DAL;
 using DAL.Listados;
 using Entidades;
-using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BL
 {
     public class clsListadoDepartamentosBL
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static ObservableCollection<clsDepartamentos> getListadoDepartamentosBL()
         {
             ObservableCollection<clsDepartamentos> listadoDepartamentosBL = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosDAL.getListadoDepartamentosDAL());
             return listadoDepartamentosBL;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static clsDepartamentos obtenerDepartamentoPorIdBL(int Id)
+        {
+            List<clsDepartamentos> departamentoBuscado = getListadoDepartamentosDAL();
+            return departamentoBuscado.Find(x => x.Id == Id);
         }
     }
 }

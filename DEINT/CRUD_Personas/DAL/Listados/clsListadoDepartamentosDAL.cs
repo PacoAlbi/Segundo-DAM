@@ -1,21 +1,18 @@
 ﻿using Entidades;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.Listados
 {
     public class clsListadoDepartamentosDAL
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static List<clsDepartamentos> getListadoDepartamentosDAL()
         {
-            DataSet miDataSet = new DataSet();
+            //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
             List<clsDepartamentos> listadoDepartamentosDAL = new List<clsDepartamentos>();
-
 
             clsMyConnection miConexion = new clsMyConnection();
             SqlConnection conexion = new SqlConnection();
@@ -54,5 +51,15 @@ namespace DAL.Listados
             return listadoDepartamentosDAL;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static clsDepartamentos obtenerDepartamentoPorIdDAL(int Id)
+        {
+            List<clsDepartamentos> departamentoBuscado = getListadoDepartamentosDAL();
+            return departamentoBuscado.Find(x => x.Id == Id);
+        }
     }
 }

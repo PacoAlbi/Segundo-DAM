@@ -15,7 +15,7 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btnShowName"
+        android:id="@+id/btnMostrarNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hola"

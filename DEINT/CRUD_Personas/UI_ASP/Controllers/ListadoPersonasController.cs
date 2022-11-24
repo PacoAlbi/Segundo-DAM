@@ -9,9 +9,7 @@ namespace UI_ASP.Controllers
     {
         public IActionResult ListadoPersonas()
         {
-            
             ObservableCollection<clsPersona> lista = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
-            
             return View(lista);
         }
 

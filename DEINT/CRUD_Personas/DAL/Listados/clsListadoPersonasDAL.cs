@@ -1,21 +1,19 @@
 ﻿using Entidades;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DAL.Listados
 {
     public class clsListadoPersonasDAL
     {
-
-        public static List<clsPersona> getListadoPersonasDAL() 
-        {   
-            DataSet miDataSet = new DataSet();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static List<clsPersona> getListadoPersonasDAL()
+        {
+            //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
             List<clsPersona> listadoPersonasDAL = new List<clsPersona>();
 
             clsMyConnection miConexion = new clsMyConnection();
@@ -27,7 +25,7 @@ namespace DAL.Listados
             {
                 conexion = miConexion.getConnection();
                 miComando.CommandText = "SELECT * FROM Personas";
-                miComando.Connection= conexion;
+                miComando.Connection = conexion;
                 miLector = miComando.ExecuteReader();
 
                 if (miLector.HasRows)
@@ -66,5 +64,15 @@ namespace DAL.Listados
             return listadoPersonasDAL;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static clsPersona obtenerPersonaPorIdDAL (int Id)
+        {
+            List<clsPersona> personaBuscada = getListadoPersonasDAL();
+            return personaBuscada.Find(x => x.Id == Id);
+        }
     }
 }
