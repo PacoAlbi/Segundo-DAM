@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64456221-0740-4a04-b5da-cb0cc076f163" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ConectandoBBDD/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConectandoBBDD/ConectandoBBDD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConectandoBBDD/ConectandoBBDD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConectandoBBDD/out/production/ConectandoBBDD/Controles/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ConectandoBBDD/out/production/ConectandoBBDD/Controles/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilidades/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilidades/Utilidades.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +57,7 @@
       <updated>1668764841180</updated>
       <workItem from="1668764842586" duration="1217000" />
       <workItem from="1669101689527" duration="583000" />
+      <workItem from="1669360865884" duration="4095000" />
     </task>
     <servers />
   </component>

@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUD_Personas.Views.ListadoPersonas"
+             xmlns:VM="clr-namespace:CRUD_Personas.ViewModels"
              Title="ListadoPersonas">
+    <ContentPage.BindingContext>
+        <VM:ListadoPersonasVM/>
+    </ContentPage.BindingContext>
+    
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        
     </VerticalStackLayout>
 </ContentPage>

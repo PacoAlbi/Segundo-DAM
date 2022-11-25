@@ -13,8 +13,7 @@ namespace BL.Listados
         /// <returns></returns>
         public static ObservableCollection<clsPersona> getListadoPersonasBL()
         {
-            ObservableCollection<clsPersona> listadoPersonasBL = new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasDAL());
-            return listadoPersonasBL;
+            return new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasDAL());
         }
 
         /// <summary>
@@ -24,8 +23,7 @@ namespace BL.Listados
         /// <returns></returns>
         public static clsPersona obtenerPersonaPorIdBL(int Id)
         {
-            List<clsPersona> personaBuscada = clsListadoPersonasDAL.getListadoPersonasDAL();
-            return personaBuscada.Find(x => x.Id == Id);
+            return clsListadoPersonasDAL.obtenerPersonaPorIdDAL(Id);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace DAL.Listados
 {
@@ -11,7 +12,6 @@ namespace DAL.Listados
         /// <returns>List de departamentos</returns>
         public static List<clsDepartamentos> getListadoDepartamentosDAL()
         {
-            //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
             List<clsDepartamentos> listadoDepartamentosDAL = new List<clsDepartamentos>();
 
             clsMyConnection miConexion = new clsMyConnection();
@@ -52,14 +52,46 @@ namespace DAL.Listados
         }
 
         /// <summary>
-        /// Busco en la lista creada antes un departamento por su Id.
+        /// Busco en la base de datos un departamento por su Id.
         /// </summary>
         /// <param name="Id">Paso el Id del departamento a buscar</param>
         /// <returns>Devuelvo un clsDepartamento si lo hemos encontrado</returns>
         public static clsDepartamentos obtenerDepartamentoPorIdDAL(int Id)
         {
-            List<clsDepartamentos> departamentoBuscado = getListadoDepartamentosDAL();
-            return departamentoBuscado.Find(x => x.Id == Id);
+            clsMyConnection miConexion = new clsMyConnection();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand miComando = new SqlCommand();
+            SqlDataReader miLector;
+            clsDepartamentos miDepartamento = null;
+            try
+            {
+                miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = Id;
+                conexion = miConexion.getConnection();
+                miComando.CommandText = "SELECT * FROM Departamentos WHERE Id = @Id";
+                miComando.Connection = conexion;
+                miLector = miComando.ExecuteReader();
+                if (miLector.HasRows)
+                {
+                    while (miLector.Read())
+                    {
+                        miDepartamento = new clsDepartamentos();
+
+                        miDepartamento.Id = (int)miLector["Id"];
+                        miDepartamento.Nombre = (String)miLector["Nombre"];
+                    }
+                }
+                miLector.Close();
+                miConexion.closeConnection(ref conexion);
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return miDepartamento;
         }
     }
 }

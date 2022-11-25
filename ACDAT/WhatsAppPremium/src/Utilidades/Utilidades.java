@@ -121,6 +121,7 @@ public class Utilidades {
 
             statement = Conexion.conectarseUsuario(usuario,"1234").createStatement();
             statement.execute(instruccionSQL);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
