@@ -9,7 +9,7 @@ namespace DAL.Listados
         /// <summary>
         /// Conecto con la BBDD y saco un lista de departamentos de la tabla Departamentos para mandar a la BL.
         /// </summary>
-        /// <returns>List de departamentos</returns>
+        /// <returns>List de departamentos.</returns>
         public static List<clsDepartamentos> getListadoDepartamentosDAL()
         {
             List<clsDepartamentos> listadoDepartamentosDAL = new List<clsDepartamentos>();
@@ -54,8 +54,8 @@ namespace DAL.Listados
         /// <summary>
         /// Busco en la base de datos un departamento por su Id.
         /// </summary>
-        /// <param name="Id">Paso el Id del departamento a buscar</param>
-        /// <returns>Devuelvo un clsDepartamento si lo hemos encontrado</returns>
+        /// <param name="Id">Paso el Id del departamento a buscar.</param>
+        /// <returns>Devuelvo un clsDepartamento si lo hemos encontrado.</returns>
         public static clsDepartamentos obtenerDepartamentoPorIdDAL(int Id)
         {
             clsMyConnection miConexion = new clsMyConnection();

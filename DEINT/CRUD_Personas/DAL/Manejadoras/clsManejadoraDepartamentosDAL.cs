@@ -1,23 +1,30 @@
 ﻿using Entidades;
 using Microsoft.Data.SqlClient;
 
-
 namespace DAL.Manejadoras
 {
-    public class manejadoraPersonasDAL
+    public class clsManejadoraDepartamentosDAL
     {
-        public static int borrarPersonaDAL(int id)
+        /// <summary>
+        /// Recibe un entero que es el id del departamento a eliminar y accede a la base de datos para eliminarlo.
+        /// </summary>
+        /// <param name="id">Entero que representa el id del departamento a eliminar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int borrarDepartamentosDAL(int id)
         {
             int numeroFilasAfectadas = 0;
+
             clsMyConnection miConexion = new clsMyConnection();
             SqlConnection conexion = new SqlConnection();
+
             SqlCommand miComando = new SqlCommand();
+
             miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
 
             try
             {
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "DELETE FROM Personas WHERE Id=@id";
+                miComando.CommandText = "DELETE FROM Departamentos WHERE Id=@id";
                 miComando.Connection = conexion;
                 numeroFilasAfectadas = miComando.ExecuteNonQuery();
             }
@@ -28,13 +35,18 @@ namespace DAL.Manejadoras
             return numeroFilasAfectadas;
         }
 
-        public static int editarPersonaDAL(clsPersona persona)
+        /// <summary>
+        /// Recibe un departamento ya editado para actualizarlo en la base de datos.
+        /// </summary>
+        /// <param name="departamento">Departamento para editar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int editarDepartamentoDAL(clsDepartamentos departamento)
         {
             int numeroFilasAfectadas = 0;
             clsMyConnection miConexion = new clsMyConnection();
             SqlConnection conexion = new SqlConnection();
             SqlCommand miComando = new SqlCommand();
-            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = persona.Id;
+            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = departamento.Id;
 
             try
             {
