@@ -24,5 +24,15 @@ namespace DAL.Manejadoras
         {
             return clsManejadoraPersonasDAL.editarPersonaDAL(persona);
         }
+
+        /// <summary>
+        /// Recibe una persona ya rellena para, según la lógica del negocio, pasarlo a la DAL para insertarlo.
+        /// </summary>
+        /// <param name="persona">Persona a insertar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int insertarPersonasBL(clsPersona persona)
+        {
+            return clsManejadoraPersonasDAL.insertarPersonasDAL(persona);
+        }
     }
 }

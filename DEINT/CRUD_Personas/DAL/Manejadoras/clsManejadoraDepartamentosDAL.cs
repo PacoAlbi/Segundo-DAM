@@ -51,7 +51,34 @@ namespace DAL.Manejadoras
             try
             {
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "";
+                miComando.CommandText = "UPDATE Departamentos SET Nombre=@nombre FROM Departamentos WHERE ID=@id";
+                miComando.Connection = conexion;
+                numeroFilasAfectadas = miComando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return numeroFilasAfectadas;
+        }
+
+        /// <summary>
+        /// Recibe un departamentos ya relleno para insertarlo en la base de datos.
+        /// </summary>
+        /// <param name="persona">Departamento para insertar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int insertarDepartamentoDAL(clsDepartamentos departamento)
+        {
+            int numeroFilasAfectadas = 0;
+            clsMyConnection miConexion = new clsMyConnection();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand miComando = new SqlCommand();
+            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = departamento.Id;
+            miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = departamento.Nombre;
+            try
+            {
+                conexion = miConexion.getConnection();
+                miComando.CommandText = "INSERT INTO Departamentos VALUES(@nombre)";
                 miComando.Connection = conexion;
                 numeroFilasAfectadas = miComando.ExecuteNonQuery();
             }

@@ -8,7 +8,7 @@ namespace DAL.Listados
     public class clsListadoPersonasDAL
     {
         /// <summary>
-        /// Conecto con la BBDD y saco un lista de personas de la tabla Personas para mandar a la BL.
+        /// Conecto con la BBDD y saco una lista de personas de la tabla Personas para mandar a la BL.
         /// </summary>
         /// <returns>List de personas.</returns>
         public static List<clsPersona> getListadoPersonasDAL()

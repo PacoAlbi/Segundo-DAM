@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 namespace UI_ASP.Models.ViewModels
 {
     /// <summary>
-    /// 
+    /// ViewModel que voy a utilizar porque mi vista necesita una lista de personas con el nombre del departamento.
     /// </summary>
     public class ListaPersonasNombreDptoVM
     {
@@ -14,9 +14,6 @@ namespace UI_ASP.Models.ViewModels
         #endregion
 
         #region Constructores
-        /// <summary>
-        /// 
-        /// </summary>
         public ListaPersonasNombreDptoVM () 
         {
             ListadodePersonasconDpto = getListaPersonasConDpto();
@@ -25,14 +22,13 @@ namespace UI_ASP.Models.ViewModels
 
         #region Métodos
         /// <summary>
-        /// 
+        /// Pillo una lista de personas normal y le añado del nombre de departamento para poder mostrarlo a la vista.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelvo una List de personas con nombre de departamento.</returns>
         public ObservableCollection<clsPersonasConNombreDpto> getListaPersonasConDpto()
         {
             ObservableCollection<clsPersona> listadoNormal = clsListadoPersonasBL.getListadoPersonasBL();
             ObservableCollection<clsPersonasConNombreDpto> listadoConDpto = new ObservableCollection<clsPersonasConNombreDpto>();
-
             for(int i = 0; i < listadoNormal.Count; i++)
             {
                 clsPersonasConNombreDpto oPersona = new clsPersonasConNombreDpto();

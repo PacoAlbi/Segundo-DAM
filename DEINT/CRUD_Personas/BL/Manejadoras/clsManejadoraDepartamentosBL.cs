@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Entidades;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,34 @@ namespace DAL.Manejadoras
 {
     public class manejadoraDepartamentos
     {
-        public static int deleteDepartamentosDAL(int id)
+        /// <summary>
+        /// Recibe un entero que es el id del departamento a eliminar y, según la lógica del negocio, accede a la DAL para eliminarlo.
+        /// </summary>
+        /// <param name="id">Entero que representa el id del departamento a eliminar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int borrarDepartamentosBL(int id)
         {
-            int numeroFilasAfectadas = 0;
+            return clsManejadoraDepartamentosDAL.borrarDepartamentosDAL(id);
+        }
 
-            clsMyConnection miConexion = new clsMyConnection();
-            SqlConnection conexion = new SqlConnection();
+        /// <summary>
+        /// Recibe un departamento ya editado y, según la lógica del negocio, lo manda a la DAL para actualizarlo.
+        /// </summary>
+        /// <param name="departamento">Departamento para editar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int editarDepartamentoBL(clsDepartamentos departamento)
+        {
+            return clsManejadoraDepartamentosDAL.editarDepartamentoDAL(departamento);
+        }
 
-            SqlCommand miComando = new SqlCommand();
-
-            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
-
-            try
-            {
-                conexion = miConexion.getConnection();
-                miComando.CommandText = "DELETE FROM Departamentos WHERE Id=@id";
-                miComando.Connection = conexion;
-                numeroFilasAfectadas = miComando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return numeroFilasAfectadas;
+        /// <summary>
+        /// Recibe un departamentos ya relleno y, según la lógica del negocio, lo manda a la DAL para insertarlo.
+        /// </summary>
+        /// <param name="persona">Departamento para insertar.</param>
+        /// <returns>Entero con el número de filas afectadas si las hay.</returns>
+        public static int insertarDepartamentoBL(clsDepartamentos departamento)
+        {
+            return clsManejadoraDepartamentosDAL.insertarDepartamentoDAL(departamento);
         }
     }
 }

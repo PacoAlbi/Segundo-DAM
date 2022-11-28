@@ -2,9 +2,13 @@
 using BL.Listados;
 using DAL.Listados;
 using Entidades;
+using System.Transactions;
 
 namespace UI_ASP.Models
 {
+    /// <summary>
+    /// Clase persona con el nombre de departamento para poder mostrarlo en la vista de personas.
+    /// </summary>
     public class clsPersonasConNombreDpto: clsPersona
     {
         #region Atributos
@@ -17,6 +21,10 @@ namespace UI_ASP.Models
 
         #region Constructor
         public clsPersonasConNombreDpto() { }
+        public clsPersonasConNombreDpto(string nombreDpto)
+        {
+            this.nombreDpto = nombreDpto;
+        }
         #endregion
     }
 }

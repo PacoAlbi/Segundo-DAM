@@ -19,6 +19,10 @@
             this.id = id;
             this.nombre = nombre;
         }
+        public clsDepartamentos(string nombre)
+        {
+            this.nombre = nombre;
+        }
         #endregion
     }
 }

@@ -37,6 +37,16 @@
             this.fechaNacimiento = fechaNacimiento;
             this.idDepartamento = idDepartamento;
         }
+        public clsPersona(string nombre, string apellidos, string telefono, string direccion, string foto, DateTime fechaNacimiento, int idDepartamento)
+        {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.foto = foto;
+            this.fechaNacimiento = fechaNacimiento;
+            this.idDepartamento = idDepartamento;
+        }
         #endregion
     }
 }

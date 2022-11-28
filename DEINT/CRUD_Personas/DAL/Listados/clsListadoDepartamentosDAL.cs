@@ -31,9 +31,9 @@ namespace DAL.Listados
                     while (miLector.Read())
                     {
                         miDepartamento = new clsDepartamentos();
-
-                        miDepartamento.Id = (int)miLector["Id"];
-                        miDepartamento.Nombre = (String)miLector["Nombre"];
+                        //Pruebo otra forma de sacare los datos del lector a modo de array con el casteo ya hecho.
+                        miDepartamento.Id = miLector.GetInt32(0);
+                        miDepartamento.Nombre = miLector.GetString(1);
                         listadoDepartamentosDAL.Add(miDepartamento);
                     }
                 }
@@ -75,9 +75,8 @@ namespace DAL.Listados
                     while (miLector.Read())
                     {
                         miDepartamento = new clsDepartamentos();
-
-                        miDepartamento.Id = (int)miLector["Id"];
-                        miDepartamento.Nombre = (String)miLector["Nombre"];
+                        miDepartamento.Id = miLector.GetInt32(0);
+                        miDepartamento.Nombre = miLector.GetString(1);
                     }
                 }
                 miLector.Close();
