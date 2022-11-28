@@ -40,9 +40,7 @@ public class Mensaje {
 
     public Mensaje() {
     }
-
     //Propiedades
-
     public int getIdMensaje() {
         return idMensaje;
     }
@@ -85,6 +83,6 @@ public class Mensaje {
 
     @Override
     public String toString() {
-        return  Texto + "   " + FechaHora + "   " + idMensaje + "Leido : " + Leido;
+        return String.format("%s. Enviado el %s. Enviado por %s. IdMensaje %d. Leido: %d", Texto, FechaHora, idContacto, idMensaje, Leido);
     }
 }

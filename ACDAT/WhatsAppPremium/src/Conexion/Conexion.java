@@ -6,7 +6,7 @@ public class Conexion {
 
     private static final String USER = "ad2223_falbinana";
     private static final String PASS = "87654321";
-    private static final String CONEXIONURL = "jdbc:mysql://dns11036.phdns11.es";
+    private static final String CONEXIONURL = "jdbc:mysql://dns11036.phdns11.es/";
     private static Connection con;
 
     /**
@@ -19,8 +19,7 @@ public class Conexion {
         try {
             con = DriverManager.getConnection(CONEXIONURL, USER, PASS);
             if (con != null) {
-                System.out.println("\033[31;1mConexión a base de datos correcta.\033[0m");
-                System.out.println(con);
+                //System.out.println("\033[31;1mConexión a base de datos correcta.\033[0m" + System.lineSeparator());
             }
         } catch (SQLException e) {
             System.out.println("\033[31;1;4mError conectando a la BBDD de " + "falbinana" + System.lineSeparator() + e.getMessage() + " causado por " + e.getCause() + "\033[0m");
@@ -39,8 +38,7 @@ public class Conexion {
         try {
             con = DriverManager.getConnection(CONEXIONURL, usuario, password);
             if (con != null) {
-                System.out.println("\033[31;1mConexión a base de datos correcta.\033[0m");
-                System.out.println(con);
+                System.out.println("\033[31;1mConexión a base de datos correcta.\033[0m" + System.lineSeparator());
             }
         } catch (SQLException e) {
             System.out.println("\033[31;1;4mError conectando a la BBDD de " + usuario + System.lineSeparator() + e.getMessage() + " causado por " + e.getCause() + "\033[0m");

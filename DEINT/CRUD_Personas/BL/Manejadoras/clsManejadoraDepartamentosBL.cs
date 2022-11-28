@@ -1,14 +1,9 @@
 ﻿using Entidades;
-using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DAL.Manejadoras;
 
-namespace DAL.Manejadoras
+namespace BL.Manejadoras
 {
-    public class manejadoraDepartamentos
+    public class clsManejadoraDepartamentos
     {
         /// <summary>
         /// Recibe un entero que es el id del departamento a eliminar y, según la lógica del negocio, accede a la DAL para eliminarlo.

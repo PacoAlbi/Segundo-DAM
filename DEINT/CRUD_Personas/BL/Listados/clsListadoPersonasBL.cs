@@ -1,5 +1,4 @@
-﻿using DAL;
-using DAL.Listados;
+﻿using DAL.Listados;
 using Entidades;
 using System.Collections.ObjectModel;
 

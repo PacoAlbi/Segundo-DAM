@@ -1,16 +1,16 @@
 ﻿using Entidades;
-using Microsoft.Data.SqlClient;
+using DAL.Manejadoras;
 
-namespace DAL.Manejadoras
+namespace BL.Manejadoras
 {
-    public class manejadoraPersonas
+    public class clsManejadoraPersonas
     {
         /// <summary>
         /// Recibe un entero que representa a una persona a eliminar, filtra según la lógica del negocio, y lo pasa a la DAL para eliminarla.
         /// </summary>
         /// <param name="id">Entero que es el ID de la persona.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int borrarPersonaBL(int id) 
+        public static int borrarPersonaBL(int id)
         {
             return clsManejadoraPersonasDAL.borrarPersonaDAL(id);
         }

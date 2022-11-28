@@ -1,4 +1,5 @@
 ﻿using BL.Listados;
+using BL.Manejadoras;
 using Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.ObjectModel;
@@ -21,6 +22,13 @@ namespace UI_ASP.Controllers
             ObservableCollection<clsDepartamentos> listaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
             return View();
         }
+        [HttpPost]
+        public IActionResult CrearPersona(clsPersona oPersona)
+        {
+            //clsPersona oPersona = new clsPersona();
+            clsManejadoraPersonas.insertarPersonasBL(oPersona);
+            return View();
+        }
 
         public IActionResult DetallesPersona(clsPersonasConNombreDpto persona)
         {
@@ -39,8 +47,6 @@ namespace UI_ASP.Controllers
 
         public IActionResult BorrarPersona(int id)
         {
-           
-
             return View();
         }
     }

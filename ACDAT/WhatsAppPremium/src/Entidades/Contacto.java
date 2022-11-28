@@ -47,6 +47,6 @@ public class Contacto {
 
     @Override
     public String toString() {
-        return String.format("El nombre del contacto es %s, y su estado de bloque es %s", nombre, bloqueado);
+        return String.format("Id: %s. El nombre del contacto es %s, y su estado de bloqueo es %s",idContacto, nombre, bloqueado);
     }
 }
