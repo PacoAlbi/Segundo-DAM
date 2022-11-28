@@ -1,11 +1,11 @@
 package Utilidades;
 
-import Conexion.Conexion;
-import Entidades.Contacto;
+import modelo.Contacto;
+import modelo.Mensaje;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.swing.*;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Utilidades {
 
@@ -13,118 +13,69 @@ public class Utilidades {
 
     public static final String DARPERMISO = "GRANT INSERT ON ad2223_falbinana.Mensajes TO 'ad2223_eramos'@'%';";
     public static final String QUITARPERMISO = "REVOKE ALL PRIVILEGES ON *.* FROM 'usuario'@'localhost'";
-    public static List<Contacto> contactos = new ArrayList<>();
+
+
+
+
+
 
     /**
-     * <b>METODO PARA INSERTAR UN NUEVO CONTACTO EN LA BASE DE DATOS</b> <br> <br>
-     * Precondiciones : la tabla Contacto debe de existir
+     * <b>METODO QUE PIDE LOS DATOS DEL CONTACTO POR UN JOPTIONPANE AL USUARIO Y DEVUELVE UN CONTACTO</b>
+     * @return new Contacto()
      */
-    public static void insertarContacto(String usuario, Contacto contacto) {
+    public static Contacto crearContacto(){
 
-        Statement statement;
+        String idUsuario, nombre;
 
-        String sql = "INSERT INTO ad2223_" + usuario + ".Contactos VALUES(' " + contacto.getIdContacto() + "','" + contacto.getNombre() + "','0'";
-        try {
-            statement = Conexion.conectarseUsuario(usuario, "1234").createStatement();
-            statement.executeUpdate(sql);
-            System.out.println("Contacto CREADO");
+        idUsuario = JOptionPane.showInputDialog("Introduzca el ID del usuario");
+        nombre = JOptionPane.showInputDialog("Introduzca el nombre del usuario");
 
-        } catch (SQLException e) {
-            System.out.println("Error"+e.getMessage());
-        }
-        Conexion.desconectar();
+        return new Contacto(idUsuario,nombre);
+    }
+
+     /**
+     * <b>METODO QUE PIDE EL ID DEL CONTACTO A ELIMINAR Y LO DEVUELVE</b>
+     * @return new Contacto()
+     */
+    public static Contacto borrarContacto(){
+
+        String contacto=JOptionPane.showInputDialog("Indique el IdContacto que desea eliminar");
+
+        return new Contacto(contacto);
+    }
+    /**
+     * <b>METODO QUE PIDE EL ID DEL CONTACTO A BLOQUEAR Y LO DEVUELVE</b>
+     * @return new Contacto()
+     */
+    public static Contacto bloquearContacto(){
+
+        String contacto=JOptionPane.showInputDialog("Indique el IdContacto que desea Bloquear");
+        return new Contacto(contacto);
     }
 
     /**
-     * <b>METODO PARA ELIMINAR UN CONTACTO</b>
+     * <b>FUNCION QUE DEVUELVE un nuevo mensaje</b>
+     * @return new Mensaje()
      */
-    public static void eliminarContacto() {
+    public static Mensaje crearMensaje(String idContacto){
 
+        String texto;
+
+        texto = JOptionPane.showInputDialog("Mensaje:");
+
+        return new Mensaje(texto,idContacto);
     }
 
     /**
-     * <b></b>
+     *
      */
-    public static void darPermisoInsert() {
-
-
-        String permiso = "";
-
+    public void temporizador (){
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override public void run() {
+                System.out.println("¡Ejecutando la primera vez en " +   "1 segundo y las demás cada 5 segundos!"); }
+        }, 1000, 5000);
+        //timer.cancel(); //detiene el temporizador.
+        //timer.purge(); //elimina el temporizador.
     }
-
-    /**
-     * <b>METODO QUE ACCEDE A LA BASE DE DATOS Y NOS DEVUELVE UN LISTADO DE CONTACTOS</b> <br> <br>
-     * Precondiciones : la tabla Contactos debe existir en la base de datos <br>
-     * Postcondiciones : obtenemos una lista de contactos
-     * @param usuario
-     * @return lista
-     */
-    public static List<Contacto> obtenerContactosFromBBDD(String usuario) {
-
-        List<Contacto> lista = new ArrayList<>();
-
-
-        Statement statement;
-        ResultSet rs;
-        Contacto contacto;
-        String instruccionSQL = "SELECT * FROM ad2223_" + usuario + ".Contactos ORDER BY idUsuario";
-
-
-        try {
-
-            statement = Conexion.conectarseUsuario(usuario, "1234").createStatement();;
-            rs = statement.executeQuery(instruccionSQL);
-
-            while (rs.next()) {
-
-                contacto = new Contacto();
-                contacto.setIdContacto(rs.getString(1));
-                contacto.setNombre(rs.getString(2));
-                contacto.setBloqueado(rs.getBoolean(3));
-
-
-                lista.add(contacto);
-            }
-            statement.close();
-            rs.close();
-            Conexion.desconectar();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return lista;
-
-    }
-
-    public static String transformarBloqueo(boolean bloqueado){
-
-        String devolucion = "0";
-
-        if(bloqueado){
-            devolucion = "1";
-        }
-
-        return devolucion;
-    }
-
-    public static void bloquearContacto(String idContacto,String usuario){
-
-
-        Statement statement = null;
-
-
-
-        String instruccionSQL = "UPDATE ad2223_mlopez +".Contacto SET nombre='"+usuarioAActualizar.getNombre()+"',apellidos='"+usuarioAActualizar.getApellido()+"',usuario='" + usuarioAActualizar.getUsername()+"',password='" + usuarioAActualizar.getPassword()+"',email='"+usuarioAActualizar.getEmail()+"'" + " WHERE idUsuario=" + usuarioAActualizar.getIdUsuario();
-
-        try {
-
-            statement = Conexion.conectarseUsuario(usuario,"1234").createStatement();
-            statement.execute(instruccionSQL);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
 }

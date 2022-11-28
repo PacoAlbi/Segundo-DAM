@@ -1,6 +1,7 @@
 package Entidades;
 
 import java.sql.Timestamp;
+import java.time.Instant;
 
 public class Mensaje {
 
@@ -8,17 +9,33 @@ public class Mensaje {
     private int idMensaje;
     private String Texto;
     private Timestamp FechaHora;
-    private boolean Leido;
-    private int idContacto;
+    private int Leido;
+    private String idContacto;
 
     //Constructores
 
-    public Mensaje(int idMensaje, String texto, Timestamp fechaHora, boolean leido, int idContacto) {
+    public Mensaje(int idMensaje, String texto, Timestamp fechaHora, String idContacto) {
+
         this.idMensaje = idMensaje;
         Texto = texto;
-        FechaHora = fechaHora;
-        Leido = leido;
+        FechaHora = Timestamp.from(Instant.now());
+        Leido = 0;
         this.idContacto = idContacto;
+    }
+    public Mensaje(String texto, String idContacto){
+
+        Texto=texto;
+        FechaHora = Timestamp.from(Instant.now());
+        Leido = 0;
+        this.idContacto = idContacto;
+    }
+
+    public Mensaje(String texto){
+
+        Texto=texto;
+        FechaHora = Timestamp.from(Instant.now());
+        Leido = 0;
+
     }
 
     public Mensaje() {
@@ -50,24 +67,24 @@ public class Mensaje {
         FechaHora = fechaHora;
     }
 
-    public boolean isLeido() {
+    public int getLeido() {
         return Leido;
     }
 
-    public void setLeido(boolean leido) {
+    public void setLeido(int leido) {
         Leido = leido;
     }
 
-    public int getIdContacto() {
+    public String getIdContacto() {
         return idContacto;
     }
 
-    public void setIdContacto(int idContacto) {
+    public void setIdContacto(String idContacto) {
         this.idContacto = idContacto;
     }
 
     @Override
     public String toString() {
-        return Texto + "   " + FechaHora ;
+        return  Texto + "   " + FechaHora + "   " + idMensaje + "Leido : " + Leido;
     }
 }
