@@ -40,6 +40,9 @@
             x:Name="btnEliminar"
             Command="{Binding EliminarCommand}"
             ImageSource="borrar.png"/>
+        <Label
+            Text="Estás buscando algo"
+            IsVisible="{Binding EstasBuscando}"/>
     </VerticalStackLayout>
 
 </ContentPage>

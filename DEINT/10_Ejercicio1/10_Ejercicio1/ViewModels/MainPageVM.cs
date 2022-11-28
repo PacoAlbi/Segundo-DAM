@@ -19,6 +19,7 @@ namespace _10_Ejercicio1.ViewModels
         private ObservableCollection<clsPersona> listadoDePersonasMostrado;
         private clsPersona personaSeleccionada;
         private string cadena;
+        private Boolean estasBuscando = false;
         #endregion
 
         #region Constructores
@@ -33,6 +34,14 @@ namespace _10_Ejercicio1.ViewModels
         #endregion
 
         #region Propiedades
+        public Boolean EstasBuscando
+        {
+            get
+            { 
+                return estasBuscando; 
+            }
+
+        }
         public string Cadena
         {
             get
@@ -40,8 +49,16 @@ namespace _10_Ejercicio1.ViewModels
             set
             {
                 cadena = value;
-                NotifyPropertyChanged();
                 buscarCommand.RaiseCanExecuteChanged();
+                if (!String.IsNullOrEmpty(Cadena))
+                {
+                    estasBuscando = true;
+                }
+                else
+                {
+                    estasBuscando=false;                    
+                }
+                NotifyPropertyChanged("EstasBuscando");
             }
         }
         public clsPersona PersonaSeleccionada
@@ -53,7 +70,6 @@ namespace _10_Ejercicio1.ViewModels
             set
             {
                 personaSeleccionada = value;
-                NotifyPropertyChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
             }
         }
@@ -107,7 +123,9 @@ namespace _10_Ejercicio1.ViewModels
         private void EliminarCommand_Executed()
         {
             listadoDePersonasCompleto.Remove(personaSeleccionada);
-            NotifyPropertyChanged();
+            personaSeleccionada = null;
+            eliminarCommand.RaiseCanExecuteChanged();
+            //NotifyPropertyChanged(); //Si es una observableCol, ya notifica el cambio, pero si es de una BBDD, hay que ponerlo, ya que es el bloque entero.
         }
 
         private bool EliminarCommand_CanExecute()

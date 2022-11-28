@@ -8,11 +8,12 @@ using System.Runtime.CompilerServices;
 
 namespace _10_Ejercicio1.ViewModels.Utilidades
 {
-        public abstract class clsVMBase : INotifyPropertyChanged
+    //Nunca poner un INotifyPropertyChanged fuera de un model o un viewmodel.
+    public abstract class clsVMBase : INotifyPropertyChanged
         {
             public event PropertyChangedEventHandler PropertyChanged;
-            
-                                        //CallerMemberName es para que me pille el nombre del bindeo que lo llama del tirón sin tener que sarselo.
+
+            //CallerMemberName es para que me pille el nombre del bindeo que lo llama del tirón sin tener que sarselo.
             protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

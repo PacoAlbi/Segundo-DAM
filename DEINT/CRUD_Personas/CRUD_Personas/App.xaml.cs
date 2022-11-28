@@ -1,4 +1,6 @@
-﻿namespace CRUD_Personas;
+﻿using CRUD_Personas.Views;
+
+namespace CRUD_Personas;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new ListadoPersonas();
 	}
 }

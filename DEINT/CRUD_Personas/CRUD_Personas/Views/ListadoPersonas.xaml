@@ -7,8 +7,30 @@
     <ContentPage.BindingContext>
         <VM:ListadoPersonasVM/>
     </ContentPage.BindingContext>
-    
+    <ScrollView>
     <VerticalStackLayout>
-        
+        <ListView
+            ItemsSource="{Binding ListaPersonasCompleta}"
+            SelectedItem="{Binding PersonaSeleccionada}"
+            RowHeight="150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame>
+                        <HorizontalStackLayout
+                            HorizontalOptions="Center"
+                            Padding="5">
+                            <Image Source="{Binding Foto}" WidthRequest="50" HorizontalOptions="Start"/>
+                                    <VerticalStackLayout>
+                            <Label Text="{Binding Nombre}" Padding="2"/>
+                            <Label Text="{Binding Apellidos}" Padding="2"/>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
