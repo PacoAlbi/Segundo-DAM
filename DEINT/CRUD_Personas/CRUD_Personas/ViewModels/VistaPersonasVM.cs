@@ -16,6 +16,7 @@ namespace CRUD_Personas.ViewModels
         #region Atributos
         private DelegateCommand eliminarCommand;
         private DelegateCommand editarCommand;
+        private DelegateCommand buscarCommand;
         private ObservableCollection<clsPersona> listadoDePersonasCompleto;
         private ObservableCollection<clsPersona> listadoDePersonasMostrado;
         private clsPersona personaSeleccionada;
@@ -25,6 +26,7 @@ namespace CRUD_Personas.ViewModels
         #region Constructores
         public VistaPersonasVM() 
         {
+            buscarCommand = new DelegateCommand(BuscarCommand_Executed, BuscarCommand_CanExecute);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             editarCommand = new DelegateCommand(EditarCommand_Executed);
             listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
@@ -35,10 +37,62 @@ namespace CRUD_Personas.ViewModels
         #endregion
 
         #region Propiedades
-        
+        public string Cadena
+        {
+            get
+            { return cadena; }
+            set
+            {
+                cadena = value;
+                buscarCommand.RaiseCanExecuteChanged();
+            }
+        }
+        public clsPersona PersonaSeleccionada
+        {
+            get 
+            {
+                return personaSeleccionada; 
+            }
+            set 
+            {
+                personaSeleccionada = value;
+                editarCommand.RaiseCanExecuteChanged();
+                eliminarCommand.RaiseCanExecuteChanged();
+            }
+        }
+        public ObservableCollection<clsPersona> ListadoPersonasCompleto
+        {
+            get
+            {
+                return listadoDePersonasCompleto;   
+            }
+            set
+            {
+                listadoDePersonasCompleto = value;
+            }
+        }
+        public DelegateCommand BuscarCommand { get { return buscarCommand; } }
+        public DelegateCommand EliminarCommand { get { return eliminarCommand;} }
+        public DelegateCommand EditarCommand { get { return editarCommand; } }
         #endregion
 
         #region Commands
+        private void BuscarCommand_Executed()
+        {
+            BuscarPersonas(cadena);
+            NotifyPropertyChanged();
+            buscarCommand.RaiseCanExecuteChanged();
+        }
+
+        private bool BuscarCommand_CanExecute()
+        {
+            bool btnBuscador = true;
+            if (String.IsNullOrEmpty(cadena))
+            {
+                btnBuscador = false;
+            }
+            return btnBuscador;
+        }
         private void EliminarCommand_Executed() 
         {
             listadoDePersonasCompleto.Remove(personaSeleccionada);
@@ -58,7 +112,7 @@ namespace CRUD_Personas.ViewModels
         #endregion
 
         #region Metodos
-        private ObservableCollection<clsPersona> BuscarPersonasCon(string cadena)
+        private ObservableCollection<clsPersona> BuscarPersonas (string cadenaABuscar)
         {
             ObservableCollection<clsPersona> listadoCompletoPersonas = clsListadoPersonasBL.getListadoPersonasBL();
             ObservableCollection<clsPersona> listadoDePersonasMostrado = new ObservableCollection<clsPersona>();

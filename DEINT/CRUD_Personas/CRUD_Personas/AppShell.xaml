@@ -7,12 +7,10 @@
     xmlns:views="clr-namespace:CRUD_Personas.Views"
     Shell.FlyoutBehavior="Flyout">
 
-    <MenuItem
+    <!--<MenuItem
         Text="Volver a Citas"
-        IconImageSource="back.png"/>
+        IconImageSource="back.png"/>-->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-
-
         <ShellContent Title="Personas"
                       Icon="personas.png"
                       ContentTemplate="{DataTemplate views:VistaPersonasPage}"
@@ -21,12 +19,9 @@
                       Icon="departamentos.png"
                       ContentTemplate="{DataTemplate views:VistaDepartamentosPage}"
                       FlyoutItemIsVisible="True"/>
-
         <!--<ShellContent
                       Title="Home"
                       ContentTemplate="{DataTemplate views:MainPage}"
                       Route="MainPage"/>-->
     </FlyoutItem>
-
-
 </Shell>

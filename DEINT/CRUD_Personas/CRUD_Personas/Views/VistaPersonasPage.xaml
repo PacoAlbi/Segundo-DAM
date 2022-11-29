@@ -7,27 +7,29 @@
     <ContentPage.BindingContext>
         <VM:VistaPersonasVM/>
     </ContentPage.BindingContext>
+    <ScrollView>
     <SwipeView>
         <SwipeView.LeftItems>
             <SwipeItems>
                 <SwipeItem Text="Editar"
-                       IconImageSource="favorite.png"
-                       BackgroundColor="LightGreen"/>
+                           Command="{Binding EditarCommand}"
+                           IconImageSource="favorite.png"
+                           BackgroundColor="LightGreen"/>
                 <SwipeItem Text="Eliminar"
-                       IconImageSource="delete.png"
-                       BackgroundColor="LightPink"/>
+                           Command="{Binding EliminarCommand}"
+                           IconImageSource="delete.png"
+                           BackgroundColor="LightPink"/>
             </SwipeItems>
         </SwipeView.LeftItems>
         <VerticalStackLayout>
             <ListView
-            ItemsSource="{Binding ListaPersonasCompleta}"
+            ItemsSource="{Binding ListadoPersonasCompleto}"
             SelectedItem="{Binding PersonaSeleccionada}"
             RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <HorizontalStackLayout
-                            HorizontalOptions="Center"
                             Padding="5">
                                 <Image Source="{Binding Foto}" WidthRequest="100" HorizontalOptions="Start"/>
                                 <VerticalStackLayout>
@@ -41,4 +43,5 @@
             </ListView>
         </VerticalStackLayout>
     </SwipeView>
+    </ScrollView>
 </ContentPage>
