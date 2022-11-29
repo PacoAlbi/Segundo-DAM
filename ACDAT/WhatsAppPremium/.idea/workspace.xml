@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64456221-0740-4a04-b5da-cb0cc076f163" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Controllers/ListadoPersonasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Controllers/ListadoPersonasController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Models/ViewModels/ListaPersonasNombreDptoVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Models/ViewModels/ListaPersonasNombreDptoVM.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ControladorContacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ControladorContacto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ControladorMensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ControladorMensaje.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +111,7 @@
       <workItem from="1669706248045" duration="7070000" />
       <workItem from="1669713487458" duration="154000" />
       <workItem from="1669722714668" duration="53000" />
+      <workItem from="1669723616554" duration="235000" />
     </task>
     <servers />
   </component>

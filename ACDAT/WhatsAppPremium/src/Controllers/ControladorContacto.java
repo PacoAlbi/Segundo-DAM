@@ -25,7 +25,6 @@ public class ControladorContacto {
         contactosDAO.registrarContactoDAO(contacto);
     }
 
-
     /**
      * <b>METODO QUE LLAMA AL eliminarContactosDAO() DEL DAO PARA MANDARLE UN CONTACTO A ELIMINAR COMO PARAMETRO</b>
      * @param idContacto Recibe el id del contacto a eliminar.

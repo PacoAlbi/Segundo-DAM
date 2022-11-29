@@ -3,7 +3,7 @@ package EstudiantesyLibros;
 public class EstudiantesLibros implements Runnable {
 
     //Creo el array de booleanos para los libros, como si fuera la biblioteca. Es estática para que sea única para todos los estudiantes.
-    public static boolean[] biblioteca = new boolean[9];
+    public boolean[] biblioteca = new boolean[9];
 
     public static void main(String[] args) {
         //Creo los estudiantes.
@@ -35,7 +35,7 @@ public class EstudiantesLibros implements Runnable {
     }
 
     /**
-     * Esto te lo he tenido que mirar, porque me daba un error que no reconocía, y no se me ocurría sacarlo fuera... sorry...
+     * Lo saco fuera o me peta el ejercicio.
      */
     public synchronized void devolverLibros (int libro1, int libro2) {
         biblioteca[libro1] = false;

@@ -27,9 +27,7 @@ public class ControladorMensaje {
      * @param idMensaje Int con el id del mensaje a borrar.
      */
     public void eliminarMensaje(int idMensaje){
-
         MensajesDAO mensajesDAO = new MensajesDAO();
-
         mensajesDAO.eliminarMensajeDAO(idMensaje);
     }
 
@@ -48,7 +46,6 @@ public class ControladorMensaje {
         }
         return mensajes;
     }
-
 
     /**
      * <b>METODO PARA VERIFICAR QUE EL USUARIO INSERTADO ESTA DENTRO DE LOS CONTACTOS (SOLO LOS DEL GRUPO)</b>
