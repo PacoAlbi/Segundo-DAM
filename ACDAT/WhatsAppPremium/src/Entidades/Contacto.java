@@ -47,6 +47,10 @@ public class Contacto {
 
     @Override
     public String toString() {
-        return String.format("Id: %s. El nombre del contacto es %s, y su estado de bloqueo es %s",idContacto, nombre, bloqueado);
+        String estado = "desbloqueado";
+        if (bloqueado == 1){
+            estado = "bloqueado";
+        }
+        return String.format("Id: %s. El nombre del contacto es %s, y está %s",idContacto, nombre, estado);
     }
 }

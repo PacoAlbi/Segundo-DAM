@@ -38,7 +38,7 @@ public class Conexion {
         try {
             con = DriverManager.getConnection(CONEXIONURL, usuario, password);
             if (con != null) {
-                System.out.println("\033[31;1mConexión a base de datos correcta.\033[0m" + System.lineSeparator());
+                //System.out.println("\033[31;1mConexión a base de datos correcta.\033[0m" + System.lineSeparator());
             }
         } catch (SQLException e) {
             System.out.println("\033[31;1;4mError conectando a la BBDD de " + usuario + System.lineSeparator() + e.getMessage() + " causado por " + e.getCause() + "\033[0m");

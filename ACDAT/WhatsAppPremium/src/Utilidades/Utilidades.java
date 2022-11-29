@@ -12,11 +12,10 @@ import java.util.Timer;
 public class Utilidades {
 
     // Pagina: https://codigofacilito.com/articulos/asignar-permisos-mysql
-
     public static final String DARPERMISO = "GRANT INSERT ON ad2223_falbinana.Mensajes TO 'ad2223_eramos'@'%';";
     public static final String QUITARPERMISO = "REVOKE ALL PRIVILEGES ON *.* FROM 'usuario'@'localhost'";
     public static Scanner sc=new Scanner(System.in);
-
+    public static JDialog dialog = new JDialog();
     public static String leerDato(){
         return sc.next();
     }
@@ -26,6 +25,7 @@ public class Utilidades {
      * @return new Contacto()
      */
     public static Contacto crearContacto(){
+        dialog.setAlwaysOnTop(true);
         String idUsuario, nombre;
         idUsuario = JOptionPane.showInputDialog("Introduzca el ID del usuario");
         nombre = JOptionPane.showInputDialog("Introduzca el nombre del usuario");
@@ -37,6 +37,7 @@ public class Utilidades {
      * @return new Contacto()
      */
     public static String borrarContacto(){
+        dialog.setAlwaysOnTop(true);
         return JOptionPane.showInputDialog("Indique el IdContacto que desea eliminar");
     }
     /**
@@ -44,6 +45,7 @@ public class Utilidades {
      * @return new Contacto()
      */
     public static String bloquearContacto(){
+        dialog.setAlwaysOnTop(true);
         return JOptionPane.showInputDialog("Indique el IdContacto que desea bloquear");
     }
 
@@ -52,6 +54,7 @@ public class Utilidades {
      * @return new Contacto()
      */
     public static String desbloquearContacto(){
+        dialog.setAlwaysOnTop(true);
         return JOptionPane.showInputDialog("Indique el IdContacto que desea desbloquear");
     }
 
@@ -60,11 +63,9 @@ public class Utilidades {
      * @return new Mensaje()
      */
     public static Mensaje crearMensaje(){
-
+        dialog.setAlwaysOnTop(true);
         String texto;
-
         texto = JOptionPane.showInputDialog("Mensaje:");
-
         return new Mensaje(texto,"falbinana");
     }
 

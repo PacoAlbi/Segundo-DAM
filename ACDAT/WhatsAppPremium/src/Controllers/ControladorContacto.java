@@ -21,7 +21,6 @@ public class ControladorContacto {
      * @param contacto Recibe un contacto a insertar.
      */
     public void insertarContacto(Contacto contacto){
-
         ContactosDAO contactosDAO = new ContactosDAO();
         contactosDAO.registrarContactoDAO(contacto);
     }
@@ -32,7 +31,6 @@ public class ControladorContacto {
      * @param idContacto Recibe el id del contacto a eliminar.
      */
     public void eliminarContacto(String idContacto){
-
         ContactosDAO contactosDAO = new ContactosDAO();
         contactosDAO.eliminarContactoDAO(idContacto);
     }
@@ -43,7 +41,6 @@ public class ControladorContacto {
      * @param contacto Recibe un contacto a bloquear.
      */
     public void bloquearContacto(String contacto){
-
         ContactosDAO contactosDAO = new ContactosDAO();
         contactosDAO.bloquearContactoDAO(contacto);
     }
@@ -53,7 +50,6 @@ public class ControladorContacto {
      * @param contacto Recibe un contacto a desbloquear.
      */
     public void desbloquearContacto(String contacto){
-
         ContactosDAO contactosDAO = new ContactosDAO();
         contactosDAO.desbloquearContactoDAO(contacto);
     }

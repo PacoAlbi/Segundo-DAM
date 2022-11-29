@@ -46,7 +46,6 @@ public class ControladorMensaje {
             MensajesDAO mensajesDAO = new MensajesDAO();
             mensajes = mensajesDAO.obtenerMensajesPorUsuarioDAO(IdContacto);
         }
-
         return mensajes;
     }
 

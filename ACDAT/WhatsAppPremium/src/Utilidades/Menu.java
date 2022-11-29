@@ -13,12 +13,13 @@ public class Menu {
         System.out.println("""
                 ----------     Que desea hacer     ----------
                 1.- Enviar mensaje
-                2.- Ver todos los mensajes 
+                2.- Conversación
                 3.- Borrar mensaje
-                4.- Insertar un nuevo contacto
-                5.- Borrar un contacto
-                6.- Bloquear un contacto
-                7.- Desbloquear un contacto
+                4.- Ver Contactos
+                5.- Insertar un nuevo contacto
+                6.- Borrar un contacto
+                7.- Bloquear un contacto
+                8.- Desbloquear un contacto
                 0.- Salir
                 """);
     }
@@ -40,16 +41,17 @@ public class Menu {
                 case "1"-> elegirOpcionMenuEnviarMensaje();
                 case "2"-> elegirOpcionMenuLeerMensaje();
                 case "3"-> controladorMensaje.eliminarMensaje(Utilidades.elegirBorrarMensaje());
-                case "4"-> controladorContacto.insertarContacto(Utilidades.crearContacto());
-                case "5"-> {
+                case "4"-> Vista.verContactos(controladorContacto.obtenerContactos());
+                case "5"-> controladorContacto.insertarContacto(Utilidades.crearContacto());
+                case "6"-> {
                     Vista.verContactos(controladorContacto.obtenerContactos());
                     controladorContacto.eliminarContacto(Utilidades.borrarContacto());
                 }
-                case "6"-> {
+                case "7"-> {
                     Vista.verContactos(controladorContacto.obtenerContactos());
                     controladorContacto.bloquearContacto(Utilidades.bloquearContacto());
                 }
-                case "7"-> {
+                case "8"-> {
                     Vista.verContactos(controladorContacto.obtenerContactos());
                     controladorContacto.desbloquearContacto(Utilidades.desbloquearContacto());
                 }

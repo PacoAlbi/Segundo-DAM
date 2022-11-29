@@ -23,7 +23,6 @@ public class Mensaje {
         this.idContacto = idContacto;
     }
     public Mensaje(String texto, String idContacto){
-
         Texto=texto;
         FechaHora = Timestamp.from(Instant.now());
         Leido = 0;
@@ -31,11 +30,9 @@ public class Mensaje {
     }
 
     public Mensaje(String texto){
-
         Texto=texto;
         FechaHora = Timestamp.from(Instant.now());
         Leido = 0;
-
     }
 
     public Mensaje() {
@@ -83,6 +80,12 @@ public class Mensaje {
 
     @Override
     public String toString() {
-        return String.format("%s. Enviado el %s. Enviado por %s. IdMensaje %d. Leido: %d", Texto, FechaHora, idContacto, idMensaje, Leido);
+        //String visto = "\033[34;1m>\033[0m";
+        String visto = "☻";
+        if (Leido == 1){
+            visto = "☺";
+        }
+        return String.format("\033[33;1m%s\033[0m" + System.lineSeparator() +
+                "IdMensaje %d. Enviado el %s. %s" + System.lineSeparator() + "%s.", idContacto, idMensaje, FechaHora, visto, Texto);
     }
 }

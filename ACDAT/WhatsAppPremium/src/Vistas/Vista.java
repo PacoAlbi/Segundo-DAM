@@ -13,10 +13,14 @@ public class Vista {
      */
     public static void verMensajes(List<Mensaje> listaMensajes){
         MensajesDAO mensaje = new MensajesDAO();
-        for (int i = 0; i < listaMensajes.size(); i++) {
-            System.out.println(listaMensajes.get(i) + System.lineSeparator());
-            if (listaMensajes.get(i).getLeido() == 0){
-                mensaje.actualizarLeido();
+        if (listaMensajes.size() == 0){
+            System.out.println("\033[33;1mNo hay mensajes con este contacto.\033[0m" + System.lineSeparator());
+        } else {
+            for (int i = 0; i < listaMensajes.size(); i++) {
+                System.out.println(listaMensajes.get(i) + System.lineSeparator());
+                if (listaMensajes.get(i).getLeido() == 0){
+                    mensaje.actualizarLeido();
+                }
             }
         }
     }
