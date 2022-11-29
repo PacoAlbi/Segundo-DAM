@@ -29,13 +29,25 @@ namespace UI_ASP.Controllers
             clsManejadoraPersonas.insertarPersonasBL(oPersona);
             return View();
         }
-
-        public IActionResult DetallesPersona(clsPersonasConNombreDpto persona)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult DetallesPersona(int id)
         {
-            clsPersona oPersona = new clsPersona();
-            ObservableCollection<clsDepartamentos> listaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
-
-            return View();
+            clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
+            clsPersonasConNombreDpto personaDetalles = new clsPersonasConNombreDpto();
+            personaDetalles.Id = oPersona.Id;
+            personaDetalles.Nombre = oPersona.Nombre;
+            personaDetalles.Apellidos = oPersona.Apellidos;
+            personaDetalles.Direccion = oPersona.Direccion;
+            personaDetalles.Telefono = oPersona.Telefono;
+            personaDetalles.Foto = oPersona.Foto;
+            personaDetalles.FechaNacimiento = oPersona.FechaNacimiento;
+            personaDetalles.IdDepartamento = oPersona.IdDepartamento;
+            personaDetalles.NombreDpto = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(oPersona.IdDepartamento).Nombre;           
+            return View(personaDetalles);
         }
 
         public IActionResult EditarPersona(clsPersona persona)

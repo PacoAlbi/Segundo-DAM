@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64456221-0740-4a04-b5da-cb0cc076f163" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Connector_J_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatsAppPremium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsAppPremium.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Conexion/Conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Conexion/Conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Controllers/ControladorContacto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Controllers/ControladorContacto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Controllers/ControladorMensaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Controllers/ControladorMensaje.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Dao/MensajesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Dao/MensajesDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Entidades/Contacto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Entidades/Contacto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Entidades/Mensaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Entidades/Mensaje.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Utilidades/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Utilidades/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Utilidades/Utilidades$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Utilidades/Utilidades$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Utilidades/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Utilidades/Utilidades.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WhatsAppPremium/Vistas/Vista.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WhatsAppPremium/Vistas/Vista.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conexion/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conexion/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ControladorContacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ControladorContacto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ControladorMensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ControladorMensaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/MensajesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/MensajesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Contacto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Contacto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/Mensaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilidades/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilidades/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilidades/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilidades/Utilidades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vistas/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vistas/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Controllers/ListadoPersonasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Controllers/ListadoPersonasController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Models/ViewModels/ListaPersonasNombreDptoVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_Personas/UI_ASP/Models/ViewModels/ListaPersonasNombreDptoVM.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +110,7 @@
       <workItem from="1669669127445" duration="4688000" />
       <workItem from="1669706248045" duration="7070000" />
       <workItem from="1669713487458" duration="154000" />
+      <workItem from="1669722714668" duration="53000" />
     </task>
     <servers />
   </component>
