@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD_Personas.Views.VistaPersonasPage"
+             xmlns:VM="clr-namespace:CRUD_Personas.ViewModels"
+             Title="Lista de Personas">
+    <ContentPage.BindingContext>
+        <VM:VistaPersonasVM/>
+    </ContentPage.BindingContext>
+    <SwipeView>
+        <SwipeView.LeftItems>
+            <SwipeItems>
+                <SwipeItem Text="Editar"
+                       IconImageSource="favorite.png"
+                       BackgroundColor="LightGreen"/>
+                <SwipeItem Text="Eliminar"
+                       IconImageSource="delete.png"
+                       BackgroundColor="LightPink"/>
+            </SwipeItems>
+        </SwipeView.LeftItems>
+        <VerticalStackLayout>
+            <ListView
+            ItemsSource="{Binding ListaPersonasCompleta}"
+            SelectedItem="{Binding PersonaSeleccionada}"
+            RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout
+                            HorizontalOptions="Center"
+                            Padding="5">
+                                <Image Source="{Binding Foto}" WidthRequest="100" HorizontalOptions="Start"/>
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Nombre}" Padding="2"/>
+                                    <Label Text="{Binding Apellidos}" Padding="2"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </SwipeView>
+</ContentPage>

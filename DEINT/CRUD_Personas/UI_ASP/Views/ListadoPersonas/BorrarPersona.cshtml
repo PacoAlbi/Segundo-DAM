@@ -1,19 +1,26 @@
 ﻿@model UI_ASP.Models.clsPersonasConNombreDpto
 
 @{
-    ViewData["Title"] = "DetallesPersona";
+    ViewData["Title"] = "BorrarPersona";
 }
 
-<h1>DetallesPersona</h1>
+<h1>BorrarPersona</h1>
 
+<h3>¿Seguro que quieres borrar?</h3>
 <div>
     <h4>clsPersonasConNombreDpto</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2" hidden>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreDpto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreDpto)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Id)
         </dt>
-        <dd class = "col-sm-10" hidden>
+        <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Id)
         </dd>
         <dt class = "col-sm-2">
@@ -52,15 +59,16 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FechaNacimiento)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreDpto)
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDepartamento)
         </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NombreDpto)
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdDepartamento)
         </dd>
     </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Vovler a la lista</a>
+    
+    <form asp-action="BorrarPersona">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
 </div>

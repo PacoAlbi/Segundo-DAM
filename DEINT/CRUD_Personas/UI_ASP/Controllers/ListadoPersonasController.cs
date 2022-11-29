@@ -29,11 +29,7 @@ namespace UI_ASP.Controllers
             clsManejadoraPersonas.insertarPersonasBL(oPersona);
             return View();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        
         public IActionResult DetallesPersona(int id)
         {
             clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
@@ -59,7 +55,18 @@ namespace UI_ASP.Controllers
 
         public IActionResult BorrarPersona(int id)
         {
-            return View();
+            clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
+            clsPersonasConNombreDpto personaDetalles = new clsPersonasConNombreDpto();
+            personaDetalles.Id = oPersona.Id;
+            personaDetalles.Nombre = oPersona.Nombre;
+            personaDetalles.Apellidos = oPersona.Apellidos;
+            personaDetalles.Direccion = oPersona.Direccion;
+            personaDetalles.Telefono = oPersona.Telefono;
+            personaDetalles.Foto = oPersona.Foto;
+            personaDetalles.FechaNacimiento = oPersona.FechaNacimiento;
+            personaDetalles.IdDepartamento = oPersona.IdDepartamento;
+            personaDetalles.NombreDpto = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(oPersona.IdDepartamento).Nombre;
+            return View(personaDetalles);
         }
     }
 }
