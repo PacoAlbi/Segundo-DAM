@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUD_Personas.ViewModels
 {
+    [QueryProperty("PersonaSeleccionada", "personaParaMandar")]
     public class EditarPersonasVM
     {
     }

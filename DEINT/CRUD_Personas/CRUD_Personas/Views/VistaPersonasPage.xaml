@@ -7,41 +7,59 @@
     <ContentPage.BindingContext>
         <VM:VistaPersonasVM/>
     </ContentPage.BindingContext>
-    <ScrollView>
-    <!--<SwipeView>
-        <SwipeView.LeftItems>
-            <SwipeItems>
-                <SwipeItem Text="Editar"
-                           Command="{Binding EditarCommand}"
-                           IconImageSource="favorite.png"
-                           BackgroundColor="LightGreen"/>
-                <SwipeItem Text="Eliminar"
-                           Command="{Binding EliminarCommand}"
-                           IconImageSource="delete.png"
-                           BackgroundColor="LightPink"/>
-            </SwipeItems>
-        </SwipeView.LeftItems>
-        </SwipeView>-->
-        <VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout
+                Padding="10"
+                Spacing="10">
             <ListView
-            ItemsSource="{Binding ListadoPersonasCompleto}"
+            ItemsSource="{Binding ListadoDePersonasMostrado}"
             SelectedItem="{Binding PersonaSeleccionada}"
             RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                                
                             <HorizontalStackLayout
-                                Padding="5">
+                                Padding="5"
+                                Spacing="20">
                                 <Image Source="{Binding Foto}" WidthRequest="100" HorizontalOptions="Start"/>
-                                <VerticalStackLayout>
-                                    <Label Text="{Binding Nombre}" Padding="2"/>
-                                    <Label Text="{Binding Apellidos}" Padding="2"/>
+                                <VerticalStackLayout Spacing="10">
+                                    <Label Text="{Binding Nombre}"/>
+                                    <Label Text="{Binding Apellidos}"/>
                                 </VerticalStackLayout>
-                            </HorizontalStackLayout>
-                        </ViewCell>
+                                        <VerticalStackLayout Spacing="10">
+                                            <Label Text="{Binding Direccion}"/>
+                                            <Label Text="{Binding Telefono}"/>
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                               
+                            </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </VerticalStackLayout>
     </ScrollView>
+        <HorizontalStackLayout Grid.Row="0"
+                               HorizontalOptions="End"
+                               VerticalOptions="End"
+                               Padding="20"
+                               Spacing="10">
+            <ImageButton
+                Command="{Binding EditarCommand}"
+                Source="editar.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                BackgroundColor="LightBlue"/>
+            <ImageButton
+                Command="{Binding EliminarCommand}"
+                Source="delete.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                BackgroundColor="LightBlue"/>
+        </HorizontalStackLayout>
+    </Grid>
 </ContentPage>

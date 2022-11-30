@@ -8,6 +8,7 @@ namespace CRUD_Personas.ViewModels
     public class VistaDepartamentosVM : clsVMBase
     {
         #region Atributos
+        private DelegateCommand crearCommand;
         private DelegateCommand eliminarCommand;
         private DelegateCommand editarCommand;
         private DelegateCommand buscarCommand;
@@ -20,12 +21,13 @@ namespace CRUD_Personas.ViewModels
         #region Constructores
         public VistaDepartamentosVM()
         {
+            crearCommand = new DelegateCommand(CrearCommand_Executed);
             buscarCommand = new DelegateCommand(BuscarCommand_Executed, BuscarCommand_CanExecute);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
-            editarCommand = new DelegateCommand(EditarCommand_Executed);
+            editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecute);
             listadoDeDepartamentosCompleto = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosBL.getListadoDepartamentosBL());
             listadoDeDepartamentosMostrado = new ObservableCollection<clsDepartamentos>();
-            departamentoSeleccionado = new clsDepartamentos();
+            departamentoSeleccionado = null;
             cadena = null;
         }
         #endregion
@@ -54,23 +56,28 @@ namespace CRUD_Personas.ViewModels
                 eliminarCommand.RaiseCanExecuteChanged();
             }
         }
-        public ObservableCollection<clsDepartamentos> ListadoDeDepartamentosCompleto
+        public ObservableCollection<clsDepartamentos> ListadoDeDepartamentosMostrado
         {
             get
             {
-                return listadoDeDepartamentosCompleto;
+                return listadoDeDepartamentosMostrado;
             }
             set
             {
-                listadoDeDepartamentosCompleto = value;
+                listadoDeDepartamentosMostrado = value;
             }
         }
+        public DelegateCommand CrearCommand { get { return crearCommand; } }
         public DelegateCommand BuscarCommand { get { return buscarCommand; } }
         public DelegateCommand EliminarCommand { get { return eliminarCommand; } }
         public DelegateCommand EditarCommand { get { return editarCommand; } }
         #endregion
 
         #region Commands
+        private void CrearCommand_Executed()
+        {
+
+        }
         private void BuscarCommand_Executed()
         {
             BuscarDepartamentos(cadena);
@@ -102,6 +109,15 @@ namespace CRUD_Personas.ViewModels
             return btnEliminar;
         }
         private void EditarCommand_Executed() { }
+        private bool EditarCommand_CanExecute()
+        {
+            bool btnEditar = true;
+            if (departamentoSeleccionado == null)
+            {
+                btnEditar = false;
+            }
+            return btnEditar;
+        }
         #endregion
 
         #region Metodos
