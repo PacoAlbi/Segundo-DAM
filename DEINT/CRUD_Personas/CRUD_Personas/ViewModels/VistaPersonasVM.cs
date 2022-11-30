@@ -1,13 +1,7 @@
 ﻿using BL.Listados;
 using CRUD_Personas.ViewModels.Utilidades;
-using DAL.Listados;
 using Entidades;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CRUD_Personas.ViewModels
 {
@@ -30,8 +24,8 @@ namespace CRUD_Personas.ViewModels
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             editarCommand = new DelegateCommand(EditarCommand_Executed);
             listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
-            listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
-            personaSeleccionada = null;
+            listadoDePersonasMostrado = new ObservableCollection<clsPersona>();
+            personaSeleccionada = new clsPersona();
             cadena = null;
         }
         #endregion
@@ -83,7 +77,6 @@ namespace CRUD_Personas.ViewModels
             NotifyPropertyChanged();
             buscarCommand.RaiseCanExecuteChanged();
         }
-
         private bool BuscarCommand_CanExecute()
         {
             bool btnBuscador = true;
@@ -114,10 +107,8 @@ namespace CRUD_Personas.ViewModels
         #region Metodos
         private ObservableCollection<clsPersona> BuscarPersonas (string cadenaABuscar)
         {
-            ObservableCollection<clsPersona> listadoCompletoPersonas = clsListadoPersonasBL.getListadoPersonasBL();
-            ObservableCollection<clsPersona> listadoDePersonasMostrado = new ObservableCollection<clsPersona>();
-
-            //listadoDePersonasMostrado.Add(listadoCompletoPersonas.Find(x => x.Nombre.Contains(cadena) || x.Apellido.Contains(cadena)));
+            List<clsPersona> listaAuxiliar = new List<clsPersona>(listadoDePersonasCompleto);
+            listadoDePersonasMostrado.Add(listaAuxiliar.Find(x=> x.Nombre.Contains(cadena) || x.Apellidos.Contains(cadena)));
             return listadoDePersonasMostrado;
         }
         #endregion

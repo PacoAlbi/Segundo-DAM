@@ -8,7 +8,7 @@
         <VM:VistaPersonasVM/>
     </ContentPage.BindingContext>
     <ScrollView>
-    <SwipeView>
+    <!--<SwipeView>
         <SwipeView.LeftItems>
             <SwipeItems>
                 <SwipeItem Text="Editar"
@@ -21,6 +21,7 @@
                            BackgroundColor="LightPink"/>
             </SwipeItems>
         </SwipeView.LeftItems>
+        </SwipeView>-->
         <VerticalStackLayout>
             <ListView
             ItemsSource="{Binding ListadoPersonasCompleto}"
@@ -30,7 +31,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <HorizontalStackLayout
-                            Padding="5">
+                                Padding="5">
                                 <Image Source="{Binding Foto}" WidthRequest="100" HorizontalOptions="Start"/>
                                 <VerticalStackLayout>
                                     <Label Text="{Binding Nombre}" Padding="2"/>
@@ -42,6 +43,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </VerticalStackLayout>
-    </SwipeView>
     </ScrollView>
 </ContentPage>
