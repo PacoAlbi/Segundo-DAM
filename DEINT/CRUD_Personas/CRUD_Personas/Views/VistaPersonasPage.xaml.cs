@@ -6,4 +6,12 @@ public partial class VistaPersonasPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    /// <summary>
+    /// Método para actualizar la vista después de insertar o actualizar.
+    /// </summary>
+    protected override void OnAppearing()
+    {
+        InitializeComponent();
+        base.OnAppearing();
+    }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CRUD_Personas.Views.EditarPersonasPage"
+             x:Class="CRUD_Personas.Views.CrearPersonaPage"
              xmlns:VM="clr-namespace:CRUD_Personas.ViewModels"
-             Title="EditarPersonasPage">
+             Title="Añadir Persona">
     <ContentPage.BindingContext>
         <VM:AgregarEditarPersonaVM/>
     </ContentPage.BindingContext>
@@ -49,14 +49,16 @@
             <Picker ItemsSource="{Binding ListaDepartamentos}" 
                     ItemDisplayBinding="{Binding Nombre}"
                     SelectedItem="{Binding Departamento}"
-                        WidthRequest="200"
-                    BackgroundColor="Aquamarine"/>
-            
+                    VerticalOptions="End"
+                    VerticalTextAlignment="End"
+                    HorizontalTextAlignment="Center"
+                    BackgroundColor="Aqua"
+                        WidthRequest="200"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout
             HorizontalOptions="Center">
-            <Button Text="Actualizar" 
-                    Command="{Binding EditarCommand}"/>
+            <Button Text="Guardar" 
+                    Command="{Binding AgregarCommand}"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

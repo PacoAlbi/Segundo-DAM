@@ -24,4 +24,16 @@
                       ContentTemplate="{DataTemplate views:MainPage}"
                       Route="MainPage"/>-->
     </FlyoutItem>
+    <ShellContent Title="CrearPersona"
+                      ContentTemplate="{DataTemplate views:CrearPersonaPage}"
+                      FlyoutItemIsVisible="False"/>
+    <ShellContent Title="CrearDepartamento"
+                      ContentTemplate="{DataTemplate views:VistaDepartamentosPage}"
+                      FlyoutItemIsVisible="False"/>
+    <ShellContent Title="EditarPersona"
+                      ContentTemplate="{DataTemplate views:EditarPersonasPage}"
+                      FlyoutItemIsVisible="False"/>
+    <ShellContent Title="EditarDepartamento"
+                      ContentTemplate="{DataTemplate views:EditarDepartamentosPage}"
+                      FlyoutItemIsVisible="False"/>
 </Shell>

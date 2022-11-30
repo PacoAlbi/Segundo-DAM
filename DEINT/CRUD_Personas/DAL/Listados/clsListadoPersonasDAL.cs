@@ -86,7 +86,6 @@ namespace DAL.Listados
                     while (miLector.Read())
                     {
                         miPersona = new clsPersona();
-
                         miPersona.Id = (int)miLector["Id"];
                         miPersona.Nombre = (String)miLector["Nombre"];
                         miPersona.Apellidos = (String)miLector["Apellidos"];

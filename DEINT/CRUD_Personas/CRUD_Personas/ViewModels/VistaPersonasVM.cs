@@ -23,9 +23,9 @@ namespace CRUD_Personas.ViewModels
         public VistaPersonasVM() 
         {
             crearCommand = new DelegateCommand(CrearCommand_Executed);
-            buscarCommand = new DelegateCommand(BuscarCommand_Executed, BuscarCommand_CanExecute);
+            buscarCommand = new DelegateCommand(BuscarCommand_Executed);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
-            editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecute);
+            editarCommand = new DelegateCommand(EditarCommand_ExecutedAsync, EditarCommand_CanExecute);
             listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
             listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
             personaSeleccionada = null;
@@ -54,7 +54,7 @@ namespace CRUD_Personas.ViewModels
             set 
             {
                 personaSeleccionada = value;
-                NotifyPropertyChanged("PersonaSeleccionada");
+                NotifyPropertyChanged();
                 editarCommand.RaiseCanExecuteChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
             }
@@ -80,31 +80,18 @@ namespace CRUD_Personas.ViewModels
         /// <summary>
         /// Comando para crear a la persona.
         /// </summary>
-        private void CrearCommand_Executed()
+        private async void CrearCommand_Executed()
         {
-
+            await Shell.Current.GoToAsync("CrearPersona");
         }
         /// <summary>
         /// Comando para buscar a la persona.
         /// </summary>
         private void BuscarCommand_Executed()
         {
-            BuscarPersonas(cadena);
-            NotifyPropertyChanged();
-            buscarCommand.RaiseCanExecuteChanged();
-        }
-        /// <summary>
-        /// Comando para habilitar o deshabilitar el botón de buscar.
-        /// </summary>
-        /// <returns>Un booleano que avisa de que hay que habilitar o deshabilitar el botón.</returns>
-        private bool BuscarCommand_CanExecute()
-        {
-            bool btnBuscador = true;
-            if (String.IsNullOrEmpty(cadena))
-            {
-                btnBuscador = false;
-            }
-            return btnBuscador;
+            BuscarPersonas();
+            NotifyPropertyChanged(nameof(ListadoDePersonasMostrado));
+            NotifyPropertyChanged(nameof(PersonaSeleccionada));
         }
         /// <summary>
         /// Comando para eliminar a la persona.
@@ -114,17 +101,17 @@ namespace CRUD_Personas.ViewModels
             bool eliminar = await App.Current.MainPage.DisplayAlert("Eliminar", "¿Seguro que desea eliminar a la persona?", "Si", "No");
             if (eliminar == true)
             {
-                listadoDePersonasCompleto.Remove(personaSeleccionada);
-                listadoDePersonasMostrado.Remove(personaSeleccionada);
+                listadoDePersonasCompleto.Remove(PersonaSeleccionada);
+                ListadoDePersonasMostrado.Remove(PersonaSeleccionada);
                 try
                 {
-                    clsManejadoraPersonas.borrarPersonaBL(personaSeleccionada.Id);
-                    personaSeleccionada = null;
-                    eliminarCommand.RaiseCanExecuteChanged();
-                    editarCommand.RaiseCanExecuteChanged();
+                    clsManejadoraPersonas.borrarPersonaBL(PersonaSeleccionada.Id);
+                    PersonaSeleccionada = null;
+                    EliminarCommand.RaiseCanExecuteChanged();
+                    EditarCommand.RaiseCanExecuteChanged();
                     NotifyPropertyChanged("ListadoDePersonasMostrado");
                 }
-                catch
+                catch (Exception ex)
                 {
                     await App.Current.MainPage.DisplayAlert("Alerta", "Error eliminanado la persona de la BBDD", "OK");
                 }
@@ -137,7 +124,7 @@ namespace CRUD_Personas.ViewModels
         private bool EliminarCommand_CanExecute() 
         {
             bool btnEliminar = false;
-            if (personaSeleccionada != null)
+            if (PersonaSeleccionada != null)
             {
                 btnEliminar = true;
             }
@@ -146,13 +133,13 @@ namespace CRUD_Personas.ViewModels
         /// <summary>
         /// Comando para editar a la persona.
         /// </summary>
-        private void EditarCommand_Executed() 
+        private async void EditarCommand_ExecutedAsync() 
         {
             var miDiccionario = new Dictionary<string, object>
             {
-                {"personaParaMandar", personaSeleccionada }
+                {"personaParaMandar", PersonaSeleccionada }
             };
-            
+            await Shell.Current.GoToAsync("EditarPersona", false, miDiccionario);
         }
         /// <summary>
         /// Comando para habilitar o deshabilitar el botón de editar.
@@ -161,7 +148,7 @@ namespace CRUD_Personas.ViewModels
         private bool EditarCommand_CanExecute()
         {
             bool btnEditar = false;
-            if (personaSeleccionada != null)
+            if (PersonaSeleccionada != null)
             {
                 btnEditar = true;
             }
@@ -175,11 +162,30 @@ namespace CRUD_Personas.ViewModels
         /// </summary>
         /// <param name="cadenaABuscar">String con la cadena a buscar.</param>
         /// <returns>Devuelve la ObservableCollection con las personas buscadas.</returns>
-        private ObservableCollection<clsPersona> BuscarPersonas (string cadenaABuscar)
+        private ObservableCollection<clsPersona> BuscarPersonas ()
         {
             List<clsPersona> listaAuxiliar = new List<clsPersona>(listadoDePersonasCompleto);
-            listadoDePersonasMostrado.Add(listaAuxiliar.Find(x=> x.Nombre.Contains(cadena) || x.Apellidos.Contains(cadena)));
-            return listadoDePersonasMostrado;
+            ListadoDePersonasMostrado.Clear();
+            ListadoDePersonasMostrado.Add(listaAuxiliar.Find(x => x.Nombre.ToLower().Contains(Cadena) || x.Apellidos.ToLower().Contains(Cadena)));
+            //OTRO MÉTODO DE BUSQUEDA PERO ME DA EL MISMO RESULTADO QUE EL MIO, HAY QUE REVISARLO.
+            //if (string.IsNullOrEmpty(Cadena))
+            //{
+            //    ListadoDePersonasMostrado = listadoDePersonasCompleto;
+            //}
+            //else
+            //{
+            //    List<clsPersona> listadoPersonasMostrado = new List<clsPersona>();
+
+            //        foreach (clsPersona persona in ListadoDePersonasMostrado)
+            //        {
+            //            if (persona.Nombre.ToLower().StartsWith(Cadena.ToLowerInvariant()) || persona.Apellidos.ToLower().StartsWith(Cadena.ToLowerInvariant()))
+            //            {
+            //                listadoPersonasMostrado.Add(persona);
+            //            }
+            //        }
+            //    ListadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoPersonasMostrado);
+            //}
+            return ListadoDePersonasMostrado;
         }
         #endregion
     }

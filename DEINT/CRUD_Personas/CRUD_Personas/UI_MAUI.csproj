@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\agregar.png" />
 	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\departamentos.png" />
@@ -62,6 +63,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\CrearDepartamentoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CrearPersonaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EditarDepartamentosPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
