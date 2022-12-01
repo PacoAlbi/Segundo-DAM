@@ -8,9 +8,11 @@
         <VM:VistaPersonasVM/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
-        <Label 
+        <!--<Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            CommandParameter="{Binding .}"
+                                    Command="{Binding BindingContext.DeletePersonaCommand, Source={x:Reference Name=PersonasPage}}"/>-->
     </VerticalStackLayout>
 </ContentPage>

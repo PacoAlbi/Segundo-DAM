@@ -9,5 +9,7 @@ namespace CRUD_Personas.ViewModels
     [QueryProperty("PersonaSeleccionada", "personaParaMandar")]
     public class AgregarEditarDepartamentoVM
     {
+
+
     }
 }
