@@ -10,7 +10,7 @@ namespace _08_Mandalorian.Models
         public List<clsMision> ListaMisiones { get; set; }
         #endregion
         #region Constructores
-        public IndexViewModel(){}
+        public IndexViewModel() { }
         public IndexViewModel(clsMision mision, List<clsMision> listaMisiones)
         {
             Mision = mision;
