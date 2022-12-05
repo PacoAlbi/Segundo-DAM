@@ -1,5 +1,5 @@
 ﻿namespace Entidades
-{   
+{
     //Entidad de persistencia para definir las misiones.
     public class clsMision
     {

@@ -6,7 +6,7 @@ namespace DAL.Listas
     public class clsListaMisiones
     {
         //Método que devuelve una lista de misiones.
-        public static List<clsMision> getListaCompletaMisiones ()
+        public static List<clsMision> getListaCompletaMisiones()
         {
             List<clsMision> lista = new List<clsMision>();
             lista.Add(new clsMision(1, "Rescate de Baby Yoda", "Debes hacerte con Grogu y llevárselo a Luke SkyWalker para su entrenamiento.\r\nRecompensa: 5000 créditos.\r\n"));
@@ -16,7 +16,7 @@ namespace DAL.Listas
 
             return lista;
         }
-        
+
 
     }
 }

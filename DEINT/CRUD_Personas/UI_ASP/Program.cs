@@ -20,14 +20,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapControllerRoute(
-    name: "BorrarPersona",
-    pattern: "BorrarPersona",
-    defaults: new { controller = "ListadoPersonas", action = "BorrarPersona" });
-
-app.MapControllerRoute(
-    name: "EditarPersona",
-    pattern: "EditarPersona",
-    defaults: new { controller = "ListadoPersonas", action = "EditarPersona" });
-
 app.Run();
