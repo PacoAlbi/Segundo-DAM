@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64456221-0740-4a04-b5da-cb0cc076f163" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Cena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Palillos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/out/production/Tema2_1/Filosofos/Filosofos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/out/production/Tema2_1/Filosofos/Filosofos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Filosofos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Filosofos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/FilosofosEV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Mesa.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +123,8 @@
       <workItem from="1669972952590" duration="52000" />
       <workItem from="1670091007255" duration="38000" />
       <workItem from="1670097573648" duration="23000" />
+      <workItem from="1670256865855" duration="16000" />
+      <workItem from="1670264299998" duration="26000" />
     </task>
     <servers />
   </component>
