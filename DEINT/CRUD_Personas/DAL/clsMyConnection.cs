@@ -32,10 +32,15 @@ namespace DAL
         #region Constructores
         public clsMyConnection()
         {
-            this.server = "falbinana.database.windows.net";
-            this.dataBase = "PacoBBDD";
-            this.user = "falbinana";
-            this.pass = "Mandaloriano69";
+            //this.server = "falbinana.database.windows.net";
+            //this.dataBase = "PacoBBDD";
+            //this.user = "falbinana";
+            //this.pass = "Mandaloriano69";
+
+            this.server = $"107-04\\SQLEXPRESS";
+            this.dataBase = "Examen";
+            this.user = "prueba";
+            this.pass = "123";
         }
         //Con parámetros por si quisiera cambiar las conexiones
         public clsMyConnection(String server, String database, String user, String pass)
@@ -58,7 +63,7 @@ namespace DAL
             SqlConnection connection = new SqlConnection();
             try
             {
-                connection.ConnectionString = $"server={server};database={dataBase};uid={user};pwd={pass};";
+                connection.ConnectionString = $"server={server};database={dataBase};uid={user};pwd={pass};Trust Server Certificate = true;";
                 connection.Open();
             }
             catch (SqlException)
