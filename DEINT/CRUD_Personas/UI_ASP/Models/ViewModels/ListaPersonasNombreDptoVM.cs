@@ -45,6 +45,21 @@ namespace UI_ASP.Models.ViewModels
             }
             return listadoConDpto;
         }
+        public clsPersonasConNombreDpto getListaPersonasConDptoPorId(int id)
+        {
+            clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
+            clsPersonasConNombreDpto personaDetalles = new clsPersonasConNombreDpto();
+            personaDetalles.Id = oPersona.Id;
+            personaDetalles.Nombre = oPersona.Nombre;
+            personaDetalles.Apellidos = oPersona.Apellidos;
+            personaDetalles.Direccion = oPersona.Direccion;
+            personaDetalles.Telefono = oPersona.Telefono;
+            personaDetalles.Foto = oPersona.Foto;
+            personaDetalles.FechaNacimiento = oPersona.FechaNacimiento;
+            personaDetalles.IdDepartamento = oPersona.IdDepartamento;
+            personaDetalles.NombreDpto = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(oPersona.IdDepartamento).Nombre;
+            return personaDetalles;
+        }
         #endregion
     }
 }

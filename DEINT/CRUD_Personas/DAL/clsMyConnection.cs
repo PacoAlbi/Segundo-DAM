@@ -32,15 +32,15 @@ namespace DAL
         #region Constructores
         public clsMyConnection()
         {
-            //this.server = "falbinana.database.windows.net";
-            //this.dataBase = "PacoBBDD";
-            //this.user = "falbinana";
-            //this.pass = "Mandaloriano69";
+            this.server = "falbinana.database.windows.net";
+            this.dataBase = "PacoBBDD";
+            this.user = "falbinana";
+            this.pass = "Mandaloriano69";
 
-            this.server = $"107-04\\SQLEXPRESS";
-            this.dataBase = "Examen";
-            this.user = "prueba";
-            this.pass = "123";
+            //this.server = $"107-04\\SQLEXPRESS";
+            //this.dataBase = "Examen";
+            //this.user = "prueba";
+            //this.pass = "123";
         }
         //Con parámetros por si quisiera cambiar las conexiones
         public clsMyConnection(String server, String database, String user, String pass)

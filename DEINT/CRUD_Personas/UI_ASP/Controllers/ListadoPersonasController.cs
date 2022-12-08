@@ -3,7 +3,6 @@ using BL.Manejadoras;
 using Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
-using System.Collections.ObjectModel;
 using UI_ASP.Models;
 using UI_ASP.Models.ViewModels;
 
@@ -13,66 +12,88 @@ namespace UI_ASP.Controllers
     {
         public IActionResult ListadoPersonas()
         {
-            ListaPersonasNombreDptoVM listadoConDpto = null;
+            ActionResult action;
+            ListaPersonasNombreDptoVM listadoConDpto;
             try
             {
                 listadoConDpto = new ListaPersonasNombreDptoVM();
+                action = View(listadoConDpto.ListadodePersonasconDpto);
             } catch (SqlException)
             {
                 ViewBag.Error = "Error accediendo a la BBDD";
+                action = View("ErrorPersonas");
             } catch (Exception)
             {
                 ViewBag.Error = "Error inesperado";
+                action = View("ErrorPersonas");
             }
-            
-            return View(listadoConDpto.ListadodePersonasconDpto);
+            return action;
         }
 
         public IActionResult CrearPersona()
         {
-
-            clsPersona oPersona = new clsPersona();
-            ObservableCollection<clsDepartamentos> listaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
-            return View(listaDepartamentos);
+            ActionResult action;
+            try
+            {
+                action = View(new CrearEditarVM());
+            }
+            catch (SqlException)
+            {
+                ViewBag.Error = "Error accediendo a la BBDD";
+                action = View("ErrorPersonas");
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "Error inesperado";
+                action = View("ErrorPersonas");
+            }
+            return action;
         }
         [HttpPost]
-        public IActionResult CrearPersona(clsPersonasConNombreDpto oPersona)
+        public IActionResult CrearPersona(CrearEditarVM personaVM)
         {
-            //clsPersona oPersona = new clsPersona();
-            clsManejadoraPersonas.insertarPersonasBL(oPersona);
-            return View();
+            clsManejadoraPersonas.insertarPersonasBL(personaVM.Persona);
+            return View("ListadoPersonas", new ListaPersonasNombreDptoVM().getListaPersonasConDpto());
         }
         
         public IActionResult DetallesPersona(int id)
         {
-            clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
-            clsPersonasConNombreDpto personaDetalles = new clsPersonasConNombreDpto();
-            personaDetalles.Id = oPersona.Id;
-            personaDetalles.Nombre = oPersona.Nombre;
-            personaDetalles.Apellidos = oPersona.Apellidos;
-            personaDetalles.Direccion = oPersona.Direccion;
-            personaDetalles.Telefono = oPersona.Telefono;
-            personaDetalles.Foto = oPersona.Foto;
-            personaDetalles.FechaNacimiento = oPersona.FechaNacimiento;
-            personaDetalles.IdDepartamento = oPersona.IdDepartamento;
-            personaDetalles.NombreDpto = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(oPersona.IdDepartamento).Nombre;           
-            return View(personaDetalles);
+            ActionResult action;
+            try
+            {              
+                action = View(new ListaPersonasNombreDptoVM().getListaPersonasConDptoPorId(id));
+            }
+            catch (SqlException)
+            {
+                ViewBag.Error = "Error accediendo a la BBDD";
+                action = View("ErrorPersonas");
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "Error inesperado";
+                action = View("ErrorPersonas");
+            }
+            return action;
         }
 
         public IActionResult EditarPersona(int id)
         {
-            clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
-            clsPersonasConNombreDpto personaDetalles = new clsPersonasConNombreDpto();
-            personaDetalles.Id = oPersona.Id;
-            personaDetalles.Nombre = oPersona.Nombre;
-            personaDetalles.Apellidos = oPersona.Apellidos;
-            personaDetalles.Direccion = oPersona.Direccion;
-            personaDetalles.Telefono = oPersona.Telefono;
-            personaDetalles.Foto = oPersona.Foto;
-            personaDetalles.FechaNacimiento = oPersona.FechaNacimiento;
-            personaDetalles.IdDepartamento = oPersona.IdDepartamento;
-            personaDetalles.NombreDpto = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(oPersona.IdDepartamento).Nombre;
-            return View(personaDetalles);
+            ActionResult action;
+            try
+            {
+                action = View(new ListaPersonasNombreDptoVM().getListaPersonasConDptoPorId(id));
+            }
+            catch (SqlException)
+            {
+                ViewBag.Error = "Error accediendo a la BBDD";
+                action = View("ErrorPersonas");
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "Error inesperado";
+                action = View("ErrorPersonas");
+            }
+            return action;
         }
         [HttpPost]
         public IActionResult EditarPersona(clsPersonasConNombreDpto oPersona)
@@ -82,18 +103,28 @@ namespace UI_ASP.Controllers
         }
         public IActionResult BorrarPersona(int id)
         {
-            clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
-            clsPersonasConNombreDpto personaDetalles = new clsPersonasConNombreDpto();
-            personaDetalles.Id = oPersona.Id;
-            personaDetalles.Nombre = oPersona.Nombre;
-            personaDetalles.Apellidos = oPersona.Apellidos;
-            personaDetalles.Direccion = oPersona.Direccion;
-            personaDetalles.Telefono = oPersona.Telefono;
-            personaDetalles.Foto = oPersona.Foto;
-            personaDetalles.FechaNacimiento = oPersona.FechaNacimiento;
-            personaDetalles.IdDepartamento = oPersona.IdDepartamento;
-            personaDetalles.NombreDpto = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(oPersona.IdDepartamento).Nombre;
-            return View(personaDetalles);
+            ActionResult action;
+            try
+            {
+                action = View(new ListaPersonasNombreDptoVM().getListaPersonasConDptoPorId(id));
+            }
+            catch (SqlException)
+            {
+                ViewBag.Error = "Error accediendo a la BBDD";
+                action = View("ErrorPersonas");
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "Error inesperado";
+                action = View("ErrorPersonas");
+            }
+            return action;
+        }
+        [HttpDelete]
+        public IActionResult BorrarPersona(clsPersonasConNombreDpto oPersona)
+        {
+            clsManejadoraPersonas.borrarPersonaBL(oPersona.Id);
+            return View("ListadoPersonas", new ListaPersonasNombreDptoVM().getListaPersonasConDpto());
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Entidades;
+﻿using BL.Listados;
+using Entidades;
+using System.Collections.ObjectModel;
 
 namespace UI_ASP.Models.ViewModels
 {
@@ -6,14 +8,20 @@ namespace UI_ASP.Models.ViewModels
     {
         #region Propiedades Autogeneradas
         public clsPersona Persona { get; set; }
-        public List<clsDepartamentos> Departamentos { get; set; }
+        public ObservableCollection<clsDepartamentos> ListaDepartamentos { get; set; }
         #endregion
 
 
-        public CrearEditarVM(clsPersona oPersona, List<clsDepartamentos> oDepartamentos)
+        public CrearEditarVM()
+        {
+            this.Persona = new clsPersona();
+            this.ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
+        }
+
+        public CrearEditarVM(clsPersona oPersona)
         {
             this.Persona = oPersona;
-            this.Departamentos = oDepartamentos;
+            this.ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
         }
 
     }
