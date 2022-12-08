@@ -6,6 +6,9 @@ using System.Collections.ObjectModel;
 
 namespace CRUD_Personas.ViewModels
 {
+    /// <summary>
+    /// ViewModel para editar o crear personas.
+    /// </summary>
     [QueryProperty("Persona", "personaParaMandar")]
     public class AgregarEditarPersonaVM : clsVMBase
     {
@@ -23,7 +26,7 @@ namespace CRUD_Personas.ViewModels
             agregarCommand = new DelegateCommand(AgregarCommand_Executed);
             editarCommand = new DelegateCommand(EditarCommand_Executed);
             listaDepartamentos = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosBL.getListadoDepartamentosBL());
-            persona= new clsPersona();
+            Persona= new clsPersona();
         }
         #endregion
 
@@ -53,7 +56,9 @@ namespace CRUD_Personas.ViewModels
 
         #region Commands
         /// <summary>
+        /// Precondiciones: No tiene.
         /// Comando para agregar a la persona.
+        /// Postcondiciones: Agregas a la persona en la BBDD.
         /// </summary>
         private async void AgregarCommand_Executed()
         {
@@ -68,7 +73,7 @@ namespace CRUD_Personas.ViewModels
                     await Application.Current.MainPage.DisplayAlert("Persona insertada correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     await Application.Current.MainPage.DisplayAlert("Alert!", "No se ha podido agregar a la persona", "Ok");
                 }
@@ -79,7 +84,9 @@ namespace CRUD_Personas.ViewModels
             }           
         }
         /// <summary>
+        /// Precondiciones: No tiene.
         /// Comando para editar a la persona.
+        /// Postcondiciones: Editas a la persona en la BBDD.
         /// </summary>
         private async void EditarCommand_Executed()
         {
@@ -93,7 +100,7 @@ namespace CRUD_Personas.ViewModels
                     await Application.Current.MainPage.DisplayAlert("Persona editada correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     await Application.Current.MainPage.DisplayAlert("Alert!", "No se ha podido editar a la persona", "Ok");
                 }

@@ -9,43 +9,50 @@
     </ContentPage.BindingContext>
     <VerticalStackLayout Spacing="10">
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Label Text="Nombre"/>
             <Entry
                 Text="{Binding Persona.Nombre}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Label Text="Apellidos"/>
             <Entry
                 Text="{Binding Persona.Apellidos}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Label Text="Teléfono"/>
             <Entry
                 Text="{Binding Persona.Telefono}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Label Text="Dirección"/>
             <Entry
                 Text="{Binding Persona.Direccion}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Label Text="Foto"/>
             <Entry
                 Text="{Binding Persona.Foto}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Label Text="Fecha de Nacimiento"/>
             <DatePicker
                 Date="{Binding Persona.FechaNacimiento}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Spacing="10" Padding="10"
-                               VerticalOptions="Center">
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
             <Picker ItemsSource="{Binding ListaDepartamentos}" 
                     ItemDisplayBinding="{Binding Nombre}"
                     SelectedItem="{Binding Departamento}"
@@ -53,7 +60,7 @@
                     VerticalTextAlignment="End"
                     HorizontalTextAlignment="Center"
                     BackgroundColor="Aqua"
-                        WidthRequest="200"/>
+                    WidthRequest="200"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout
             HorizontalOptions="Center">

@@ -1,10 +1,14 @@
 ﻿using BL.Listados;
+using BL.Manejadoras;
 using CRUD_Personas.ViewModels.Utilidades;
 using Entidades;
 using System.Collections.ObjectModel;
 
 namespace CRUD_Personas.ViewModels
 {
+    /// <summary>
+    /// ViewModel para mostrar en la vista de la lista de departamentos.
+    /// </summary>
     public class VistaDepartamentosVM : clsVMBase
     {
         #region Atributos
@@ -22,11 +26,11 @@ namespace CRUD_Personas.ViewModels
         public VistaDepartamentosVM()
         {
             crearCommand = new DelegateCommand(CrearCommand_Executed);
-            buscarCommand = new DelegateCommand(BuscarCommand_Executed, BuscarCommand_CanExecute);
+            buscarCommand = new DelegateCommand(BuscarCommand_Executed);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecute);
             listadoDeDepartamentosCompleto = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosBL.getListadoDepartamentosBL());
-            listadoDeDepartamentosMostrado = new ObservableCollection<clsDepartamentos>();
+            listadoDeDepartamentosMostrado = new ObservableCollection<clsDepartamentos>(listadoDeDepartamentosCompleto);
             departamentoSeleccionado = null;
             cadena = null;
         }
@@ -40,6 +44,7 @@ namespace CRUD_Personas.ViewModels
             set
             {
                 cadena = value;
+                NotifyPropertyChanged();
                 buscarCommand.RaiseCanExecuteChanged();
             }
         }
@@ -52,6 +57,7 @@ namespace CRUD_Personas.ViewModels
             set
             {
                 departamentoSeleccionado = value;
+                NotifyPropertyChanged();
                 editarCommand.RaiseCanExecuteChanged();
                 eliminarCommand.RaiseCanExecuteChanged();
             }
@@ -74,45 +80,100 @@ namespace CRUD_Personas.ViewModels
         #endregion
 
         #region Commands
-        private void CrearCommand_Executed()
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Command que me manda a la vista de crear departamentos.
+        /// Postcondiciones: Navegas a la vista de crear departamentos.
+        /// </summary>
+        private async void CrearCommand_Executed()
         {
-
+            await Shell.Current.GoToAsync("CrearDepartamento");
         }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Command que busca un departamento en la lista.
+        /// Postcondiciones: Muestra las coincidencias.
+        /// </summary>
         private void BuscarCommand_Executed()
         {
-            BuscarDepartamentos(cadena);
+            BuscarDepartamentos();
             NotifyPropertyChanged();
             buscarCommand.RaiseCanExecuteChanged();
         }
-        private bool BuscarCommand_CanExecute()
+        //No lo voy a usar
+        //private bool BuscarCommand_CanExecute()
+        //{
+        //    bool btnBuscador = true;
+        //    if (String.IsNullOrEmpty(cadena))
+        //    {
+        //        btnBuscador = false;
+        //    }
+        //    return btnBuscador;
+        //}
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Comando para eliminar un departamento de la BBDD.
+        /// Postcondiciones: Elimina un departamento de la BBDD.
+        /// </summary>
+        private async void EliminarCommand_Executed()
         {
-            bool btnBuscador = true;
-            if (String.IsNullOrEmpty(cadena))
+            bool eliminar = await App.Current.MainPage.DisplayAlert("Eliminar", "¿Seguro que desea eliminar el departamento de la BBDD?", "Si", "No");
+            if (eliminar == true)
             {
-                btnBuscador = false;
+                listadoDeDepartamentosCompleto.Remove(DepartamentoSeleccionado);
+                listadoDeDepartamentosMostrado.Remove(DepartamentoSeleccionado);
+                try
+                {
+                    clsManejadoraDepartamentos.borrarDepartamentosBL(DepartamentoSeleccionado.Id);
+                    DepartamentoSeleccionado = null;
+                    EliminarCommand.RaiseCanExecuteChanged();
+                    EditarCommand.RaiseCanExecuteChanged();
+                    NotifyPropertyChanged("ListadoDeDepartamentosMostrado");
+                }
+                catch (Exception)
+                {
+                    await App.Current.MainPage.DisplayAlert("Alerta", "Error eliminanado el departamento de la BBDD", "OK");
+                }
             }
-            return btnBuscador;
         }
-        private void EliminarCommand_Executed()
-        {
-            listadoDeDepartamentosCompleto.Remove(departamentoSeleccionado);
-            departamentoSeleccionado = null;
-            eliminarCommand.RaiseCanExecuteChanged();
-        }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Comando que devuelve true si hay un departamento seleccionado y false si no lo hay.
+        /// Postcondiciones: Devuelve un booleano según hay un departamento seleccionado o no.
+        /// </summary>
+        /// <returns>bool</returns>
         private bool EliminarCommand_CanExecute()
         {
             bool btnEliminar = true;
-            if (departamentoSeleccionado == null)
+            if (DepartamentoSeleccionado == null)
             {
                 btnEliminar = false;
             }
             return btnEliminar;
         }
-        private void EditarCommand_Executed() { }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Comando para editar un departamento de la BBDD.
+        /// Postcondiciones: Edita un departamento de la BBDD.
+        /// </summary>
+        private async void EditarCommand_Executed() 
+        {
+            var miDiccionario = new Dictionary<string, object>
+            {
+                {"departamentoParaMandar", DepartamentoSeleccionado }
+            };
+            await Shell.Current.GoToAsync("EditarDepartamento", miDiccionario);
+        }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Comando que devuelve true si hay un departamento seleccionado y false si no lo hay.
+        /// Postcondiciones: Devuelve un booleano según haya un departamento seleccionado o no.
+        /// </summary>
+        /// <returns>bool</returns>
         private bool EditarCommand_CanExecute()
         {
             bool btnEditar = true;
-            if (departamentoSeleccionado == null)
+            if (DepartamentoSeleccionado == null)
             {
                 btnEditar = false;
             }
@@ -121,11 +182,18 @@ namespace CRUD_Personas.ViewModels
         #endregion
 
         #region Metodos
-        private ObservableCollection<clsDepartamentos> BuscarDepartamentos(string cadenaABuscar)
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Método que busca las coincidencias de la cadena en la lista de departamentos.
+        /// Postcondiciones: Devuelve una ObservableCollection con las coincidencias.
+        /// </summary>
+        /// <returns>ObservableCollection</returns>
+        private ObservableCollection<clsDepartamentos> BuscarDepartamentos()
         {
             List<clsDepartamentos> listaAuxiliar= new List<clsDepartamentos>(listadoDeDepartamentosCompleto);
-            listadoDeDepartamentosMostrado.Add(listaAuxiliar.Find(x=> x.Nombre.Contains(cadena)));
-            return listadoDeDepartamentosMostrado;
+            ListadoDeDepartamentosMostrado.Clear();
+            ListadoDeDepartamentosMostrado.Add(listaAuxiliar.Find(x=> x.Nombre.Contains(Cadena)));
+            return ListadoDeDepartamentosMostrado;
         }
         #endregion
     }

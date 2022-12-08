@@ -8,7 +8,10 @@ namespace DAL.Listados
     public class clsListadoPersonasDAL
     {
         /// <summary>
+        /// Precondiciones: No tiene.
         /// Conecto con la BBDD y saco una lista de personas de la tabla Personas para mandar a la BL.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Devuelve una lista de personas de la BBDD.
         /// </summary>
         /// <returns>List de personas.</returns>
         public static List<clsPersona> getListadoPersonasDAL()
@@ -62,7 +65,10 @@ namespace DAL.Listados
         }
 
         /// <summary>
+        /// Precondiciones: Debe recivir el id de una persona.
         /// Busco en la Base de datos a un usuario pasando el Id como parámetro.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Devuelve una persona de la BBDD.
         /// </summary>
         /// <param name="Id">Entero que representa el Id de la persona a buscar.</param>
         /// <returns>Devuelve una clsPersona encontrada por su Id.</returns>

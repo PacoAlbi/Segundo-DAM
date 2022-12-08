@@ -7,7 +7,10 @@ namespace DAL.Listados
     public class clsListadoDepartamentosDAL
     {
         /// <summary>
+        /// Precondiciones: No tiene.
         /// Conecto con la BBDD y saco un lista de departamentos de la tabla Departamentos para mandar a la BL.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Devuelve una lista de departamentos.
         /// </summary>
         /// <returns>List de departamentos.</returns>
         public static List<clsDepartamentos> getListadoDepartamentosDAL()
@@ -52,7 +55,10 @@ namespace DAL.Listados
         }
 
         /// <summary>
+        /// Precondiciones: Debe recivbir el id de un departamento.
         /// Busco en la base de datos un departamento por su Id.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Devuelve una persona de la BBDD.
         /// </summary>
         /// <param name="Id">Paso el Id del departamento a buscar.</param>
         /// <returns>Devuelvo un clsDepartamento si lo hemos encontrado.</returns>

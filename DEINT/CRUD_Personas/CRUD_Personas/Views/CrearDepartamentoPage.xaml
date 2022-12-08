@@ -5,12 +5,21 @@
              xmlns:VM="clr-namespace:CRUD_Personas.ViewModels"
              Title="CrearDepartamentoPage">
     <ContentPage.BindingContext>
-        <VM:VistaPersonasVM/>
+        <VM:AgregarEditarDepartamentoVM/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <HorizontalStackLayout Spacing="10" Padding="10"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
+            <Label Text="Nombre del Departamento"/>
+            <Entry
+                WidthRequest="120"
+                Text="{Binding Departamento.Nombre}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Button Text="Guardar" 
+                    Command="{Binding AgregarCommand}"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

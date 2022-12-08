@@ -7,7 +7,9 @@ public partial class VistaPersonasPage : ContentPage
 		InitializeComponent();
 	}
     /// <summary>
+    /// Precondiciones: No tiene.
     /// Método para actualizar la vista después de insertar o actualizar.
+    /// Postcondiciones: No tiene.
     /// </summary>
     protected override void OnAppearing()
     {

@@ -5,14 +5,27 @@
              xmlns:VM="clr-namespace:CRUD_Personas.ViewModels"
              Title="EditarDepartamentosPage">
     <ContentPage.BindingContext>
-        <VM:VistaPersonasVM/>
+        <VM:AgregarEditarDepartamentoVM/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
         <!--<Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Welcome to .NET MAUI!"                    Para ver como se haría con reference
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             CommandParameter="{Binding .}"
                                     Command="{Binding BindingContext.DeletePersonaCommand, Source={x:Reference Name=PersonasPage}}"/>-->
+        <HorizontalStackLayout Spacing="10" Padding="10"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center">
+            <Label Text="Nombre del Departamento"/>
+            <Entry
+                Placeholder="{Binding Departamento.Nombre}"
+                Text="{Binding Departamento.Nombre}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Button Text="Actualizar" 
+                    Command="{Binding EditarCommand}"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

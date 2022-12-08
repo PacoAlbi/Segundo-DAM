@@ -33,28 +33,28 @@
             SelectedItem="{Binding PersonaSeleccionada}"
             RowHeight="100"
                   >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
                                 <Frame CornerRadius="10" BorderColor="Black">
-                            <HorizontalStackLayout Spacing="10">
-                                <Image Source="{Binding Foto}" WidthRequest="100" HorizontalOptions="Start"/>
-                                <VerticalStackLayout Spacing="20">
-                                    <Label Text="{Binding Nombre}"/>
-                                    <Label Text="{Binding Apellidos}"/>
-                                </VerticalStackLayout>
-                                <VerticalStackLayout Spacing="20">
-                                    <Label Text="{Binding Direccion}"/>
-                                    <Label Text="{Binding FechaNacimiento}"/>
-                                </VerticalStackLayout>
-                            </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Image Source="{Binding Foto}" WidthRequest="100" HorizontalOptions="Start"/>
+                                        <VerticalStackLayout Spacing="20">
+                                            <Label Text="{Binding Nombre}"/>
+                                            <Label Text="{Binding Apellidos}"/>
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout Spacing="20">
+                                            <Label Text="{Binding Direccion}"/>
+                                            <Label Text="{Binding FechaNacimiento}"/>
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
                                 </Frame>
                             </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </VerticalStackLayout>
-    </ScrollView>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </ScrollView>
         <HorizontalStackLayout Grid.Row="0"
                                HorizontalOptions="End"
                                VerticalOptions="End"

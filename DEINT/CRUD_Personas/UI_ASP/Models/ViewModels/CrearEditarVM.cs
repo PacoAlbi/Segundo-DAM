@@ -4,6 +4,9 @@ using System.Collections.ObjectModel;
 
 namespace UI_ASP.Models.ViewModels
 {
+    /// <summary>
+    /// ViewModel que me sirve para crear o editar personas, que crea una persona y pide una lista departamentos a la BBDD para poder mostrarla y editarla o crearla.
+    /// </summary>
     public class CrearEditarVM
     {
         #region Propiedades Autogeneradas
@@ -14,13 +17,13 @@ namespace UI_ASP.Models.ViewModels
         #region Constructores
         public CrearEditarVM()
         {
-            this.Persona = new clsPersona();
-            this.ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
+            Persona = new clsPersona();
+            ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
         }
         public CrearEditarVM(clsPersona oPersona)
         {
-            this.Persona = oPersona;
-            this.ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
+            Persona = oPersona;
+            ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
         }
         #endregion
     }

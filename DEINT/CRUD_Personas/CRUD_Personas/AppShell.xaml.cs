@@ -7,6 +7,7 @@ public partial class AppShell : Shell
 	public AppShell()
 	{
 		InitializeComponent();
+		//Registro las rutas de todas las páginas de navegacion que no pertenecen al tab
         Routing.RegisterRoute("CrearPersona", typeof(CrearPersonaPage)); //TODO colocar todas las paginas aqui que no estén en los tabs
         Routing.RegisterRoute("CrearDepartamento", typeof(CrearDepartamentoPage));
         Routing.RegisterRoute("EditarPersona",typeof(EditarPersonasPage));

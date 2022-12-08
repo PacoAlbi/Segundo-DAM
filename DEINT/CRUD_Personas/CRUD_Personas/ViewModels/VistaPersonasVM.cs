@@ -6,6 +6,9 @@ using System.Collections.ObjectModel;
 
 namespace CRUD_Personas.ViewModels
 {
+    /// <summary>
+    /// ViewModel para mostrar en la vista de la lista de personas con sus nombres de departamentos.
+    /// </summary>
     public class VistaPersonasVM : clsVMBase
     {
         #region Atributos
@@ -78,14 +81,18 @@ namespace CRUD_Personas.ViewModels
 
         #region Commands
         /// <summary>
-        /// Comando para crear a la persona.
+        /// Precondiciones: No tiene.
+        /// Command que me manda a la vista de crear personas.
+        /// Postcondiciones: Navegas a la vista de crear personas.
         /// </summary>
         private async void CrearCommand_Executed()
         {
             await Shell.Current.GoToAsync("CrearPersona");
         }
         /// <summary>
-        /// Comando para buscar a la persona.
+        /// Precondiciones: No tiene.
+        /// Command que busca una persona en la lista.
+        /// Postcondiciones: Muestra las coincidencias.
         /// </summary>
         private void BuscarCommand_Executed()
         {
@@ -94,7 +101,9 @@ namespace CRUD_Personas.ViewModels
             NotifyPropertyChanged(nameof(PersonaSeleccionada));
         }
         /// <summary>
-        /// Comando para eliminar a la persona.
+        /// Precondiciones: No tiene.
+        /// Comando para editar una persona de la BBDD.
+        /// Postcondiciones: Edita una persona de la BBDD.
         /// </summary>
         private async void EliminarCommand_Executed() 
         {
@@ -111,16 +120,18 @@ namespace CRUD_Personas.ViewModels
                     EditarCommand.RaiseCanExecuteChanged();
                     NotifyPropertyChanged("ListadoDePersonasMostrado");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     await App.Current.MainPage.DisplayAlert("Alerta", "Error eliminanado la persona de la BBDD", "OK");
                 }
             }
         }
         /// <summary>
-        /// Comando para habilitar o deshabilitar el botón de eliminar.
+        /// Precondiciones: No tiene.
+        /// Comando que devuelve true si hay una persona seleccionada y false si no la hay.
+        /// Postcondiciones: Devuelve un booleano según haya una persona seleccionada o no.
         /// </summary>
-        /// <returns>Un booleano que avisa de que hay que habilitar o deshabilitar el botón.</returns>
+        /// <returns>bool</returns>
         private bool EliminarCommand_CanExecute() 
         {
             bool btnEliminar = false;
@@ -131,7 +142,9 @@ namespace CRUD_Personas.ViewModels
             return btnEliminar;
         }
         /// <summary>
-        /// Comando para editar a la persona.
+        /// Precondiciones: No tiene.
+        /// Comando para editar una persona de la BBDD.
+        /// Postcondiciones: Edita una persona de la BBDD.
         /// </summary>
         private async void EditarCommand_ExecutedAsync() 
         {
@@ -139,12 +152,14 @@ namespace CRUD_Personas.ViewModels
             {
                 {"personaParaMandar", PersonaSeleccionada }
             };
-            await Shell.Current.GoToAsync("EditarPersona", false, miDiccionario);
+            await Shell.Current.GoToAsync("EditarPersona", miDiccionario);
         }
         /// <summary>
-        /// Comando para habilitar o deshabilitar el botón de editar.
+        /// Precondiciones: No tiene.
+        /// Comando que devuelve true si hay una persona seleccionada y false si no la hay.
+        /// Postcondiciones: Devuelve un booleano según haya una persona seleccionada o no.
         /// </summary>
-        /// <returns>Un booleano que avisa de que hay que habilitar o deshabilitar el botón.</returns>
+        /// <returns>bool</returns>
         private bool EditarCommand_CanExecute()
         {
             bool btnEditar = false;
@@ -158,10 +173,11 @@ namespace CRUD_Personas.ViewModels
 
         #region Metodos
         /// <summary>
+        /// Precondiciones: No tiene.
         /// Método para buscar dentro de la lista una persona o varias personas en concreto mediante una cadena que buscará dentro de la lista.
+        /// Postcondiciones: Devuelve una ObservableCollection con las coincidencias.
         /// </summary>
-        /// <param name="cadenaABuscar">String con la cadena a buscar.</param>
-        /// <returns>Devuelve la ObservableCollection con las personas buscadas.</returns>
+        /// <returns>ObservableCollection</returns>
         private ObservableCollection<clsPersona> BuscarPersonas ()
         {
             List<clsPersona> listaAuxiliar = new List<clsPersona>(listadoDePersonasCompleto);

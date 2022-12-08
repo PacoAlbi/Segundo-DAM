@@ -6,7 +6,10 @@ namespace DAL.Manejadoras
     public class clsManejadoraDepartamentosDAL
     {
         /// <summary>
+        /// Precondiciones: Deber recivir la id de un departamento.
         /// Recibe un entero que es el id del departamento a eliminar y accede a la base de datos para eliminarlo.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Borra el departamento accediendo a la BBDD.
         /// </summary>
         /// <param name="id">Entero que representa el id del departamento a eliminar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
@@ -36,7 +39,10 @@ namespace DAL.Manejadoras
         }
 
         /// <summary>
+        /// Precondiciones: Deber recivir la id de un departamento.
         /// Recibe un departamento ya editado para actualizarlo en la base de datos.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Edita el departamento accediendo a la BBDD.
         /// </summary>
         /// <param name="departamento">Departamento para editar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
@@ -56,15 +62,22 @@ namespace DAL.Manejadoras
                 miComando.Connection = conexion;
                 numeroFilasAfectadas = miComando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (SqlException)
             {
-                throw ex;
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
             }
             return numeroFilasAfectadas;
         }
 
         /// <summary>
+        /// Precondiciones: Debe recivir un departamento relleno.
         /// Recibe un departamentos ya relleno para insertarlo en la base de datos.
+        /// Lanza los errores a la capa superior.
+        /// Postcondiciones: Inserta un nuevo departamento accediendo a la BBDD.
         /// </summary>
         /// <param name="persona">Departamento para insertar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
@@ -83,9 +96,13 @@ namespace DAL.Manejadoras
                 miComando.Connection = conexion;
                 numeroFilasAfectadas = miComando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (SqlException)
             {
-                throw ex;
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
             }
             return numeroFilasAfectadas;
         }
