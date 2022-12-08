@@ -53,6 +53,7 @@
 	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\departamentos.png" />
+	  <None Remove="Resources\Images\details.png" />
 	  <None Remove="Resources\Images\editar.png" />
 	  <None Remove="Resources\Images\personas.png" />
 	</ItemGroup>
@@ -67,6 +68,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CrearPersonaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DetallesPersonaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EditarDepartamentosPage.xaml">

@@ -16,6 +16,7 @@ namespace CRUD_Personas.ViewModels
         private DelegateCommand eliminarCommand;
         private DelegateCommand editarCommand;
         private DelegateCommand buscarCommand;
+        private DelegateCommand detallesCommand;
         private ObservableCollection<clsPersona> listadoDePersonasCompleto;
         private ObservableCollection<clsPersona> listadoDePersonasMostrado;
         private clsPersona personaSeleccionada;
@@ -29,6 +30,7 @@ namespace CRUD_Personas.ViewModels
             buscarCommand = new DelegateCommand(BuscarCommand_Executed);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             editarCommand = new DelegateCommand(EditarCommand_ExecutedAsync, EditarCommand_CanExecute);
+            detallesCommand = new DelegateCommand(DetallesCommand_Execute, DetallesCommand_CanExecute);
             listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
             listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
             personaSeleccionada = null;
@@ -77,6 +79,7 @@ namespace CRUD_Personas.ViewModels
         public DelegateCommand BuscarCommand { get { return buscarCommand; } }
         public DelegateCommand EliminarCommand { get { return eliminarCommand;} }
         public DelegateCommand EditarCommand { get { return editarCommand; } }
+        public DelegateCommand DetallesCommand { get { return detallesCommand; } }
         #endregion
 
         #region Commands
@@ -161,6 +164,34 @@ namespace CRUD_Personas.ViewModels
         /// </summary>
         /// <returns>bool</returns>
         private bool EditarCommand_CanExecute()
+        {
+            bool btnEditar = false;
+            if (PersonaSeleccionada != null)
+            {
+                btnEditar = true;
+            }
+            return btnEditar;
+        }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Comando para ir a la vista de detalles de la persona.
+        /// Postcondiciones: No tiene.
+        /// </summary>
+        private async void DetallesCommand_Execute()
+        {
+            var miDiccionario = new Dictionary<string, object>
+            {
+                {"personaParaMandar", PersonaSeleccionada }
+            };
+            await Shell.Current.GoToAsync("DetallesPersona", miDiccionario);
+        }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Comando que devuelve true si hay una persona seleccionada y false si no la hay.
+        /// Postcondiciones: Devuelve un booleano según haya una persona seleccionada o no.
+        /// </summary>
+        /// <returns>bool</returns>
+        private bool DetallesCommand_CanExecute()
         {
             bool btnEditar = false;
             if (PersonaSeleccionada != null)

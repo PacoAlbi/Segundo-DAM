@@ -31,8 +31,7 @@
                 <ListView
             ItemsSource="{Binding ListadoDePersonasMostrado}"
             SelectedItem="{Binding PersonaSeleccionada}"
-            RowHeight="100"
-                  >
+            RowHeight="100">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -55,6 +54,20 @@
                 </ListView>
             </VerticalStackLayout>
         </ScrollView>
+        <HorizontalStackLayout Grid.Row="0"
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               Padding="20"
+                               Spacing="10">
+
+            <ImageButton
+                Command="{Binding DetallesCommand}"
+                Source="details.png"
+                WidthRequest="50"
+                HeightRequest="50"
+                BackgroundColor="LightSalmon"
+                CornerRadius="10"/>
+        </HorizontalStackLayout>
         <HorizontalStackLayout Grid.Row="0"
                                HorizontalOptions="End"
                                VerticalOptions="End"

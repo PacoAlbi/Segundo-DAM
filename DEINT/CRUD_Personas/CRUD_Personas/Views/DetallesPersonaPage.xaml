@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD_Personas.Views.DetallesPersonaPage"
+             xmlns:VM="clr-namespace:CRUD_Personas.ViewModels"
+             Title="Detalles de la Persona">
+    <ContentPage.BindingContext>
+        <VM:AgregarEditarPersonaVM/>
+    </ContentPage.BindingContext>
+    <HorizontalStackLayout>
+        <VerticalStackLayout>
+        <Image Source="{Binding Persona.Foto}" WidthRequest="200"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label 
+            Text="{Binding Persona.Id}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        <Label 
+            Text="{Binding Persona.Nombre}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Persona.Apellidos}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Persona.Direccion}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Persona.Telefono}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="{Binding Persona.FechaNacimiento}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        <Label 
+            Text="{Binding Departamento.Nombre}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+</ContentPage>
