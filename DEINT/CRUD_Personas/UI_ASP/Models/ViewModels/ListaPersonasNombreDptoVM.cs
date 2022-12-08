@@ -22,9 +22,11 @@ namespace UI_ASP.Models.ViewModels
 
         #region Métodos
         /// <summary>
-        /// Pillo una lista de personas normal y le añado del nombre de departamento para poder mostrarlo a la vista.
+        /// Precondición: No tiene.
+        /// Recibe una lista de personas normal y le añado del nombre de departamento para poder enviarla.
+        /// Postcondición: Devuelve una lista de personas con el nombre del departamento.
         /// </summary>
-        /// <returns>Devuelvo una List de personas con nombre de departamento.</returns>
+        /// <returns>Devuelvo una List de personas con el nombre de departamento.</returns>
         public ObservableCollection<clsPersonasConNombreDpto> getListaPersonasConDpto()
         {
             ObservableCollection<clsPersona> listadoNormal = clsListadoPersonasBL.getListadoPersonasBL();
@@ -45,6 +47,13 @@ namespace UI_ASP.Models.ViewModels
             }
             return listadoConDpto;
         }
+        /// <summary>
+        /// Precondición: No tiene.
+        /// Busca una persona por su id y le añade el nombre del departamento para enviarla.
+        /// Postcondición: Devuelve un persona con el nombre de su departamento encontrada por su id.
+        /// </summary>
+        /// <param name="id">int id</param>
+        /// <returns>clsPersonasConNombreDpto</returns>
         public clsPersonasConNombreDpto getListaPersonasConDptoPorId(int id)
         {
             clsPersona oPersona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);

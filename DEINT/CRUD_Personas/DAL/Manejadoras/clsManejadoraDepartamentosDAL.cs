@@ -47,6 +47,7 @@ namespace DAL.Manejadoras
             SqlConnection conexion = new SqlConnection();
             SqlCommand miComando = new SqlCommand();
             miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = departamento.Id;
+            miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = departamento.Nombre;
 
             try
             {

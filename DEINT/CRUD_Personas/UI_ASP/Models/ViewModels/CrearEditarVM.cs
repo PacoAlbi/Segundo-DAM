@@ -11,18 +11,17 @@ namespace UI_ASP.Models.ViewModels
         public ObservableCollection<clsDepartamentos> ListaDepartamentos { get; set; }
         #endregion
 
-
+        #region Constructores
         public CrearEditarVM()
         {
             this.Persona = new clsPersona();
             this.ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
         }
-
         public CrearEditarVM(clsPersona oPersona)
         {
             this.Persona = oPersona;
             this.ListaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
         }
-
+        #endregion
     }
 }
