@@ -54,7 +54,7 @@
                 <span asp-validation-for="Persona.IdDepartamento" class="text-danger"></span>
             </div>                                                 Lo comento por lo mismo que en el crear*@
             <div class="form-group">
-            @Html.DropDownListFor(m => m.Persona.IdDepartamento,new SelectList(Model.ListaDepartamentos,"Id","Nombre"),Model.Persona)
+            @Html.DropDownListFor(m => m.Persona.IdDepartamento,new SelectList(Model.ListaDepartamentos,"Id","Nombre"))
             <br/>
             </div>
             <br />
