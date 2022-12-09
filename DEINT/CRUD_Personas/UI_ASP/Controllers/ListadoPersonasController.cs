@@ -1,6 +1,5 @@
 ﻿using BL.Listados;
 using BL.Manejadoras;
-using Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using UI_ASP.Models;

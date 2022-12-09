@@ -1,8 +1,4 @@
-﻿using BL;
-using BL.Listados;
-using DAL.Listados;
-using Entidades;
-using System.Transactions;
+﻿using Entidades;
 
 namespace CRUD_Personas.Models
 {
