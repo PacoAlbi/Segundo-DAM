@@ -1,4 +1,5 @@
-﻿namespace Entidades
+﻿using System.ComponentModel.DataAnnotations;
+namespace Entidades
 {
     public class clsPersona
     {
@@ -15,6 +16,7 @@
 
         #region Propiedades
         public int Id { get { return id; } set { id = value; } }
+        [Required]
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Apellidos { get { return apellidos; } set { apellidos = value; } }
         public string Telefono { get { return telefono; } set { telefono = value; } }
