@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Francisco_Albiñana.Models.DepartamentosConPersonas>
+
+@{
+    ViewData["Title"] = "ListadoDepartamentos";
+}
+
+<h1>Listado Departamentos con Empleados</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+                    @for (int i=0; i<item.ListaPersonas.Count; i++)
+                    {
+                     <ul>
+                        @*No se muy bien como va HTML en si, así que lo pinto así, pero tampoco se porque me pilla solo una persona de la lista*@
+                        <li>@Html.DisplayName(item.ListaPersonas[i].Nombre)</li>
+                        <li>@Html.DisplayName(item.ListaPersonas[i].Apellidos)</li>
+                        <li>@Html.DisplayName(item.ListaPersonas[i].Telefono)</li>
+                    </ul>
+                    }                   
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                    @Html.ActionLink("Borrar", "BorrarDepartamento", new { id=item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

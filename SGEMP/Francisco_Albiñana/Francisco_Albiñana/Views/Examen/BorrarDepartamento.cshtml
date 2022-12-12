@@ -1,0 +1,32 @@
+﻿@model Francisco_Albiñana.Models.DepartamentosConPersonas
+
+@{
+    ViewData["Title"] = "BorrarDepartamento";
+}
+
+<h1>Borrar Departamento</h1>
+
+<h3>¿Seguro que desea borrar el departamento y todos sus empleados?</h3>
+<div>
+    <h4>Departamentos y Empleados</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+    </dl>
+    
+    <form asp-action="BorrarDepartamento">
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="ListadoDepartamentos">Volver</a>
+    </form>
+</div>
