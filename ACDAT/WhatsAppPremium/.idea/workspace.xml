@@ -5,14 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64456221-0740-4a04-b5da-cb0cc076f163" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Cena.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Palillos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PaintBall_Examen/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PruebaTrimestre1/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/.jpb/persistence-units.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/src/main/java/PersonasEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tema_5/src/main/resources/Hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/Francisco_Albinana_Examen_Tema2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/out/production/Francisco_Albinana_Examen_Tema2/Ejercicio1/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/out/production/Francisco_Albinana_Examen_Tema2/Ejercicio2/Consumidor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/out/production/Francisco_Albinana_Examen_Tema2/Ejercicio2/Hucha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/out/production/Francisco_Albinana_Examen_Tema2/Ejercicio2/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/out/production/Francisco_Albinana_Examen_Tema2/Ejercicio2/Productor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/src/Ejercicio1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/src/Ejercicio1/Peluqueria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/src/Ejercicio2/Consumidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/src/Ejercicio2/Hucha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/src/Ejercicio2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Francisco_Albinana_Examen_Tema2/src/Ejercicio2/Productor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PaintBall_Examen/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PaintBall_Examen/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PruebaTrimestre1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PruebaTrimestre1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/out/production/Tema2_1/Filosofos/Filosofos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/out/production/Tema2_1/Filosofos/Filosofos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Filosofos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Filosofos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/FilosofosEV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/src/Filosofos/Mesa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema2_1/out/production/Tema2_1/ProductorConsumidorHDD/ProductorConsumidorHDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema2_1/out/production/Tema2_1/ProductorConsumidorHDD/ProductorConsumidorHDD.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +153,9 @@
       <workItem from="1670097573648" duration="23000" />
       <workItem from="1670256865855" duration="16000" />
       <workItem from="1670264299998" duration="26000" />
+      <workItem from="1670918515032" duration="61000" />
+      <workItem from="1670918913200" duration="12000" />
+      <workItem from="1670934261948" duration="12000" />
     </task>
     <servers />
   </component>
