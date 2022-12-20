@@ -2,6 +2,7 @@
 using BL.Manejadoras;
 using CRUD_Personas.ViewModels.Utilidades;
 using Entidades;
+using Microsoft.Data.SqlClient;
 using System.Collections.ObjectModel;
 
 namespace CRUD_Personas.ViewModels
@@ -233,6 +234,17 @@ namespace CRUD_Personas.ViewModels
             //    ListadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoPersonasMostrado);
             //}
             return ListadoDePersonasMostrado;
+        }
+        private void actualizarLista()
+        {
+            try
+            {
+                ListadoDePersonasMostrado = new ObservableCollection<clsPersona> (clsListadoPersonasBL.getListadoPersonasBL());
+            }catch(SqlException)
+            {
+                var toast = Toast.Make("La BBDD no esta disponible.", ToastDuration.Long).Show();
+            }
+            NotifyPropertyChanged("ListadoDePersonasMostrado");
         }
         #endregion
     }

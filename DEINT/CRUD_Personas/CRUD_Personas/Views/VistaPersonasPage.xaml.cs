@@ -1,3 +1,5 @@
+using CRUD_Personas.ViewModels;
+
 namespace CRUD_Personas.Views;
 
 public partial class VistaPersonasPage : ContentPage
@@ -14,6 +16,7 @@ public partial class VistaPersonasPage : ContentPage
     protected override void OnAppearing()
     {
         InitializeComponent();
+        //((VistaPersonasVM)(this.BindingContext)).actualizarLista(); Falta hacer el metodo acturalizar lista
         base.OnAppearing();
     }
 }
