@@ -15,14 +15,18 @@
         #endregion
 
         #region Constructores
+        public Carta() { }
         public Carta(int id, string anverso, string reverso)
         {
             Id = id;
             Anverso = anverso;
             Reverso = reverso;
         }
-        public Carta()
+        public Carta(Carta carta)
         {
+            Id = carta.Id;
+            anverso= carta.Anverso;
+            reverso= carta.Reverso;
         }
         #endregion
 

@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,8 +48,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\background1.png" />
+	  <None Remove="Resources\Images\background2.png" />
+	  <None Remove="Resources\Images\background3.png" />
+	  <None Remove="Resources\Images\capitanAmerica.png" />
+	  <None Remove="Resources\Images\deadpool.png" />
+	  <None Remove="Resources\Images\hulk.png" />
+	  <None Remove="Resources\Images\ironMan.png" />
+	  <None Remove="Resources\Images\missmarvel.png" />
+	  <None Remove="Resources\Images\spiderman.png" />
+	  <None Remove="Resources\Images\thor.png" />
+	  <None Remove="Resources\Images\vision.png" />
+	  <None Remove="Resources\Images\viudaNegra.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\BL\BL.csproj" />
 	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\TableroPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
