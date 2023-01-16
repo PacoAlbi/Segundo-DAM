@@ -9,13 +9,13 @@
     </ContentPage.BindingContext>
     
     <CollectionView HorizontalOptions="Center" VerticalOptions="Start"
-        ItemsLayout="VerticalGrid, 3" SelectionMode="Single"
+        ItemsLayout="VerticalGrid, 6" SelectionMode="Single"
         ItemsSource="{Binding BarajaMostrada}"
         SelectedItem="{Binding CartaSeleccionada}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Image HeightRequest="200"
-                    Source="{Binding Anverso}"
+                    Source="{Binding ImagenMostrada}"
                     Aspect="AspectFit"/>
             </DataTemplate>
         </CollectionView.ItemTemplate>

@@ -1,4 +1,6 @@
-﻿using EncuentraLasParejas.ViewModels.Utilidades;
+﻿using EncuentraLasParejas.Models;
+using EncuentraLasParejas.ViewModels.Utilidades;
+using EncuentraLasParejas.Views;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -12,14 +14,16 @@ namespace EncuentraLasParejas.ViewModels
     public class TableroVM : clsVMBase
     {
         #region Atributos
-        private Carta cartaSeleccionada;
+        private CartaNotify cartaSeleccionada;
+        private CartaNotify cartaAuxiliar;
         private int parejasEncontradas;
-        private List<Carta> baraja;
-        private ObservableCollection<Carta> barajaMostrada;
+        private ObservableCollection<CartaNotify> baraja;
+        private ObservableCollection<CartaNotify> barajaMostrada;
+        private bool haySeleccionada = false;
         #endregion
 
         #region Propiedades
-        public Carta CartaSeleccionada
+        public CartaNotify CartaSeleccionada
         {
             get
             {
@@ -28,111 +32,94 @@ namespace EncuentraLasParejas.ViewModels
             set
             {
                 cartaSeleccionada = value;
-                NotifyPropertyChanged(nameof(CartaSeleccionada));
+                cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Anverso;
+                if (!haySeleccionada)
+                {
+                    cartaAuxiliar = cartaSeleccionada;
+                    haySeleccionada = true;
+                } 
+                else if (cartaSeleccionada.ImagenMostrada.Equals(cartaAuxiliar.ImagenMostrada))
+                {
+                    parejasEncontradas++;
+                    haySeleccionada = false;
+                }
+                else
+                {
+                    cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
+                    cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;
+                    haySeleccionada = false;
+                }
             }
         }
-        public ObservableCollection<Carta> BarajaMostrada 
+        public ObservableCollection<CartaNotify> BarajaMostrada 
         { 
             get 
             { 
                 return barajaMostrada; 
-            } 
+            }
+            set
+            {
+                barajaMostrada = value;
+            }
         }
         #endregion
 
         #region Constructores
         public TableroVM()
         {
+            parejasEncontradas = 0;
             hacerBaraja();
-            barajar();
-            jugar();
+            BarajaMostrada = barajar(baraja);
         }
         #endregion
 
         #region Métodos
         private void hacerBaraja()
         {
-            baraja = new List<Carta>
-            {
-                new Carta(1, "capitanamerica.png", "background2.png"),
-                new Carta(2, "hulk.png", "background2.png"),
-                new Carta(3, "ironman.png", "background2.png"),
-                new Carta(4, "spiderman.png", "background2.png"),
-                new Carta(5, "thor.png", "background2.png"),
-                new Carta(6, "viudanegra.png", "background2.png"),
-                new Carta(7, "missmarvel.png", "background2.png"),
-                new Carta(8, "vision.png", "background2.png"),
-                new Carta(9, "deadpool.png", "background2.png")
-            };
+            baraja = new ObservableCollection<CartaNotify>();     
+            baraja.Add(new CartaNotify("capitanamerica.png", "background2.png"));
+            baraja.Add(new CartaNotify("capitanamerica.png", "background2.png"));
+            baraja.Add(new CartaNotify("hulk.png", "background2.png"));
+            baraja.Add(new CartaNotify("hulk.png", "background2.png"));
+            baraja.Add(new CartaNotify("ironman.png", "background2.png"));
+            baraja.Add(new CartaNotify("ironman.png", "background2.png"));
+            baraja.Add(new CartaNotify("spiderman.png", "background2.png"));
+            baraja.Add(new CartaNotify("spiderman.png", "background2.png"));
+            baraja.Add(new CartaNotify("thor.png", "background2.png"));
+            baraja.Add(new CartaNotify("thor.png", "background2.png"));
+            baraja.Add(new CartaNotify("viudanegra.png", "background2.png"));
+            baraja.Add(new CartaNotify("viudanegra.png", "background2.png"));
+            baraja.Add(new CartaNotify("missmarvel.png", "background2.png"));
+            baraja.Add(new CartaNotify("missmarvel.png", "background2.png"));
+            baraja.Add(new CartaNotify("vision.png", "background2.png"));
+            baraja.Add(new CartaNotify("vision.png", "background2.png"));
+            baraja.Add(new CartaNotify("deadpool.png", "background2.png"));
+            baraja.Add(new CartaNotify("deadpool.png", "background2.png"));
         }
-        private void barajar()
+        private ObservableCollection<CartaNotify> barajar (ObservableCollection<CartaNotify> cartas)
         {
-            barajaMostrada = new ObservableCollection<Carta>();
-            int contId1 = 0, contId2 = 0, contId3 = 0, contId4 = 0, contId5 = 0, contId6 = 0, contId7 = 0, contId8 = 0, contId9 = 0;
-            Carta cartaAinsertar;
-            for (int i = 0; i < 18; i++)
-            {
-                cartaAinsertar = new Carta(baraja[new Random().Next(1, baraja.Count)]);
-                if (cartaAinsertar.Id == 1 && contId1 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId1++;
-                }
-                else if (cartaAinsertar.Id == 2 && contId2 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId2++;
-                }
-                else if (cartaAinsertar.Id == 3 && contId3 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId3++;
-                }
-                else if (cartaAinsertar.Id == 4 && contId4 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId4++;
-                }
-                else if (cartaAinsertar.Id == 5 && contId5 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId5++;
-                }
-                else if (cartaAinsertar.Id == 6 && contId6 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId6++;
-                }
-                else if (cartaAinsertar.Id == 7 && contId7 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId7++;
-                }
-                else if (cartaAinsertar.Id == 8 && contId8 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId8++;
-                }
-                else if (cartaAinsertar.Id == 9 && contId9 < 2)
-                {
-                    barajaMostrada[i] = cartaAinsertar;
-                    contId9++;
-                }
-            }
+            var rnd = new Random();
+            var baraja = cartas.OrderBy(x => rnd.Next());
+            return new ObservableCollection<CartaNotify>(baraja);
         }
         private void jugar()
         {
-            foreach (Carta carta in barajaMostrada)
-            {
-                cartaSeleccionada = carta;
-            }
+            
+        }
+        private void temporizador()
+        {
+
+        }
+        public static void StartTimer(TimeSpan interval, Func<bool> callback)
+        {
+
         }
         private async void preguntarJugar(string mensaje)
         {
             bool volverAjugar = await Application.Current.MainPage.DisplayAlert(mensaje, "¿Jugar otra partida?", "Sí", "No");
             if (volverAjugar)
             {
-                //iniciarJuego();
+                Application.Current.MainPage = new TableroPage();
             }
             else
             {
