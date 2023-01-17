@@ -1,8 +1,9 @@
-package lecturaEscrituraClienteServidor;
+package Ejercicio2;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Random;
 
 public class Servidor {
     public static void main(String[] args) {
@@ -23,7 +24,10 @@ public class Servidor {
                 // 4.- Intercambiar datos con el cliente
                 InputStreamReader inputStream = new InputStreamReader(is, "UTF-8");
                 BufferedReader bufferedReader = new BufferedReader(inputStream);
-                System.out.println("Mensaje enviado por el cliente:" + bufferedReader.readLine());
+                //System.out.println("Mensaje enviado por el cliente: " + bufferedReader.readLine());
+
+                int numero = bufferedReader.read();
+                System.out.println(esPrimo(numero));
 
                 System.out.println("Mensaje para el servidor");
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os, "UTF-8");
@@ -48,5 +52,18 @@ public class Servidor {
         } catch (IOException e) {
             System.err.println("ERROR: Error al crear el socket en el puerto 50000");
         }
+    }
+
+    public static String esPrimo(int num) {
+        String resultado = "Es primo";
+        boolean encontrado = false;
+        if (num <= 1)
+            resultado = "No es primo";
+        for (int i = 2; i <= num / 2 && !encontrado; i++) {
+            if (num % i == 0) {
+                resultado = "No es primo";
+            }
+        }
+        return resultado;
     }
 }

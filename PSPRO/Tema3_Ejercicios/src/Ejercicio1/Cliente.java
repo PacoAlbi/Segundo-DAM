@@ -1,5 +1,6 @@
-package lecturaEscrituraClienteServidor;
+package Ejercicio1;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -23,7 +24,9 @@ public class Cliente {
             System.out.println("(Cliente) ");
             OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os, "UTF-8");
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
-            bufferedWriter.write("Soy el Cliente. Este mensaje hace una peticion al servidor");
+
+            int numero = leerNumero();
+            bufferedWriter.write(numero);
             bufferedWriter.newLine();
             bufferedWriter.flush();
 
@@ -48,6 +51,13 @@ public class Cliente {
         }
     }
 
-
+    public static int leerNumero (){
+        int numero;
+        numero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca un número"));
+        while (numero <= 0){
+            numero = Integer.parseInt(JOptionPane.showInputDialog("El número no puede ser negativo"));
+        }
+        return numero;
+    }
 
 }

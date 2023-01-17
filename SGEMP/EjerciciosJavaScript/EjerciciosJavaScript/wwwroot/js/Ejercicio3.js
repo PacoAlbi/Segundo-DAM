@@ -1,5 +1,6 @@
 ﻿window.onload = inicializaEventos;
-
+/**
+ * */
 function inicializaEventos() {
 
     cargarComidas();
@@ -7,14 +8,16 @@ function inicializaEventos() {
     //document.getElementById("btnComidas").onselect = cargarPlatos(document.getElementById("btnComidas").option);
 
 }
-
+/**
+ * */
 function cargarComidas() {
 
     var arrayComidas = ["Pizzas", "Hamburguesas", "Pastas"];
     //arrayComidas.sort(); Puedo ordenar si quiero.
     anadirOpciones("comidas", arrayComidas);
 }
-
+/**
+ * */
 function anadirOpciones(domelement, array) {
     var select = document.getElementsByName(domelement)[0];
     for (value in array) {
@@ -23,7 +26,8 @@ function anadirOpciones(domelement, array) {
         select.add(option);
     }
 }
-
+/**
+ * */
 function cargarPlatos() {
 
     let selectComidas = document.getElementById("btnComidas");
