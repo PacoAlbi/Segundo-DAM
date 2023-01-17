@@ -11,10 +11,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             setUp();
-            guardar("Pedro duque", 7412.00);
-            actualizar(28, "Pepe Gotera", 1200.00);
-            leer(28);
-            borrar(28);
+            //guardar("Pedro duque", 7412.00);
+            //actualizar(28, "Pepe Gotera", 1200.00);
+            leer(1);
+            //borrar(28);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
