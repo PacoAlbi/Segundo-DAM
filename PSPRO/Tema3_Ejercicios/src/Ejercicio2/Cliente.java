@@ -1,40 +1,36 @@
 package Ejercicio2;
 
-import javax.swing.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Cliente {
     public static void main(String[] args) {
-
-
+        int numero;
         try {
             //1.- Creacion del Socket del tipo Cliente
             System.out.println("(Cliente) Creamos Socket");
-            //InetAddress dirección = InetAddress.getByName("Pongo la ip del que toque"); Para poner cualquier direccion
-            Socket socketCliente=new Socket(InetAddress.getLocalHost(),49200);
+            Socket socketCliente=new Socket(InetAddress.getLocalHost(),1500);
 
             // 2.- Abrimos flujo de lectura y escritura
-            System.out.println("(Cliente) Abrimos flujo de entrada y salida");
+            System.out.println("(Cliente) Abrimos flujo de entrada y salida.");
             InputStream is=socketCliente.getInputStream();
             OutputStream os=socketCliente.getOutputStream();
 
             // 3.- Intercambiamos datos con el servidor
-            System.out.println("(Cliente) ");
             OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os, "UTF-8");
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
 
-            int numero = leerNumero();
+            numero = leerNumero();
             bufferedWriter.write(numero);
             bufferedWriter.newLine();
             bufferedWriter.flush();
 
-
-
             InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
-            System.out.println("Mensaje enviado por el Servidor: " + bufferedReader.readLine());
+            System.out.printf("El factorial del número %d es %s", numero, bufferedReader.read());
+
             // 4.- cerramos flujo de datos
             bufferedWriter.close();
             is.close();
@@ -44,20 +40,25 @@ public class Cliente {
             outputStreamWriter.close();
             inputStreamReader.close();
 
-
         } catch (IOException e) {
-            System.err.println("ERROR: Problema con la conexion");
+            System.err.println("ERROR: Problema con la conexión.");
             e.printStackTrace();
         }
     }
 
+    /**
+     * Método para leer un número del usuario y mandarlo al servidor para comprobaciones.
+     * @return Devuelve un entero con el número si es válido.
+     */
     public static int leerNumero (){
         int numero;
-        numero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca un número"));
-        while (numero <= 0){
-            numero = Integer.parseInt(JOptionPane.showInputDialog("El número no puede ser negativo"));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca un número.");
+        numero = sc.nextInt();
+        while (numero < 0){
+            System.out.println("El número no puede ser negativo, perdone las molestias.");
+            numero = sc.nextInt();
         }
         return numero;
     }
-
 }

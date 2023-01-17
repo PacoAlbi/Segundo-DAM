@@ -2,10 +2,9 @@
 /**
  * */
 function inicializaEventos() {
-
+    var platosSelect = document.getElementById("platosSelect");
     cargarComidas();
-    cargarPlatos();
-    //document.getElementById("btnComidas").onselect = cargarPlatos(document.getElementById("btnComidas").option);
+    platosSelect.addEventListener("change", cargarPlatos, false)
 
 }
 /**
@@ -30,22 +29,33 @@ function anadirOpciones(domelement, array) {
  * */
 function cargarPlatos() {
 
-    let selectComidas = document.getElementById("btnComidas");
-    let platos = selectComidas.options[selectComidas.selectedIndex].text;
+    //let selectComidas = document.getElementById("btnComidas");
+    //let platos = selectComidas.options[selectComidas.selectedIndex].text;
+    var platoElegido = document.getElementById("platosSelect").value;
+    console.log(platoElegido);
 
-    var arrayPizzas = ["Proscciuto", "Cuatro estaciones", "BBQ"];
-    var arrayHamburguesas = ["BLT", "Whopper", "BaconQueso"];
-    var arrayPastas = ["Macarrones", "Spaguetti", "Tallarines"];
+    if (document.getElementById("listaPlatos") != null) {
+        document.getElementById("listaPlatos").remove();
+    }
 
+    var listaPlatos;
     switch (platos) {
         case "Pizzas":
-            anadirOpciones("platos", arrayPizzas);
+            listaPlatos = ["Proscciuto", "Cuatro estaciones", "BBQ", "Caprichosa", "Cuatro quesos"];
             break;
         case "Hamburguesas":
-            anadirOpciones("platos", arrayHamburguesas);
+            listaPlatos = ["BLT", "Whopper", "BaconQueso", "MacDonald"];
             break;
         case "Pastas":
-            anadirOpciones("platos", arrayPastas);
+            listaPlatos = ["Macarrones", "Spaguetti", "Tallarines"];
             break;
     } 
+    //Recorremos la lista
+    listaPlatos.forEach(function (plato) {
+        var option = document.createElement('option')
+        option.innerHTML = plato;
+        option.value = plato;
+        //ponemos un hijo a la lista
+        platosSelect.appendChild(option);
+    });
 }

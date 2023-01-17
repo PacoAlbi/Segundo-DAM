@@ -5,28 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/801a5fbd-c9fa-4558-aaa1-a3ec24332e4a.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/GestionConBBDD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/LikesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/PostsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/UsuarioEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConectandoBBDD/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConectandoBBDD/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tema_5/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tema_5/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/out/production/Tema3_Ejercicios/Ejercicio3/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/out/production/Tema3_Ejercicios/Ejercicio3/Servidor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/out/production/Tema3_Ejercicios/Ejercicio4/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/out/production/Tema3_Ejercicios/Ejercicio4/Servidor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio3/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio3/Servidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio4/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio4/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/lecturaEscrituraClienteServidor/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/lecturaEscrituraClienteServidor/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/out/production/Tema3_Ejercicios/Conexion/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/out/production/Tema3_Ejercicios/Conexion/Servidor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio1/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio1/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio1/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio1/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio2/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio2/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio2/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3_Ejercicios/src/Ejercicio2/Servidor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
+    "last_opened_file_path": "C:/Users/Paco/Documents/GitHub/Segundo-DAM/ACDAT/Tema5_Ej2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,6 +91,7 @@
       <updated>1673943381796</updated>
       <workItem from="1673943383159" duration="387000" />
       <workItem from="1673944084205" duration="2962000" />
+      <workItem from="1673978751714" duration="221000" />
     </task>
     <servers />
   </component>

@@ -1,19 +1,19 @@
-package Ejercicio1;
+package Ejercicio3;
 
-import javax.swing.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Cliente {
     public static void main(String[] args) {
-
-
+        String acertado;
+        int numero;
         try {
             //1.- Creacion del Socket del tipo Cliente
             System.out.println("(Cliente) Creamos Socket");
             //InetAddress dirección = InetAddress.getByName("Pongo la ip del que toque"); Para poner cualquier direccion
-            Socket socketCliente=new Socket(InetAddress.getLocalHost(),2500);
+            Socket socketCliente=new Socket(InetAddress.getLocalHost(),2000);
 
             // 2.- Abrimos flujo de lectura y escritura
             System.out.println("(Cliente) Abrimos flujo de entrada y salida");
@@ -21,21 +21,27 @@ public class Cliente {
             OutputStream os=socketCliente.getOutputStream();
 
             // 3.- Intercambiamos datos con el servidor
-            System.out.println("(Cliente) ");
-            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os, "UTF-8");
+            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os,"UTF-8");
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
-
-            int numero = leerNumero();
+            InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
+            BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
+            do {
+                numero = leerNumero();
             bufferedWriter.write(numero);
             bufferedWriter.newLine();
             bufferedWriter.flush();
 
+                acertado =  bufferedReader.readLine();
+                System.out.println("(Servidor) " + acertado);
+            } while (!(acertado.equals("¡Enhorabuena! Has acertado el número, era el %d")));
+
             // 4.- cerramos flujo de datos
-            bufferedWriter.close();
             is.close();
             os.close();
             bufferedWriter.close();
+            bufferedReader.close();
             outputStreamWriter.close();
+            inputStreamReader.close();
 
         } catch (IOException e) {
             System.err.println("ERROR: Problema con la conexión.");
@@ -49,9 +55,12 @@ public class Cliente {
      */
     public static int leerNumero (){
         int numero;
-        numero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca un número."));
-        while (numero <= 0){
-            numero = Integer.parseInt(JOptionPane.showInputDialog("El número no puede ser negativo."));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca un número.");
+        numero = sc.nextInt();
+        while (numero < 0 || numero > 100){
+            System.out.println("El número debe ser entre 0 y 100, ambos inclusive.");
+            numero = sc.nextInt();
         }
         return numero;
     }

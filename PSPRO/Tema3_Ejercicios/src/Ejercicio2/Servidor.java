@@ -3,21 +3,20 @@ package Ejercicio2;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Random;
 
 public class Servidor {
     public static void main(String[] args) {
         try {
-            // 1.- Crear un Socket servidor
-            ServerSocket socketServidor = new ServerSocket(49200);
+            // 1.- Crear un Socket servidor.
+            ServerSocket socketServidor = new ServerSocket(1500);
 
-            // 2.- Espera y acepta conexiones, para ello creamos el socket cliente, ya que es lo que devuelve el metodo
+            // 2.- Espera y acepta conexiones, para ello creamos el socket cliente.
             while (true) {
-                System.out.println("Esperando peticiones");
+                System.out.println("(Servidor) Esperando peticiones.");
                 Socket socketCliente = socketServidor.accept();
 
                 // 3.- Flujo de entrada y salida
-                System.out.println("Abriendo flujos de entrada y salida");
+                System.out.println("(Servidor) Abriendo flujos de entrada y salida.");
                 InputStream is = socketCliente.getInputStream();
                 OutputStream os = socketCliente.getOutputStream();
 
@@ -27,12 +26,10 @@ public class Servidor {
                 //System.out.println("Mensaje enviado por el cliente: " + bufferedReader.readLine());
 
                 int numero = bufferedReader.read();
-                System.out.println(esPrimo(numero));
 
-                System.out.println("Mensaje para el servidor");
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os, "UTF-8");
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-                bufferedWriter.write("Soy el servidor. Este mensaje es para el cliente");
+                bufferedWriter.write(factorial(numero));
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
 
@@ -45,12 +42,9 @@ public class Servidor {
                 //Cierro la conexión solo con ese cliente concreto
                 socketCliente.close();
             }
-            // Cerramos la conexion
-            // socketServidor.close();
-            // socketCliente.close();
-
         } catch (IOException e) {
-            System.err.println("ERROR: Error al crear el socket en el puerto 50000");
+            System.err.println("ERROR: Error al crear el socket en el puerto 1500.");
+            e.printStackTrace();
         }
     }
 
@@ -64,6 +58,17 @@ public class Servidor {
                 resultado = "No es primo";
             }
         }
+        System.out.println(factorial(num));
         return resultado;
+    }
+
+    public static int factorial(int num){
+        int factorial;
+        if(num == 0){
+            factorial = 1;
+        }
+        else
+            factorial = num * factorial(num-1);
+        return factorial;
     }
 }

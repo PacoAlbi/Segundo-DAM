@@ -33,7 +33,7 @@ public class Cliente {
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
             System.out.println("Mensaje enviado por el Servidor: " + bufferedReader.readLine());
             // 4.- cerramos flujo de datos
-            bufferedWriter.close();
+
             is.close();
             os.close();
             bufferedWriter.close();
