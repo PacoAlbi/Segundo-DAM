@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\html\Ejercicio4.html" />
+  </ItemGroup>
+
 </Project>

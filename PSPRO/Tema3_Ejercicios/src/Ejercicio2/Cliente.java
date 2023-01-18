@@ -33,12 +33,11 @@ public class Cliente {
 
             // 4.- cerramos flujo de datos
             bufferedWriter.close();
-            is.close();
-            os.close();
-            bufferedWriter.close();
             bufferedReader.close();
             outputStreamWriter.close();
             inputStreamReader.close();
+            is.close();
+            os.close();
 
         } catch (IOException e) {
             System.err.println("ERROR: Problema con la conexión.");

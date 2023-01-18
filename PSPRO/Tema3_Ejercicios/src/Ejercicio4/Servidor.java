@@ -37,10 +37,11 @@ public class Servidor {
                 bufferedWriter.flush();
 
                 // Cerramos los flujos de lectura y escritura
+                bufferedWriter.close();
+                bufferedReader.close();
+                outputStreamWriter.close();
                 is.close();
                 os.close();
-                bufferedReader.close();
-                bufferedWriter.close();
 
                 //Cierro la conexión solo con ese cliente concreto
                 socketCliente.close();

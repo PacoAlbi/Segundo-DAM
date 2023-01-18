@@ -29,9 +29,9 @@ public class Servidor {
                 System.out.println("(Servidor) " + esPrimo(numero));
 
                 // Cerramos los flujos de lectura y escritura
+                bufferedReader.close();
                 is.close();
                 os.close();
-                bufferedReader.close();
 
                 //Cierro la conexión solo con ese cliente concreto
                 socketCliente.close();

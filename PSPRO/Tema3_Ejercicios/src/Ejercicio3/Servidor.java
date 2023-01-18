@@ -8,6 +8,15 @@ import java.util.Random;
 public class Servidor {
     public static void main(String[] args) {
         String peticion;
+        int numeroSecreto = new Random().nextInt(0, 100);
+        int numero;
+        Socket socketCliente;
+        InputStream is;
+        OutputStream os;
+        InputStreamReader inputStream;
+        BufferedReader bufferedReader;
+        OutputStreamWriter outputStreamWriter;
+        BufferedWriter bufferedWriter;
         try {
             // 1.- Crear un Socket servidor
             ServerSocket socketServidor = new ServerSocket(2000);
@@ -16,32 +25,34 @@ public class Servidor {
             // y lo hacemos en bucle infinito, porque es un servidor y no debe apagarse.
             while (true) {
                 System.out.println("(Servidor) Esperando peticiones.");
-                Socket socketCliente = socketServidor.accept();
+                socketCliente = socketServidor.accept();
 
                 // 3.- Flujo de entrada y salida
                 System.out.println("(Servidor) Abriendo flujos de entrada y salida.");
-                InputStream is = socketCliente.getInputStream();
-                OutputStream os = socketCliente.getOutputStream();
+                is = socketCliente.getInputStream();
+                os = socketCliente.getOutputStream();
 
                 // 4.- Intercambiar datos con el cliente
-                InputStreamReader inputStream = new InputStreamReader(is, "UTF-8");
-                BufferedReader bufferedReader = new BufferedReader(inputStream);
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os, "UTF-8");
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+                inputStream = new InputStreamReader(is, "UTF-8");
+                bufferedReader = new BufferedReader(inputStream);
+                outputStreamWriter = new OutputStreamWriter(os, "UTF-8");
+                bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                do {
-                    peticion = aciertaNumero(bufferedReader.read());
-                    bufferedWriter.write(peticion);
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-                } while (peticion != null);
+
+                numero = bufferedReader.read();
+                bufferedReader.reset();
+                peticion = aciertaNumero(numero, numeroSecreto);
+                bufferedWriter.write(peticion);
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+
 
                 // Cerramos los flujos de lectura y escritura
+                bufferedWriter.close();
+                bufferedReader.close();
+                outputStreamWriter.close();
                 is.close();
                 os.close();
-                bufferedReader.close();
-                bufferedWriter.close();
-                outputStreamWriter.close();
 
                 //Cierro la conexión solo con ese cliente concreto
                 socketCliente.close();
@@ -55,18 +66,18 @@ public class Servidor {
     /**
      * Método para comprobar si el número pasado es primo o no.
      * @param num Un entero que es el número a comprobar.
+     * @param numeroSecreto Un entero que es el que hay que adivinar.
      * @return Un String con el resultado.
      */
-    public static String aciertaNumero (int num) {
-        int numeroSecreto = new Random().nextInt(0,100);
+    public static String aciertaNumero(int num, int numeroSecreto) {
         String resultado;
-        if (num == numeroSecreto){
-            resultado = String.format("¡Enhorabuena! Has acertado el número, era el %d", num);
+        if (num == numeroSecreto) {
+            resultado = "¡Enhorabuena! Has acertado el número";
         } else if (num < numeroSecreto) {
-            resultado = String.format("El número %d es inferior al número secreto", num);
+            resultado = "El número mandado es inferior al número secreto";
         } else {
-            resultado = String.format("El número %d es superior al número secreto", num);
+            resultado = "El número mandado es superior al número secreto";
         }
-        return  resultado;
+        return resultado;
     }
 }

@@ -17,7 +17,7 @@ function pedirNombre() {
     //Definicion estados
 
     miLlamada.onreadystatechange = function () {                  //Esta es una función anónima. Paso 4
-        //alert(miLlamada.readyState); veo los estados por los que pasa
+        alert(miLlamada.readyState);// veo los estados por los que pasa
         if (miLlamada.readyState < 4) {
 
             //aquí se puede poner una imagen de un reloj o un texto “Cargando”
@@ -28,12 +28,13 @@ function pedirNombre() {
         else
 
             if (miLlamada.readyState == 4 && miLlamada.status == 200) {
-
+                alert(miLlamada.readyState);
                 var pedirResultado = JSON.parse(miLlamada.responseText);
                 //alert(arrayPersonas); No trae un array, trae un objeto
                 divNombre.innerHTML = pedirResultado.results[0].name;
-
-                rellenarTablaPersonas(arrayPersonas)
+              
+                //rellenarTablaPersonas(pedirResultado);
+                
 
             }
     };
@@ -43,5 +44,10 @@ function pedirNombre() {
 }
 
 function rellenarTablaPersonas(arrayPersonas) {
-
+    for (i = 0; i < arrayPersonas.length; i++) {
+        html += '<tr>' +
+            '<td>' + arrayPersonas[i].name + '</td>' +
+            '<td>' + arrayPersonas[i].height + '</td>' +
+            '</tr>';
+    }
 }

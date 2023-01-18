@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Cliente {
     public static void main(String[] args) {
         int suma, numero;
-        Scanner sc = new Scanner("numeros.txt");
+        Scanner sc = new Scanner("src/Ejercicio4/numeros.txt");
         try {
             //1.- Creacion del Socket del tipo Cliente
             System.out.println("(Cliente) Creamos Socket");
@@ -24,24 +24,25 @@ public class Cliente {
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
             InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
-            numero = sc.nextInt();
-            while (sc.hasNextLine()){
+
+            while (sc.hasNextInt()){
+                numero = sc.nextInt();
                 bufferedWriter.write(numero);
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
-                numero = sc.nextInt();
+
             }
             suma = bufferedReader.read();
             System.out.printf("La suma total de los números del fichero es %d", suma);
 
             // 4.- cerramos flujo de datos
-            is.close();
-            os.close();
             bufferedWriter.close();
             bufferedReader.close();
             outputStreamWriter.close();
             inputStreamReader.close();
-            sc.close();
+            is.close();
+            os.close();
+            socketCliente.close();
 
         } catch (IOException e) {
             System.err.println("ERROR: Problema con la conexión.");

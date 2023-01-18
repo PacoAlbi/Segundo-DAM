@@ -25,23 +25,24 @@ public class Cliente {
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
             InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
+
             do {
                 numero = leerNumero();
-            bufferedWriter.write(numero);
-            bufferedWriter.newLine();
-            bufferedWriter.flush();
-
+                bufferedWriter.write(numero);
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
                 acertado =  bufferedReader.readLine();
-                System.out.println("(Servidor) " + acertado);
-            } while (!(acertado.equals("¡Enhorabuena! Has acertado el número, era el %d")));
+                System.out.println("(Servidor) " + acertado + " numero mandado: " + numero);
+            } while (!(acertado.equals("¡Enhorabuena! Has acertado el número")));
 
             // 4.- cerramos flujo de datos
-            is.close();
-            os.close();
             bufferedWriter.close();
             bufferedReader.close();
             outputStreamWriter.close();
             inputStreamReader.close();
+            is.close();
+            os.close();
+            socketCliente.close();
 
         } catch (IOException e) {
             System.err.println("ERROR: Problema con la conexión.");
