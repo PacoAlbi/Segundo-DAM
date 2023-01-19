@@ -11,7 +11,7 @@ function iniciarEventos() {
 function mostrarHora() {
     var horaActual = new Date();
     var miHora;
-    var hora = horaActual.getHours().toFixed();
+    var hora = horaActual.getHours();
     var minutos = horaActual.getMinutes();
     var segundos = horaActual.getSeconds();
     //Compruebo si es menor de 10.
