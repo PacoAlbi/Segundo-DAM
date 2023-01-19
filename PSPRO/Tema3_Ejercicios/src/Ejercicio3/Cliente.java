@@ -3,6 +3,7 @@ package Ejercicio3;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Cliente {
@@ -21,9 +22,9 @@ public class Cliente {
             OutputStream os=socketCliente.getOutputStream();
 
             // 3.- Intercambiamos datos con el servidor
-            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os,"UTF-8");
+            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os, StandardCharsets.UTF_8);
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
-            InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
+            InputStreamReader inputStreamReader=new InputStreamReader(is, StandardCharsets.UTF_8);
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
 
             do {

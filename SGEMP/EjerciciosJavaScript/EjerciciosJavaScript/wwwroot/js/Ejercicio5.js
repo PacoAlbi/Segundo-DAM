@@ -11,7 +11,7 @@ function iniciarEventos() {
 function mostrarHora() {
     var horaActual = new Date();
     var miHora;
-    var hora = horaActual.getHours();
+    var hora = horaActual.getHours().toString();
     var minutos = horaActual.getMinutes();
     var segundos = horaActual.getSeconds();
     //Compruebo si es menor de 10.
@@ -20,6 +20,8 @@ function mostrarHora() {
     miHora = hora + " : " + minutos + " : " + segundos;
     document.getElementById("reloj").innerHTML = miHora;
     //Refresco cada poco tiempo 
+    var horas = hora.split("");
+    var h1 = document.getElementById("imgh1");
     setTimeout(function () { mostrarHora() }, 1000);
 }
 /**
@@ -33,7 +35,7 @@ function comprobarDecimal(i) {
 
 function cargarImagenes() {
     var cero = document.createElement("img");
-    cero.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\0.gif";
+    cero.src = "../reloj/0.gif";
     var uno = document.createElement("img");
     uno.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\1.gif";
     var dos = document.createElement("img");

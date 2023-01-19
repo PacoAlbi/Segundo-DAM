@@ -3,6 +3,7 @@ package Ejercicio3;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class Servidor {
@@ -33,9 +34,9 @@ public class Servidor {
                 os = socketCliente.getOutputStream();
 
                 // 4.- Intercambiar datos con el cliente
-                inputStream = new InputStreamReader(is, "UTF-8");
+                inputStream = new InputStreamReader(is, StandardCharsets.UTF_8);
                 bufferedReader = new BufferedReader(inputStream);
-                outputStreamWriter = new OutputStreamWriter(os, "UTF-8");
+                outputStreamWriter = new OutputStreamWriter(os, StandardCharsets.UTF_8);
                 bufferedWriter = new BufferedWriter(outputStreamWriter);
 
 
