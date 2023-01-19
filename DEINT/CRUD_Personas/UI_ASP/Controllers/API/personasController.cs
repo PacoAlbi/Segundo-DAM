@@ -2,46 +2,43 @@
 using BL.Manejadoras;
 using Entidades;
 using Microsoft.AspNetCore.Mvc;
-using System.Web.Http;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace UI_ASP.Controllers.API
 {
-    [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class personasController : ControllerBase
     {
         // GET: api/<ValuesController>
-        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [HttpGet]
         public IEnumerable<clsPersona> Get()
         {
             return clsListadoPersonasBL.getListadoPersonasBL();
         }
 
         // GET api/<ValuesController>/5
-        [Microsoft.AspNetCore.Mvc.HttpGet("{id}")]
+        [HttpGet("{id}")]
         public clsPersona Get(int id)
         {
             return clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
         }
 
         // POST api/<ValuesController>
-        [Microsoft.AspNetCore.Mvc.HttpPost]
-        public void Post([Microsoft.AspNetCore.Mvc.FromBody] clsPersona persona)
+        [HttpPost]
+        public void Post([FromBody] clsPersona persona)
         {
             clsManejadoraPersonas.insertarPersonasBL(persona);
         }
 
         // PUT api/<ValuesController>/5
-        [Microsoft.AspNetCore.Mvc.HttpPut("{id}")]
-        public void Put([Microsoft.AspNetCore.Mvc.FromBody] clsPersona persona)
+        [HttpPut("{id}")]
+        public void Put([FromBody] clsPersona persona)
         {
             clsManejadoraPersonas.editarPersonaBL(persona);
         }
 
         // DELETE api/<ValuesController>/5
-        [Microsoft.AspNetCore.Mvc.HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             IActionResult result = null;
@@ -58,7 +55,7 @@ namespace UI_ASP.Controllers.API
                     result = Ok();
                 }
             }
-            catch (HttpResponseException)
+            catch (Exception)
             {
                 result = BadRequest();
             }
