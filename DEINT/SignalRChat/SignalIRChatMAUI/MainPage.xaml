@@ -19,7 +19,15 @@
 
         <Entry
             Grid.Row="2"
-            />
+            x:Name="txtMensaje"
+            Placeholder="Escribe el mensaje"/>
+
+        <Button
+            Grid.Row="3"
+            x:Name="btnEnviar"
+            Text="Enviar"
+            HorizontalOptions="FillAndExpand"
+            Clicked="btnEnviar_Clicked"/>
     </Grid>
 
 </ContentPage>

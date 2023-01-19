@@ -18,11 +18,16 @@ function mostrarHora() {
     minutos = comprobarDecimal(minutos);
     segundos = comprobarDecimal(segundos);
     miHora = hora + " : " + minutos + " : " + segundos;
-    document.getElementById("reloj").innerHTML = miHora;
-    //Refresco cada poco tiempo 
-    var horas = hora.split("");
-    var h1 = document.getElementById("imgh1");
+    document.getElementById("reloj").innerHTML = miHora; //*
     setTimeout(function () { mostrarHora() }, 1000);
+    //Posible solución
+    for (i = 0; i < hora.length; i++)
+    {
+        var src = obtenerNumeros(miHora.charAt(i));
+        var imagen = document.getElementById("img");
+        imagen.src = src;
+        //divPadre.appendChild(imagen);  arreglar por el *
+    }
 }
 /**
  * */
@@ -32,28 +37,42 @@ function comprobarDecimal(i) {
     }
     return i;
 }
-
-function cargarImagenes() {
-    var cero = document.createElement("img");
-    cero.src = "../reloj/0.gif";
-    var uno = document.createElement("img");
-    uno.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\1.gif";
-    var dos = document.createElement("img");
-    dos.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\2.gif";
-    var tres = document.createElement("img");
-    tres.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\3.gif";
-    var cuatro = document.createElement("img");
-    cuatro.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\4.gif";
-    var cinco = document.createElement("img");
-    cinco.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\5.gif";
-    var seis = document.createElement("img");
-    seis.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\6.gif";
-    var siete = document.createElement("img");
-    siete.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\7.gif";
-    var ocho = document.createElement("img");
-    ocho.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\8.gif";
-    var nueve = document.createElement("img");
-    nueve.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\9.gif";
-    var puntos = document.createElement("img");
-    puntos.src = "C:\Users\Paco\Documents\GitHub\Segundo-DAM\SGEMP\EjerciciosJavaScript\EjerciciosJavaScript\wwwroot\reloj\dosPuntos.gif";
+/**
+ * */
+function obtenerNumeros(numeros)
+{
+    var numero = parseInt(numeros);
+    var src = "../reloj/dosPuntos.gif";
+    if (numero >= 0 && numero <= 9)
+    {
+        src = "../reloj/" + numero + ".gif";
+    }
+    return src;
+}
+/**
+ * */
+function relojAlvaro()
+{
+    //Hay que cargar todas las imagenes en el div del HTML
+    var hora1 = document.getElementById("digitoHora1");
+    var hora2 = document.getElementById("digitoHora2");
+    var min1 = document.getElementById("digitoMin1");
+    var min2 = document.getElementById("digitoMin2");
+    var seg1 = document.getElementById("digitoSeg1");
+    var seg2 = document.getElementById("digitoSeg2");
+    var today = new Date();
+    var now = today.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    var valores = now.split(":");
+    var h1 = valores[0].charAt(0);
+    var h2 = valores[0].charAt(1);
+    var m1 = valores[1].charAt(0);
+    var m2 = valores[1].charAt(1);
+    var s1 = valores[2].charAt(0);
+    var s2 = valores[2].charAt(1);
+    hora1.src = "../(reloj o img?)/" + h1 + ".gif";
+    hora2.src = "../(reloj o img?)/" + h2 + ".gif";
+    min1.src = "../(reloj o img?)/" + m1 + ".gif";
+    min2.src = "../(reloj o img?)/" + m2 + ".gif";
+    seg1.src = "../(reloj o img?)/" + s1 + ".gif";
+    seg2.src = "../(reloj o img?)/" + s2 + ".gif";
 }

@@ -2,23 +2,22 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+
+            var UrlBase = "http://localhost";
+            //Android no se podrá conectar a esta url
+
+            if (DeviceInfo.Current.Platform == DevicePlatform.Android)
+            {
+                UrlBase = "http://10.0.2.2";
+            }
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void btnEnviar_Clicked(object sender, EventArgs e)
         {
-            count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
 }
