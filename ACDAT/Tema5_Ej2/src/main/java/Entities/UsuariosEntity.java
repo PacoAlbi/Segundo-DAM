@@ -59,6 +59,13 @@ public class UsuariosEntity implements Serializable {
         this.password = password;
         this.email = email;
     }
+    public UsuariosEntity(String nombre, String apellidos, String username, String password, String email) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 
     //Getter y Setter para modificar los atributos.
     public int getIdUsuario() {

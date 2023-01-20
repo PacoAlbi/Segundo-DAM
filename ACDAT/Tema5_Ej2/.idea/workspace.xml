@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConectandoBBDD/src/ResourceSQL/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ConectandoBBDD/src/ResourceSQL/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/LikesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/LikesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/PostsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/PostsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/UsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/GestionConBBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +80,7 @@
       <workItem from="1673943383159" duration="387000" />
       <workItem from="1673944084205" duration="2962000" />
       <workItem from="1673978751714" duration="221000" />
-      <workItem from="1674199647634" duration="8327000" />
+      <workItem from="1674199647634" duration="8786000" />
     </task>
     <servers />
   </component>

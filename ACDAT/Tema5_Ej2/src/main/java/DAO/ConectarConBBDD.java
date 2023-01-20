@@ -7,7 +7,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-public class GestionConBBDD {
+public class ConectarConBBDD {
     private SessionFactory sf;
     private Session sesion;
     private Transaction transaction;
