@@ -10,44 +10,47 @@ public class PostsEntity implements Serializable {
     //Atributos.
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "idPosts")
-    private int idPosts;
-    @Column(name = "idUsuarios")
-    private int idUsuarios;
-    @Column(name = "created_at")
-    private String created_at;
-    @Column(name = "updated_at")
-    private String updated_at;
+    @Column(name = "idPost")
+    private int idPost;
     @ManyToOne
     @JoinColumn(name="idUsuario")
-    private UsuarioEntity usuario;
+    private UsuariosEntity usuario;
+    @Column(name = "Created_at")
+    private String created_at;
+    @Column(name = "Updated_at")
+    private String updated_at;
 
     //Constructores.
     public PostsEntity(){}
-    public PostsEntity(int idPosts, int idUsuarios, String created_at_date, String updated_at_date) {
-        this.idPosts = idPosts;
-        this.idUsuarios = idUsuarios;
-        this.created_at = created_at_date;
-        this.updated_at = updated_at_date;
+    public PostsEntity(int idPost, UsuariosEntity usuario, String created_at, String updated_at) {
+        this.idPost = idPost;
+        this.usuario = usuario;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
-    public PostsEntity(int idUsuarios, String created_at_date, String updated_at_date) {
-        this.idUsuarios = idUsuarios;
-        this.created_at = created_at_date;
-        this.updated_at = updated_at_date;
+    public PostsEntity(UsuariosEntity usuario, String created_at, String updated_at) {
+        this.usuario = usuario;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+    }
+    public PostsEntity(int idPost, String created_at, String updated_at) {
+        this.idPost = idPost;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
 
     //Getter y Setter.
-    public int getIdPosts() {
-        return idPosts;
+    public int getIdPost() {
+        return idPost;
     }
-    public void setIdPosts(int idPosts) {
-        this.idPosts = idPosts;
+    public void setIdPost(int idPost) {
+        this.idPost = idPost;
     }
-    public int getIdUsuarios() {
-        return idUsuarios;
+    public UsuariosEntity getUsuario() {
+        return usuario;
     }
-    public void setIdUsuarios(int idUsuarios) {
-        this.idUsuarios = idUsuarios;
+    public void setUsuario(UsuariosEntity usuario) {
+        this.usuario = usuario;
     }
     public String getCreated_at() {
         return created_at;
@@ -65,6 +68,6 @@ public class PostsEntity implements Serializable {
     //toString sobreescrito a mi gusto.
     @Override
     public String toString() {
-        return String.format("idPost: %d, creado por el usuario cuya id es %d" + System.lineSeparator() + "Creado en la fecha %s, modificado en la fecha %s", idPosts, idUsuarios, created_at, updated_at);
+        return String.format("idPost: %d, creado por el usuario cuya id es %d" + System.lineSeparator() + "Creado en la fecha %s, modificado en la fecha %s", idPost, usuario.getIdUsuario(), created_at, updated_at);
     }
 }

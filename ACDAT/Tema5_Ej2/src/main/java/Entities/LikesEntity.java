@@ -2,6 +2,7 @@ package Entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name="Likes")
@@ -10,51 +11,53 @@ public class LikesEntity implements Serializable {
     //Atributos.
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "idLikes")
-    private int idLikes;
-    @Column(name = "idUsuarios")
-    private int idUsuarios;
-    @Column(name = "idPosts")
-    private int idPosts;
+    @Column(name = "idLike")
+    private int idLike;
     @ManyToOne
     @JoinColumn(name="idUsuario")
-    private UsuarioEntity usuario;
+    private UsuariosEntity usuario;
+    @OneToMany(cascade= CascadeType.ALL)
+    @JoinColumn(name = "idPost")
+    private List<PostsEntity> listaPosts;
 
     //Constructores.
     public LikesEntity() {}
-    public LikesEntity(int idLikes, int idUsuarios, int idPosts) {
-        this.idLikes = idLikes;
-        this.idUsuarios = idUsuarios;
-        this.idPosts = idPosts;
+    public LikesEntity(int idLike, UsuariosEntity usuario, List<PostsEntity> listaPosts) {
+        this.idLike = idLike;
+        this.usuario = usuario;
+        this.listaPosts = listaPosts;
     }
-    public LikesEntity(int idUsuarios, int idPosts) {
-        this.idUsuarios = idUsuarios;
-        this.idPosts = idPosts;
+    public LikesEntity(UsuariosEntity usuario, List<PostsEntity> listaPosts) {
+        this.usuario = usuario;
+        this.listaPosts = listaPosts;
     }
 
     //Getter y Setter.
-    public int getIdLikes() {
-        return idLikes;
+    public int getIdLike() {
+        return idLike;
     }
-    public void setIdLikes(int idLikes) {
-        this.idLikes = idLikes;
+    public void setIdLike(int idLike) {
+        this.idLike = idLike;
     }
-    public int getIdUsuarios() {
-        return idUsuarios;
+    public UsuariosEntity getUsuario() {
+        return usuario;
     }
-    public void setIdUsuarios(int idUsuarios) {
-        this.idUsuarios = idUsuarios;
+
+    public void setUsuario(UsuariosEntity usuario) {
+        this.usuario = usuario;
     }
-    public int getIdPosts() {
-        return idPosts;
+
+    public List<PostsEntity> getListaPosts() {
+        return listaPosts;
     }
-    public void setIdPosts(int idPosts) {
-        this.idPosts = idPosts;
+
+    public void setListaPosts(List<PostsEntity> listaPosts) {
+        this.listaPosts = listaPosts;
     }
 
     //toString sobreescrito a mi gusto.
     @Override
     public String toString() {
-        return String.format("idLike: %d, idUsuario: %d, idPost: %d", idLikes, idUsuarios, idPosts);
+        return String.format("idLike: %d, idUsuario: %d, idPost: %d", idLike, usuario.getIdUsuario(), listaPosts.get(usuario.getIdUsuario()).getIdPost());
     }
 }
