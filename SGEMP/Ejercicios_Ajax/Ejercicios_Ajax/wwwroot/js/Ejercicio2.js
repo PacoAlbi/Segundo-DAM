@@ -30,24 +30,8 @@ function pedirNombre() {
             if (miLlamada.readyState == 4 && miLlamada.status == 200) {
                 alert(miLlamada.readyState);
                 var pedirResultado = JSON.parse(miLlamada.responseText);
-                //alert(arrayPersonas); No trae un array, trae un objeto
-                divNombre.innerHTML = pedirResultado.results[0].name;
-              
-                //rellenarTablaPersonas(pedirResultado);
-                
-
+                divNombre.innerHTML = pedirResultado.results[1].name;
             }
     };
-
     miLlamada.send();   //Paso 5
-
-}
-
-function rellenarTablaPersonas(arrayPersonas) {
-    for (i = 0; i < arrayPersonas.length; i++) {
-        html += '<tr>' +
-            '<td>' + arrayPersonas[i].name + '</td>' +
-            '<td>' + arrayPersonas[i].height + '</td>' +
-            '</tr>';
-    }
 }
