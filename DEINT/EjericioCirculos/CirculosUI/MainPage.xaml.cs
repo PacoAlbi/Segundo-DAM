@@ -29,7 +29,11 @@ namespace CirculosUI
 
         public void DibujarCirculo(clsCirculo circulo)
         {
-            BoxView miCirculo = new BoxView { Color = Color.FromArgb(circulo.Colores) };
+            BoxView miCirculo = new BoxView
+            {
+                Color = Color.FromArgb(circulo.Colores),
+                CornerRadius = 200
+            };
             AbsoluteLayout.SetLayoutBounds(miCirculo, new Rect(circulo.XPosition, circulo.YPosition, 100, 100));
             Content = new AbsoluteLayout
             {
