@@ -39,7 +39,8 @@ function pedirNombre() {
 
 function rellenarTablaPersonas(arrayPersonas) {
     var tablaPersonas = document.getElementById("tablaPersonas");
-    console.log(arrayPersonas)
+    var tbody = document.createElement("tbody");
+    var html;
     for (i = 0; i < arrayPersonas.length; i++) {
         html += '<tr>' +
             '<td>' + arrayPersonas[i].nombre + '</td>' +
@@ -52,5 +53,8 @@ function rellenarTablaPersonas(arrayPersonas) {
             '<td>' + arrayPersonas[i].nombreDpto + '</td>' +
             '</tr>';
     }
-    tablaPersonas.appendChild = html;
+    tbody.appendChild = html;
+    tablaPersonas.appendChild(tbody);
+    console.log(tablaPersonas)
+    console.log(arrayPersonas)
 }
