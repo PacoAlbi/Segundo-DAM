@@ -13,7 +13,8 @@
             <Label
                 x:Name="lblChat"
                 FontSize="14"
-                HorizontalOptions="StartAndExpand"/>
+                HorizontalOptions="StartAndExpand"
+                TextType="Html"/>
 
         </ScrollView>
 
