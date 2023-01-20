@@ -2,36 +2,31 @@
 
 function inicializaEventos() {
     document.getElementById("btnLlamada").addEventListener("click", pedirNombre, false);
-    //document.getElementById("btnLlamada").onclick = pedirNombre;
-    //document.getElementById("btnLlamada").onclick = pedirNombre(); si le pongo los parentesis llama a la función y la ejecuta,
-                                                                    //si los quito, solo dice que el onclik es la función, y cuando le de, lo hará
+    //Otra forma de llamar al click del elemento, entre "" el evento que hará, la función que 
+    //desencadenará y si el click se propaga o no en la función.
 }
 
 
 function pedirNombre() {
-
-    var miLlamada = new XMLHttpRequest(); //Punto 1
+    //Punto 1
+    var miLlamada = new XMLHttpRequest(); 
     var divNombre = document.getElementById("divNombre");
-    miLlamada.open("GET", "https://swapi.dev/api/people"); //Punto 2
-
-    //Definicion estados
-
-    miLlamada.onreadystatechange = function () {                  //Esta es una función anónima. Paso 4
-        alert(miLlamada.readyState);// veo los estados por los que pasa
+    //Punto 2
+    miLlamada.open("GET", "https://swapi.dev/api/people"); 
+    //Punto 4
+    miLlamada.onreadystatechange = function ()
+    {                  
+        alert(miLlamada.readyState);
         if (miLlamada.readyState < 4) {
-
-            //aquí se puede poner una imagen de un reloj o un texto “Cargando”
             divNombre.innerHTML = "Cargando...";
-
         }
-
-        else
-
-            if (miLlamada.readyState == 4 && miLlamada.status == 200) {
-                alert(miLlamada.readyState);
-                var pedirResultado = JSON.parse(miLlamada.responseText);
-                divNombre.innerHTML = pedirResultado.results[1].name;
-            }
+        else if (miLlamada.readyState == 4 && miLlamada.status == 200)
+        {
+            alert(miLlamada.readyState);
+            var pedirResultado = JSON.parse(miLlamada.responseText);
+            divNombre.innerHTML = pedirResultado.results[1].name;
+        }
     };
-    miLlamada.send();   //Paso 5
+    //Punto 5
+    miLlamada.send();   
 }

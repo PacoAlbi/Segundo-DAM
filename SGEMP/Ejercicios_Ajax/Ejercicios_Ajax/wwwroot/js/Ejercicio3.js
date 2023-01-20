@@ -2,42 +2,34 @@
 
 function inicializaEventos() {
     document.getElementById("btnLlamada").addEventListener("click", pedirNombre, false);
-    //document.getElementById("btnLlamada").onclick = pedirNombre;
-    //document.getElementById("btnLlamada").onclick = pedirNombre(); si le pongo los parentesis llama a la función y la ejecuta,
-    //si los quito, solo dice que el onclik es la función, y cuando le de, lo hará
 }
 
 function pedirNombre() {
-
-    var miLlamada = new XMLHttpRequest(); //Punto 1
+    //Punto 1
+    var miLlamada = new XMLHttpRequest(); 
     var divEstado = document.getElementById("divEstado");
-    miLlamada.open("GET", "https://apipersonaspaco.azurewebsites.net/api/personascondepartamento"); //Punto 2
+    //Punto 2
+    miLlamada.open("GET", "https://apipersonaspaco.azurewebsites.net/api/personascondepartamento"); 
+    //Punto 4
+    miLlamada.onreadystatechange = function ()
+    { 
 
-    //Definicion estados
-
-    miLlamada.onreadystatechange = function () {                  //Esta es una función anónima. Paso 4
-        alert(miLlamada.readyState);// veo los estados por los que pasa
         if (miLlamada.readyState < 4) {
-
-            //aquí se puede poner una imagen de un reloj o un texto “Cargando”
-            divEstado.innerHTML = "Cargando...";
-
+            divEstado.innerHTML = "Pidiendo datos a la API...";
         }
 
         else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
-            alert(miLlamada.readyState);
+
             var pedirResultado = JSON.parse(miLlamada.responseText);
-            //alert(arrayPersonas); No trae un array, trae un objeto
-            //divNombre.innerHTML = pedirResultado.results[0].name;
-           rellenarTablaPersonas(pedirResultado);
+            rellenarTablaPersonas(pedirResultado);
         }
     };
-
-    miLlamada.send();   //Paso 5
-
+    //Punto 5
+    miLlamada.send();   
 }
 
-function rellenarTablaPersonas(arrayPersonas) {
+function rellenarTablaPersonas(arrayPersonas)
+{
     var tablaPersonas = document.getElementById("tablaPersonas");
     var tbody = document.createElement("tbody");
     var html;
@@ -52,9 +44,11 @@ function rellenarTablaPersonas(arrayPersonas) {
             '<td>' + arrayPersonas[i].idDepartamento + '</td>' +
             '<td>' + arrayPersonas[i].nombreDpto + '</td>' +
             '</tr>';
+        tbody.appendChild = html;
     }
-    tbody.appendChild = html;
+    alert(arrayPersonas);
     tablaPersonas.appendChild(tbody);
+    console.log(tbody)
     console.log(tablaPersonas)
     console.log(arrayPersonas)
 }
