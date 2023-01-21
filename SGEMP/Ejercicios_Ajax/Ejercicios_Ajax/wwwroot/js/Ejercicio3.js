@@ -9,7 +9,7 @@ function pedirNombre() {
     var miLlamada = new XMLHttpRequest(); 
     var divEstado = document.getElementById("divEstado");
     //Punto 2
-    miLlamada.open("GET", "https://apipersonaspaco.azurewebsites.net/api/personascondepartamento"); 
+    miLlamada.open("GET", "https://apipersonaspaco.azurewebsites.net/api/personascondepartamento", true); 
     //Punto 4
     miLlamada.onreadystatechange = function ()
     { 
@@ -22,6 +22,7 @@ function pedirNombre() {
 
             var pedirResultado = JSON.parse(miLlamada.responseText);
             rellenarTablaPersonas(pedirResultado);
+            divEstado.innerHTML = "";
         }
     };
     //Punto 5
@@ -32,23 +33,48 @@ function rellenarTablaPersonas(arrayPersonas)
 {
     var tablaPersonas = document.getElementById("tablaPersonas");
     var tbody = document.createElement("tbody");
-    var html;
     for (i = 0; i < arrayPersonas.length; i++) {
-        html += '<tr>' +
-            '<td>' + arrayPersonas[i].nombre + '</td>' +
-            '<td>' + arrayPersonas[i].apellidos + '</td>' +
-            '<td>' + arrayPersonas[i].telefono + '</td>' +
-            '<td>' + arrayPersonas[i].direccion + '</td>' +
-            '<td>' + arrayPersonas[i].foto + '</td>' +
-            '<td>' + arrayPersonas[i].fechaNacimiento + '</td>' +
-            '<td>' + arrayPersonas[i].idDepartamento + '</td>' +
-            '<td>' + arrayPersonas[i].nombreDpto + '</td>' +
-            '</tr>';
-        tbody.appendChild = html;
+        var fila = document.createElement("tr");
+        var columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].id;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].nombre;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].apellidos;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].telefono;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].direccion;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].foto;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].fechaNacimiento;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].idDepartamento;
+        fila.appendChild(columna);
+        columna = document.createElement("td");
+        columna.innerHTML = arrayPersonas[i].nombreDpto;
+        fila.appendChild(columna);
+        tbody.appendChild(fila);
+        //No se porque este método no me funciona
+        //var html += '<tr>' +
+        //    '<td>' + arrayPersonas[i].nombre + '</td>' +
+        //    '<td>' + arrayPersonas[i].apellidos + '</td>' +
+        //    '<td>' + arrayPersonas[i].telefono + '</td>' +
+        //    '<td>' + arrayPersonas[i].direccion + '</td>' +
+        //    '<td>' + arrayPersonas[i].foto + '</td>' +
+        //    '<td>' + arrayPersonas[i].fechaNacimiento + '</td>' +
+        //    '<td>' + arrayPersonas[i].idDepartamento + '</td>' +
+        //    '<td>' + arrayPersonas[i].nombreDpto + '</td>' +
+        //    '</tr>';
+        //tbody.appendChild = html;
     }
-    alert(arrayPersonas);
     tablaPersonas.appendChild(tbody);
-    console.log(tbody)
-    console.log(tablaPersonas)
-    console.log(arrayPersonas)
 }

@@ -8,26 +8,24 @@ function borrarPersona () {
     //Punto 1
     var miLlamada = new XMLHttpRequest();
     var divEstado = document.getElementById("divEstado");
-    var idAborrar = document.getElementById("txtId").textContent;
+    var idAborrar = document.getElementById("txtId").value;
     var divAlert = document.getElementById("divAlert");
     //Punto 2
-    miLlamada.open("DELETE", "https://apipersonaspaco.azurewebsites.net/api/personascondepartamento/" + idAborrar, true);
-    
+    miLlamada.open("DELETE", "https://apipersonaspaco.azurewebsites.net/api/personas/" + idAborrar, true);
     //Punto 4
     miLlamada.onreadystatechange = function ()
     {
-        var persona = JSON.parse(miLlamada.responseText);
         if (miLlamada.readyState < 4) {
+            //alert(miLlamada.status);
             divEstado.innerHTML = "Buscando a la persona a borrar...";
         }
         else if (miLlamada.readyState == 4 && miLlamada.status == 200)
         {
-            console.table(persona);
+            divEstado.innerHTML = "";
             divAlert.innerHTML = "Persona eliminada con éxito.";
         }
         else
         {
-            console.error(persona);
             divAlert.innerHTML = "Lo siento, ID no encontrada en la BBDD.";
         }
     };

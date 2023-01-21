@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/GestionConBBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGEMP/Ejercicios_Ajax/Ejercicios_Ajax/wwwroot/Ejercicio3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGEMP/Ejercicios_Ajax/Ejercicios_Ajax/wwwroot/Ejercicio3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGEMP/Ejercicios_Ajax/Ejercicios_Ajax/wwwroot/js/Ejercicio3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGEMP/Ejercicios_Ajax/Ejercicios_Ajax/wwwroot/js/Ejercicio3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SGEMP/Ejercicios_Ajax/Ejercicios_Ajax/wwwroot/js/Ejercicio4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../SGEMP/Ejercicios_Ajax/Ejercicios_Ajax/wwwroot/js/Ejercicio4.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,25 +42,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\falbinana\Desktop\Segundo-DAM\ACDAT\Tema5_Ej2\src\main\resources" />
@@ -81,6 +81,7 @@
       <workItem from="1673944084205" duration="2962000" />
       <workItem from="1673978751714" duration="221000" />
       <workItem from="1674199647634" duration="8786000" />
+      <workItem from="1674263293135" duration="374000" />
     </task>
     <servers />
   </component>
