@@ -18,10 +18,11 @@ public class Menu {
         System.out.println("""
 
                 ---Bienvenido a mi menú de hoy, ¿Que desea hacer?---
-                [1] Mostrar Datos.
-                [2] Actualizar.
-                [3] Insertar.
-                [4] Borrar.
+                [1] Mostrar Lista de Usuarios.
+                [2] Mostrar Usuario.
+                [3] Actualizar.
+                [4] Insertar.
+                [5] Borrar.
                 [0] Salir.
                 ----------------------------------------------------""");
     }
@@ -39,9 +40,10 @@ public class Menu {
             menu = sc.next();
             switch (menu) {
                 case "1" -> mostrarTablas();
-                case "2" -> mostrarActualizar();
-                case "3" -> mostrarInsertar();
-                case "4" -> mostrarBorrar();
+                case "2" -> mostrarTablas();
+                case "3" -> mostrarActualizar();
+                case "4" -> mostrarInsertar();
+                case "5" -> mostrarBorrar();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }

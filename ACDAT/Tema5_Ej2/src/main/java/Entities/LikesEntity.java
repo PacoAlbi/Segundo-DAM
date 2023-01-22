@@ -14,9 +14,10 @@ public class LikesEntity implements Serializable {
     @Column(name = "idLike")
     private int idLike;
     @ManyToOne
+    //@PrimaryKeyJoinColumn
     @JoinColumn(name="idUsuario")
     private UsuariosEntity usuario;
-    @OneToMany(cascade= CascadeType.ALL)
+    @OneToMany
     @JoinColumn(name = "idPost")
     private List<PostsEntity> listaPosts;
 
@@ -58,6 +59,6 @@ public class LikesEntity implements Serializable {
     //toString sobreescrito a mi gusto.
     @Override
     public String toString() {
-        return String.format("idLike: %d, idUsuario: %d, idPost: %d", idLike, usuario.getIdUsuario(), listaPosts.get(usuario.getIdUsuario()).getIdPost());
+        return String.format("idLike: %d, idUsuario: %d, idPost:", idLike, usuario.getIdUsuario());
     }
 }

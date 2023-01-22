@@ -16,7 +16,6 @@ function borrarPersona () {
     miLlamada.onreadystatechange = function ()
     {
         if (miLlamada.readyState < 4) {
-            //alert(miLlamada.status);
             divEstado.innerHTML = "Buscando a la persona a borrar...";
         }
         else if (miLlamada.readyState == 4 && miLlamada.status == 200)

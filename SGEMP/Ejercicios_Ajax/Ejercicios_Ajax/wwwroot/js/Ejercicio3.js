@@ -13,7 +13,6 @@ function pedirNombre() {
     //Punto 4
     miLlamada.onreadystatechange = function ()
     { 
-
         if (miLlamada.readyState < 4) {
             divEstado.innerHTML = "Pidiendo datos a la API...";
         }
@@ -77,4 +76,5 @@ function rellenarTablaPersonas(arrayPersonas)
         //tbody.appendChild = html;
     }
     tablaPersonas.appendChild(tbody);
+    console.log(tbody);
 }
