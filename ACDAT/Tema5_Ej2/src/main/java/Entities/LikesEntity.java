@@ -18,6 +18,7 @@ public class LikesEntity implements Serializable {
     @JoinColumn(name="idUsuario")
     private UsuariosEntity usuario;
     @OneToMany
+    //@PrimaryKeyJoinColumn
     @JoinColumn(name = "idPost")
     private List<PostsEntity> listaPosts;
 

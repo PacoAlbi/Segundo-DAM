@@ -76,7 +76,9 @@ public class ConectarConBBDD {
      */
     public void actualizar(UsuariosEntity usuario) throws Exception {
         UsuariosEntity persona = sesion.get(UsuariosEntity.class,usuario.getIdUsuario());
-        // session.saveOrUpdate(persona);       // session.merge(persona);
+        persona = usuario;
+        //sesion.saveOrUpdate(persona);
+        //sesion.merge(persona);
         sesion.update(persona);
     }
     /**

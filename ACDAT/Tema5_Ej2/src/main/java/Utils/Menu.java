@@ -1,13 +1,15 @@
 package Utils;
 
+import DAO.ConectarConBBDD;
+import Entities.LikesEntity;
+import Entities.PostsEntity;
+import Entities.UsuariosEntity;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-
-//    System.out.println("\033[31;1;4mEn Construcción\033[0m"); //Para poner el texto en rojo; negrita; subrayado por ese orden dentro de los ;
-//    System.out.println("\033[93;1;4mEn Construcción\033[0m"); //Amarillo
-//    System.out.println("\033[92;1;4mEn Construcción\033[0m"); //Verde
-
     private static Scanner sc = new Scanner(System.in);
     /**
      * Precondiciones: No tiene.
@@ -20,13 +22,12 @@ public class Menu {
                 ---Bienvenido a mi menú de hoy, ¿Que desea hacer?---
                 [1] Mostrar Lista de Usuarios.
                 [2] Mostrar Usuario.
-                [3] Actualizar.
-                [4] Insertar.
-                [5] Borrar.
+                [3] Actualizar Usuario.
+                [4] Insertar Usuario.
+                [5] Borrar Usuario.
                 [0] Salir.
                 ----------------------------------------------------""");
     }
-
     /**
      * Precondiciones: No tiene.
      * Método que imprime por pantalla el menú y comprueba si la entrada es válida.
@@ -39,8 +40,8 @@ public class Menu {
             pintarMenu();
             menu = sc.next();
             switch (menu) {
-                case "1" -> mostrarTablas();
-                case "2" -> mostrarTablas();
+                case "1" -> mostrarLista();
+                case "2" -> mostrarUsuario();
                 case "3" -> mostrarActualizar();
                 case "4" -> mostrarInsertar();
                 case "5" -> mostrarBorrar();
@@ -50,88 +51,99 @@ public class Menu {
         } while (!salir);
         sc.close();
     }
+    /**
+     * Método que muestra la lista de usuarios de la BBDD.
+     */
+    public static void mostrarLista() {
+        ConectarConBBDD conexion = new ConectarConBBDD();
+        conexion.abrirConexion();
+        try {
 
-
-    public static void pinntar3Tablas() {
-        System.out.println("""
-
-                ---Elija una tabla---
-                [1] Usuarios.
-                [2] Posts.
-                [3] Likes.
-                [0] Salir.
-                ---------------------""");
+        } catch (Exception e) {
+            System.out.println("Error cargando la lista de la BBDD.");
+        }
+        conexion.cerrar();
     }
-
-    public static void pinntar2Tablas() {
-        System.out.println("""
-
-                ---Elija una tabla---
-                [1] Usuarios.
-                [2] Posts.
-                [0] Salir.
-                ---------------------""");
+    /**
+     * Método que muestra al usuario solicitado por id de la BBDD.
+     */
+    public static void mostrarUsuario() {
+        ConectarConBBDD conexion = new ConectarConBBDD();
+        conexion.abrirConexion();
+        int id;
+        System.out.println("Introduzca el ID del usuario que desea mostrar.");
+        id = sc.nextInt();
+        try {
+            conexion.leer(id);
+        } catch (Exception e) {
+            System.out.println("Error, usuario no encontrado.");
+        }
+        conexion.cerrar();
     }
-
-    public static void mostrarTablas() {
-        String menu;
-        boolean salir = false;
-        do {
-            pinntar3Tablas();
-            menu = sc.next();
-            switch (menu) {
-                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "0" -> salir = true;
-                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
-            }
-        } while (!salir);
-    }
-
-    public static void mostrarActualizar() {
-        String menu;
-        boolean salir = false;
-        do {
-            pinntar2Tablas();
-            menu = sc.next();
-            switch (menu) {
-                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "0" -> salir = true;
-                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
-            }
-        } while (!salir);
-    }
-
+    /**
+     * Método que inserta a un usuario en la BBDD.
+     */
     public static void mostrarInsertar() {
-        String menu;
-        boolean salir = false;
-        do {
-            pinntar2Tablas();
-            menu = sc.next();
-            switch (menu) {
-                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "0" -> salir = true;
-                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
-            }
-        } while (!salir);
+        ConectarConBBDD conexion = new ConectarConBBDD();
+        conexion.abrirConexion();
+        try {
+            conexion.guardar(setearUser());
+        } catch (Exception e) {
+            System.out.println("Error insertando al usuario, pruebe mas tarde.");
+        }
+        conexion.cerrar();
     }
-
+    /**
+     * Método que actualiza a un usuario de la BBDD.
+     */
+    public static void mostrarActualizar() {
+        ConectarConBBDD conexion = new ConectarConBBDD();
+        conexion.abrirConexion();
+        try {
+            conexion.actualizar(setearUser());
+        } catch (Exception e) {
+            System.out.println("Error actualizando al usuario, pruebe mas tarde.");
+        }
+        conexion.cerrar();
+    }
+    /**
+     * Método que borra a un usuario de la BBDD.
+     */
     public static void mostrarBorrar() {
-        String menu;
-        boolean salir = false;
-        do {
-            pinntar3Tablas();
-            menu = sc.next();
-            switch (menu) {
-                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
-                case "0" -> salir = true;
-                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
-            }
-        } while (!salir);
+        ConectarConBBDD conexion = new ConectarConBBDD();
+        conexion.abrirConexion();
+        int id;
+        System.out.println("Introduzca el ID del usuario que desea borra.");
+        id = sc.nextInt();
+        try {
+            conexion.borrar(id);
+        } catch (Exception e) {
+            System.out.println("Error borrando al usuario.");
+        }
+        conexion.cerrar();
+    }
+    /**
+     * Método que crea un usuario y hace las preguntas para poder setearlo y mandarlo a insertar o actualizar.
+     * @return Devuelve un usuario del tipo usuario.
+     */
+    public static UsuariosEntity setearUser(){
+        String dato;
+        UsuariosEntity usuario = new UsuariosEntity();
+        System.out.println("Introduzca el nombre del usuario.");
+        dato = sc.next();
+        usuario.setNombre(dato);
+        System.out.println("Introduzca los apellidos del usuario.");
+        dato = sc.next();
+        usuario.setApellidos(dato);
+        System.out.println("Introduzca el E-mail del usuario.");
+        dato = sc.next();
+        usuario.setEmail(dato);
+        System.out.println("Introduzca el nick del usuario.");
+        dato = sc.next();
+        usuario.setUsername(dato);
+        System.out.println("Introduzca la password del usuario.");
+        dato = sc.next();
+        usuario.setPassword(dato);
+        return usuario;
     }
 }
