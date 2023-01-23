@@ -13,9 +13,9 @@ namespace BL.Listados
         /// Postcondiciones: Devuelve de la DAL un listado de personas.
         /// </summary>
         /// <returns>List de personas.</returns>
-        public static ObservableCollection<clsPersona> getListadoPersonasBL()
+        public async static Task<ObservableCollection<clsPersona>> getListadoPersonasBL()
         {
-            return new ObservableCollection<clsPersona>(clsListadoPersonasDAL.getListadoPersonasDAL());
+            return new ObservableCollection<clsPersona>(await clsListadoPersonasDAL.getListadoPersonasDAL());
         }
 
         /// <summary>
@@ -24,11 +24,11 @@ namespace BL.Listados
         /// Lanza los errores a la capa superior.
         /// Postcondiciones: Devuelve de la DAL una persona.
         /// </summary>
-        /// <param name="Id">Entero que representa el Id de la persona a buscar.</param>
-        /// <returns>Devuelve una clsPersona encontrada por su Id.</returns>
-        public static clsPersona obtenerPersonaPorIdBL(int Id)
+        /// <param name="Id">Entero que representa el id de la persona a buscar.</param>
+        /// <returns>Devuelve una clsPersona encontrada por su id.</returns>
+        public async static Task<clsPersona> obtenerPersonaPorIdBL(int Id)
         {
-            return clsListadoPersonasDAL.obtenerPersonaPorIdDAL(Id);
+            return await clsListadoPersonasDAL.obtenerPersonaPorIdDAL(Id);
         }
     }
 }

@@ -13,39 +13,39 @@
         <form asp-action="EditarPersona">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group" hidden>
-                <label asp-for="Persona.Id" class="control-label"></label>
-                <input asp-for="Persona.Id" class="form-control" />
-                <span asp-validation-for="Persona.Id" class="text-danger"></span>
+                <label asp-for="Persona.id" class="control-label"></label>
+                <input asp-for="Persona.id" class="form-control" />
+                <span asp-validation-for="Persona.id" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Persona.Nombre" class="control-label"></label>
-                <input asp-for="Persona.Nombre" class="form-control" />
-                <span asp-validation-for="Persona.Nombre" class="text-danger"></span>
+                <label asp-for="Persona.nombre" class="control-label"></label>
+                <input asp-for="Persona.nombre" class="form-control" />
+                <span asp-validation-for="Persona.nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Persona.Apellidos" class="control-label"></label>
-                <input asp-for="Persona.Apellidos" class="form-control" />
-                <span asp-validation-for="Persona.Apellidos" class="text-danger"></span>
+                <label asp-for="Persona.apellidos" class="control-label"></label>
+                <input asp-for="Persona.apellidos" class="form-control" />
+                <span asp-validation-for="Persona.apellidos" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Persona.Telefono" class="control-label"></label>
-                <input asp-for="Persona.Telefono" class="form-control" />
-                <span asp-validation-for="Persona.Telefono" class="text-danger"></span>
+                <label asp-for="Persona.telefono" class="control-label"></label>
+                <input asp-for="Persona.telefono" class="form-control" />
+                <span asp-validation-for="Persona.telefono" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Persona.Direccion" class="control-label"></label>
-                <input asp-for="Persona.Direccion" class="form-control" />
-                <span asp-validation-for="Persona.Direccion" class="text-danger"></span>
+                <label asp-for="Persona.direccion" class="control-label"></label>
+                <input asp-for="Persona.direccion" class="form-control" />
+                <span asp-validation-for="Persona.direccion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Persona.Foto" class="control-label"></label>
-                <input asp-for="Persona.Foto" class="form-control" />
-                <span asp-validation-for="Persona.Foto" class="text-danger"></span>
+                <label asp-for="Persona.foto" class="control-label"></label>
+                <input asp-for="Persona.foto" class="form-control" />
+                <span asp-validation-for="Persona.foto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Persona.FechaNacimiento" class="control-label"></label>
-                <input asp-for="Persona.FechaNacimiento" class="form-control" />
-                <span asp-validation-for="Persona.FechaNacimiento" class="text-danger"></span>
+                <label asp-for="Persona.fechaNacimiento" class="control-label"></label>
+                <input asp-for="Persona.fechaNacimiento" class="form-control" />
+                <span asp-validation-for="Persona.fechaNacimiento" class="text-danger"></span>
             </div>
             <br />
 @*            <div class="form-group" hidden>
@@ -54,7 +54,7 @@
                 <span asp-validation-for="Persona.IdDepartamento" class="text-danger"></span>
             </div>                                                 Lo comento por lo mismo que en el crear*@
             <div class="form-group">
-            @Html.DropDownListFor(m => m.Persona.IdDepartamento,new SelectList(Model.ListaDepartamentos,"Id","Nombre"))
+            @Html.DropDownListFor(m => m.Persona.idDepartamento,new SelectList(Model.ListaDepartamentos,"id","nombre"))
             <br/>
             </div>
             <br />

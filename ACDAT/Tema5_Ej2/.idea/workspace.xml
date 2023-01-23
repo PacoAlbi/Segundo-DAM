@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../PSPRO/Examen-Tema1-FranciscoAlbinana/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/LikesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/LikesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/UsuariosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/Examen-Tema1-FranciscoAlbinana/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Examen-Tema1-FranciscoAlbinana/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PSPRO/ProgramacionHilos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/ProgramacionHilos/.idea/misc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +97,7 @@
       <workItem from="1674470787578" duration="3760000" />
       <workItem from="1674485099728" duration="2941000" />
       <workItem from="1674489105915" duration="15000" />
+      <workItem from="1674489305407" duration="8000" />
     </task>
     <servers />
   </component>

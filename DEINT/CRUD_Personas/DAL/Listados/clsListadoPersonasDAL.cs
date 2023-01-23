@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using Microsoft.Data.SqlClient;
+using Newtonsoft.Json;
 using System.Data;
 
 
@@ -7,116 +8,174 @@ namespace DAL.Listados
 {
     public class clsListadoPersonasDAL
     {
-        /// <summary>
-        /// Precondiciones: No tiene.
-        /// Conecto con la BBDD y saco una lista de personas de la tabla Personas para mandar a la BL.
-        /// Lanza los errores a la capa superior.
-        /// Postcondiciones: Devuelve una lista de personas de la BBDD.
-        /// </summary>
-        /// <returns>List de personas.</returns>
-        public static List<clsPersona> getListadoPersonasDAL()
+        public static async Task<List<clsPersona>> getListadoPersonasDAL()
         {
-            //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
-            List<clsPersona> listadoPersonasDAL = new List<clsPersona>();
-
-            clsMyConnection miConexion = new clsMyConnection();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand miComando = new SqlCommand();
-            SqlDataReader miLector;
-            clsPersona miPersona;
+            //Pido la cadena de la Uri al método estático
+            string miCadenaUrl = clsUriBase.getUriBase();
+            Uri miUri = new Uri($"{miCadenaUrl}personas");
+            List<clsPersona> listadoPersonas = new List<clsPersona>();
+            HttpClient mihttpClient;
+            HttpResponseMessage miCodigoRespuesta;
+            string textoJsonRespuesta;
+            //Instanciamos el cliente Http
+            mihttpClient = new HttpClient();
             try
             {
-                conexion = miConexion.getConnection();
-                miComando.CommandText = "SELECT * FROM Personas";
-                miComando.Connection = conexion;
-                miLector = miComando.ExecuteReader();
-
-                if (miLector.HasRows)
+                miCodigoRespuesta = await mihttpClient.GetAsync(miUri);
+                if (miCodigoRespuesta.IsSuccessStatusCode)
                 {
-                    while (miLector.Read())
-                    {
-                        miPersona = new clsPersona();
-                        miPersona.Id = (int)miLector["Id"];
-                        miPersona.Nombre = (String)miLector["Nombre"];
-                        miPersona.Apellidos = (String)miLector["Apellidos"];
-                        miPersona.Telefono = (String)miLector["Telefono"];
-                        miPersona.Direccion = (String)miLector["Direccion"];
-                        miPersona.Foto = (String)miLector["Foto"];
-                        if (miLector["FechaNacimiento"] != DBNull.Value)
-                        {
-                            miPersona.FechaNacimiento = (DateTime)miLector["FechaNacimiento"];
-                        }
-                        miPersona.IdDepartamento = (int)miLector["IdDepartamento"];
-                        listadoPersonasDAL.Add(miPersona);
-                    }
+                    textoJsonRespuesta = await mihttpClient.GetStringAsync(miUri);
+                    mihttpClient.Dispose();
+                    //JsonConvert necesita using Newtonsoft.Json;
+                    //Es el paquete Nuget de Newtonsoft
+                    listadoPersonas = JsonConvert.DeserializeObject<List<clsPersona>>(textoJsonRespuesta);
                 }
-                miLector.Close();
-                miConexion.closeConnection(ref conexion);
             }
-            catch (SqlException)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            return listadoPersonasDAL;
+            return listadoPersonas;
         }
 
-        /// <summary>
-        /// Precondiciones: Debe recivir el id de una persona.
-        /// Busco en la Base de datos a un usuario pasando el Id como parámetro.
-        /// Lanza los errores a la capa superior.
-        /// Postcondiciones: Devuelve una persona de la BBDD.
-        /// </summary>
-        /// <param name="Id">Entero que representa el Id de la persona a buscar.</param>
-        /// <returns>Devuelve una clsPersona encontrada por su Id.</returns>
-        public static clsPersona obtenerPersonaPorIdDAL (int Id)
+        public static async Task<clsPersona> obtenerPersonaPorIdDAL(int id)
         {
-            clsMyConnection miConexion = new clsMyConnection();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand miComando = new SqlCommand();
-            SqlDataReader miLector;
-            clsPersona miPersona = null;
+            //Pido la cadena de la Uri al método estático
+            string miCadenaUrl = clsUriBase.getUriBase();
+            Uri miUri = new Uri($"{miCadenaUrl}personas/{id}");
+            clsPersona persona = new clsPersona();
+            HttpClient mihttpClient;
+            HttpResponseMessage miCodigoRespuesta;
+            string textoJsonRespuesta;
+            //Instanciamos el cliente Http
+            mihttpClient = new HttpClient();
             try
             {
-                miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = Id;
-                conexion = miConexion.getConnection();
-                miComando.CommandText = "SELECT * FROM Personas WHERE Id = @Id";             
-                miComando.Connection = conexion;
-                miLector = miComando.ExecuteReader();
-
-                if (miLector.HasRows)
+                miCodigoRespuesta = await mihttpClient.GetAsync(miUri);
+                if (miCodigoRespuesta.IsSuccessStatusCode)
                 {
-                    while (miLector.Read())
-                    {
-                        miPersona = new clsPersona();
-                        miPersona.Id = (int)miLector["Id"];
-                        miPersona.Nombre = (String)miLector["Nombre"];
-                        miPersona.Apellidos = (String)miLector["Apellidos"];
-                        miPersona.Telefono = (String)miLector["Telefono"];
-                        miPersona.Direccion = (String)miLector["Direccion"];
-                        miPersona.Foto = (String)miLector["Foto"];
-                        if (miLector["FechaNacimiento"] != DBNull.Value)
-                        {
-                            miPersona.FechaNacimiento = (DateTime)miLector["FechaNacimiento"];
-                        }
-                        miPersona.IdDepartamento = (int)miLector["IdDepartamento"];
-                    }
+                    textoJsonRespuesta = await mihttpClient.GetStringAsync(miUri);
+                    mihttpClient.Dispose();
+                    persona = JsonConvert.DeserializeObject<clsPersona>(textoJsonRespuesta);
                 }
-                miLector.Close();
-                miConexion.closeConnection(ref conexion);
             }
-            catch (SqlException)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            return miPersona;
+            return persona;
         }
+
+        //    /// <summary>
+        //    /// Precondiciones: No tiene.
+        //    /// Conecto con la BBDD y saco una lista de personas de la tabla Personas para mandar a la BL.
+        //    /// Lanza los errores a la capa superior.
+        //    /// Postcondiciones: Devuelve una lista de personas de la BBDD.
+        //    /// </summary>
+        //    /// <returns>List de personas.</returns>
+        //    public static List<clsPersona> getListadoPersonasDAL()
+        //    {
+        //        //DataSet miDataSet = new DataSet(); //Esto es para el modo desconectado, que no tengo aceso a la BBDD
+        //        List<clsPersona> listadoPersonasDAL = new List<clsPersona>();
+
+        //        clsMyConnection miConexion = new clsMyConnection();
+        //        SqlConnection conexion = new SqlConnection();
+        //        SqlCommand miComando = new SqlCommand();
+        //        SqlDataReader miLector;
+        //        clsPersona miPersona;
+        //        try
+        //        {
+        //            conexion = miConexion.getConnection();
+        //            miComando.CommandText = "SELECT * FROM Personas";
+        //            miComando.Connection = conexion;
+        //            miLector = miComando.ExecuteReader();
+
+        //            if (miLector.HasRows)
+        //            {
+        //                while (miLector.Read())
+        //                {
+        //                    miPersona = new clsPersona();
+        //                    miPersona.id = (int)miLector["id"];
+        //                    miPersona.nombre = (String)miLector["nombre"];
+        //                    miPersona.apellidos = (String)miLector["apellidos"];
+        //                    miPersona.telefono = (String)miLector["telefono"];
+        //                    miPersona.direccion = (String)miLector["direccion"];
+        //                    miPersona.foto = (String)miLector["foto"];
+        //                    if (miLector["fechaNacimiento"] != DBNull.Value)
+        //                    {
+        //                        miPersona.fechaNacimiento = (DateTime)miLector["fechaNacimiento"];
+        //                    }
+        //                    miPersona.idDepartamento = (int)miLector["idDepartamento"];
+        //                    listadoPersonasDAL.Add(miPersona);
+        //                }
+        //            }
+        //            miLector.Close();
+        //            miConexion.closeConnection(ref conexion);
+        //        }
+        //        catch (SqlException)
+        //        {
+        //            throw;
+        //        }
+        //        catch (Exception)
+        //        {
+        //            throw;
+        //        }
+        //        return listadoPersonasDAL;
+        //    }
+
+        //    /// <summary>
+        //    /// Precondiciones: Debe recivir el id de una persona.
+        //    /// Busco en la Base de datos a un usuario pasando el id como parámetro.
+        //    /// Lanza los errores a la capa superior.
+        //    /// Postcondiciones: Devuelve una persona de la BBDD.
+        //    /// </summary>
+        //    /// <param name="id">Entero que representa el id de la persona a buscar.</param>
+        //    /// <returns>Devuelve una clsPersona encontrada por su id.</returns>
+        //    public static clsPersona obtenerPersonaPorIdDAL (int id)
+        //    {
+        //        clsMyConnection miConexion = new clsMyConnection();
+        //        SqlConnection conexion = new SqlConnection();
+        //        SqlCommand miComando = new SqlCommand();
+        //        SqlDataReader miLector;
+        //        clsPersona miPersona = null;
+        //        try
+        //        {
+        //            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+        //            conexion = miConexion.getConnection();
+        //            miComando.CommandText = "SELECT * FROM Personas WHERE id = @id";             
+        //            miComando.Connection = conexion;
+        //            miLector = miComando.ExecuteReader();
+
+        //            if (miLector.HasRows)
+        //            {
+        //                while (miLector.Read())
+        //                {
+        //                    miPersona = new clsPersona();
+        //                    miPersona.id = (int)miLector["id"];
+        //                    miPersona.nombre = (String)miLector["nombre"];
+        //                    miPersona.apellidos = (String)miLector["apellidos"];
+        //                    miPersona.telefono = (String)miLector["telefono"];
+        //                    miPersona.direccion = (String)miLector["direccion"];
+        //                    miPersona.foto = (String)miLector["foto"];
+        //                    if (miLector["fechaNacimiento"] != DBNull.Value)
+        //                    {
+        //                        miPersona.fechaNacimiento = (DateTime)miLector["fechaNacimiento"];
+        //                    }
+        //                    miPersona.idDepartamento = (int)miLector["idDepartamento"];
+        //                }
+        //            }
+        //            miLector.Close();
+        //            miConexion.closeConnection(ref conexion);
+        //        }
+        //        catch (SqlException)
+        //        {
+        //            throw;
+        //        }
+        //        catch (Exception)
+        //        {
+        //            throw;
+        //        }
+        //        return miPersona;
+        //    }
     }
 }

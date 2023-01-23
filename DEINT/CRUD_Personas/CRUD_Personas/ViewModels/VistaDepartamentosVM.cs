@@ -124,7 +124,7 @@ namespace CRUD_Personas.ViewModels
                 listadoDeDepartamentosMostrado.Remove(DepartamentoSeleccionado);
                 try
                 {
-                    clsManejadoraDepartamentos.borrarDepartamentosBL(DepartamentoSeleccionado.Id);
+                    clsManejadoraDepartamentos.borrarDepartamentosBL(DepartamentoSeleccionado.id);
                     DepartamentoSeleccionado = null;
                     EliminarCommand.RaiseCanExecuteChanged();
                     EditarCommand.RaiseCanExecuteChanged();
@@ -192,7 +192,7 @@ namespace CRUD_Personas.ViewModels
         {
             List<clsDepartamentos> listaAuxiliar= new List<clsDepartamentos>(listadoDeDepartamentosCompleto);
             ListadoDeDepartamentosMostrado.Clear();
-            ListadoDeDepartamentosMostrado.Add(listaAuxiliar.Find(x=> x.Nombre.Contains(Cadena)));
+            ListadoDeDepartamentosMostrado.Add(listaAuxiliar.Find(x=> x.nombre.Contains(Cadena)));
             return ListadoDeDepartamentosMostrado;
         }
         #endregion

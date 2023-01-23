@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using DAL.Manejadoras;
+using System.Net;
 
 namespace BL.Manejadoras
 {
@@ -13,9 +14,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="id">Entero que representa el id del departamento a eliminar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int borrarDepartamentosBL(int id)
+        public static async Task<HttpStatusCode> borrarDepartamentosBL(int id)
         {
-            return clsManejadoraDepartamentosDAL.borrarDepartamentosDAL(id);
+            return await clsManejadoraDepartamentosDAL.borrarDepartamentosDAL(id);
         }
 
         /// <summary>
@@ -26,9 +27,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="departamento">Departamento para editar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int editarDepartamentoBL(clsDepartamentos departamento)
+        public static async Task<HttpStatusCode> editarDepartamentoBL(clsDepartamentos departamento)
         {
-            return clsManejadoraDepartamentosDAL.editarDepartamentoDAL(departamento);
+            return await clsManejadoraDepartamentosDAL.editarDepartamentoDAL(departamento);
         }
 
         /// <summary>
@@ -39,9 +40,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="persona">Departamento para insertar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int insertarDepartamentoBL(clsDepartamentos departamento)
+        public static async Task<HttpStatusCode> insertarDepartamentoBL(clsDepartamentos departamento)
         {
-            return clsManejadoraDepartamentosDAL.insertarDepartamentoDAL(departamento);
+            return await clsManejadoraDepartamentosDAL.insertarDepartamentoDAL(departamento);
         }
     }
 }

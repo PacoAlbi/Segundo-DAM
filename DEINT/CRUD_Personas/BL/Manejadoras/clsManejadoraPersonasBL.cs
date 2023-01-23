@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using DAL.Manejadoras;
+using System.Net;
 
 namespace BL.Manejadoras
 {
@@ -13,9 +14,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="id">Entero que es el ID de la persona.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int borrarPersonaBL(int id)
+        public static async Task<HttpStatusCode> borrarPersonaBL(int id)
         {
-            return clsManejadoraPersonasDAL.borrarPersonaDAL(id);
+            return await clsManejadoraPersonasDAL.borrarPersonaDAL(id);
         }
 
         /// <summary>
@@ -26,9 +27,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="persona">Persona para editar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int editarPersonaBL(clsPersona persona)
+        public static async Task<HttpStatusCode> editarPersonaBL(clsPersona persona)
         {
-            return clsManejadoraPersonasDAL.editarPersonaDAL(persona);
+            return await clsManejadoraPersonasDAL.editarPersonaDAL(persona);
         }
 
         /// <summary>
@@ -39,9 +40,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="persona">Persona a insertar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static int insertarPersonasBL(clsPersona persona)
+        public static async Task<HttpStatusCode> insertarPersonasBL(clsPersona persona)
         {
-            return clsManejadoraPersonasDAL.insertarPersonasDAL(persona);
+            return await clsManejadoraPersonasDAL.insertarPersonasDAL(persona);
         }
     }
 }

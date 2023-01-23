@@ -11,47 +11,47 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2" hidden>
-            @Html.DisplayNameFor(model => model.Id)
+            @Html.DisplayNameFor(model => model.id)
         </dt>
         <dd class = "col-sm-10" hidden>
-            @Html.DisplayFor(model => model.Id)
+            @Html.DisplayFor(model => model.id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.nombre)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
+            @Html.DisplayFor(model => model.nombre)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellidos)
+            @Html.DisplayNameFor(model => model.apellidos)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellidos)
+            @Html.DisplayFor(model => model.apellidos)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefono)
+            @Html.DisplayNameFor(model => model.telefono)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefono)
+            @Html.DisplayFor(model => model.telefono)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Direccion)
+            @Html.DisplayNameFor(model => model.direccion)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Direccion)
+            @Html.DisplayFor(model => model.direccion)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Foto)
+            @Html.DisplayNameFor(model => model.foto)
         </dt>
         <dd class = "col-sm-10">
             @*@Html.DisplayFor(model => model.Foto)*@
-            <img src="@Model.Foto" height="200" />
+            <img src="@Model.foto" height="200" />
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaNacimiento)
+            @Html.DisplayFor(model => model.fechaNacimiento)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NombreDpto)
@@ -62,6 +62,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Editar", "EditarPersona", new { id = Model.Id }) |
+    @Html.ActionLink("Editar", "EditarPersona", new { id = Model.id }) |
     <a asp-action="ListadoPersonas">Vovler a la lista</a>
 </div>

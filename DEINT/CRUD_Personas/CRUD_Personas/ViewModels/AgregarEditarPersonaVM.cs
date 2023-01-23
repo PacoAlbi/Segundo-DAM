@@ -35,8 +35,8 @@ namespace CRUD_Personas.ViewModels
         {
             get { return persona; }
             set { persona = value;
-                //departamento = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(persona.IdDepartamento); Con esto no me pilla el nombre, así que lo busco en la lista.
-                departamento = listaDepartamentos.FirstOrDefault(x => x.Id == persona.IdDepartamento);
+                //departamento = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(persona.idDepartamento); Con esto no me pilla el nombre, así que lo busco en la lista.
+                departamento = listaDepartamentos.FirstOrDefault(x => x.id == persona.idDepartamento);
                 NotifyPropertyChanged(nameof(Departamento));
                 NotifyPropertyChanged(nameof(Persona));
             }
@@ -67,7 +67,7 @@ namespace CRUD_Personas.ViewModels
             {
                 try
                 {
-                    Persona.IdDepartamento = Departamento.Id;
+                    Persona.idDepartamento = Departamento.id;
                     NotifyPropertyChanged("Derpartamento");
                     clsManejadoraPersonas.insertarPersonasBL(Persona);
                     await Application.Current.MainPage.DisplayAlert("Persona insertada correctamente", null, "Ok");
@@ -95,7 +95,7 @@ namespace CRUD_Personas.ViewModels
             {
                 try
                 {
-                    Persona.IdDepartamento = Departamento.Id;
+                    Persona.idDepartamento = Departamento.id;
                     clsManejadoraPersonas.editarPersonaBL(Persona);
                     await Application.Current.MainPage.DisplayAlert("Persona editada correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");

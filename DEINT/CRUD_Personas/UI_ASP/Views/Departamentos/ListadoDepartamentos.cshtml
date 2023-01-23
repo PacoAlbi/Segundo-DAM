@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Nombre)
+                @Html.DisplayNameFor(model => model.nombre)
             </th>
             <th></th>
         </tr>
@@ -25,15 +25,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
+                @Html.DisplayFor(modelItem => item.nombre)
             </td>
             <td>
-                @Html.ActionLink("Editar", "EditarDepartamento", new {  id=item.Id }) |
+                @Html.ActionLink("Editar", "EditarDepartamento", new {  id=item.id }) |
                 @*@Html.ActionLink("Detalles", "DetallesDepartamento", new { id=item.Id }) | Creado todo pero lo veo innecesario*@
-                @Html.ActionLink("Borrar", "BorrarDepartamento", new { id=item.Id })
+                @Html.ActionLink("Borrar", "BorrarDepartamento", new { id=item.id })
             </td>
         </tr>
 }

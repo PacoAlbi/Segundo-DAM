@@ -12,25 +12,25 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Nombre)
+                @Html.DisplayNameFor(model => model.nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Apellidos)
+                @Html.DisplayNameFor(model => model.apellidos)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telefono)
+                @Html.DisplayNameFor(model => model.telefono)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Direccion)
+                @Html.DisplayNameFor(model => model.direccion)
             </th>
             @*<th>
                 @Html.DisplayNameFor(model => model.Foto)
             </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.FechaNacimiento)
+                @Html.DisplayNameFor(model => model.fechaNacimiento)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NombreDpto)
@@ -42,19 +42,19 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
+                @Html.DisplayFor(modelItem => item.nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Apellidos)
+                @Html.DisplayFor(modelItem => item.apellidos)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
+                @Html.DisplayFor(modelItem => item.telefono)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Direccion)
+                @Html.DisplayFor(modelItem => item.direccion)
             </td>
             @*<td>             
                 <img src="@item.Foto" height="100"/>
@@ -63,16 +63,16 @@
                 @*@Html.DisplayFor(modelItem => item.FechaNacimiento.Date.ToString("dd/MM/yyyy")) En esta versión me sale con la hora, y no la quiero*@
                 @*Lo meto en un label para poder quitarle la hora*@
                 <label>
-                        @item.FechaNacimiento.Date.ToString("dd - MMMM - yyyy") 
+                        @item.fechaNacimiento.Date.ToString("dd - MMMM - yyyy") 
                 </label>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NombreDpto)
             </td>
             <td>
-                @Html.ActionLink("Detalles", "DetallesPersona", new { id=item.Id }) |
-                @Html.ActionLink("Editar", "EditarPersona", new { id=item.Id }) |
-                @Html.ActionLink("Borrar", "BorrarPersona", new { id=item.Id })
+                @Html.ActionLink("Detalles", "DetallesPersona", new { id=item.id }) |
+                @Html.ActionLink("Editar", "EditarPersona", new { id=item.id }) |
+                @Html.ActionLink("Borrar", "BorrarPersona", new { id=item.id })
             </td>
         </tr>
 }

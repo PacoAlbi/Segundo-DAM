@@ -32,10 +32,18 @@ namespace CRUD_Personas.ViewModels
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             editarCommand = new DelegateCommand(EditarCommand_ExecutedAsync, EditarCommand_CanExecute);
             detallesCommand = new DelegateCommand(DetallesCommand_Execute, DetallesCommand_CanExecute);
-            listadoDePersonasCompleto = new ObservableCollection<clsPersona>(clsListadoPersonasBL.getListadoPersonasBL());
             listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
             personaSeleccionada = null;
             cadena = null;
+        }
+        public static async Task<VistaPersonasVM> BuildViewModelAsync()
+        {
+            ObservableCollection<clsPersona>  listaAsincrona = new ObservableCollection<clsPersona>( await clsListadoPersonasBL.getListadoPersonasBL());
+            return new VistaPersonasVM(listaAsincrona);
+        }
+        private VistaPersonasVM(ObservableCollection<clsPersona> lista)
+        {
+            this.listadoDePersonasCompleto = lista;
         }
         #endregion
 
@@ -118,7 +126,7 @@ namespace CRUD_Personas.ViewModels
                 ListadoDePersonasMostrado.Remove(PersonaSeleccionada);
                 try
                 {
-                    clsManejadoraPersonas.borrarPersonaBL(PersonaSeleccionada.Id);
+                    clsManejadoraPersonas.borrarPersonaBL(PersonaSeleccionada.id);
                     PersonaSeleccionada = null;
                     EliminarCommand.RaiseCanExecuteChanged();
                     EditarCommand.RaiseCanExecuteChanged();
@@ -214,7 +222,7 @@ namespace CRUD_Personas.ViewModels
         {
             List<clsPersona> listaAuxiliar = new List<clsPersona>(listadoDePersonasCompleto);
             ListadoDePersonasMostrado.Clear();
-            ListadoDePersonasMostrado.Add(listaAuxiliar.Find(x => x.Nombre.ToLower().Contains(Cadena) || x.Apellidos.ToLower().Contains(Cadena)));
+            ListadoDePersonasMostrado.Add(listaAuxiliar.Find(x => x.nombre.ToLower().Contains(Cadena) || x.apellidos.ToLower().Contains(Cadena)));
             //OTRO MÉTODO DE BUSQUEDA PERO ME DA EL MISMO RESULTADO QUE EL MIO, HAY QUE REVISARLO.
             //if (string.IsNullOrEmpty(Cadena))
             //{
@@ -226,7 +234,7 @@ namespace CRUD_Personas.ViewModels
 
             //        foreach (clsPersona persona in ListadoDePersonasMostrado)
             //        {
-            //            if (persona.Nombre.ToLower().StartsWith(Cadena.ToLowerInvariant()) || persona.Apellidos.ToLower().StartsWith(Cadena.ToLowerInvariant()))
+            //            if (persona.nombre.ToLower().StartsWith(Cadena.ToLowerInvariant()) || persona.apellidos.ToLower().StartsWith(Cadena.ToLowerInvariant()))
             //            {
             //                listadoPersonasMostrado.Add(persona);
             //            }
