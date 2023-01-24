@@ -18,7 +18,7 @@ public class Main {
         UsuariosEntity usuarioPrueba = new UsuariosEntity(1,"Jorge","Sanchez Julai","aadderson0","tOLWSQh33Kz9","aiston0@sciencedirect.com");
         PostsEntity potsPrueba = new PostsEntity(usuarioPrueba,"2021-10-19","2022-03-25");
         listaPost.add(potsPrueba);
-        LikesEntity likePrueba = new LikesEntity(usuarioPrueba,listaPost);
+        LikesEntity likePrueba = new LikesEntity();
         listaLikes.add(likePrueba);
         usuarioPrueba.setListaLikes(listaLikes);
         usuarioPrueba.setListaPosts(listaPost);

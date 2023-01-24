@@ -2,45 +2,48 @@ package Entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
-@Table(name="Likes")
+@Table(name = "Likes")
 public class LikesEntity implements Serializable {
 
     //Atributos.
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idLike")
     private int idLike;
     @ManyToOne
-    //@PrimaryKeyJoinColumn
-    @JoinColumn(name="idUsuario")
+    //@PrimaryKeyJoinColumn Solo sirve para el One to One y si ambas primary keys se llaman igual. para onetomany y menytoone se usa joincolumn.
+    @JoinColumn(name = "idUsuario")
     private UsuariosEntity usuario;
-    @OneToMany
-    //@PrimaryKeyJoinColumn
+    @ManyToOne
     @JoinColumn(name = "idPost")
-    private List<PostsEntity> listaPosts;
+    private PostsEntity post;
 
     //Constructores.
-    public LikesEntity() {}
-    public LikesEntity(int idLike, UsuariosEntity usuario, List<PostsEntity> listaPosts) {
+    public LikesEntity() {
+    }
+
+    public LikesEntity(int idLike, UsuariosEntity usuario, PostsEntity post) {
         this.idLike = idLike;
         this.usuario = usuario;
-        this.listaPosts = listaPosts;
+        this.post = post;
     }
-    public LikesEntity(UsuariosEntity usuario, List<PostsEntity> listaPosts) {
+
+    public LikesEntity(UsuariosEntity usuario, PostsEntity post) {
         this.usuario = usuario;
-        this.listaPosts = listaPosts;
+        this.post = post;
     }
 
     //Getter y Setter.
     public int getIdLike() {
         return idLike;
     }
+
     public void setIdLike(int idLike) {
         this.idLike = idLike;
     }
+
     public UsuariosEntity getUsuario() {
         return usuario;
     }
@@ -49,12 +52,12 @@ public class LikesEntity implements Serializable {
         this.usuario = usuario;
     }
 
-    public List<PostsEntity> getListaPosts() {
-        return listaPosts;
+    public PostsEntity getPost() {
+        return post;
     }
 
-    public void setListaPosts(List<PostsEntity> listaPosts) {
-        this.listaPosts = listaPosts;
+    public void setPost(PostsEntity post) {
+        this.post = post;
     }
 
     //toString sobreescrito a mi gusto.

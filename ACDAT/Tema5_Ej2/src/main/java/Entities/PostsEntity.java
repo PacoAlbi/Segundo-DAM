@@ -2,6 +2,7 @@ package Entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name="Posts")
@@ -12,6 +13,9 @@ public class PostsEntity implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "idPost")
     private int idPost;
+    @OneToMany(cascade= CascadeType.ALL)
+    @JoinColumn(name = "idPost")
+    private List<LikesEntity> listaLikes;
     @ManyToOne
     @JoinColumn(name="idUsuario")
     private UsuariosEntity usuario;
