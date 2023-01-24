@@ -1,7 +1,6 @@
 package Utils;
 
 import DAO.ConectarConBBDD;
-import Entities.LikesEntity;
 import Entities.PostsEntity;
 import Entities.UsuariosEntity;
 
@@ -20,7 +19,7 @@ public class Menu {
         System.out.println("""
 
                 ---Bienvenido a mi menú de hoy, ¿Que desea hacer?---
-                [1] Mostrar Lista de Usuarios.
+                [1] Lista de Usuarios.
                 [2] Mostrar Usuario.
                 [3] Actualizar Usuario.
                 [4] Insertar Usuario.
@@ -85,9 +84,12 @@ public class Menu {
      */
     public static void mostrarInsertar() {
         ConectarConBBDD conexion = new ConectarConBBDD();
+        UsuariosEntity usuarioAinsertar = setearUser();
+        List<PostsEntity> listaPost = setearPosts();
+        usuarioAinsertar.setListaPosts(listaPost);
         conexion.abrirConexion();
         try {
-            conexion.guardar(setearUser());
+            conexion.guardar(usuarioAinsertar);
         } catch (Exception e) {
             System.out.println("Error insertando al usuario, pruebe mas tarde.");
         }
@@ -123,12 +125,12 @@ public class Menu {
         conexion.cerrar();
     }
     /**
-     * Método que crea un usuario y hace las preguntas para poder setearlo y mandarlo a insertar o actualizar.
+     * Método que crea un usuario y hace las preguntas para poder setearlo y mandarlo a insertar o a actualizar.
      * @return Devuelve un usuario del tipo usuario.
      */
     public static UsuariosEntity setearUser(){
-        String dato;
         UsuariosEntity usuario = new UsuariosEntity();
+        String dato;
         System.out.println("Introduzca el nombre del usuario.");
         dato = sc.next();
         usuario.setNombre(dato);
@@ -145,5 +147,33 @@ public class Menu {
         dato = sc.next();
         usuario.setPassword(dato);
         return usuario;
+    }
+
+    /**
+     * Método que crea el post para insertarlo.
+     * @return Devuelve un tipo Post.
+     */
+    public static List<PostsEntity> setearPosts(){
+        PostsEntity post = new PostsEntity();
+        List<PostsEntity> listaPost = new ArrayList<>();
+        String dato;
+        boolean salir = false;
+        do {
+            System.out.println("Introduzca la fecha de creación en formato 'AAAA-MM-DD'.");
+            dato = sc.next();
+            post.setCreated_at(dato);
+            System.out.println("Introduzca la fecha de modificación en formato 'AAAA-MM-DD'.");
+            dato = sc.next();
+            post.setCreated_at(dato);
+            listaPost.add(post);
+            System.out.println("¿Desea insertar otro post?");
+            dato = sc.next();
+            switch (dato) {
+                case "1" -> setearPosts();
+                case "0" -> salir = true;
+                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
+            }
+        } while (!salir);
+        return listaPost;
     }
 }

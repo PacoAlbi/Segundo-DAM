@@ -120,7 +120,7 @@ public class UsuariosEntity implements Serializable {
     //toString sobreescrito a mi gusto.
     @Override
     public String toString() {
-        return String.format("ID: %d, Nombre: %s, Apellidos: %s" + System.lineSeparator() + "Username: %s, email: %s, Password: %s" + System.lineSeparator() +
-                "Sus Posts: %s" + System.lineSeparator() + "Sus Likes %s", idUsuario, nombre, apellidos, username, email, password, listaPosts, listaLikes);
+        return String.format(System.lineSeparator() + "ID: %d, Nombre: %s, Apellidos: %s" + System.lineSeparator() + "Username: %s, email: %s, Password: %s" + System.lineSeparator() +
+                "Sus Posts: %s" + System.lineSeparator() + "Sus Likes %s" + System.lineSeparator(), idUsuario, nombre, apellidos, username, email, password, listaPosts, listaLikes);
     }
 }

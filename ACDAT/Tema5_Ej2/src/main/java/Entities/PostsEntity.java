@@ -37,11 +37,6 @@ public class PostsEntity implements Serializable {
         this.created_at = created_at;
         this.updated_at = updated_at;
     }
-    public PostsEntity(int idPost, String created_at, String updated_at) {
-        this.idPost = idPost;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
-    }
 
     //Getter y Setter.
     public int getIdPost() {
@@ -55,6 +50,12 @@ public class PostsEntity implements Serializable {
     }
     public void setUsuario(UsuariosEntity usuario) {
         this.usuario = usuario;
+    }
+    public List<LikesEntity> getListaLikes() {
+        return listaLikes;
+    }
+    public void setListaLikes(List<LikesEntity> listaLikes) {
+        this.listaLikes = listaLikes;
     }
     public String getCreated_at() {
         return created_at;
@@ -72,6 +73,7 @@ public class PostsEntity implements Serializable {
     //toString sobreescrito a mi gusto.
     @Override
     public String toString() {
-        return String.format("idPost: %d, creado por el usuario cuya id es %d" + System.lineSeparator() + "Creado en la fecha %s, modificado en la fecha %s", idPost, usuario.getIdUsuario(), created_at, updated_at);
+        return String.format("idPost: %d, creado por el usuario cuya id es %d" + System.lineSeparator() + "Creado en la fecha %s, modificado en la fecha %s",
+                idPost, usuario.getIdUsuario(), created_at, updated_at);
     }
 }

@@ -1062,7 +1062,7 @@ ad2223\\_falbinana|schema||ad2223_falbinana||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="333" parent="329" name="idLike">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>1003</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1128,7 +1128,7 @@ ad2223\\_falbinana|schema||ad2223_falbinana||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="347" parent="331" name="idPost">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>803</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1165,7 +1165,7 @@ ad2223\\_falbinana|schema||ad2223_falbinana||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="355" parent="332" name="idUsuario">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>602</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>

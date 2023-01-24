@@ -24,9 +24,9 @@ public class Main {
                 System.out.println(con.toString());
                 //CON UN STATETMENT NORMAL BÁSICO
                 st = con.createStatement();
-                String[] campos = {"id int PRIMARY KEY AUTO_INCREMENT,", "nombre varchar(255),", "apellidos varchar(255),", "edad int"};
-                crearTabla("falbinana", campos); //Crea la tabla con el nombre y el array de los campos
-                //insertarDatos();  // Inserta datos en la tabla de una vez
+                //String[] campos = {"id int PRIMARY KEY AUTO_INCREMENT,", "nombre varchar(255),", "apellidos varchar(255),", "edad int"};
+                //crearTabla("falbinana", campos); //Crea la tabla con el nombre y el array de los campos
+                insertarDatos();  // Inserta datos en la tabla de una vez
                 //insertarDatosArray(st); //Inserta los datos
                 //st.executeUpdate("DELETE FROM ad2223.falbinana");  //Aqui borro los datos de la tabla y la dejo vacia
 

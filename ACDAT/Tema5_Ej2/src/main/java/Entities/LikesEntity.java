@@ -23,18 +23,15 @@ public class LikesEntity implements Serializable {
     //Constructores.
     public LikesEntity() {
     }
-
     public LikesEntity(int idLike, UsuariosEntity usuario, PostsEntity post) {
         this.idLike = idLike;
         this.usuario = usuario;
         this.post = post;
     }
-
     public LikesEntity(UsuariosEntity usuario, PostsEntity post) {
         this.usuario = usuario;
         this.post = post;
     }
-
     //Getter y Setter.
     public int getIdLike() {
         return idLike;
@@ -63,6 +60,6 @@ public class LikesEntity implements Serializable {
     //toString sobreescrito a mi gusto.
     @Override
     public String toString() {
-        return String.format("idLike: %d, idUsuario: %d, idPost:", idLike, usuario.getIdUsuario());
+        return String.format("idLike: %d, idUsuario: %d, idPost: %d", idLike, usuario.getIdUsuario(), post.getIdPost());
     }
 }
