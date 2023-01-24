@@ -43,9 +43,10 @@ public class ConectarConBBDD {
     public void cerrar() {
         try {
             transaction.commit();
+            System.out.println(System.lineSeparator() + "Gestión realizada correctamente." + System.lineSeparator());
         } catch (Exception e) {
             transaction.rollback();
-            System.out.println("Error haciendo el commit.");
+            System.out.println(System.lineSeparator() + "Error haciendo el commit." + System.lineSeparator());
         }
         sessionFactory.close();
     }
@@ -55,7 +56,7 @@ public class ConectarConBBDD {
      * @param id entero que representa el id del usuario.
      * @throws Exception Lanza una excepción si algo falla.
      */
-    public void leer(int id) throws Exception {
+    public void leer(int id){
         UsuariosEntity usuario = sesion.load(UsuariosEntity.class, id);
         System.out.println(usuario);
     }
@@ -65,7 +66,7 @@ public class ConectarConBBDD {
      * @return ¿?
      * @throws Exception Lanza una excepción si algo falla.
      */
-    public Object guardar(Object objeto) throws Exception {
+    public Object guardar(Object objeto){
         return sesion.save(objeto);
     }
     /**
@@ -74,12 +75,12 @@ public class ConectarConBBDD {
      * @param usuario Objeto usuario que actualizará.
      * @throws Exception Lanza una excepción si algo falla.
      */
-    public void actualizar(UsuariosEntity usuario) throws Exception {
-        UsuariosEntity persona = sesion.get(UsuariosEntity.class,usuario.getIdUsuario());
+    public void actualizar(UsuariosEntity usuario){
+        //UsuariosEntity persona = sesion.get(UsuariosEntity.class,usuario.getIdUsuario()); Esto es para recuperar a un usuario de una de las clases.
         //persona = usuario;
         //sesion.saveOrUpdate(persona);
         //sesion.merge(persona);
-        sesion.update(persona);
+        sesion.update(usuario);
     }
     /**
      * Método que borra un usuario de la BBDD y por ende, sus registros asociados.
@@ -87,7 +88,7 @@ public class ConectarConBBDD {
      * @param id Entero que representa el id.
      * @throws Exception Lanza una excepción si algo falla.
      */
-    public void borrar (int id) throws Exception {
+    public void borrar (int id){
         UsuariosEntity usuario = sesion.get(UsuariosEntity.class,id);
         sesion.delete(usuario);
     }

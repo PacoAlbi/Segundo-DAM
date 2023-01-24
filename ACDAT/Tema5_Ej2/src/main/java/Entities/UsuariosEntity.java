@@ -42,6 +42,14 @@ public class UsuariosEntity implements Serializable {
         this.password = password;
         this.email = email;
     }
+    public UsuariosEntity(List<PostsEntity> listaPosts, String nombre, String apellidos, String username, String password, String email) {
+        this.listaPosts = listaPosts;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
     public UsuariosEntity(List<PostsEntity> listaPosts, List<LikesEntity> listaLikes, String nombre, String apellidos, String username, String password, String email) {
         this.listaPosts = listaPosts;
         this.listaLikes = listaLikes;

@@ -84,7 +84,8 @@ public class Menu {
      */
     public static void mostrarInsertar() {
         ConectarConBBDD conexion = new ConectarConBBDD();
-        UsuariosEntity usuarioAinsertar = setearUser();
+        UsuariosEntity usuarioAinsertar = new UsuariosEntity();
+        setearUser(usuarioAinsertar);
         List<PostsEntity> listaPost = setearPosts();
         usuarioAinsertar.setListaPosts(listaPost);
         conexion.abrirConexion();
@@ -100,9 +101,14 @@ public class Menu {
      */
     public static void mostrarActualizar() {
         ConectarConBBDD conexion = new ConectarConBBDD();
+        UsuariosEntity usuarioAinsertar = new UsuariosEntity();
+        int idAmodificar;
         conexion.abrirConexion();
+        System.out.println("Introduzca el id del usuario a actualizar.");
+        idAmodificar = sc.nextInt();
+        usuarioAinsertar.setIdUsuario(idAmodificar);
         try {
-            conexion.actualizar(setearUser());
+            conexion.actualizar(setearUser(usuarioAinsertar));
         } catch (Exception e) {
             System.out.println("Error actualizando al usuario, pruebe mas tarde.");
         }
@@ -128,8 +134,7 @@ public class Menu {
      * Método que crea un usuario y hace las preguntas para poder setearlo y mandarlo a insertar o a actualizar.
      * @return Devuelve un usuario del tipo usuario.
      */
-    public static UsuariosEntity setearUser(){
-        UsuariosEntity usuario = new UsuariosEntity();
+    public static UsuariosEntity setearUser(UsuariosEntity usuario){
         String dato;
         System.out.println("Introduzca el nombre del usuario.");
         dato = sc.next();
@@ -159,14 +164,14 @@ public class Menu {
         String dato;
         boolean salir = false;
         do {
-            System.out.println("Introduzca la fecha de creación en formato 'AAAA-MM-DD'.");
+            System.out.println("Introduzca la fecha del nuevo post en formato 'AAAA-MM-DD'.");
             dato = sc.next();
             post.setCreated_at(dato);
             System.out.println("Introduzca la fecha de modificación en formato 'AAAA-MM-DD'.");
             dato = sc.next();
             post.setCreated_at(dato);
             listaPost.add(post);
-            System.out.println("¿Desea insertar otro post?");
+            System.out.println("¿Desea insertar otro post? 1 para si, 0 para no.");
             dato = sc.next();
             switch (dato) {
                 case "1" -> setearPosts();
