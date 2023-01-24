@@ -1,9 +1,11 @@
 ﻿window.onload = inicializaEventos;
-
+/**
+ * */
 function inicializaEventos() {
     document.getElementById("btnLlamada").addEventListener("click", pedirNombre, false);
 }
-
+/**
+ * */
 function pedirNombre() {
     //Punto 1
     var miLlamada = new XMLHttpRequest(); 
@@ -27,7 +29,8 @@ function pedirNombre() {
     //Punto 5
     miLlamada.send();   
 }
-
+/**
+ * */
 function rellenarTablaPersonas(arrayPersonas)
 {
     var tablaPersonas = document.getElementById("tablaPersonas");
@@ -50,7 +53,8 @@ function rellenarTablaPersonas(arrayPersonas)
         columna.innerHTML = arrayPersonas[i].direccion;
         fila.appendChild(columna);
         columna = document.createElement("td");
-        columna.innerHTML = arrayPersonas[i].foto;
+        var foto = document.createElement("img")
+        foto.src = arrayPersonas[i].foto;
         fila.appendChild(columna);
         columna = document.createElement("td");
         columna.innerHTML = arrayPersonas[i].fechaNacimiento;

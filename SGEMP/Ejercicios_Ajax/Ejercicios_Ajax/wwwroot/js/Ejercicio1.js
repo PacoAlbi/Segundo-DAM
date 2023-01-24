@@ -1,11 +1,13 @@
 ﻿window.onload = inicializaEventos;
-
+/**
+ * */
 function inicializaEventos() {
     document.getElementById("btnLlamada").onclick = saludar;
     //document.getElementById("btnLlamada").onclick = pedirNombre(); si le pongo los parentesis llama a la función y la ejecuta,
     //si los quito, solo dice que el onclik es la función, y cuando le de, lo hará
 }
-
+/**
+ * */
 function saludar () {
     //Punto 1
     var miLlamada = new XMLHttpRequest(); 

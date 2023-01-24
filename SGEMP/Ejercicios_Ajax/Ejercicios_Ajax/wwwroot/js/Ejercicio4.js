@@ -1,9 +1,11 @@
 ﻿window.onload = inicializaEventos;
-
+/**
+ * */
 function inicializaEventos() {
     document.getElementById("btnBorrar").onclick = borrarPersona;
 }
-
+/**
+ * */
 function borrarPersona () {
     //Punto 1
     var miLlamada = new XMLHttpRequest();
@@ -11,7 +13,7 @@ function borrarPersona () {
     var idAborrar = document.getElementById("txtId").value;
     var divAlert = document.getElementById("divAlert");
     //Punto 2
-    miLlamada.open("DELETE", "https://apipersonaspaco.azurewebsites.net/api/personas/" + idAborrar, true);
+    miLlamada.open("DELETE", "https://apipersonaspaco.azurewebsites.net/api/personas/" + idAborrar);
     //Punto 4
     miLlamada.onreadystatechange = function ()
     {
