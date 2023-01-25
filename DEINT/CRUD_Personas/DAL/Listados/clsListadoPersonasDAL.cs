@@ -8,6 +8,10 @@ namespace DAL.Listados
 {
     public class clsListadoPersonasDAL
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static async Task<List<clsPersona>> getListadoPersonasDAL()
         {
             //Pido la cadena de la Uri al método estático
@@ -37,7 +41,11 @@ namespace DAL.Listados
             }
             return listadoPersonas;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static async Task<clsPersona> obtenerPersonaPorIdDAL(int id)
         {
             //Pido la cadena de la Uri al método estático
