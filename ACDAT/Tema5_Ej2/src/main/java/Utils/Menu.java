@@ -3,12 +3,14 @@ package Utils;
 import DAO.ConectarConBBDD;
 import Entities.PostsEntity;
 import Entities.UsuariosEntity;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
+    /**
+     * Atributos de la clase.
+     */
     private static Scanner sc = new Scanner(System.in);
     /**
      * Precondiciones: No tiene.
@@ -51,20 +53,24 @@ public class Menu {
         sc.close();
     }
     /**
+     * Precondiciones: No tiene.
      * Método que muestra la lista de usuarios de la BBDD.
+     * Postcondiciones: No tiene.
      */
     public static void mostrarLista() {
         ConectarConBBDD conexion = new ConectarConBBDD();
         conexion.abrirConexion();
         try {
-
+            System.out.println(conexion.getLista());
         } catch (Exception e) {
             System.out.println("Error cargando la lista de la BBDD.");
         }
         conexion.cerrar();
     }
     /**
+     * Precondiciones: No tiene.
      * Método que muestra al usuario solicitado por id de la BBDD.
+     * Postcondiciones: No tiene.
      */
     public static void mostrarUsuario() {
         ConectarConBBDD conexion = new ConectarConBBDD();
@@ -73,14 +79,16 @@ public class Menu {
         System.out.println("Introduzca el ID del usuario que desea mostrar.");
         id = sc.nextInt();
         try {
-            conexion.leer(id);
+            conexion.getUsuario(id);
         } catch (Exception e) {
             System.out.println("Error, usuario no encontrado.");
         }
         conexion.cerrar();
     }
     /**
+     * Precondiciones: No tiene.
      * Método que inserta a un usuario en la BBDD.
+     * Postcondiciones: No tiene.
      */
     public static void mostrarInsertar() {
         ConectarConBBDD conexion = new ConectarConBBDD();
@@ -91,13 +99,16 @@ public class Menu {
         conexion.abrirConexion();
         try {
             conexion.guardar(usuarioAinsertar);
+            System.out.println("Usuario insertado correctamente.");
         } catch (Exception e) {
             System.out.println("Error insertando al usuario, pruebe mas tarde.");
         }
         conexion.cerrar();
     }
     /**
+     * Precondiciones: No tiene.
      * Método que actualiza a un usuario de la BBDD.
+     * Postcondiciones: No tiene.
      */
     public static void mostrarActualizar() {
         ConectarConBBDD conexion = new ConectarConBBDD();
@@ -109,13 +120,16 @@ public class Menu {
         usuarioAinsertar.setIdUsuario(idAmodificar);
         try {
             conexion.actualizar(setearUser(usuarioAinsertar));
+            System.out.println("Usuario actualizado correctamente.");
         } catch (Exception e) {
             System.out.println("Error actualizando al usuario, pruebe mas tarde.");
         }
         conexion.cerrar();
     }
     /**
+     * Precondiciones: No tiene.
      * Método que borra a un usuario de la BBDD.
+     * Postcondiciones: No tiene.
      */
     public static void mostrarBorrar() {
         ConectarConBBDD conexion = new ConectarConBBDD();
@@ -125,14 +139,17 @@ public class Menu {
         id = sc.nextInt();
         try {
             conexion.borrar(id);
+            System.out.println("Usuario borrado correctamente.");
         } catch (Exception e) {
             System.out.println("Error borrando al usuario.");
         }
         conexion.cerrar();
     }
     /**
+     * Precondiciones: Debe recibir un usuario válido.
      * Método que crea un usuario y hace las preguntas para poder setearlo y mandarlo a insertar o a actualizar.
      * @return Devuelve un usuario del tipo usuario.
+     * Postcondiciones: Devuelve un usuario seteado.
      */
     public static UsuariosEntity setearUser(UsuariosEntity usuario){
         String dato;
@@ -153,10 +170,11 @@ public class Menu {
         usuario.setPassword(dato);
         return usuario;
     }
-
     /**
+     * Precondiciones: No tiene.
      * Método que crea el post para insertarlo.
      * @return Devuelve un tipo Post.
+     * Postcondiciones: Devuelve una lista de post para insertar al usuario.
      */
     public static List<PostsEntity> setearPosts(){
         PostsEntity post = new PostsEntity();
