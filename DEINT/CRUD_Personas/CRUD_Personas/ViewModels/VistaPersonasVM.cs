@@ -35,6 +35,7 @@ namespace CRUD_Personas.ViewModels
             listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
             personaSeleccionada = null;
             cadena = null;
+            LoadData();
         }
         public static async Task<VistaPersonasVM> BuildViewModelAsync()
         {
@@ -44,6 +45,12 @@ namespace CRUD_Personas.ViewModels
         private VistaPersonasVM(ObservableCollection<clsPersona> lista)
         {
             this.listadoDePersonasCompleto = lista;
+        }
+
+        private async void LoadData()
+        {
+            this.listadoDePersonasCompleto = new ObservableCollection<clsPersona>(await clsListadoPersonasBL.getListadoPersonasBL());
+            NotifyPropertyChanged(nameof(listadoDePersonasCompleto));
         }
         #endregion
 
@@ -243,17 +250,17 @@ namespace CRUD_Personas.ViewModels
             //}
             return ListadoDePersonasMostrado;
         }
-        private void actualizarLista()
-        {
-            try
-            {
-                ListadoDePersonasMostrado = new ObservableCollection<clsPersona> (clsListadoPersonasBL.getListadoPersonasBL());
-            }catch(SqlException)
-            {
-                var toast = Toast.Make("La BBDD no esta disponible.", ToastDuration.Long).Show();
-            }
-            NotifyPropertyChanged("ListadoDePersonasMostrado");
-        }
+        //private void actualizarLista()
+        //{
+        //    try
+        //    {
+        //        ListadoDePersonasMostrado = new ObservableCollection<clsPersona> (clsListadoPersonasBL.getListadoPersonasBL());
+        //    }catch(SqlException)
+        //    {
+        //        var toast = Toast.Make("La BBDD no esta disponible.", ToastDuration.Long).Show();
+        //    }
+        //    NotifyPropertyChanged("ListadoDePersonasMostrado");
+        //}
         #endregion
     }
 }
