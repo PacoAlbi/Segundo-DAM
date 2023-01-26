@@ -25,7 +25,7 @@ public class Cliente {
             InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
 
-            
+
             while (){
                 numero = sc.nextInt();
                 bufferedWriter.write(numero);
