@@ -10,6 +10,18 @@ namespace CRUD_API.ViewModels.Utilidades
 {
     public abstract class clsVMBase : INotifyPropertyChanged
     {
+        private bool cargando;
+
+        public bool Cargando
+        {
+            get { return cargando; }
+            set
+            {
+                cargando = value;
+                NotifyPropertyChanged(nameof(Cargando));
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = null)

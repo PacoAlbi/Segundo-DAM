@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/AppShell.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/AppShell.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/AgregarEditarDepartamentoVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/AgregarEditarDepartamentoVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/AgregarEditarPersonaVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/AgregarEditarPersonaVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/VistaDepartamentosVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/VistaDepartamentosVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/VistaPersonasVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/ViewModels/VistaPersonasVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/CrearPersonaPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/CrearPersonaPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/CrearPersonaPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/CrearPersonaPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/DetallesPersonaPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/DetallesPersonaPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/DetallesPersonaPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/DetallesPersonaPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaDepartamentosPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaDepartamentosPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaDepartamentosPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaDepartamentosPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,6 +106,7 @@
       <workItem from="1674591472881" duration="12000" />
       <workItem from="1674656522457" duration="13000" />
       <workItem from="1674670903800" duration="1419000" />
+      <workItem from="1674745216183" duration="23000" />
     </task>
     <servers />
   </component>

@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUD_Personas.Views.VistaPersonasPage"
              xmlns:VM="clr-namespace:CRUD_API.ViewModels"
+             xmlns:Model="clr-namespace:Entities;assembly=Entities"
+             x:DataType="VM:VistaPersonasVM"
              Title="Lista de Personas">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <ActivityIndicator IsVisible="{Binding Cargando}"
+                           IsRunning="True"/>
         <HorizontalStackLayout Grid.Row="0"
                                HorizontalOptions="End"
                                VerticalOptions="End"
@@ -30,7 +34,8 @@
                     SelectedItem="{Binding PersonaSeleccionada}"
                     RowHeight="100">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate
+                            x:DataType="Model:clsPersona">
                             <ViewCell>
                                 <Frame CornerRadius="10" BorderColor="Black">
                                     <HorizontalStackLayout Spacing="10">

@@ -4,62 +4,54 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
-import java.util.Random;
 
 public class Servidor {
 
+    //Atributos de clase para usar en el código.
     private static BufferedWriter bufferedWriter;
     private static String ruta;
+
     public static void main(String[] args) {
-        File fichero = new File(ruta);
-        String peticion;
-        int numeroSecreto = new Random().nextInt(0, 100);
-        int numero;
         Socket socketCliente;
         InputStream is;
         OutputStream os;
-        InputStreamReader inputStream;
-        BufferedReader bufferedReader;
+        InputStreamReader inputStreamReader;
         OutputStreamWriter outputStreamWriter;
-
+        BufferedReader bufferedReader;
         try {
-            // 1.- Crear un Socket servidor
+            //Crear un Socket servidor.
             ServerSocket socketServidor = new ServerSocket(2000);
 
-            // 2.- Espera y acepta conexiones, para ello creamos el socket cliente, ya que es lo que devuelve el método,
-            // y lo hacemos en bucle infinito, porque es un servidor y no debe apagarse.
+            //Espera y acepta conexiones, para ello creamos el socket cliente, ya que es lo que devuelve el método,
+            //y lo hacemos en bucle infinito, porque es un servidor y no debe apagarse.
             while (true) {
                 System.out.println("(Servidor.Servidor) Esperando peticiones.");
                 socketCliente = socketServidor.accept();
 
-                // 3.- Flujo de entrada y salida
+                //Flujo de entrada y salida.
                 System.out.println("(Servidor.Servidor) Abriendo flujos de entrada y salida.");
                 is = socketCliente.getInputStream();
                 os = socketCliente.getOutputStream();
 
-                // 4.- Intercambiar datos con el cliente
-                inputStream = new InputStreamReader(is, StandardCharsets.UTF_8);
-                bufferedReader = new BufferedReader(inputStream);
+                //Intercambiar datos con el cliente.
+                inputStreamReader = new InputStreamReader(is, StandardCharsets.UTF_8);
+                bufferedReader = new BufferedReader(inputStreamReader);
                 outputStreamWriter = new OutputStreamWriter(os, StandardCharsets.UTF_8);
                 bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                do{
-                    numero = Integer.parseInt(bufferedReader.readLine());
-                    peticion = aciertaNumero(numero, numeroSecreto);
-                    bufferedWriter.write(peticion);
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-                }while (numero!=numeroSecreto);
+                //Leo la ruta del cliente.
+                ruta = bufferedReader.readLine();
+                leerFichero();
 
-
-                // Cerramos los flujos de lectura y escritura
+                //Cerramos los flujos de lectura y escritura.
                 bufferedWriter.close();
                 bufferedReader.close();
                 outputStreamWriter.close();
+                inputStreamReader.close();
                 is.close();
                 os.close();
 
-                //Cierro la conexión solo con ese cliente concreto
+                //Cierro la conexión solo con ese cliente concreto.
                 socketCliente.close();
             }
         } catch (IOException e) {
@@ -67,23 +59,28 @@ public class Servidor {
             e.printStackTrace();
         }
     }
-    public static void leerFichero (String ruta) {
-        File fichero = new File(ruta);
+    /**
+     * Método que carga el fichero, lo lee y lo manda directamente al cliente.
+     */
+    public static void leerFichero() {
         String linea;
         try {
+            File fichero = new File(ruta);
             FileReader lector = new FileReader(fichero);
             BufferedReader bufferLectura = new BufferedReader(lector);
             linea = bufferLectura.readLine();
-            while (linea!=null){
-
-
+            while (linea != null) {
+                bufferedWriter.write(linea);
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
                 linea = bufferLectura.readLine();
             }
-
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.err.println("Fichero no encontrado.");
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("Error abriendo el archivo.");
+            e.printStackTrace();
         }
     }
 }

@@ -14,8 +14,10 @@ public partial class VistaPersonasPage : ContentPage
     protected override async void OnAppearing()
     {
         VistaPersonasVM viewModel = await VistaPersonasVM.BuildViewModelAsync();
+        viewModel.Cargando = true;
         BindingContext = viewModel;
         InitializeComponent();
+        viewModel.Cargando = false;
         base.OnAppearing();
     }
 }
