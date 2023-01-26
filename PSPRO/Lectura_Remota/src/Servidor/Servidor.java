@@ -1,4 +1,4 @@
-package Ejercicio3;
+package Servidor;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -7,7 +7,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class Servidor {
+
+    private static BufferedWriter bufferedWriter;
+    private static String ruta;
     public static void main(String[] args) {
+        File fichero = new File(ruta);
         String peticion;
         int numeroSecreto = new Random().nextInt(0, 100);
         int numero;
@@ -17,7 +21,7 @@ public class Servidor {
         InputStreamReader inputStream;
         BufferedReader bufferedReader;
         OutputStreamWriter outputStreamWriter;
-        BufferedWriter bufferedWriter;
+
         try {
             // 1.- Crear un Socket servidor
             ServerSocket socketServidor = new ServerSocket(2000);
@@ -25,11 +29,11 @@ public class Servidor {
             // 2.- Espera y acepta conexiones, para ello creamos el socket cliente, ya que es lo que devuelve el método,
             // y lo hacemos en bucle infinito, porque es un servidor y no debe apagarse.
             while (true) {
-                System.out.println("(Servidor) Esperando peticiones.");
+                System.out.println("(Servidor.Servidor) Esperando peticiones.");
                 socketCliente = socketServidor.accept();
 
                 // 3.- Flujo de entrada y salida
-                System.out.println("(Servidor) Abriendo flujos de entrada y salida.");
+                System.out.println("(Servidor.Servidor) Abriendo flujos de entrada y salida.");
                 is = socketCliente.getInputStream();
                 os = socketCliente.getOutputStream();
 
@@ -63,22 +67,23 @@ public class Servidor {
             e.printStackTrace();
         }
     }
+    public static void leerFichero (String ruta) {
+        File fichero = new File(ruta);
+        String linea;
+        try {
+            FileReader lector = new FileReader(fichero);
+            BufferedReader bufferLectura = new BufferedReader(lector);
+            linea = bufferLectura.readLine();
+            while (linea!=null){
 
-    /**
-     * Método para comprobar si el número pasado es primo o no.
-     * @param num Un entero que es el número a comprobar.
-     * @param numeroSecreto Un entero que es el que hay que adivinar.
-     * @return Un String con el resultado.
-     */
-    public static String aciertaNumero(int num, int numeroSecreto) {
-        String resultado;
-        if (num == numeroSecreto) {
-            resultado = "¡Enhorabuena! Has acertado el número";
-        } else if (num < numeroSecreto) {
-            resultado = "El número mandado es inferior al número secreto";
-        } else {
-            resultado = "El número mandado es superior al número secreto";
+
+                linea = bufferLectura.readLine();
+            }
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        return resultado;
     }
 }

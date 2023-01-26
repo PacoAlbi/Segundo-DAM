@@ -1,4 +1,4 @@
-package Ejercicio3;
+package Cliente;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -7,17 +7,18 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Cliente {
+
     public static void main(String[] args) {
         String acertado;
         int numero;
         try {
-            //1.- Creacion del Socket del tipo Cliente
-            System.out.println("(Cliente) Creamos Socket");
+            //1.- Creacion del Socket del tipo Cliente.Cliente
+            System.out.println("(Cliente.Cliente) Creamos Socket");
             //InetAddress dirección = InetAddress.getByName("Pongo la ip del que toque"); Para poner cualquier direccion
             Socket socketCliente=new Socket(InetAddress.getLocalHost(),2000);
 
             // 2.- Abrimos flujo de lectura y escritura
-            System.out.println("(Cliente) Abrimos flujo de entrada y salida");
+            System.out.println("(Cliente.Cliente) Abrimos flujo de entrada y salida");
             InputStream is=socketCliente.getInputStream();
             OutputStream os=socketCliente.getOutputStream();
 
@@ -32,7 +33,7 @@ public class Cliente {
                 bufferedWriter.write(String.valueOf(numero));
                 bufferedWriter.flush();
                 acertado =  bufferedReader.readLine();
-                System.out.println("(Servidor) " + acertado + " numero mandado: " + numero);
+                System.out.println("(Servidor.Servidor) " + acertado + " numero mandado: " + numero);
             } while (!(acertado.equals("¡Enhorabuena! Has acertado el número")));
 
             // 4.- cerramos flujo de datos
