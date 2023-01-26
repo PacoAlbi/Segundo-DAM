@@ -31,31 +31,44 @@ namespace EncuentraLasParejas.ViewModels
             }
             set
             {
-                cartaSeleccionada = value;
-                cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Anverso;
-                if (!haySeleccionada)
-                {
-                    cartaAuxiliar = cartaSeleccionada;
-                    haySeleccionada = true;
-                } 
-                else if (cartaSeleccionada.ImagenMostrada.Equals(cartaAuxiliar.ImagenMostrada))
-                {
-                    parejasEncontradas++;
-                    haySeleccionada = false;
-                }
-                else
-                {
-                    cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
-                    cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;
-                    haySeleccionada = false;
-                }
+                var t = Task.Run(async delegate
+
+                    {
+                        if (cartaSeleccionada != value)
+                        {
+
+
+                            cartaSeleccionada = value;
+                            cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Anverso;
+
+                            if (!haySeleccionada)
+                            {
+                                cartaAuxiliar = cartaSeleccionada;
+                                haySeleccionada = true;
+                            }
+                            else if (cartaSeleccionada.ImagenMostrada.Equals(cartaAuxiliar.ImagenMostrada))
+                            {
+                                parejasEncontradas++;
+                                haySeleccionada = false;
+                            }
+                            else
+                            {
+                                cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
+
+                                cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;
+                                haySeleccionada = false;
+                            }
+                            cartaSeleccionada = null;
+                        }
+                    });
+                t.Wait();
             }
         }
-        public ObservableCollection<CartaNotify> BarajaMostrada 
-        { 
-            get 
-            { 
-                return barajaMostrada; 
+        public ObservableCollection<CartaNotify> BarajaMostrada
+        {
+            get
+            {
+                return barajaMostrada;
             }
             set
             {
@@ -76,7 +89,7 @@ namespace EncuentraLasParejas.ViewModels
         #region Métodos
         private void hacerBaraja()
         {
-            baraja = new ObservableCollection<CartaNotify>();     
+            baraja = new ObservableCollection<CartaNotify>();
             baraja.Add(new CartaNotify("capitanamerica.png", "background2.png"));
             baraja.Add(new CartaNotify("capitanamerica.png", "background2.png"));
             baraja.Add(new CartaNotify("hulk.png", "background2.png"));
@@ -96,7 +109,7 @@ namespace EncuentraLasParejas.ViewModels
             baraja.Add(new CartaNotify("deadpool.png", "background2.png"));
             baraja.Add(new CartaNotify("deadpool.png", "background2.png"));
         }
-        private ObservableCollection<CartaNotify> barajar (ObservableCollection<CartaNotify> cartas)
+        private ObservableCollection<CartaNotify> barajar(ObservableCollection<CartaNotify> cartas)
         {
             var rnd = new Random();
             var baraja = cartas.OrderBy(x => rnd.Next());
@@ -104,7 +117,7 @@ namespace EncuentraLasParejas.ViewModels
         }
         private void jugar()
         {
-            
+
         }
         private void temporizador()
         {

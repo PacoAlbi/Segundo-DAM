@@ -10,7 +10,7 @@ namespace CRUD_API.ViewModels
     /// ViewModel para editar o crear personas.
     /// </summary>
     [QueryProperty("Persona", "personaParaMandar")]
-    public class AgregarEditarPersonaVM : clsVMBase
+    public class AgregarEditarPersonaVM : clsVMBase, IQueryAttributable
     {
         #region Atributos
         private DelegateCommand agregarCommand;
@@ -21,12 +21,23 @@ namespace CRUD_API.ViewModels
         #endregion
 
         #region Contructores
-        public AgregarEditarPersonaVM()
+        private AgregarEditarPersonaVM(ObservableCollection<clsDepartamentos> lista)
         {
+            listaDepartamentos = lista;
             agregarCommand = new DelegateCommand(AgregarCommand_Executed);
             editarCommand = new DelegateCommand(EditarCommand_Executed);
-            listaDepartamentos = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosBL.getListadoDepartamentosBL());
             Persona = new clsPersona();
+        }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Constructor asíncrono que recibe la lista, y la manda al constructor privado.
+        /// Postcondiciones: Se construye la página.
+        /// </summary>
+        /// <returns>Devuelve la lista de la api una vez recibida.</returns>
+        public static async Task<AgregarEditarPersonaVM> BuildViewModelAsync()
+        {
+            ObservableCollection<clsDepartamentos> listaAsincrona = new ObservableCollection<clsDepartamentos>(await clsListadoDepartamentosBL.getListadoDepartamentosBL());
+            return new AgregarEditarPersonaVM(listaAsincrona);
         }
         #endregion
 
@@ -37,7 +48,6 @@ namespace CRUD_API.ViewModels
             set
             {
                 persona = value;
-                //departamento = clsListadoDepartamentosBL.obtenerDepartamentoPorIdBL(persona.idDepartamento); Con esto no me pilla el nombre, así que lo busco en la lista.
                 departamento = listaDepartamentos.FirstOrDefault(x => x.id == persona.idDepartamento);
                 NotifyPropertyChanged(nameof(Departamento));
                 NotifyPropertyChanged(nameof(Persona));
@@ -71,7 +81,7 @@ namespace CRUD_API.ViewModels
                 {
                     Persona.idDepartamento = Departamento.id;
                     NotifyPropertyChanged("Derpartamento");
-                    clsManejadoraPersonas.insertarPersonasBL(Persona);
+                    await clsManejadoraPersonas.insertarPersonasBL(Persona);
                     await Application.Current.MainPage.DisplayAlert("Persona insertada correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");
                 }
@@ -98,7 +108,7 @@ namespace CRUD_API.ViewModels
                 try
                 {
                     Persona.idDepartamento = Departamento.id;
-                    clsManejadoraPersonas.editarPersonaBL(Persona);
+                    await clsManejadoraPersonas.editarPersonaBL(Persona);
                     await Application.Current.MainPage.DisplayAlert("Persona editada correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");
                 }
@@ -111,6 +121,13 @@ namespace CRUD_API.ViewModels
             {
                 await Shell.Current.GoToAsync("..");
             }
+        }
+        #endregion
+
+        #region Metodos
+        public void ApplyQueryAttributes(IDictionary<string, object> query)
+        {
+            Persona = query["personaParaMandar"] as clsPersona;
         }
         #endregion
     }

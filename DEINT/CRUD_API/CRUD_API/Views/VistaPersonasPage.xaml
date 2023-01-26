@@ -4,9 +4,6 @@
              x:Class="CRUD_Personas.Views.VistaPersonasPage"
              xmlns:VM="clr-namespace:CRUD_API.ViewModels"
              Title="Lista de Personas">
-    <ContentPage.BindingContext>
-        <VM:VistaPersonasVM/>
-    </ContentPage.BindingContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -25,7 +22,7 @@
                     <SearchBar BackgroundColor="Beige"
                        Placeholder="Buscar"
                         MinimumWidthRequest="100"
-                        Text="{Binding Cadena}"
+                        Text="{Binding Busqueda, Mode=TwoWay}"
                         SearchCommand="{Binding BuscarCommand}"/>
                 </HorizontalStackLayout>
                 <ListView

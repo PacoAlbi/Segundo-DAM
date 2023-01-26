@@ -48,7 +48,7 @@ namespace CRUD_API.ViewModels
             {
                 try
                 {
-                    clsManejadoraDepartamentos.insertarDepartamentoBL(Departamento);
+                    await clsManejadoraDepartamentos.insertarDepartamentoBL(Departamento);
                     await Application.Current.MainPage.DisplayAlert("Departamento insertado correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");
                 }
@@ -74,7 +74,7 @@ namespace CRUD_API.ViewModels
             {
                 try
                 {
-                    clsManejadoraDepartamentos.editarDepartamentoBL(Departamento);
+                    await clsManejadoraDepartamentos.editarDepartamentoBL(Departamento);
                     await Application.Current.MainPage.DisplayAlert("Departamento editado correctamente", null, "Ok");
                     await Shell.Current.GoToAsync("..");
                 }

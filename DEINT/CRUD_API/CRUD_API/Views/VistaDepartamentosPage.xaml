@@ -4,9 +4,6 @@
              x:Class="CRUD_Personas.Views.VistaDepartamentosPage"
              xmlns:VM="clr-namespace:CRUD_API.ViewModels"
              Title="Vista de Departamentos">
-    <ContentPage.BindingContext>
-        <VM:VistaDepartamentosVM/>
-    </ContentPage.BindingContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

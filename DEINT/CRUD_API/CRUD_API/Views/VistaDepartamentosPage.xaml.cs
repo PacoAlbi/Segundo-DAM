@@ -1,3 +1,5 @@
+using CRUD_API.ViewModels;
+
 namespace CRUD_Personas.Views;
 
 public partial class VistaDepartamentosPage : ContentPage
@@ -7,12 +9,12 @@ public partial class VistaDepartamentosPage : ContentPage
 		InitializeComponent();
 	}
     /// <summary>
-    /// Precondiciones: No tiene.
-    /// Método para actualizar la vista después de insertar o actualizar.
-    /// Postcondiciones: No tiene.
+    /// Hago la llamada al constructor de forma asíncrona y le paso el ViewModel a la vista por aqui.
     /// </summary>
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
+        VistaDepartamentosVM viewModel = await VistaDepartamentosVM.BuildViewModelAsync();
+        this.BindingContext = viewModel;
         InitializeComponent();
         base.OnAppearing();
     }

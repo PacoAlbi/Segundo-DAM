@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUD_Personas.Views.EditarPersonasPage"
              xmlns:VM="clr-namespace:CRUD_API.ViewModels"
-             Title="EditarPersonasPage">
-    <ContentPage.BindingContext>
-        <VM:AgregarEditarPersonaVM/>
-    </ContentPage.BindingContext>
+             x:DataType="VM:AgregarEditarPersonaVM"
+             Title="Editar Personas">
     <VerticalStackLayout Spacing="10">
         <HorizontalStackLayout Spacing="10" Padding="10"
                                VerticalOptions="Center"
@@ -59,9 +57,11 @@
         <HorizontalStackLayout Spacing="10" Padding="10"
                                VerticalOptions="Center"
                                HorizontalOptions="Center">
-            <Picker ItemsSource="{Binding ListaDepartamentos}" 
-                    ItemDisplayBinding="{Binding Nombre}"
-                    SelectedItem="{Binding Departamento}"
+            <Picker 
+                    ItemsSource="{Binding ListaDepartamentos}" 
+                    ItemDisplayBinding="{Binding nombre}"
+                    SelectedIndex="{Binding Persona.idDepartamento}"
+                    SelectedItem="{Binding Departamento, Mode=TwoWay}"
                     WidthRequest="200"
                     BackgroundColor="Aquamarine"/>
             

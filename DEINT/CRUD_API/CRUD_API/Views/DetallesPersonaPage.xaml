@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUD_Personas.Views.DetallesPersonaPage"
              xmlns:VM="clr-namespace:CRUD_API.ViewModels"
+             x:DataType="VM:AgregarEditarPersonaVM"
              Title="Detalles de la Persona">
-    <ContentPage.BindingContext>
-        <VM:AgregarEditarPersonaVM/>
-    </ContentPage.BindingContext>
     <HorizontalStackLayout>
         <VerticalStackLayout>
         <Image Source="{Binding Persona.foto}" WidthRequest="200"/>

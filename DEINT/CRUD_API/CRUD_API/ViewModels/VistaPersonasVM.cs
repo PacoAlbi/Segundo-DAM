@@ -9,7 +9,7 @@ namespace CRUD_API.ViewModels
     /// <summary>
     /// ViewModel para mostrar en la vista de la lista de personas con sus nombres de departamentos.
     /// </summary>
-    public class VistaPersonasVM : clsVMBase
+    public class VistaPersonasVM : clsVMBase //IQueryAttributable
     {
         #region Atributos
         private DelegateCommand crearCommand;
@@ -20,12 +20,13 @@ namespace CRUD_API.ViewModels
         private ObservableCollection<clsPersona> listadoDePersonasCompleto;
         private ObservableCollection<clsPersona> listadoDePersonasMostrado;
         private clsPersona personaSeleccionada;
-        private string cadena;
+        private String busqueda;
         #endregion
 
         #region Constructores
-        public VistaPersonasVM()
+        private VistaPersonasVM(ObservableCollection<clsPersona> lista)
         {
+            listadoDePersonasCompleto = lista;
             crearCommand = new DelegateCommand(CrearCommand_Executed);
             buscarCommand = new DelegateCommand(BuscarCommand_Executed);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
@@ -33,36 +34,40 @@ namespace CRUD_API.ViewModels
             detallesCommand = new DelegateCommand(DetallesCommand_Execute, DetallesCommand_CanExecute);
             listadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoDePersonasCompleto);
             personaSeleccionada = null;
-            cadena = null;
-            LoadData();
+            busqueda = null;        
+            //LoadData();
         }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Constructor asíncrono que recibe la lista, y la manda al constructor privado.
+        /// Postcondiciones: Se construye la página.
+        /// </summary>
+        /// <returns>Devuelve la lista de la api una vez recibida.</returns>
         public static async Task<VistaPersonasVM> BuildViewModelAsync()
         {
             ObservableCollection<clsPersona> listaAsincrona = new ObservableCollection<clsPersona>(await clsListadoPersonasBL.getListadoPersonasBL());
             return new VistaPersonasVM(listaAsincrona);
         }
-        private VistaPersonasVM(ObservableCollection<clsPersona> lista)
-        {
-            listadoDePersonasCompleto = lista;
-        }
-
-        private async void LoadData()
-        {
-            listadoDePersonasCompleto = new ObservableCollection<clsPersona>(await clsListadoPersonasBL.getListadoPersonasBL());
-            NotifyPropertyChanged(nameof(listadoDePersonasCompleto));
-        }
+        //Esta es la forma fácil de hacer el constructor asíncrono, pero la no recomendada.
+        //private async void LoadData()
+        //{
+        //    listadoDePersonasCompleto = new ObservableCollection<clsPersona>(await clsListadoPersonasBL.getListadoPersonasBL());
+        //    NotifyPropertyChanged(nameof(listadoDePersonasCompleto));
+        //}
         #endregion
 
         #region Propiedades
-        public string Cadena
+        public String Busqueda
         {
             get
-            { return cadena; }
+            { return busqueda; }
             set
             {
-                cadena = value;
-                NotifyPropertyChanged();
-                buscarCommand.RaiseCanExecuteChanged();
+                busqueda = value;
+                NotifyPropertyChanged(nameof(busqueda));
+
+                //buscarCommand.RaiseCanExecuteChanged();
+                BuscarPersonas();
             }
         }
         public clsPersona PersonaSeleccionada
@@ -132,7 +137,7 @@ namespace CRUD_API.ViewModels
                 ListadoDePersonasMostrado.Remove(PersonaSeleccionada);
                 try
                 {
-                    clsManejadoraPersonas.borrarPersonaBL(PersonaSeleccionada.id);
+                    await clsManejadoraPersonas.borrarPersonaBL(PersonaSeleccionada.id);
                     PersonaSeleccionada = null;
                     EliminarCommand.RaiseCanExecuteChanged();
                     EditarCommand.RaiseCanExecuteChanged();
@@ -220,34 +225,24 @@ namespace CRUD_API.ViewModels
         #region Metodos
         /// <summary>
         /// Precondiciones: No tiene.
-        /// Método para buscar dentro de la lista una persona o varias personas en concreto mediante una cadena que buscará dentro de la lista.
+        /// Método para buscar dentro de la lista una persona o varias personas en concreto mediante una busqueda que buscará dentro de la lista.
         /// Postcondiciones: Devuelve una ObservableCollection con las coincidencias.
         /// </summary>
         /// <returns>ObservableCollection</returns>
-        private ObservableCollection<clsPersona> BuscarPersonas()
+        public async void BuscarPersonas()
         {
-            List<clsPersona> listaAuxiliar = new List<clsPersona>(listadoDePersonasCompleto);
-            ListadoDePersonasMostrado.Clear();
-            ListadoDePersonasMostrado.Add(listaAuxiliar.Find(x => x.nombre.ToLower().Contains(Cadena) || x.apellidos.ToLower().Contains(Cadena)));
-            //OTRO MÉTODO DE BUSQUEDA PERO ME DA EL MISMO RESULTADO QUE EL MIO, HAY QUE REVISARLO.
-            //if (string.IsNullOrEmpty(Cadena))
-            //{
-            //    ListadoDePersonasMostrado = listadoDePersonasCompleto;
-            //}
-            //else
-            //{
-            //    List<clsPersona> listadoPersonasMostrado = new List<clsPersona>();
+            //Compruebo primero si está vació.
+            if (String.IsNullOrEmpty(Busqueda) || Busqueda.Equals(" "))
+            {
+                ListadoDePersonasMostrado = listadoDePersonasCompleto;
+            }
+            else
+            {
+                List<clsPersona> listaAuxiliar = new List<clsPersona>(listadoDePersonasCompleto);
+                ListadoDePersonasMostrado.Clear();
+                ListadoDePersonasMostrado.Add(listaAuxiliar.Find(x => x.nombre.ToLower().Contains(Busqueda) || x.apellidos.ToLower().Contains(Busqueda)));
+            }
 
-            //        foreach (clsPersona persona in ListadoDePersonasMostrado)
-            //        {
-            //            if (persona.nombre.ToLower().StartsWith(Cadena.ToLowerInvariant()) || persona.apellidos.ToLower().StartsWith(Cadena.ToLowerInvariant()))
-            //            {
-            //                listadoPersonasMostrado.Add(persona);
-            //            }
-            //        }
-            //    ListadoDePersonasMostrado = new ObservableCollection<clsPersona>(listadoPersonasMostrado);
-            //}
-            return ListadoDePersonasMostrado;
         }
         //private void actualizarLista()
         //{

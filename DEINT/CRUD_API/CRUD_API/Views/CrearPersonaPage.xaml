@@ -4,9 +4,6 @@
              x:Class="CRUD_Personas.Views.CrearPersonaPage"
              xmlns:VM="clr-namespace:CRUD_API.ViewModels"
              Title="Añadir Persona">
-    <ContentPage.BindingContext>
-        <VM:AgregarEditarPersonaVM/>
-    </ContentPage.BindingContext>
     <VerticalStackLayout Spacing="10">
         <HorizontalStackLayout Spacing="10" Padding="10"
                                VerticalOptions="Center"

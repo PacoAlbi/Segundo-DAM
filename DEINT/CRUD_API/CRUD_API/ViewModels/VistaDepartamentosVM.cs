@@ -23,16 +23,27 @@ namespace CRUD_API.ViewModels
         #endregion
 
         #region Constructores
-        public VistaDepartamentosVM()
+        private VistaDepartamentosVM(ObservableCollection<clsDepartamentos> lista)
         {
+            listadoDeDepartamentosCompleto = lista;
             crearCommand = new DelegateCommand(CrearCommand_Executed);
             buscarCommand = new DelegateCommand(BuscarCommand_Executed);
             eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
             editarCommand = new DelegateCommand(EditarCommand_Executed, EditarCommand_CanExecute);
-            listadoDeDepartamentosCompleto = new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosBL.getListadoDepartamentosBL());
             listadoDeDepartamentosMostrado = new ObservableCollection<clsDepartamentos>(listadoDeDepartamentosCompleto);
             departamentoSeleccionado = null;
             cadena = null;
+        }
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Constructor asíncrono que recibe la lista, y la manda al constructor privado.
+        /// Postcondiciones: Se construye la página.
+        /// </summary>
+        /// <returns>Devuelve la lista de la api una vez recibida.</returns>
+        public static async Task<VistaDepartamentosVM> BuildViewModelAsync()
+        {
+            ObservableCollection<clsDepartamentos> listaAsincrona = new ObservableCollection<clsDepartamentos>(await clsListadoDepartamentosBL.getListadoDepartamentosBL());
+            return new VistaDepartamentosVM(listaAsincrona);
         }
         #endregion
 
@@ -104,7 +115,7 @@ namespace CRUD_API.ViewModels
         //private bool BuscarCommand_CanExecute()
         //{
         //    bool btnBuscador = true;
-        //    if (String.IsNullOrEmpty(cadena))
+        //    if (String.IsNullOrEmpty(busqueda))
         //    {
         //        btnBuscador = false;
         //    }
@@ -124,7 +135,7 @@ namespace CRUD_API.ViewModels
                 listadoDeDepartamentosMostrado.Remove(DepartamentoSeleccionado);
                 try
                 {
-                    clsManejadoraDepartamentos.borrarDepartamentosBL(DepartamentoSeleccionado.id);
+                    await clsManejadoraDepartamentos.borrarDepartamentosBL(DepartamentoSeleccionado.id);
                     DepartamentoSeleccionado = null;
                     EliminarCommand.RaiseCanExecuteChanged();
                     EditarCommand.RaiseCanExecuteChanged();
@@ -184,7 +195,7 @@ namespace CRUD_API.ViewModels
         #region Metodos
         /// <summary>
         /// Precondiciones: No tiene.
-        /// Método que busca las coincidencias de la cadena en la lista de departamentos.
+        /// Método que busca las coincidencias de la busqueda en la lista de departamentos.
         /// Postcondiciones: Devuelve una ObservableCollection con las coincidencias.
         /// </summary>
         /// <returns>ObservableCollection</returns>

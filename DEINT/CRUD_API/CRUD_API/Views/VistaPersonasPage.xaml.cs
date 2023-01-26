@@ -7,18 +7,15 @@ public partial class VistaPersonasPage : ContentPage
 	public VistaPersonasPage()
 	{
 		InitializeComponent();
-       
 	}
     /// <summary>
-    /// Precondiciones: No tiene.
-    /// Método para actualizar la vista después de insertar o actualizar.
-    /// Postcondiciones: No tiene.
+    /// Hago la llamada al constructor de forma asíncrona y le paso el ViewModel a la vista por aqui.
     /// </summary>
     protected override async void OnAppearing()
     {
+        VistaPersonasVM viewModel = await VistaPersonasVM.BuildViewModelAsync();
+        BindingContext = viewModel;
         InitializeComponent();
-        this.BindingContext = await VistaPersonasVM.BuildViewModelAsync();
-        //((VistaPersonasVM)(this.BindingContext)).actualizarLista(); Falta hacer el metodo acturalizar lista
         base.OnAppearing();
     }
 }
