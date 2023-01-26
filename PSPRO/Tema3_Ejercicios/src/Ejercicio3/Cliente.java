@@ -29,8 +29,7 @@ public class Cliente {
 
             do {
                 numero = leerNumero();
-                bufferedWriter.write(numero);
-                //bufferedWriter.newLine();
+                bufferedWriter.write(String.valueOf(numero));
                 bufferedWriter.flush();
                 acertado =  bufferedReader.readLine();
                 System.out.println("(Servidor) " + acertado + " numero mandado: " + numero);

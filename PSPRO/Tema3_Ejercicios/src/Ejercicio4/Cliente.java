@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Cliente {
     public static void main(String[] args) {
         int suma, numero;
-        Scanner sc = new Scanner("src/Ejercicio4/numeros.txt");
+        File file = new File("src/Ejercicio4/numeros.txt");
         try {
             //1.- Creacion del Socket del tipo Cliente
             System.out.println("(Cliente) Creamos Socket");
@@ -25,7 +25,8 @@ public class Cliente {
             InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
 
-            while (sc.hasNextInt()){
+            
+            while (){
                 numero = sc.nextInt();
                 bufferedWriter.write(numero);
                 bufferedWriter.newLine();

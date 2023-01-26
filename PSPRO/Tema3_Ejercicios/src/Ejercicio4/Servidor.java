@@ -47,7 +47,7 @@ public class Servidor {
                 socketCliente.close();
             }
         } catch (IOException e) {
-            System.err.println("ERROR: Error al crear el socket en el puerto 2500.");
+            System.err.println("ERROR: Error al crear el socket en el puerto 3000.");
             e.printStackTrace();
         }
     }

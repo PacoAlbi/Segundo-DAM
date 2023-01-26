@@ -39,13 +39,13 @@ public class Servidor {
                 outputStreamWriter = new OutputStreamWriter(os, StandardCharsets.UTF_8);
                 bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-
-                numero = bufferedReader.read();
-                bufferedReader.reset();
-                peticion = aciertaNumero(numero, numeroSecreto);
-                bufferedWriter.write(peticion);
-                bufferedWriter.newLine();
-                bufferedWriter.flush();
+                do{
+                    numero = Integer.parseInt(bufferedReader.readLine());
+                    peticion = aciertaNumero(numero, numeroSecreto);
+                    bufferedWriter.write(peticion);
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                }while (numero!=numeroSecreto);
 
 
                 // Cerramos los flujos de lectura y escritura
@@ -59,7 +59,7 @@ public class Servidor {
                 socketCliente.close();
             }
         } catch (IOException e) {
-            System.err.println("ERROR: Error al crear el socket en el puerto 2500.");
+            System.err.println("ERROR: Error al crear el socket en el puerto 2000.");
             e.printStackTrace();
         }
     }

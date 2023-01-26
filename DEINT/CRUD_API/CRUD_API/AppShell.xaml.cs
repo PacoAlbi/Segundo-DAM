@@ -1,4 +1,5 @@
-﻿namespace CRUD_API;
+﻿using CRUD_Personas.Views;
+namespace CRUD_API;
 
 public partial class AppShell : Shell
 {
