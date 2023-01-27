@@ -18,8 +18,6 @@
         <property name="current_session_context_class">thread</property>
         <property name="hbm2ddl.auto">update</property> <!-- Esto se para no tener que crear las tablas en la BBDD, se crean solas y se updatean si es necesario -->
         <!-- A partir de aquí hay que poner todas las clases que se vayan a usar -->
-        <mapping class="Entities.UsuariosEntity"/>
-        <mapping class="Entities.PostsEntity"/>
-        <mapping class="Entities.LikesEntity"/>
+        <mapping class="Entities.Profesores"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,14 +1,16 @@
-package DAO;
+package Conxion;
 
-import Entities.UsuariosEntity;
-import org.hibernate.*;
+import Entities.Profesores;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.query.Query;
+
 import java.util.List;
 
-public class ConectarConBBDD {
+public class Conexion {
     /**
      * Atributos de clase para poder usarlos durante la sesión de conexión al CRUD.
      */
@@ -22,7 +24,7 @@ public class ConectarConBBDD {
      */
     protected void setUp() {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // por defecto: hibernate.cfg.xml
+                .configure()
                 .build();
         try {
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
@@ -37,7 +39,7 @@ public class ConectarConBBDD {
      */
     public void abrirConexion() {
         setUp();
-        sesion = sessionFactory.openSession();1
+        sesion = sessionFactory.openSession();
         transaction = sesion.beginTransaction();
     }
     /**
@@ -64,10 +66,10 @@ public class ConectarConBBDD {
      * @throws Exception Lanza una excepción si algo falla.
      * Postcondiciones: No tiene.
      */
-    public void getUsuario(int id){
-        UsuariosEntity usuario = sesion.load(UsuariosEntity.class, id);
-        System.out.println(usuario);
-    }
+//    public void getUsuario(int id){
+//        UsuariosEntity usuario = sesion.load(UsuariosEntity.class, id);
+//        System.out.println(usuario);
+//    }
 
     /**+
      * Precondiciones: No tiene.
@@ -75,9 +77,15 @@ public class ConectarConBBDD {
      * @return List de usuarios.
      * Postcondiciones: Devuelve una lista de usuarios y todos sus datos.
      */
-    public List<UsuariosEntity> getLista(){
-        Query query = sesion.createQuery("FROM UsuariosEntity ");
-        return (List<UsuariosEntity>) query.list();
+//    public List<UsuariosEntity> getLista(){
+//        Query query = sesion.createQuery("FROM UsuariosEntity ");
+//        return (List<UsuariosEntity>) query.list();
+//    }
+    public void listarProfesorado (){
+        List<Profesores> lista = sesion.createQuery("select p from Profesores p").getResultList();
+        System.out.println(lista);
+        lista = sesion.getNamedQuery("listaPorNombre").setParameter("nombre", "Eva").getResultList();
+        System.out.println(lista);
     }
     /**
      * Precondiciones: Debe recibir un objeto.
@@ -97,12 +105,12 @@ public class ConectarConBBDD {
      * @param usuario Objeto usuario que actualizará.
      * Postcondiciones: Se actualiza el usuario.
      */
-    public void actualizar(UsuariosEntity usuario){
+    public void actualizar(Object obj){
         //UsuariosEntity persona = sesion.get(UsuariosEntity.class,usuario.getIdUsuario()); Esto es para recuperar a un usuario de una de las clases.
         //persona = usuario;
         //sesion.saveOrUpdate(persona);
         //sesion.merge(persona);
-        sesion.update(usuario);
+        sesion.update(obj);
     }
     /**
      * Precondiciones: Debe recibir un id válido.
@@ -111,8 +119,8 @@ public class ConectarConBBDD {
      * @param id Entero que representa el id.
      * Postcondiciones: Se elimina al usuario.
      */
-    public void borrar (int id){
-        UsuariosEntity usuario = sesion.get(UsuariosEntity.class,id);
+    public void borrar (Object obj, int id){
+        Object usuario = sesion.get(obj.getClass(),id);
         sesion.delete(usuario);
     }
 }
