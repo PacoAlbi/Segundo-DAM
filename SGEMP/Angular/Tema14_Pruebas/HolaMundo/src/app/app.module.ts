@@ -4,15 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablaPersonasComponent } from './components/tabla-personas/tabla-personas.component';
-import { FormularioPersonaComponent } from './component/formulario-persona/formulario-persona.component';
-import { ListadoCddComponent } from './component_listado/listado-cdd/listado-cdd.component';
+import { FormularioPersonaComponent } from './components/formulario-persona/formulario-persona.component';
+import { ListaPersonasComponent } from './components/lista-personas/lista-personas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TablaPersonasComponent,
     FormularioPersonaComponent,
-    ListadoCddComponent
+    ListaPersonasComponent
   ],
   imports: [
     BrowserModule,
