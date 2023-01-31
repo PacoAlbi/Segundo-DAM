@@ -3,11 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:EncuentraLasParejas.ViewModels"
              x:Class="EncuentraLasParejas.Views.TableroPage"
-             Title="Tablero de Juego">
+             Title="Encuentra las 9 parejas">
     <ContentPage.BindingContext>
         <model:TableroVM/>
     </ContentPage.BindingContext>
-    
+    <VerticalStackLayout HorizontalOptions="Center" >
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <VerticalStackLayout>
+                <Label Text="{Binding ContadorAciertos}"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="{Binding Segundos}"
+                   TextColor="Black"
+                   FontSize="45"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout HorizontalOptions="End">
+                <Button Command="{Binding ReiniciarPartida}"
+                   BackgroundColor="Aqua"
+                   Text="Reiniciar"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
     <CollectionView HorizontalOptions="Center" VerticalOptions="Start"
         ItemsLayout="VerticalGrid, 6" SelectionMode="Single"
         ItemsSource="{Binding BarajaMostrada}"
@@ -15,9 +30,11 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Image HeightRequest="200"
+                       WidthRequest="200"
                     Source="{Binding ImagenMostrada}"
                     Aspect="AspectFit"/>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
+    </VerticalStackLayout>
 </ContentPage>

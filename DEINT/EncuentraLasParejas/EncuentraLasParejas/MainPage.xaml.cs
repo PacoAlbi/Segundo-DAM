@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
     }
     private async void navegarRanking(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("Tablero");
+        await Shell.Current.GoToAsync("Ranking");
     }
 }
 

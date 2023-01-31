@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:EncuentraLasParejas.ViewModels"
+             x:Class="EncuentraLasParejas.Views.RankingPage"
+             Title="Ranking de Jugadores">
+    <ContentPage.BindingContext>
+        <model:RankingVM/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout HorizontalOptions="Center">
+        <ListView
+            ItemsSource="{Binding ListadoJugadores}"
+            HorizontalOptions="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame CornerRadius="20" BorderColor="Black">
+                            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
+                                <Label Text="Nombre:"/>
+                                <Label Text="{Binding Nombre}"/>
+                                <Label Text="Tiempo en segundos:"/>
+                                <Label Text="{Binding Tiempo}"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
