@@ -6,17 +6,17 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>EncuentraLasParejas</RootNamespace>
+		<RootNamespace>examenDavidCarvajal_UI</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>EncuentraLasParejas</ApplicationTitle>
+		<ApplicationTitle>examenDavidCarvajal_UI</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.encuentralasparejas</ApplicationId>
-		<ApplicationIdGuid>bf6583c7-085c-48ed-bd03-df770880ce78</ApplicationIdGuid>
+		<ApplicationId>com.companyname.examendavidcarvajal_ui</ApplicationId>
+		<ApplicationIdGuid>2F22D2AE-0D1C-4DF6-8C66-E5EB6D6D7594</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -39,6 +39,7 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -48,33 +49,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\background1.png" />
-	  <None Remove="Resources\Images\background2.png" />
-	  <None Remove="Resources\Images\background3.png" />
-	  <None Remove="Resources\Images\capitanamerica.png" />
-	  <None Remove="Resources\Images\deadpool.png" />
-	  <None Remove="Resources\Images\fondo.png" />
-	  <None Remove="Resources\Images\fondo2.jpg" />
-	  <None Remove="Resources\Images\hulk.png" />
-	  <None Remove="Resources\Images\ironMan.png" />
-	  <None Remove="Resources\Images\loky.png" />
-	  <None Remove="Resources\Images\missmarvel.png" />
-	  <None Remove="Resources\Images\spiderman.png" />
-	  <None Remove="Resources\Images\thor.png" />
-	  <None Remove="Resources\Images\vision.png" />
-	  <None Remove="Resources\Images\viudaNegra.png" />
+	  <None Remove="Resources\Images\atst.jpg" />
+	  <None Remove="Resources\Images\babyjoda.jpg" />
+	  <None Remove="Resources\Images\kraytdragon.jpg" />
+	  <None Remove="Resources\Images\mandalorian.jpg" />
+	  <None Remove="Resources\Images\moffgideon.jpg" />
+	  <None Remove="Resources\Images\reverso.jpg" />
+	  <None Remove="Resources\Images\spider.jpg" />
+	  <None Remove="Resources\Images\tradoshan.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BL\BL.csproj" />
-	  <ProjectReference Include="..\Entidades\Entidades.csproj" />
+	  <Compile Update="View\vistaTableroCartas.xaml.cs">
+	    <DependentUpon>VistaTableroCartas.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\RankingPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\TableroPage.xaml">
+	  <MauiXaml Update="View\VistaTableroCartas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

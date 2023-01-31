@@ -9,10 +9,14 @@
         <Button 
             Text="RANKING" 
             BackgroundColor="LightCoral"
-            Clicked="navegarRanking"/>
+            Clicked="navegarRanking"
+            WidthRequest="200"
+            HeightRequest="100"/>
         <Button 
             Text="JUGAR" 
             BackgroundColor="LightGreen"
-            Clicked="navegarTablero"/>
+            Clicked="navegarTablero"
+            WidthRequest="200"
+            HeightRequest="100"/>
     </VerticalStackLayout>
 </ContentPage>

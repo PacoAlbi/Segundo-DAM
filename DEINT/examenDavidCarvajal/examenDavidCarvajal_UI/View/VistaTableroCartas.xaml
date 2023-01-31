@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examenDavidCarvajal_UI.View.VistaTableroCartas"
+             Title="VistaTableroCartas"
+             xmlns:VM="clr-namespace:examenDavidCarvajal_UI.ViewModel">
+    <ContentPage.BindingContext>
+        <VM:tableroCartasVM/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <CollectionView ItemsLayout="VerticalGrid, 3" SelectionMode="Single" 
+                    ItemsSource="{Binding Cartas}" SelectedItem="{Binding CartaSeleccionada}"
+                    SelectionChangedCommand="{Binding SeleccionarCarta}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding ImagenMostrada}" MaximumHeightRequest="200" MaximumWidthRequest="200" 
+                       Aspect="Fill"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Label Text="Cartas buenas: " FontAttributes="Bold"/>
+            <Label Text="{Binding CartasDesbloqueadasBuenas}"/>
+            <Label Text="-"/>
+            <Label Text="Cartas malas: " FontAttributes="Bold"/>
+            <Label Text="{Binding CartasDesbloqueadasMalas}"/>
+        </HorizontalStackLayout>    
+    </VerticalStackLayout>
+</ContentPage>

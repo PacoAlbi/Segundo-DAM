@@ -1,15 +1,8 @@
 ﻿using BL.Manejadora;
 using EncuentraLasParejas.Models;
 using EncuentraLasParejas.ViewModels.Utilidades;
-using EncuentraLasParejas.Views;
 using Entidades;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EncuentraLasParejas.ViewModels
 {
@@ -25,11 +18,13 @@ namespace EncuentraLasParejas.ViewModels
         private ObservableCollection<Carta> barajaMostrada;
         private bool haySeleccionada = false;
         private DelegateCommand reiniciarPartida;
+        private bool seguir;
         #endregion
 
         #region Constructores
         public TableroVM()
         {
+            Seguir = true;
             cronometro();
             Segundos = 60;
             ContadorFallos = 0;
@@ -49,40 +44,80 @@ namespace EncuentraLasParejas.ViewModels
             }
             set
             {
+                //Pillo la carta.
                 cartaSeleccionada = value;
+                //Muestro la imagen para que se vea.
                 cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Anverso;
-
+                //Compruebo que haya alguna seleccionada antes.
                 if (!haySeleccionada)
                 {
+                    //Si no la hay, la pongo en una auxiliar para seguir mostrándola.
                     cartaAuxiliar = cartaSeleccionada;
+                    //Aviso que ya hay una seleccionada.
                     haySeleccionada = true;
                 }
+                //Como ya hay una visible, compruebo si se ha acertado en la segunda.
                 else if (cartaSeleccionada.ImagenMostrada.Equals(cartaAuxiliar.ImagenMostrada))
                 {
+                    //Aumento el contador de aciertos.
                     contadorAciertos++;
+                    //Notifico a la vista el cambio.
+                    NotifyPropertyChanged(nameof(ContadorAciertos));
+                    //Aviso que la siguiente es nueva pareja.
                     haySeleccionada = false;
+                    //Compruebo si se han alcanzado las condiciones de victoria.
+                    comprobarPartida();
                 }
+                //Si no se ha acertado.
                 else
                 {
-
-                    cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Anverso;
-                    //NotifyPropertyChanged(nameof(CartaSeleccionada));
-                    var t = Task.Run(async delegate
-
-                    {
-                        
-                        await Task.Delay(1000);
-                        cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
-                        cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;
-                    });
-                    t.Wait();
-
+                    //var t = Task.Run(async delegate ESTE NO FUNCIONA
+                    //{
+                    //    await Task.Delay(1000);
+                    //    cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
+                    //    cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;
+                    //});
+                    //t.Wait();  
+                    //Device.StartTimer(TimeSpan.FromSeconds(1), () => ESTE ME DICE QUE ESTA OBSOLETO
+                    //{
+                    //    vistazo--;
+                    //    if (vistazo == 0)
+                    //    {
+                    //        cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
+                    //        NotifyPropertyChanged(nameof(cartaAuxiliar));
+                    //        cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;
+                    //        return false;
+                    //    }
+                    //    else
+                    //    {
+                    //        return true;
+                    //    }
+                    //}); 
+                    //Creo un contador de tiempo
+                    int vistazo = 1;
+                    //Inicio una variable de tiempo.
+                    var VistazoTimer = Application.Current.Dispatcher.CreateTimer();
+                    //Ajusto el intervalo de visualizado.
+                    VistazoTimer.Interval = TimeSpan.FromSeconds(1);
+                    //Resto el tiempo, doy la vuelta a las cartas y notifico el cambio.
+                    VistazoTimer.Tick += (s, e) => {
+                        vistazo--;
+                        if (vistazo == 0)
+                        {
+                            cartaAuxiliar.ImagenMostrada = cartaAuxiliar.Reverso;
+                            NotifyPropertyChanged(nameof(cartaAuxiliar));
+                            cartaSeleccionada.ImagenMostrada = cartaSeleccionada.Reverso;                         
+                        }                  
+                    };
+                    //Inicio el tiempo.
+                    VistazoTimer.Start();
+                    //Actualizo el contador de fallos.
                     contadorFallos++;
+                    //Aviso que la siguiente es nueva pareja.
                     haySeleccionada = false;
+                    //Compruebo si se han alcanzado las condiciones de victoria.
+                    comprobarPartida();
                 }
-                cartaSeleccionada = null;
-
-
             }
         }
         public int Segundos { get { return segundos; } set { segundos = value; NotifyPropertyChanged(nameof(Segundos)); } }
@@ -100,6 +135,7 @@ namespace EncuentraLasParejas.ViewModels
         public DelegateCommand ReiniciarPartida { get { return reiniciarPartida; } }
         public int ContadorFallos { get { return contadorFallos; } set { contadorFallos = value; } }
         public int ContadorAciertos { get { return contadorAciertos; } set { contadorAciertos = value; } }
+        public bool Seguir { get { return seguir; } set { seguir = value; } }
         #endregion
 
         #region Commands
@@ -109,9 +145,10 @@ namespace EncuentraLasParejas.ViewModels
         /// Postcondiciones: No tiene.
         /// </summary>
         private async void ReiniciarPartida_Executed()
-        {
-            await Shell.Current.GoToAsync("..");
-            //Application.Current.MainPage = new TableroPage();
+        {       
+            Seguir = false;
+            Application.Current.MainPage = new AppShell();
+            await Shell.Current.GoToAsync("//TableroPage");
         }
         #endregion
         #region Métodos
@@ -124,13 +161,14 @@ namespace EncuentraLasParejas.ViewModels
         {
             if (ContadorAciertos == 9)
             {
+                Seguir = false;
                 clsJugador jugador = new clsJugador();
                 jugador.Tiempo = (60 - Segundos);
                 jugador.Nombre = await Application.Current.MainPage.DisplayPromptAsync("¡Enhorabuena!", "Ha encontrado las 9 parejas en " + jugador.Tiempo + " segundos.", "Guardar", "Cancelar", "Introduzca su nombre");
-                clsManejadoraBL.insertarJugadorBL(jugador);
-                await Shell.Current.GoToAsync("..");
+                clsManejadoraBL.insertarJugadorBL(jugador);               
+                Application.Current.MainPage = new AppShell();
             }
-            else if (ContadorFallos == 5)
+            else if (ContadorFallos == 16)
             {
                 preguntarJugar("Lo siento, ha fallado demasiadas veces.");
             }
@@ -142,25 +180,27 @@ namespace EncuentraLasParejas.ViewModels
         /// </summary>
         private void hacerBaraja()
         {
-            baraja = new ObservableCollection<Carta>();
-            baraja.Add(new Carta("capitanamerica.png", "background2.png"));
-            baraja.Add(new Carta("capitanamerica.png", "background2.png"));
-            baraja.Add(new Carta("hulk.png", "background2.png"));
-            baraja.Add(new Carta("hulk.png", "background2.png"));
-            baraja.Add(new Carta("ironman.png", "background2.png"));
-            baraja.Add(new Carta("ironman.png", "background2.png"));
-            baraja.Add(new Carta("spiderman.png", "background2.png"));
-            baraja.Add(new Carta("spiderman.png", "background2.png"));
-            baraja.Add(new Carta("thor.png", "background2.png"));
-            baraja.Add(new Carta("thor.png", "background2.png"));
-            baraja.Add(new Carta("viudanegra.png", "background2.png"));
-            baraja.Add(new Carta("viudanegra.png", "background2.png"));
-            baraja.Add(new Carta("missmarvel.png", "background2.png"));
-            baraja.Add(new Carta("missmarvel.png", "background2.png"));
-            baraja.Add(new Carta("vision.png", "background2.png"));
-            baraja.Add(new Carta("vision.png", "background2.png"));
-            baraja.Add(new Carta("deadpool.png", "background2.png"));
-            baraja.Add(new Carta("deadpool.png", "background2.png"));
+            baraja = new ObservableCollection<Carta>
+            {
+                new Carta("capitanamerica.png", "background2.png"),
+                new Carta("capitanamerica.png", "background2.png"),
+                new Carta("hulk.png", "background2.png"),
+                new Carta("hulk.png", "background2.png"),
+                new Carta("ironman.png", "background2.png"),
+                new Carta("ironman.png", "background2.png"),
+                new Carta("spiderman.png", "background2.png"),
+                new Carta("spiderman.png", "background2.png"),
+                new Carta("thor.png", "background2.png"),
+                new Carta("thor.png", "background2.png"),
+                new Carta("viudanegra.png", "background2.png"),
+                new Carta("viudanegra.png", "background2.png"),
+                new Carta("loky.png", "background2.png"),
+                new Carta("loky.png", "background2.png"),
+                new Carta("vision.png", "background2.png"),
+                new Carta("vision.png", "background2.png"),
+                new Carta("deadpool.png", "background2.png"),
+                new Carta("deadpool.png", "background2.png")
+            };
         }
         /// <summary>
         /// Precondiciones: No tiene.
@@ -191,10 +231,15 @@ namespace EncuentraLasParejas.ViewModels
                     preguntarJugar("El tiempo se ha agotado");
                     return false;
                 }
+                else if (!Seguir)
+                {        
+                    return false;
+                }
                 else
                 {
                     return true;
                 }
+                
             });
         }
         /// <summary>
@@ -205,18 +250,17 @@ namespace EncuentraLasParejas.ViewModels
         /// <param name="mensaje">String con el mensaje</param>
         private async void preguntarJugar(string mensaje)
         {
+            Seguir = false;
             bool volverAjugar = await Application.Current.MainPage.DisplayAlert(mensaje, "¿Jugar otra partida?", "Sí", "No");
             if (volverAjugar)
             {
-                //Application.Current.MainPage = new TableroPage();
-                await Shell.Current.GoToAsync("///TableroPage");
+                Application.Current.MainPage = new AppShell();
+                await Shell.Current.GoToAsync("//TableroPage");
             }
             else
-            {
-                //await Shell.Current.GoToAsync("..");
-                await Shell.Current.GoToAsync("//MainPage");
-                //Application.Current.Quit();
-            }
+            {                
+                Application.Current.MainPage = new AppShell();
+            }           
         }
         #endregion
     }

@@ -3,28 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:EncuentraLasParejas.ViewModels"
              x:Class="EncuentraLasParejas.Views.RankingPage"
-             Title="Ranking de Jugadores">
+             Title="Ranking de Jugadores"
+             BackgroundImageSource="fondo.png">
     <ContentPage.BindingContext>
         <model:RankingVM/>
     </ContentPage.BindingContext>
-    <VerticalStackLayout HorizontalOptions="Center">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Frame VerticalOptions="Center" HorizontalOptions="Center" Padding="20" HeightRequest="400">
         <ListView
             ItemsSource="{Binding ListadoJugadores}"
             HorizontalOptions="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Frame CornerRadius="20" BorderColor="Black">
-                            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
-                                <Label Text="Nombre:"/>
-                                <Label Text="{Binding Nombre}"/>
-                                <Label Text="Tiempo en segundos:"/>
-                                <Label Text="{Binding Tiempo}"/>
+                        <ViewCell>
+                            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                                <Label Text="Nombre:" FontSize="30"/>
+                                <Label Text="{Binding Nombre}" TextColor="Blue" FontSize="30"/>
+                                <Label Text="Tiempo en segundos:" FontSize="30"/>
+                                <Label Text="{Binding Tiempo}" TextColor="Red" FontSize="30"/>
                             </HorizontalStackLayout>
-                        </Frame>
-                    </ViewCell>
+                        </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>
