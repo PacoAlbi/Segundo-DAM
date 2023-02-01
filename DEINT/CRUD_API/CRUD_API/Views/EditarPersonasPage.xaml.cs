@@ -11,11 +11,12 @@ public partial class EditarPersonasPage : ContentPage
     /// <summary>
     /// Hago la llamada al constructor de forma asíncrona y le paso el ViewModel a la vista por aqui.
     /// </summary>
-    protected override async void OnAppearing()
+    protected override void OnAppearing()
     {
-        AgregarEditarPersonaVM viewModel = await AgregarEditarPersonaVM.BuildViewModelAsync();
+        //AgregarEditarPersonaVM viewModel = await AgregarEditarPersonaVM.BuildViewModelAsync();
+        
         BindingContext = viewModel;
-        InitializeComponent();
+
         base.OnAppearing();
     }
 }

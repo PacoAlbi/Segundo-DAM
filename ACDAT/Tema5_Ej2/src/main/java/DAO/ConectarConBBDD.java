@@ -37,7 +37,7 @@ public class ConectarConBBDD {
      */
     public void abrirConexion() {
         setUp();
-        sesion = sessionFactory.openSession();1
+        sesion = sessionFactory.openSession();
         transaction = sesion.beginTransaction();
     }
     /**

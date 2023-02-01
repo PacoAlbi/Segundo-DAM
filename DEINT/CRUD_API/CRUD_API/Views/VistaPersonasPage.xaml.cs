@@ -16,7 +16,6 @@ public partial class VistaPersonasPage : ContentPage
         VistaPersonasVM viewModel = await VistaPersonasVM.BuildViewModelAsync();
         viewModel.Cargando = true;
         BindingContext = viewModel;
-        InitializeComponent();
         viewModel.Cargando = false;
         base.OnAppearing();
     }

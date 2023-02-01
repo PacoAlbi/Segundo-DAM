@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/java/Conxion/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/java/Entities/Alumnado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/java/Entities/Asignaturas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/java/Entities/Matricula.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/java/Entities/Profesores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/resources/Hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tema6Pruebas/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +118,10 @@
       <workItem from="1674806699840" duration="1547000" />
       <workItem from="1674808988035" duration="282000" />
       <workItem from="1674809416254" duration="15000" />
+      <workItem from="1675237507011" duration="6000" />
+      <workItem from="1675237529310" duration="6000" />
+      <workItem from="1675246176226" duration="41000" />
+      <workItem from="1675246255873" duration="32000" />
     </task>
     <servers />
   </component>
