@@ -51,10 +51,13 @@
 	  <None Remove="Resources\Images\background1.png" />
 	  <None Remove="Resources\Images\background2.png" />
 	  <None Remove="Resources\Images\background3.png" />
-	  <None Remove="Resources\Images\capitanAmerica.png" />
+	  <None Remove="Resources\Images\capitanamerica.png" />
 	  <None Remove="Resources\Images\deadpool.png" />
+	  <None Remove="Resources\Images\fondo.png" />
+	  <None Remove="Resources\Images\fondo2.jpg" />
 	  <None Remove="Resources\Images\hulk.png" />
 	  <None Remove="Resources\Images\ironMan.png" />
+	  <None Remove="Resources\Images\loky.png" />
 	  <None Remove="Resources\Images\missmarvel.png" />
 	  <None Remove="Resources\Images\spiderman.png" />
 	  <None Remove="Resources\Images\thor.png" />
@@ -68,6 +71,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\RankingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TableroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

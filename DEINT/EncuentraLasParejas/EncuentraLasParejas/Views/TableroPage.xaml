@@ -3,21 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:EncuentraLasParejas.ViewModels"
              x:Class="EncuentraLasParejas.Views.TableroPage"
-             Title="Tablero de Juego">
+             Title="Encuentra las 9 parejas"
+             BackgroundColor="LightBlue">
     <ContentPage.BindingContext>
         <model:TableroVM/>
     </ContentPage.BindingContext>
-    
-    <CollectionView HorizontalOptions="Center" VerticalOptions="Start"
-        ItemsLayout="VerticalGrid, 6" SelectionMode="Single"
-        ItemsSource="{Binding BarajaMostrada}"
-        SelectedItem="{Binding CartaSeleccionada}">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <Grid ColumnDefinitions="*,*,100" Padding="10">
+            <Label Text="Parejas Encontradas"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   Margin="80,0,0,0"/>
+            <Label Text="{Binding ContadorAciertos}"
+                   FontSize="45"
+                   HorizontalOptions="Center"/>
+            <Label Text="{Binding Segundos}"
+                   Grid.Column="1"
+                   TextColor="Black"
+                   FontSize="45"/>
+            <Button Command="{Binding ReiniciarPartida}"
+                    Grid.Column="2"
+                    BackgroundColor="RosyBrown"
+                    Text="Reiniciar"/>
+        </Grid>
+        <Frame Padding="10" BackgroundColor="DarkGreen">
+        <CollectionView HorizontalOptions="Center" VerticalOptions="Start"
+            ItemsLayout="VerticalGrid, 6" SelectionMode="Single"
+            ItemsSource="{Binding BarajaMostrada}"
+            SelectedItem="{Binding CartaSeleccionada}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Image HeightRequest="200"
+                       WidthRequest="200"
                     Source="{Binding ImagenMostrada}"
                     Aspect="AspectFit"/>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-    </CollectionView>
+        </CollectionView>
+        </Frame>
+    </VerticalStackLayout>
 </ContentPage>

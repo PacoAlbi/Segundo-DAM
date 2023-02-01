@@ -6,7 +6,6 @@
     xmlns:local="clr-namespace:EncuentraLasParejas"
     xmlns:views="clr-namespace:EncuentraLasParejas.Views"
     Shell.FlyoutBehavior="Disabled">
-
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
@@ -15,6 +14,8 @@
         Title="Tablero"
         ContentTemplate="{DataTemplate views:TableroPage}"
         Route="TableroPage" />
-    
-
+    <ShellContent
+        Title="Ranking"
+        ContentTemplate="{DataTemplate views:RankingPage}"
+        Route="RankingPage" />
 </Shell>

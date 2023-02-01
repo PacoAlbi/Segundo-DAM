@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ConectarConBBDD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/EditarPersonasPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DEINT/CRUD_API/CRUD_API/Views/VistaPersonasPage.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +56,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -118,10 +116,11 @@
       <workItem from="1674806699840" duration="1547000" />
       <workItem from="1674808988035" duration="282000" />
       <workItem from="1674809416254" duration="15000" />
-      <workItem from="1675237507011" duration="6000" />
-      <workItem from="1675237529310" duration="6000" />
-      <workItem from="1675246176226" duration="41000" />
-      <workItem from="1675246255873" duration="32000" />
+      <workItem from="1674993751534" duration="73000" />
+      <workItem from="1675192511303" duration="33000" />
+      <workItem from="1675192552299" duration="11000" />
+      <workItem from="1675192658235" duration="10000" />
+      <workItem from="1675192685840" duration="6000" />
     </task>
     <servers />
   </component>

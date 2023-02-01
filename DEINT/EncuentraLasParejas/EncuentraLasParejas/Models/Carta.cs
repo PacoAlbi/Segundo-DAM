@@ -1,17 +1,33 @@
-﻿namespace Entidades
+﻿using EncuentraLasParejas.ViewModels.Utilidades;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace EncuentraLasParejas.Models
 {
-    public class Carta
+    public class Carta : clsVMBase
     {
         #region Atributos
         private string anverso;
         private string reverso;
-        private string imagenMostrada;
+        private string imagenMostrada;       
         #endregion
 
         #region Propiedades
         public string Anverso { get { return anverso; } set { anverso = value; } }
         public string Reverso { get { return reverso; } set { reverso = value; } }
-        public string ImagenMostrada { get { return imagenMostrada; } set { imagenMostrada = value; } }
+        public string ImagenMostrada 
+        { 
+            get 
+            { 
+                return imagenMostrada; 
+            } 
+            set 
+            { 
+                //Notifico aquí el cambio de la imagen.
+                imagenMostrada = value;
+                NotifyPropertyChanged(nameof(ImagenMostrada));
+            } 
+        }
         #endregion
 
         #region Constructores
@@ -24,11 +40,10 @@
         }
         public Carta(Carta carta)
         {
-            anverso= carta.Anverso;
-            reverso= carta.Reverso;
+            anverso = carta.Anverso;
+            reverso = carta.Reverso;
             ImagenMostrada = carta.reverso;
         }
         #endregion
-
     }
 }

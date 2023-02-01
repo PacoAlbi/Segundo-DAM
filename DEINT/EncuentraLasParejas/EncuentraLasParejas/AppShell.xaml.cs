@@ -8,5 +8,7 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
         Routing.RegisterRoute("Tablero", typeof(TableroPage));
+        Routing.RegisterRoute("Ranking", typeof(RankingPage));
+        //Routing.RegisterRoute("Main", typeof(MainPage));       
     }
 }

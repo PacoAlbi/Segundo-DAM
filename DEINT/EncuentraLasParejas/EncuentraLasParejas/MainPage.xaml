@@ -2,16 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EncuentraLasParejas.MainPage"
-             BackgroundColor="LightYellow">
+             BackgroundColor="LightYellow"
+             Title="BIENVENIDO AL JUEGO DE LAS PAREJAS">
 
     <VerticalStackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
         <Button 
             Text="RANKING" 
             BackgroundColor="LightCoral"
-            Clicked="navegarRanking"/>
+            Clicked="navegarRanking"
+            WidthRequest="200"
+            HeightRequest="100"/>
         <Button 
             Text="JUGAR" 
             BackgroundColor="LightGreen"
-            Clicked="navegarTablero"/>
+            Clicked="navegarTablero"
+            WidthRequest="200"
+            HeightRequest="100"/>
     </VerticalStackLayout>
 </ContentPage>
