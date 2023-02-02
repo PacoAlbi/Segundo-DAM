@@ -12,12 +12,9 @@ public class ClienteTCP {
     public static void main(String[] args) {
 
         try {
-
             // 1.- Creacion del Socket de tipo cliente
             System.out.println("(Cliente) Creacion del socket");
             Socket socketCliente=new Socket(InetAddress.getLocalHost(),50000);
-
-
             // 2.- Abrir flujo de lectura y escritura de datos
             System.out.println("(Cliente) Abrimos flujos de lectura y escritura");
             InputStream is=socketCliente.getInputStream();

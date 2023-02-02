@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b91c263-72c2-44e3-9133-7ff9b12e7584" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/MensajesUDP/mensajeRecibido.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tema6/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tema6/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/out/production/Tema3Cliente_Servidor/Conexion_TCP/ClienteTCP.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/out/production/Tema3Cliente_Servidor/Conexion_TCP/ClienteTCP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/out/production/Tema3Cliente_Servidor/MensajesUDP/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/out/production/Tema3Cliente_Servidor/MensajesUDP/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/out/production/Tema3Cliente_Servidor/MensajesUDP/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/out/production/Tema3Cliente_Servidor/MensajesUDP/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/Conexion_TCP/ClienteTCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/Conexion_TCP/ClienteTCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/MensajesUDP/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/MensajesUDP/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/MensajesUDP/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PSPRO/Tema3Cliente_Servidor/src/MensajesUDP/Servidor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Paco/Documents/GitHub/Segundo-DAM/ACDAT/Tema6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -124,6 +132,9 @@
       <workItem from="1675273989932" duration="470000" />
       <workItem from="1675274594086" duration="420000" />
       <workItem from="1675275025130" duration="4896000" />
+      <workItem from="1675346207966" duration="3000" />
+      <workItem from="1675361838712" duration="2709000" />
+      <workItem from="1675371433926" duration="47000" />
     </task>
     <servers />
   </component>

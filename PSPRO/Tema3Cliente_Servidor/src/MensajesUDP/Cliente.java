@@ -4,42 +4,63 @@ import java.io.IOException;
 import java.net.*;
 
 public class Cliente {
+
+    //Creo las variables de clase.
+    private static DatagramSocket socket;
+    private static DatagramPacket packet;
+
     public static void main(String[] args) {
+        //Creo las variables.
         InetAddress direccion;
-        DatagramSocket socket;
-        DatagramPacket packet;
-        DatagramPacket packetRecibido;
-        byte[] buffer;
-        byte[] mensajeRecibido;
-        String linea;
         try {
+            System.out.println("Empieza el programa.");
+            //Pillo la dirección del cliente.
             direccion = InetAddress.getLocalHost();
-            System.out.println("Creacion del socket del cliente");
+            //Creo el socket de datagrama.
             socket = new DatagramSocket();
-            System.out.println("Introduce una cadena : ");
-            for (int i = 0; i < 10000; i++) {
-                linea = "Mensaje " + i;
-                buffer = linea.getBytes();
-                System.out.println("Creacion del datagrama del cliente");
-                packet = new DatagramPacket(buffer, buffer.length, direccion, 41500);
-                socket.send(packet);
-                mensajeRecibido = new byte[64];
-                packetRecibido = new DatagramPacket(mensajeRecibido, mensajeRecibido.length);
-                socket.receive(packetRecibido);
-                System.out.println("El valor de la cadena introducida es : " + new String(packetRecibido.getData()).trim());
-            }
-            linea = "Fin del mensaje";
-            buffer = linea.getBytes();
-            packet = new DatagramPacket(buffer, buffer.length, direccion, 41500);
-            socket.send(packet);
+            //Creo el bucle.
+            crearMensajes(direccion);
+            System.out.println("Programa finalizado con éxito.");
+            //Cierro la comunicación.
             socket.close();
         } catch (SocketException e) {
-            System.out.println("Error en la creacion del socket");
+            System.out.println("Error creando el socket");
             e.printStackTrace();
         } catch (UnknownHostException e) {
-            System.out.println("Error al obtener la ip local");
+            System.out.println("Error obteniendo ip local");
+        }
+    }
+    /**
+     * Precondiciones: Debe recibir una dirección a la que enviar los datos.
+     * Método que genera los mensajes mediante un bucle y los manda.
+     * Postcondiciones: No tiene.
+     * @param direccion Dirección del Host tipo InetAddress
+     */
+    private static void crearMensajes (InetAddress direccion){
+        String linea;
+        //Creo el buffer de escritura.
+        byte[] buffer;
+        try {
+            for (int i = 0; i < 10000; i++) {
+                //Creo el mensaje.
+                linea = "Mensaje: " + i;
+                //Transformo los datos a bytes.
+                buffer = linea.getBytes();
+                //Creo el paquete para enviar.
+                packet = new DatagramPacket(buffer, buffer.length, direccion, 60000);
+                //Mando el paquete.
+                socket.send(packet);
+            }
+            //Creo la última línea.
+            linea = "Fin";
+            //La transformo a bytes.
+            buffer = linea.getBytes();
+            //Creo el paquete para enviar.
+            packet = new DatagramPacket(buffer, buffer.length, direccion, 60000);
+            //Mando el paquete.
+            socket.send(packet);
         } catch (IOException e) {
-            System.out.println("Error en el envio del paquete");
+            System.out.println("Error enviando el paquete");
             e.printStackTrace();
         }
     }
