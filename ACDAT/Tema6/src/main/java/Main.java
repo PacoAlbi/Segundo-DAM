@@ -54,4 +54,9 @@ public class Main {
 
     @NamedQuery(name="listaAsignaturas", query="select a.nombre from AsignaturaEntity a")
     @NamedQuery(name="listaAsignaturas", query="from AsignaturaEntity a")
+    avg(...),
+    sum(...),
+    min(...),
+    max(...)
+    count(*), count(...), count(distinct ...), count(all...)
 }
