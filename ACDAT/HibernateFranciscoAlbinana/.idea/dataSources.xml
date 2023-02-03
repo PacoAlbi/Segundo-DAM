@@ -8,5 +8,16 @@
       <jdbc-url>jdbc:mysql://dns11036.phdns11.es:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Hibernate.cfg.xml/Hibernate" uuid="4849a8e9-3ad3-441e-8ee8-11955c0c72e8">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/falbinana/Desktop/Segundo-DAM/ACDAT/HibernateFranciscoAlbinana/src/main/resources/Hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://dns11036.phdns11.es:3306/ad2223_falbinana</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
