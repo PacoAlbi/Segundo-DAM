@@ -1061,141 +1061,173 @@ ad2223\\_falbinana|schema||ad2223_falbinana||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="333" parent="329" name="idLike">
-      <AutoIncrement>1003</AutoIncrement>
+    <table id="333" parent="325" name="tProfesores">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="334" parent="329" name="idLike">
+      <AutoIncrement>1019</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="334" parent="329" name="idPost">
+    <column id="335" parent="329" name="idPost">
       <DasType>int(11)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="335" parent="329" name="idUsuario">
+    <column id="336" parent="329" name="idUsuario">
       <DasType>int(11)|0s</DasType>
       <Position>3</Position>
     </column>
-    <foreign-key id="336" parent="329" name="FKsoih9vdtdyet68qdw9ukn2nqh">
+    <foreign-key id="337" parent="329" name="FKsoih9vdtdyet68qdw9ukn2nqh">
       <ColNames>idPost</ColNames>
       <RefColNames>idPost</RefColNames>
       <RefTableName>Posts</RefTableName>
     </foreign-key>
-    <foreign-key id="337" parent="329" name="FKrxetsvdmejll42kqgonbffcvn">
+    <foreign-key id="338" parent="329" name="FKrxetsvdmejll42kqgonbffcvn">
       <ColNames>idUsuario</ColNames>
       <RefColNames>idUsuario</RefColNames>
       <RefTableName>Usuarios</RefTableName>
     </foreign-key>
-    <index id="338" parent="329" name="PRIMARY">
+    <index id="339" parent="329" name="PRIMARY">
       <ColNames>idLike</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="339" parent="329" name="FKsoih9vdtdyet68qdw9ukn2nqh">
+    <index id="340" parent="329" name="FKsoih9vdtdyet68qdw9ukn2nqh">
       <ColNames>idPost</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="340" parent="329" name="FKrxetsvdmejll42kqgonbffcvn">
+    <index id="341" parent="329" name="FKrxetsvdmejll42kqgonbffcvn">
       <ColNames>idUsuario</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="341" parent="329" name="PRIMARY">
+    <key id="342" parent="329" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="342" parent="330" name="idPersona">
+    <column id="343" parent="330" name="idPersona">
       <AutoIncrement>2</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="343" parent="330" name="nombre">
+    <column id="344" parent="330" name="nombre">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="344" parent="330" name="saldo">
+    <column id="345" parent="330" name="saldo">
       <DasType>double|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="345" parent="330" name="PRIMARY">
+    <index id="346" parent="330" name="PRIMARY">
       <ColNames>idPersona</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="346" parent="330" name="PRIMARY">
+    <key id="347" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="347" parent="331" name="idPost">
-      <AutoIncrement>803</AutoIncrement>
+    <column id="348" parent="331" name="idPost">
+      <AutoIncrement>822</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="348" parent="331" name="Created_at">
+    <column id="349" parent="331" name="Created_at">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="349" parent="331" name="Updated_at">
+    <column id="350" parent="331" name="Updated_at">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="350" parent="331" name="idUsuario">
+    <column id="351" parent="331" name="idUsuario">
       <DasType>int(11)|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="351" parent="331" name="FK80e3ykgpye53m9cfmqqir1s6g">
+    <foreign-key id="352" parent="331" name="FK80e3ykgpye53m9cfmqqir1s6g">
       <ColNames>idUsuario</ColNames>
       <RefColNames>idUsuario</RefColNames>
       <RefTableName>Usuarios</RefTableName>
     </foreign-key>
-    <index id="352" parent="331" name="PRIMARY">
+    <index id="353" parent="331" name="PRIMARY">
       <ColNames>idPost</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="353" parent="331" name="FK80e3ykgpye53m9cfmqqir1s6g">
+    <index id="354" parent="331" name="FK80e3ykgpye53m9cfmqqir1s6g">
       <ColNames>idUsuario</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="354" parent="331" name="PRIMARY">
+    <key id="355" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="355" parent="332" name="idUsuario">
-      <AutoIncrement>602</AutoIncrement>
+    <column id="356" parent="332" name="idUsuario">
+      <AutoIncrement>611</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="356" parent="332" name="Apellidos">
+    <column id="357" parent="332" name="Apellidos">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="357" parent="332" name="Email">
+    <column id="358" parent="332" name="Email">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="358" parent="332" name="Nombre">
+    <column id="359" parent="332" name="Nombre">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="359" parent="332" name="Password">
+    <column id="360" parent="332" name="Password">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="360" parent="332" name="Username">
+    <column id="361" parent="332" name="Username">
       <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="361" parent="332" name="PRIMARY">
+    <index id="362" parent="332" name="PRIMARY">
       <ColNames>idUsuario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="362" parent="332" name="PRIMARY">
+    <key id="363" parent="332" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="364" parent="333" name="idProf">
+      <AutoIncrement>3</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="365" parent="333" name="ape1">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="366" parent="333" name="ape2">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="367" parent="333" name="nombre">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="368" parent="333" name="PRIMARY">
+      <ColNames>idProf</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="369" parent="333" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
