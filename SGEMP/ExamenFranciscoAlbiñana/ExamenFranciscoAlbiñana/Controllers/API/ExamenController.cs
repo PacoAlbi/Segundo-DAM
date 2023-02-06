@@ -22,13 +22,13 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
             return "value";
         }
 
-        // POST api/<ExamenController>
+        // POST api/<ExamenController> Insertar
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<ExamenController>/5
+        // PUT api/<ExamenController>/5 Actualizar
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
