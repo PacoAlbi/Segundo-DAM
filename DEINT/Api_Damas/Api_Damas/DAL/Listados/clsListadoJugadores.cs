@@ -37,7 +37,6 @@ namespace Api_Damas.DAL.Listados
                         miJugador = new clsJugador();
                         miJugador.nombre = (string)miLector["nombre"];
                         miJugador.password = (string)miLector["password"];
-                        miJugador.partidasJugadas = (List<clsSala>)miLector["partidasJugadas"];
                         listadoPersonasDAL.Add(miJugador);
                     }
                 }
@@ -54,7 +53,6 @@ namespace Api_Damas.DAL.Listados
             }
             return listadoPersonasDAL;
         }
-
         /// <summary>
         /// Precondiciones: Debe recivir el id de una persona.
         /// Busco en la Base de datos a un usuario pasando el id como parámetro.
@@ -85,7 +83,6 @@ namespace Api_Damas.DAL.Listados
                         miJugador = new clsJugador();
                         miJugador.nombre = (string)miLector["nombre"];
                         miJugador.password = (string)miLector["password"];
-                        miJugador.partidasJugadas = (List<clsSala>)miLector["partidasJugadas"];
                     }
                 }
                 miLector.Close();

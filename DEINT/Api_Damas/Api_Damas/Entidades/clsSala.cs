@@ -11,9 +11,11 @@ namespace Api_Damas.Entidades
         #region Attributes
         private int _codSala;
         private string _nombreSala;
-        private clsJugador _jugadorArriba;
-        private clsJugador _jugadorAbajo;
-        private long _tiempo;
+        //private clsJugador _jugadorArriba;
+        private string _jugadorArriba;
+        //private clsJugador _jugadorAbajo;
+        private string _jugadorAbajo;
+        private int _tiempo;
         private int _cantidadFichasArriba;
         private int _cantidadFichasAbajo;
         #endregion
@@ -21,16 +23,16 @@ namespace Api_Damas.Entidades
         #region Properties
         public int codSala { get { return _codSala; } set { _codSala = value; } }
         public string nombreSala { get { return _nombreSala; } set { _nombreSala = value; } }
-        public clsJugador jugadorArriba { get { return _jugadorArriba; } set { _jugadorArriba = value; } }
-        public clsJugador jugadorAbajo { get { return _jugadorAbajo; } set { _jugadorAbajo = value; } }
-        public long tiempo { get { return _tiempo; } set { _tiempo = value; } }
+        public string jugadorArriba { get { return _jugadorArriba; } set { _jugadorArriba = value; } }
+        public string jugadorAbajo { get { return _jugadorAbajo; } set { _jugadorAbajo = value; } }
+        public int tiempo { get { return _tiempo; } set { _tiempo = value; } }
         public int cantidadFichasArriba { get { return _cantidadFichasArriba; } set { _cantidadFichasArriba = value; } }
         public int cantidadFichasAbajo { get { return _cantidadFichasAbajo; } set { _cantidadFichasAbajo = value; } }
         #endregion
 
         #region Constructors
         public clsSala() { }
-        public clsSala(int _codSala, string _nombreSala, clsJugador _jugadorArriba, clsJugador _jugadorAbajo, long _tiempo, int _cantidadFichasArriba, int _cantidadFichasAbajo)
+        public clsSala(int _codSala, string _nombreSala, string _jugadorArriba, string _jugadorAbajo, int _tiempo, int _cantidadFichasArriba, int _cantidadFichasAbajo)
         {
             codSala = _codSala;
             nombreSala = _nombreSala;
@@ -40,7 +42,7 @@ namespace Api_Damas.Entidades
             cantidadFichasArriba = _cantidadFichasArriba;
             cantidadFichasAbajo = _cantidadFichasAbajo;
         }
-        public clsSala(int _codSala, string _nombreSala, clsJugador _jugadorArriba, clsJugador _jugadorAbajo, long _tiempo)
+        public clsSala(int _codSala, string _nombreSala, string _jugadorArriba, string _jugadorAbajo, int _tiempo)
         {
             codSala = _codSala;
             nombreSala = _nombreSala;

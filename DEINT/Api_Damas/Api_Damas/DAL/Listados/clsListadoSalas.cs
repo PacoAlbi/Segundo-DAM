@@ -16,7 +16,6 @@ namespace Api_Damas.DAL.Listados
         public static List<clsSala> getListadoDepartamentosDAL()
         {
             List<clsSala> listadoDepartamentosDAL = new List<clsSala>();
-
             clsMyConnection miConexion = new clsMyConnection();
             SqlConnection conexion = new SqlConnection();
             SqlCommand miComando = new SqlCommand();
@@ -25,7 +24,7 @@ namespace Api_Damas.DAL.Listados
             try
             {
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "SELECT * FROM Departamentos";
+                miComando.CommandText = "SELECT * FROM FROM Salas";
                 miComando.Connection = conexion;
                 miLector = miComando.ExecuteReader();
                 if (miLector.HasRows)
@@ -51,7 +50,6 @@ namespace Api_Damas.DAL.Listados
             }
             return listadoDepartamentosDAL;
         }
-
         /// <summary>
         /// Precondiciones: Debe recivbir el id de un departamento.
         /// Busco en la base de datos un departamento por su id.
@@ -66,21 +64,26 @@ namespace Api_Damas.DAL.Listados
             SqlConnection conexion = new SqlConnection();
             SqlCommand miComando = new SqlCommand();
             SqlDataReader miLector;
-            clsSala miDepartamento = null;
+            clsSala miSala = null;
             try
             {
                 miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = Id;
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "SELECT * FROM Departamentos WHERE id = @id";
+                miComando.CommandText = "SELECT * FROM Salas WHERE codSala = @id";
                 miComando.Connection = conexion;
                 miLector = miComando.ExecuteReader();
                 if (miLector.HasRows)
                 {
                     while (miLector.Read())
                     {
-                        miDepartamento = new clsDepartamentos();
-                        miDepartamento.id = miLector.GetInt32(0);
-                        miDepartamento.nombre = miLector.GetString(1);
+                        miSala = new clsSala();
+                        miSala.codSala = miLector.GetInt32(0);
+                        miSala.nombreSala = miLector.GetString(1);
+                        miSala.cantidadFichasArriba = miLector.GetString(2);
+                        miSala.cantidadFichasAbajo = miLector.GetString(3);
+                        miSala.tiempo = miLector.GetDouble(4);
+                        miSala.cantidadFichasArriba = miLector.GetInt32(5);
+                        miSala.cantidadFichasAbajo = miLector.GetInt32(6);
                     }
                 }
                 miLector.Close();
@@ -94,7 +97,7 @@ namespace Api_Damas.DAL.Listados
             {
                 throw;
             }
-            return miDepartamento;
+            return miSala;
         }
     }
 }
