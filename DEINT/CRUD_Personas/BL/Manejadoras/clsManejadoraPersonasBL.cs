@@ -14,9 +14,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="id">Entero que es el ID de la persona.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static async Task<HttpStatusCode> borrarPersonaBL(int id)
+        public static int borrarPersonaBL(int id)
         {
-            return await clsManejadoraPersonasDAL.borrarPersonaDAL(id);
+            return clsManejadoraPersonasDAL.borrarPersonaDAL(id);
         }
 
         /// <summary>
@@ -27,9 +27,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="persona">Persona para editar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static async Task<HttpStatusCode> editarPersonaBL(clsPersona persona)
+        public static int editarPersonaBL(clsPersona persona)
         {
-            return await clsManejadoraPersonasDAL.editarPersonaDAL(persona);
+            return clsManejadoraPersonasDAL.editarPersonaDAL(persona);
         }
 
         /// <summary>
@@ -40,9 +40,9 @@ namespace BL.Manejadoras
         /// </summary>
         /// <param name="persona">Persona a insertar.</param>
         /// <returns>Entero con el número de filas afectadas si las hay.</returns>
-        public static async Task<HttpStatusCode> insertarPersonasBL(clsPersona persona)
+        public static int insertarPersonasBL(clsPersona persona)
         {
-            return await clsManejadoraPersonasDAL.insertarPersonasDAL(persona);
+            return clsManejadoraPersonasDAL.insertarPersonasDAL(persona);
         }
     }
 }

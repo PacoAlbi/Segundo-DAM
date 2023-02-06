@@ -13,9 +13,9 @@ namespace BL.Listados
         /// Postcondiciones: Devuelve una lista de departamentos de la DAL.
         /// </summary>
         /// <returns>List de departamentos.</returns>
-        public static async Task<ObservableCollection<clsDepartamentos>> getListadoDepartamentosBL()
+        public static ObservableCollection<clsDepartamentos> getListadoDepartamentosBL()
         {
-            return new ObservableCollection<clsDepartamentos>(await clsListadoDepartamentosDAL.getListadoDepartamentosDAL());
+            return new ObservableCollection<clsDepartamentos>(clsListadoDepartamentosDAL.getListadoDepartamentosDAL());
         }
 
         /// <summary>
@@ -26,9 +26,9 @@ namespace BL.Listados
         /// </summary>
         /// <param name="Id"></param>
         /// <returns>Devuelvo un clsDepartamento si lo hemos encontrado.</returns>
-        public static async Task<clsDepartamentos> obtenerDepartamentoPorIdBL(int Id)
+        public static clsDepartamentos obtenerDepartamentoPorIdBL(int Id)
         {
-            return await clsListadoDepartamentosDAL.obtenerDepartamentoPorIdDAL(Id);
+            return clsListadoDepartamentosDAL.obtenerDepartamentoPorIdDAL(Id);
         }
     }
 }
