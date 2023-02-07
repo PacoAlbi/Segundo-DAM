@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using ExamenFranciscoAlbiñana.Models.ViewModels;
+using ExamenFranciscoAlbiñana.Models;
+using Microsoft.AspNetCore.Mvc;
+using BL.Manejadoras;
+using Entidades;
 
 namespace ExamenFranciscoAlbiñana.Controllers.API
 {
@@ -8,36 +10,27 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
     [ApiController]
     public class ExamenController : ControllerBase
     {
-        // GET: api/<ExamenController>
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Método que devuelve una lista de personas con departamento de la api.
+        /// Postcondiciones: Devuelve una lista de personas con departamento.
+        /// </summary>
+        /// <returns>List clsPersonaDep</returns>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<clsPersonasConNombreDpto> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new ListaPersonasNombreDptoVM().getListaPersonasConDpto();
         }
-
-        // GET api/<ExamenController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<ExamenController> Insertar
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<ExamenController>/5 Actualizar
+        /// <summary>
+        /// Precondiciones: No tiene.
+        /// Método que actualiza una persona en la api.
+        /// Postcondiciones: Devuelve una lista de personas con departamento.
+        /// </summary>
+        /// <param name="persona">clsPersona</param>
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put([FromBody] clsPersona persona)
         {
-        }
-
-        // DELETE api/<ExamenController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            clsManejadoraPersonas.editarPersonaBL(persona);
         }
     }
 }

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="js/EditarPersonaSelect.js"></script>
+    <title>Editar Persona</title>
+</head>
+<body>
+    <div id="divId">
+        <p>Indique el ID para actualizar</p>
+        <br />
+        <input type="text" id="txtId" />
+        <br />
+        <input type="button" value="Buscar persona" id="btnBuscar" />
+    </div>
+    <div id="divEditar" style="display: none">
+        <input type="text" id="txtIdEditar" hidden />
+        <br />
+        <p>Nombre</p>
+        <br />
+        <input type="text" id="txtNombre" />
+        <br />
+        <p>Apellidos</p>
+        <br />
+        <input type="text" id="txtApellidos" />
+        <br />
+        <p>Telefono</p>
+        <br />
+        <input type="text" id="txtTelefono" />
+        <br />
+        <p>Direccion</p>
+        <br />
+        <input type="text" id="txtDireccion" />
+        <br />
+        <p>Foto</p>
+        <input type="text" id="txtFoto" />
+        <br />
+        <p>Fecha nacimiento</p>
+        <br />
+        <input type="datetime" id="inputFecha" />
+        <br />
+        <p>IdDepartamento</p>
+        <br />
+        <input type="text" id="txtDepartamento" hidden/>
+
+        <select id="selectDpto">
+           
+        </select>
+
+        <br />
+        <input type="button" value="Crear persona" id="btnGuardar" />
+    </div>
+</body>
+</html>

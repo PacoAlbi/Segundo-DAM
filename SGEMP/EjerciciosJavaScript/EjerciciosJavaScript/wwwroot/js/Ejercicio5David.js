@@ -6,12 +6,8 @@ function Inicio(){
         comberitrNumeroEnImagen(hora.getHours(), "hora1", "hora2")
         comberitrNumeroEnImagen(hora.getMinutes(), "minuto1", "minuto2")
         comberitrNumeroEnImagen(hora.getSeconds(), "segundo1", "segundo2")
-
-
-
     }, 1000);
 }
-
 /**
  * Actualizara las imagenes en la vista, combirtiendo el numero en imagen, los cmapos seran donde se guardara el numero
  * @param {any} a

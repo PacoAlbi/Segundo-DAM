@@ -71,7 +71,7 @@ function updateModels(brand) {
 //        case "Pastas":
 //            listaPlatos = ["Macarrones", "Spaguetti", "Tallarines"];
 //            break;
-//    } 
+//    }
 //    //Recorremos la lista
 //    listaPlatos.forEach(function (plato) {
 //        var option = document.createElement('option')
@@ -81,3 +81,44 @@ function updateModels(brand) {
 //        platosSelect.appendChild(option);
 //    });
 //}
+//HECHO POR CHAT GPT
+//<select id="first-select">
+//    <option value="option1">Option 1</option>
+//    <option value="option2">Option 2</option>
+//    <option value="option3">Option 3</option>
+//</select>
+
+//<select id="second-select">
+//    <option value="suboption1">Suboption 1</option>
+//    <option value="suboption2">Suboption 2</option>
+//    <option value="suboption3">Suboption 3</option>
+//</select>
+
+//<script>
+//  const firstSelect = document.getElementById("first-select");
+//  const secondSelect = document.getElementById("second-select");
+
+//  firstSelect.addEventListener("change", function() {
+//    const selectedValue = firstSelect.value;
+//    let options = "";
+
+//    if (selectedValue === "option1") {
+//      options = `
+//        <option value="suboption1">Suboption 1</option>
+//        <option value="suboption2">Suboption 2</option>
+//      `;
+//    } else if (selectedValue === "option2") {
+//      options = `
+//        <option value="suboption2">Suboption 2</option>
+//        <option value="suboption3">Suboption 3</option>
+//      `;
+//    } else if (selectedValue === "option3") {
+//      options = `
+//        <option value="suboption3">Suboption 3</option>
+//        <option value="suboption1">Suboption 1</option>
+//      `;
+//    }
+
+//    secondSelect.innerHTML = options;
+//  });
+//</script>
