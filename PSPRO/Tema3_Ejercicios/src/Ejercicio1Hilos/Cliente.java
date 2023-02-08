@@ -37,8 +37,8 @@ public class Cliente {
                 bufferRecivir = new byte[64];
                 packetRecibir = new DatagramPacket(bufferRecivir, bufferRecivir.length);
                 socketRecibir.receive(packetRecibir);
-                mensaje = new String(packetRecibir.getData());
-                System.out.println(mensaje.trim());
+                mensaje = new String(packetRecibir.getData()).trim();
+                System.out.println(mensaje);
             } while (!mensaje.equals("¡Enhorabuena! Has acertado el número"));
             System.out.println("Enhorabuena! has acertado el número.");
             //Cierro la comunicación.

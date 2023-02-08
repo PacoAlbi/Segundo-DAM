@@ -15,6 +15,7 @@ public class Servidor {
         DatagramSocket socketRecibir;
         DatagramPacket packetEnviar;
         DatagramPacket packetRecibir;
+        int puertoCliente = 60000;
         int numero;
         String mensaje;
         //Creo el buffer de lectura.
@@ -22,7 +23,7 @@ public class Servidor {
         try {
             System.out.println("Leyendo datos.");
             //Creo el socket de datagrama.
-            socketRecibir = new DatagramSocket(60000);
+            socketRecibir = new DatagramSocket(puertoCliente);
             //Inicio el servidor.
             while (true) {
                 //Inicio el buffer de escritura.
