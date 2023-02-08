@@ -82,6 +82,7 @@ public class Gestor extends Thread {
             while (lectura != null){
                 if (lectura.split(" ")[0].equals(peticion)){
                     mensajeSalida = "La ip de " + peticion + " es " + lectura.split(" ")[1];
+                    break;
                 } else {
                     mensajeSalida = "Lo sentimos, dirección web no registrada.";
                 }

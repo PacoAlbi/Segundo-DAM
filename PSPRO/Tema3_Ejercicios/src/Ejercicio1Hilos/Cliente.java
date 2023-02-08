@@ -40,7 +40,7 @@ public class Cliente {
                 mensaje = new String(packetRecibir.getData()).trim();
                 System.out.println(mensaje);
             } while (!mensaje.equals("¡Enhorabuena! Has acertado el número"));
-            System.out.println("Enhorabuena! has acertado el número.");
+            System.out.println(mensaje);
             //Cierro la comunicación.
             socketEnviar.close();
             socketRecibir.close();
@@ -50,7 +50,8 @@ public class Cliente {
         } catch (UnknownHostException e) {
             System.out.println("Error obteniendo ip local");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error enviando datos.");
+            e.printStackTrace();
         }
     }
 }

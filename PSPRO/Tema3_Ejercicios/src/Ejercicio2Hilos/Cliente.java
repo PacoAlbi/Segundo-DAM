@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class ClienteTCPNormal {
+public class Cliente {
     public static void main(String[] args) {
         //Variables de conexión
         int puertoServidor = 60000;

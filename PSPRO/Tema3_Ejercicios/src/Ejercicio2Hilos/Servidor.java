@@ -16,6 +16,7 @@ public class Servidor {
                 System.out.println("Esperando peticiones de clientes");
                 peticionCliente = socketServidor.accept();
                 System.out.println("(Servidor) conexión establecida...");
+                //Creo un hilo
                 new Gestor(peticionCliente).start();
             }
         } catch (IOException e) {
