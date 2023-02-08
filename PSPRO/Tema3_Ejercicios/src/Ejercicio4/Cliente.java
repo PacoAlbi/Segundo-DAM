@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Cliente {
     public static void main(String[] args) {
         int suma, numero;
+        Scanner sc = new Scanner(System.in);
         File file = new File("src/Ejercicio4/numeros.txt");
         try {
             //1.- Creacion del Socket del tipo Cliente
@@ -24,17 +25,17 @@ public class Cliente {
             BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
             InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
             BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
-
-
-            while (){
-                numero = sc.nextInt();
-                bufferedWriter.write(numero);
-                bufferedWriter.newLine();
-                bufferedWriter.flush();
-
-            }
-            suma = bufferedReader.read();
-            System.out.printf("La suma total de los números del fichero es %d", suma);
+//
+//
+//            while (true){
+//                numero = sc.nextInt();
+//                bufferedWriter.write(numero);
+//                bufferedWriter.newLine();
+//                bufferedWriter.flush();
+//
+//            }
+//            suma = bufferedReader.read();
+//            System.out.printf("La suma total de los números del fichero es %d", suma);
 
             // 4.- cerramos flujo de datos
             bufferedWriter.close();
