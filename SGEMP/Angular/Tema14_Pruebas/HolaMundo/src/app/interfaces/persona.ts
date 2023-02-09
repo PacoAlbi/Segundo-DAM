@@ -7,4 +7,5 @@ export interface Persona {
     foto: String;
     fechaNacimiento: Date;
     idDepartamento: number;
+    nombreDpto: String;
 }
