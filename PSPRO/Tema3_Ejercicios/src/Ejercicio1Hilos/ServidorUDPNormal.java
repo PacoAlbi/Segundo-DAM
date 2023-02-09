@@ -40,8 +40,6 @@ public class ServidorUDPNormal {
                 socketEnviar = new DatagramSocket();
                 packetEnviar = new DatagramPacket(mensajeAenviar, mensajeAenviar.length,packetRecibir.getAddress(), packetRecibir.getPort());
                 socketEnviar.send(packetEnviar);
-                //Compruebo si es condición de salida.
-                //if (mensaje.equals("Fin")) break;
             }
         } catch (SocketException e) {
             System.out.println("Error creando el socket");

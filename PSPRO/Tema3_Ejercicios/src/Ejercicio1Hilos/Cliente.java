@@ -10,40 +10,46 @@ public class Cliente {
 
     public static void main(String[] args) {
         //Creo las variables.
-        DatagramSocket socketEnviar;
-        DatagramSocket socketRecibir;
+        DatagramSocket socket;
         DatagramPacket packetEnviar;
         DatagramPacket packetRecibir;
         InetAddress direccion;
+        int puertoServidor = 60000;
+        //Variables del programa
         int numero;
         String mensaje;
-        int puertoServidor = 60000;
-        //String nombreServidor = "localhost";??
-        byte[] bufferEnviar;
-        byte[] bufferRecivir;
+        //String nombreServidor = "localhost";?? ¿Necesario?
+        //Creo los buffer
+        byte[] buffer;
         try {
             System.out.println("¡Averigua el número secreto!");
             //Pillo la dirección del cliente.
             direccion = InetAddress.getLocalHost();
             //Creo el socket de datagrama.
-            socketEnviar = new DatagramSocket();
-            socketRecibir = new DatagramSocket();
+            socket = new DatagramSocket();
             do {
                 System.out.println("Introduce un número");
+                //Leo el número
                 numero = sc.nextInt();
-                bufferEnviar = String.valueOf(numero).getBytes();
-                packetEnviar = new DatagramPacket(bufferEnviar, bufferEnviar.length, direccion, puertoServidor);
-                socketEnviar.send(packetEnviar);
-                bufferRecivir = new byte[64];
-                packetRecibir = new DatagramPacket(bufferRecivir, bufferRecivir.length);
-                socketRecibir.receive(packetRecibir);
+                //Preparo el buffer para enviar
+                buffer = String.valueOf(numero).getBytes();
+                //Preparo el paquete
+                packetEnviar = new DatagramPacket(buffer, buffer.length, direccion, puertoServidor);
+                //Envío el paquete
+                socket.send(packetEnviar);
+                //Preparo el buffer para recibir
+                buffer = new byte[64];
+                //Preparo el paquete para recibir
+                packetRecibir = new DatagramPacket(buffer, buffer.length);
+                //Recibo el paquete
+                socket.receive(packetRecibir);
+                //Saco el mensaje
                 mensaje = new String(packetRecibir.getData()).trim();
+                //Imprimo el mensaje
                 System.out.println(mensaje);
             } while (!mensaje.equals("¡Enhorabuena! Has acertado el número"));
-            System.out.println(mensaje);
             //Cierro la comunicación.
-            socketEnviar.close();
-            socketRecibir.close();
+            socket.close();
         } catch (SocketException e) {
             System.out.println("Error creando el socket");
             e.printStackTrace();

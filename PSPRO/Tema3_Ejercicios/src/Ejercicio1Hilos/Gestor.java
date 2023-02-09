@@ -6,26 +6,31 @@ import java.net.DatagramSocket;
 import java.util.Random;
 
 public class Gestor extends Thread {
-    private DatagramSocket socketEntrada;
+    private static int numeroSecreto = new Random().nextInt(0, 100);
+    private DatagramSocket socket;
     private DatagramPacket paquete;
     public Gestor (DatagramSocket socket, DatagramPacket paquete){
-        super();
-        this.socketEntrada = socket;
+        //super(); ¿Para que se pone?
+        this.socket = socket;
         this.paquete = paquete;
     }
     @Override
     public void run() {
         realizarProceso();
     }
+    /**
+     * Precondiciones: No tiene.
+     * Método que hace la conexión con el cliente y comprueba su petición.
+     * Postcondiciones: No tiene.
+     */
     public void realizarProceso (){
         //Creo el número secreto.
-        int numeroSecreto = new Random().nextInt(0, 100);
         int numero = Integer.parseInt(new String(paquete.getData()).trim());
         String mensaje = acertarNumero(numero, numeroSecreto);
         byte[] mensajeEnviado = mensaje.getBytes();
         DatagramPacket paqueteSalida = new DatagramPacket(mensajeEnviado, mensajeEnviado.length,paquete.getAddress(),paquete.getPort());
         try {
-            socketEntrada.send(paqueteSalida);
+            socket.send(paqueteSalida);
         } catch (IOException e) {
             System.out.println("Error enviando el paquete");
             e.printStackTrace();

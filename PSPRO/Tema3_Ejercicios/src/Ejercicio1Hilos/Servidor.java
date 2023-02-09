@@ -7,9 +7,11 @@ import java.net.SocketException;
 
 public class Servidor {
     public static void main(String[] args) {
+        //Variables de conexión
         int puertoCliente = 60000;
         DatagramSocket socket;
         DatagramPacket paqueteEntrada;
+        //Creo el buffer
         byte[] buffer;
         try {
             //Creamos socket y le indicamos el puerto
