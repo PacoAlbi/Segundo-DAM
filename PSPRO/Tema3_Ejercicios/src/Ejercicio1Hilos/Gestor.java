@@ -24,7 +24,7 @@ public class Gestor extends Thread {
      * Postcondiciones: No tiene.
      */
     public void realizarProceso (){
-        //Creo el número secreto.
+        //Leo el número del cliente
         int numero = Integer.parseInt(new String(paquete.getData()).trim());
         String mensaje = acertarNumero(numero, numeroSecreto);
         byte[] mensajeEnviado = mensaje.getBytes();
