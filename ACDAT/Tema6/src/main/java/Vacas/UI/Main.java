@@ -18,13 +18,13 @@ public class Main {
       //  DAL.mostrarRegistroConString("ContarVacasSinMadre");
      //   DAL.mostrarRegistroConEntero("ContarVacasSinMadre");
         //DAL.mostrarRegistroDobles("NumeroLitrosMesYAnno","mes_produccion",8,"year_produccion",2015);
-        var nave = new VQ_Naves();
-   nave.setIdNave(11);
+//        var nave = new VQ_Naves();
+//   nave.setIdNave(11);
 //        nave.setGanadero("Paco Albiñana");
 //       nave.setUbicacion("Los cerros de Úbeda");
 //        DAL.guardar(nave);
 //       var vaca1 = new VQ_Ganado();
 //        vaca1.setID(17);
-        DAL.borrar2(nave);
+//        DAL.borrar2(nave);
     }
 }
