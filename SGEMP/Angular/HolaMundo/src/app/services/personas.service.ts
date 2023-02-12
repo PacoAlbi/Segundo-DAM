@@ -15,4 +15,8 @@ export class PersonasService {
   listadoPersonas(): Observable<Persona[]>{
   return this.http.get<Persona[]>(this.urlWebAPI);
   }
+
+  eliminarPersona(id:number): void {
+    this.http.delete<number>(this.urlWebAPI+"/"+id);
+ }
 }

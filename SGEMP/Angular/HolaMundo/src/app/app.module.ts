@@ -11,6 +11,7 @@ import { FormularioPersonasReactivoComponent } from './components/formulario-per
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { TablaApiPersonasDepComponent } from './components/tabla-api-personas-dep/tabla-api-personas-dep.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TablaApiPersonasDepComponent } from './components/tabla-api-personas-de
     AppRoutingModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
