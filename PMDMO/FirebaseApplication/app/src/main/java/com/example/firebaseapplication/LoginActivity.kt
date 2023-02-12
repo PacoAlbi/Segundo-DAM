@@ -34,8 +34,6 @@ class LoginActivity : AppCompatActivity() {
             val password = loginPassword.text.toString()
             if (checkEmpty(email, password)){
                 login(email, password)
-            }else{
-                Toast.makeText(applicationContext, "Usuario no encontrado", Toast.LENGTH_LONG).show()
             }
         }
         loginGoRegisterButton.setOnClickListener {
@@ -51,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 }else{
-                    Toast.makeText(applicationContext, "Error al registrarse", Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, "Usuario no encontrado", Toast.LENGTH_LONG).show()
                 }
             }
     }
