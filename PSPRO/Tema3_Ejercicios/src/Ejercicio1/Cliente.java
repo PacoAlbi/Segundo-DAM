@@ -30,6 +30,8 @@ public class Cliente {
             bufferedWriter.newLine();
             bufferedWriter.flush();
 
+
+
             // 4.- cerramos flujo de datos
             bufferedWriter.close();
             outputStreamWriter.close();

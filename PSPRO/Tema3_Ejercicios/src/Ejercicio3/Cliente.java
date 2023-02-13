@@ -30,11 +30,11 @@ public class Cliente {
             do {
                 numero = leerNumero();
                 bufferedWriter.write(String.valueOf(numero));
+                bufferedWriter.newLine();
                 bufferedWriter.flush();
                 acertado =  bufferedReader.readLine();
-                System.out.println("(Servidor) " + acertado + " numero mandado: " + numero);
+                System.out.println("(Servidor) " + acertado + ". Numero mandado: " + numero);
             } while (!(acertado.equals("¡Enhorabuena! Has acertado el número")));
-
             // 4.- cerramos flujo de datos
             bufferedWriter.close();
             bufferedReader.close();

@@ -3,13 +3,14 @@ package Ejercicio4;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Cliente {
+    private static BufferedWriter bw;
+
     public static void main(String[] args) {
-        int suma, numero;
-        Scanner sc = new Scanner(System.in);
-        File file = new File("src/Ejercicio4/numeros.txt");
+        String suma;
         try {
             //1.- Creacion del Socket del tipo Cliente
             System.out.println("(Cliente) Creamos Socket");
@@ -21,32 +22,53 @@ public class Cliente {
             OutputStream os=socketCliente.getOutputStream();
 
             // 3.- Intercambiamos datos con el servidor
-            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os, "UTF-8");
-            BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
-            InputStreamReader inputStreamReader=new InputStreamReader(is,"UTF-8");
-            BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
+            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(os, StandardCharsets.UTF_8);
+            bw = new BufferedWriter(outputStreamWriter);
+            InputStreamReader inputStreamReader=new InputStreamReader(is, StandardCharsets.UTF_8);
+            BufferedReader br = new BufferedReader(inputStreamReader);
 
-            numero = sc.nextInt();
-            while (sc.hasNextInt()){
-                bufferedWriter.write(numero);
-                bufferedWriter.newLine();
-                bufferedWriter.flush();
-                numero = sc.nextInt();
-            }
-            suma = bufferedReader.read();
-            System.out.printf("La suma total de los números del fichero es %d", suma);
+
+            leerFichero();
+
+            suma = br.readLine();
+            System.out.printf("La suma total de los números del fichero es %s", suma);
 
             // 4.- cerramos flujo de datos
-            bufferedWriter.close();
-            bufferedReader.close();
+            //bw.close();
+            br.close();
             outputStreamWriter.close();
             inputStreamReader.close();
             is.close();
             os.close();
-            socketCliente.close();
+            //socketCliente.close();
 
         } catch (IOException e) {
             System.err.println("ERROR: Problema con la conexión.");
+            e.printStackTrace();
+        }
+    }
+
+    private static void leerFichero (){
+        String linea;
+        File fichero = new File("src/Ejercicio4/numeros.txt");
+        FileReader fr;
+        BufferedReader brFile;
+        try {
+            fr = new FileReader(fichero);
+            brFile = new BufferedReader(fr);
+            linea = brFile.readLine();
+            while(linea != null) {
+                bw.write(linea);
+                bw.newLine();
+                bw.flush();
+                linea = brFile.readLine();
+            }
+            bw.write("FIN");
+            brFile.close();
+            bw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

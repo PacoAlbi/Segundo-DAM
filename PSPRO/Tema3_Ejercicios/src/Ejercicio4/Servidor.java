@@ -3,10 +3,17 @@ package Ejercicio4;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 public class Servidor {
+
+    private static BufferedWriter bufferedWriter;
+
+    private static BufferedReader bufferedReader;
+
     public static void main(String[] args) {
         int suma = 0, numero;
+        String linea;
         try {
             // 1.- Crear un Socket servidor
             ServerSocket socketServidor = new ServerSocket(3000);
@@ -21,17 +28,21 @@ public class Servidor {
                 System.out.println("(Servidor) Abriendo flujos de entrada y salida.");
                 InputStream is = socketCliente.getInputStream();
                 OutputStream os = socketCliente.getOutputStream();
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os, "UTF-8");
-                BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+                bufferedWriter= new BufferedWriter(outputStreamWriter);
 
                 // 4.- Intercambiar datos con el cliente
-                InputStreamReader inputStream = new InputStreamReader(is, "UTF-8");
-                BufferedReader bufferedReader = new BufferedReader(inputStream);
+                InputStreamReader inputStream = new InputStreamReader(is, StandardCharsets.UTF_8);
+                bufferedReader = new BufferedReader(inputStream);
 
+                linea = bufferedReader.readLine();
+                while (!linea.equals("FIN")){
+                    numero = Integer.parseInt(linea);
+                    suma += numero;
+                    linea = bufferedReader.readLine();
+                }
 
-                numero = bufferedReader.read();
-                suma += numero;
-
+                System.out.println(suma);
                 bufferedWriter.write(suma);
                 bufferedWriter.newLine();
                 bufferedWriter.flush();

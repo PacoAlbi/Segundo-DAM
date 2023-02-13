@@ -48,6 +48,7 @@ public class ServidorTCPNormal {
                 while (cadenaFichero != null){
                     if (cadenaFichero.split(" ")[0].equals(cadenaCliente)){
                         mensajeSalida = "La ip de " + cadenaCliente + " es " + cadenaFichero.split(" ")[1];
+                        break;
                     } else {
                         mensajeSalida = "Lo sentimos, dirección web no registrada.";
                     }
