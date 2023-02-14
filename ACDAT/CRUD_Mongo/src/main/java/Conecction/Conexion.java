@@ -59,7 +59,7 @@ public class Conexion {
      * Devuelve e imprime un valor (WHERE) de la colección.
      * Postcondiciones: No tiene.
      */
-    public static void getValue (){
+    public static void getOne (){
         MongoCollection<Document> collection = database.getCollection("Alumnos");
         Document doc = collection.find(eq("nombre", "David")).first();
         if (doc != null) {
