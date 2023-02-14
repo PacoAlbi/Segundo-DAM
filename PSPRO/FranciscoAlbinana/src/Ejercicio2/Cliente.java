@@ -7,17 +7,17 @@ import java.util.Scanner;
 public class Cliente {
 
     private static DatagramSocket socket;
-    private static DatagramPacket packet;
-    private static final String DIRECCION = "172.26.0.1";
+    private static final String DIRECCION = "192.168.56.1";
     private static final int PUERTO = 45000;
 
     public static void main(String[] args) {
         String mensaje;
+        DatagramPacket packet;
         byte[] bufferEntrada;
         try{
             socket = new DatagramSocket();
             leerCadena();
-            bufferEntrada = new byte[64];
+            bufferEntrada = new byte[128];
             packet = new DatagramPacket(bufferEntrada, bufferEntrada.length);
             socket.receive(packet);
             mensaje = new String(packet.getData()).trim();
@@ -39,7 +39,7 @@ public class Cliente {
     private static void leerCadena (){
         String cadena;
         Scanner sc = new Scanner(System.in);
-        System.out.println("\033[91;1;4mIntroduzca la cadena de 'CREATE numAlum nombreAlum' O SELECT.\033[0m");
+        System.out.println("\033[91;1;4mIntroduzca la cadena de 'CREATE numAlum nombreAlum' ó SELECT.\033[0m");
         cadena = sc.nextLine();
         byte[] buffer;
         try {

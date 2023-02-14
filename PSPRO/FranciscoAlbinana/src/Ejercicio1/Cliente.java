@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Cliente {
     //Variables de la clase
-    private static final String DIRECCION = "172.26.0.1";
+    private static final String DIRECCION = "192.168.56.1";
     private static final int PUERTO = 45000;
 
     public static void main(String[] args) {

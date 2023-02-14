@@ -4,4 +4,9 @@
 4 Salva
 5 Isaac
 6 Elena
-7 Deivid
+7 Felipe
+8 Lucia
+9 Ruben
+10 Andres
+11 Jesús
+12 Irene

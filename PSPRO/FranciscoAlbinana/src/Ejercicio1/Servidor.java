@@ -6,10 +6,9 @@ import java.net.Socket;
 
 public class Servidor {
     public static void main(String[] args) {
-        try {
-            //Variables de conexión
-            int puertoServidor = 45000;
-            ServerSocket socketServidor = new ServerSocket(puertoServidor);
+        //Variables de conexión
+        int puertoServidor = 45000;
+        try (ServerSocket socketServidor = new ServerSocket(puertoServidor)) {
             Socket peticionCliente;
             while (true) {
                 //Queda a la espera de peticiones y las acepta cuando las recibe

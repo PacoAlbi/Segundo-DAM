@@ -6,14 +6,10 @@ import java.nio.charset.StandardCharsets;
 
 public class Hilo extends Thread {
     //Variables compartidas
-    private Socket socket;
-    private OutputStream outputStream;
-    private InputStream inputStream;
-
+    private final Socket SOCKET;
     public Hilo (Socket socket){
-        this.socket = socket;
+        this.SOCKET = socket;
     }
-
     @Override
     public void run() {
         realizarProceso();
@@ -34,12 +30,12 @@ public class Hilo extends Thread {
         String cadenaCliente;
         try {
             //Preparo la lectura/entrada
-            outputStream = this.socket.getOutputStream();
+            OutputStream outputStream = SOCKET.getOutputStream();
             //Preparo el intercambio con el cliente
             outputStreamWriter = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8);
             bufferedWriter = new BufferedWriter(outputStreamWriter);
             //Preparo la escritura/salida
-            inputStream = this.socket.getInputStream();
+            InputStream inputStream = SOCKET.getInputStream();
             //Preparo el intercambio con el cliente
             inputStreamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             bufferedReader = new BufferedReader(inputStreamReader);
