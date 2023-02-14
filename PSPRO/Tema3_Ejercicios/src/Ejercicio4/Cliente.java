@@ -47,6 +47,7 @@ public class Cliente {
             System.err.println("ERROR: Problema con la conexión.");
             e.printStackTrace();
         }
+
     }
 
     private static void leerFichero (){
