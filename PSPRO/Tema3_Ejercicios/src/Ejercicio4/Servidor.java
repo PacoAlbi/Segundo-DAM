@@ -40,10 +40,11 @@ public class Servidor {
                     numero = Integer.parseInt(linea);
                     suma += numero;
                     linea = bufferedReader.readLine();
+                    System.out.println(linea);
                 }
 
                 System.out.println(suma);
-                bufferedWriter.write(suma);
+                bufferedWriter.write(String.valueOf(suma));
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
 

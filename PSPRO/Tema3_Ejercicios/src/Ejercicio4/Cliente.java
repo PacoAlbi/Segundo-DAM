@@ -28,19 +28,20 @@ public class Cliente {
             BufferedReader br = new BufferedReader(inputStreamReader);
 
 
+
             leerFichero();
 
             suma = br.readLine();
             System.out.printf("La suma total de los números del fichero es %s", suma);
 
             // 4.- cerramos flujo de datos
-            //bw.close();
             br.close();
+            bw.close();
             outputStreamWriter.close();
             inputStreamReader.close();
             is.close();
             os.close();
-            //socketCliente.close();
+            socketCliente.close();
 
         } catch (IOException e) {
             System.err.println("ERROR: Problema con la conexión.");
@@ -64,8 +65,9 @@ public class Cliente {
                 linea = brFile.readLine();
             }
             bw.write("FIN");
+            bw.newLine();
+            bw.flush();
             brFile.close();
-            bw.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
