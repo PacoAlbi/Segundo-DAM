@@ -1,6 +1,7 @@
 package Ejercicio1;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -26,7 +27,7 @@ public class Cliente {
         String cadena;
         try {
             //Creo el socket
-            socketCliente = new Socket(DIRECCION, PUERTO);
+            socketCliente = new Socket(InetAddress.getLocalHost(), PUERTO);
             //Preparo la escritura/salida
             outputStream = socketCliente.getOutputStream();
             //Preparo el intercambio con el cliente

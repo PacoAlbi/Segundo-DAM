@@ -41,6 +41,15 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
     }
+    //Comprobamos que cuando inicie no este ya conectado antes con su cuenta google
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            //reload()
+        }
+    }
 
     private fun login(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)

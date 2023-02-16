@@ -4,40 +4,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:textAlignment="textStart"
     tools:context=".LoginActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28sp"
+        android:text="Iniciar Sesión"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:text="Iniciar Sesión"/>
+        android:textSize="28sp" />
 
     <EditText
         android:id="@+id/loginEmail"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:inputType="textEmailAddress"
-        android:hint="email"/>
+        android:hint="email"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/loginPassword"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:inputType="textPassword"
-        android:hint="password"/>
-    
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="Inciar Sesión"/>
+        android:text="Inciar Sesión" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/loginGoRegisterButton"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="Crear cuenta"/>
+        android:text="Crear cuenta" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/googleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawableStart="@mipmap/google"
+        android:text="Google"
+        android:textAlignment="textStart"
+        android:textColor="@color/design_default_color_primary_dark" />
 
 </LinearLayout>

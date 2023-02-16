@@ -44,7 +44,7 @@ public class Cliente {
         byte[] buffer;
         try {
             buffer = cadena.getBytes();
-            DatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName(DIRECCION), PUERTO); //Cambiar despues, no olvidar
+            DatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getLocalHost(), PUERTO); //Cambiar despues, no olvidar
             socket.send(packet);
         } catch (UnknownHostException e) {
             System.out.println("Error servidor desconocido");
