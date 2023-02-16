@@ -129,20 +129,20 @@ function actualizarTabla() {
         {
             listaPersonas[i].idDepartamento = select.value;
             var json = JSON.stringify(listaPersonas[i]);
-            miLlamada.open("PUT", "http://localhost:5119/api/personas");
+            miLlamada.open("PUT", "http://localhost:5119/api/examen", false);
             miLlamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-            miLlamada.onreadystatechange = function () {
-                if (miLlamada.readyState < 4) {
-                    divEstado.innerHTML = "Accediendo a datos...";
-                }
-                else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
-                    divEstado.innerHTML = "";
-                    divAlert.innerHTML = "Persona insertada con éxito.";
-                }
-                else {
-                    divAlert.innerHTML = "Error al insertar en la BBDD.";
-                }
-            };
+            //miLlamada.onreadystatechange = function () {
+            //    if (miLlamada.readyState < 4) {
+            //        divEstado.innerHTML = "Accediendo a datos...";
+            //    }
+            //    else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
+            //        divEstado.innerHTML = "";
+            //        divAlert.innerHTML = "Persona insertada con éxito.";
+            //    }
+            //    else {
+            //        divAlert.innerHTML = "Error al insertar en la BBDD.";
+            //    }
+            //};
             //Hago la llamada y mando el JSON con la persona.
             miLlamada.send(json);
         }
