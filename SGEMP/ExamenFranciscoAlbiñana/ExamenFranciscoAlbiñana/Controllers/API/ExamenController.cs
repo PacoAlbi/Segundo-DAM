@@ -3,6 +3,8 @@ using ExamenFranciscoAlbiñana.Models;
 using Microsoft.AspNetCore.Mvc;
 using BL.Manejadoras;
 using Entidades;
+using BL.Listados;
+using System.Collections.ObjectModel;
 
 namespace ExamenFranciscoAlbiñana.Controllers.API
 {
@@ -19,7 +21,16 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
         [HttpGet]
         public IEnumerable<clsPersonasConNombreDpto> Get()
         {
-            return new ListaPersonasNombreDptoVM().getListaPersonasConDpto();
+            ObservableCollection<clsPersonasConNombreDpto> listaPersonas = new ObservableCollection<clsPersonasConNombreDpto>();
+            try
+            {
+                listaPersonas = new ListaPersonasNombreDptoVM().getListaPersonasConDpto();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listaPersonas;
         }
         /// <summary>
         /// Precondiciones: No tiene.
@@ -30,7 +41,14 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
         [HttpPut("{id}")]
         public void Put([FromBody] clsPersona persona)
         {
-            clsManejadoraPersonas.editarPersonaBL(persona);
+            try
+            {
+                clsManejadoraPersonas.editarPersonaBL(persona);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

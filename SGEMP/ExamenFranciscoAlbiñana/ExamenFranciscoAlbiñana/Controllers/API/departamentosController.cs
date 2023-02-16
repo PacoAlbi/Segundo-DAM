@@ -1,7 +1,7 @@
 ﻿using BL.Listados;
-using BL.Manejadoras;
 using Entidades;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.ObjectModel;
 
 namespace ExamenFranciscoAlbiñana.Controllers.API
 {
@@ -18,7 +18,15 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
         [HttpGet]
         public IEnumerable<clsDepartamentos> Get()
         {
-            return clsListadoDepartamentosBL.getListadoDepartamentosBL();
+            ObservableCollection<clsDepartamentos> listaDepartamentos; 
+            try
+            {
+                listaDepartamentos = clsListadoDepartamentosBL.getListadoDepartamentosBL();
+            } catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listaDepartamentos;
         }
     }
 }
