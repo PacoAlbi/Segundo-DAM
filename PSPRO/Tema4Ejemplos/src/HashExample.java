@@ -10,7 +10,7 @@ public class HashExample {
         Scanner sc = new Scanner(System.in);
         String mensaje;
         byte[] mensajeBytes;
-        byte[] resumen = null;
+        byte[] resumen;
         String resumenHexadecimal;
 
         System.out.println("Introduce el mensaje a cifrar:");

@@ -8,6 +8,8 @@ import com.mongodb.client.result.UpdateResult;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
+import java.util.Date;
+
 import static com.mongodb.client.model.Filters.eq;
 
 public class Conexion {
@@ -75,7 +77,7 @@ public class Conexion {
      */
     public static void insertar (){
         //Modo compacto de insertar
-        database.getCollection("Alumnos").insertOne(new Document().append("nombre", "Manu").append("apellidos", "Torpedo"));
+        database.getCollection("Alumnos").insertOne(new Document().append("nombre", "Manu").append("apellidos", "Torpedo").append("fecha", new Date(2024, 10, 10)));
     }
     /**
      * Precondiciones: Debe recibir el dato a cambiar y por el que lo queremos cambiar.
