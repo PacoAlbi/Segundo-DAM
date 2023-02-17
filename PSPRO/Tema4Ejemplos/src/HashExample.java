@@ -1,5 +1,6 @@
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
@@ -18,7 +19,7 @@ public class HashExample {
 
         try {
             // Convierto el mensaje introducido por el usuario en un array de bytes
-            mensajeBytes = mensaje.getBytes("UTF-8");
+            mensajeBytes = mensaje.getBytes(StandardCharsets.UTF_8);
 
             // Creo una instancia de MessageDigest con el algoritmo SHA-256
             MessageDigest algoritmo = MessageDigest.getInstance("SHA-256");
@@ -37,9 +38,6 @@ public class HashExample {
 
         } catch (NoSuchAlgorithmException e) {
             System.err.println("El algoritmo seleccionado no existe");
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            System.err.println("No se conoce la codificación especificada");
             e.printStackTrace();
         }
     }
