@@ -1,6 +1,4 @@
-﻿using ExamenFranciscoAlbiñana.Models.ViewModels;
-using ExamenFranciscoAlbiñana.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BL.Manejadoras;
 using Entidades;
 using BL.Listados;
@@ -19,12 +17,12 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
         /// </summary>
         /// <returns>List clsPersonaDep</returns>
         [HttpGet]
-        public IEnumerable<clsPersonasConNombreDpto> Get()
+        public IEnumerable<clsPersona> Get()
         {
-            ObservableCollection<clsPersonasConNombreDpto> listaPersonas = new ObservableCollection<clsPersonasConNombreDpto>();
+            ObservableCollection<clsPersona> listaPersonas;
             try
             {
-                listaPersonas = new ListaPersonasNombreDptoVM().getListaPersonasConDpto();
+                listaPersonas = clsListadoPersonasBL.getListadoPersonasBL();
             }
             catch (Exception ex)
             {
@@ -38,9 +36,10 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
         /// Postcondiciones: Devuelve una lista de personas con departamento.
         /// </summary>
         /// <param name="persona">clsPersona</param>
-        [HttpPut("{id}")]
-        public void Put([FromBody] clsPersona persona)
+        [HttpPut]
+        public int Put([FromBody] clsPersona persona)
         {
+            int registrosAfectados = 0;
             try
             {
                 clsManejadoraPersonas.editarPersonaBL(persona);
@@ -49,6 +48,7 @@ namespace ExamenFranciscoAlbiñana.Controllers.API
             {
                 throw ex;
             }
+            return registrosAfectados;
         }
     }
 }

@@ -22,18 +22,18 @@ function inicializaEventos() {
 function pedirPersonas() {
     //Preparo mis variables.
     var miLlamada = new XMLHttpRequest();
-    var divEstado = document.getElementById("divEstado");
+    var divEstado = document.getElementById("div");
     //Hago la llamada a la api con el verbo correspondiente.
-    miLlamada.open("GET", "http://localhost:5119/api/examen", false);
+    miLlamada.open("GET", "http://localhost:5119/api/examen");
     //Espero Datos.
     miLlamada.onreadystatechange = function () {
         if (miLlamada.readyState < 4) {
-            divEstado.innerHTML = "Pidiendo datos a la API...";
+            //alert(miLlamada.readyState);  Fernando, no se porque no me funciona poner el estado de esta forma, asi que lo pongo en el html.
+            //divEstado.innerHTML = "Pidiendo datos a la API...";
         }
         else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
             listaPersonas = JSON.parse(miLlamada.responseText);
             pedirDepartamentos();
-            divEstado.innerHTML = "";
         }
     };
     //Hago la llamada a la API.
@@ -47,18 +47,19 @@ function pedirPersonas() {
 function pedirDepartamentos() {
     //Preparo mis variables.
     var miLlamada = new XMLHttpRequest();
-    var divEstado = document.getElementById("divEstado");
+    var divEstado = document.getElementById("div");
     //Hago la llamada a la api con el verbo correspondiente.
-    miLlamada.open("GET", "http://localhost:5119/api/departamentos", false);
+    miLlamada.open("GET", "http://localhost:5119/api/departamentos");
     //Espero Datos.
     miLlamada.onreadystatechange = function () {
         if (miLlamada.readyState < 4) {
-            divEstado.innerHTML = "Pidiendo datos a la API...";
+            //alert(miLlamada.readyState);  Fernando, no se porque no me funciona poner el estado de esta forma, asi que lo pongo en el html.
+            //divEstado.innerHTML = "Pidiendo datos a la API...";
         }
         else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
             listaDepartamentos = JSON.parse(miLlamada.responseText);
             rellenarTablaPersonas();
-            divEstado.innerHTML = "";
+            divEstado.hidden = true;
         }
     };
     //Hago la llamada a la API.
@@ -92,21 +93,31 @@ function rellenarTablaPersonas() {
         fila.appendChild(contenido);
         //Creo otro elemento table data
         contenido = document.createElement("td");
+        //Creo el elemento select.
         var select = document.createElement("select");
+        select.id = listaPersonas[i].id;
+        //Recorro los departamentos para mostrarlos.
         for (var j = 0; j < listaDepartamentos.length; j++)
         {
+            //Creo las opciones.
             var option = document.createElement("option");
+            //Añado value al opton con el id.
             option.value = listaDepartamentos[j].id;
+            //Añado el nombre del departamento al html.
             option.innerHTML = listaDepartamentos[j].nombre;
+            //Compruebo si el departamento de la persona es el mismo que el departamento de la lista.
             if (listaPersonas[i].idDepartamento == listaDepartamentos[j].id)
             {
+                //Si es el mismo, lo selecciono.
                 option.selected = true;
             }
+            //Añado la opción al select.
             select.appendChild(option);
         }
-        fila.appendChild(contenido);
+        //Añado el select al contenido.
         contenido.appendChild(select);
-
+        //Añado el contenido a la fila.
+        fila.appendChild(contenido);
         //Añado la fila a la tabla.
         cuerpoTabla.appendChild(fila);
     }
@@ -119,34 +130,22 @@ function rellenarTablaPersonas() {
  * Postcondiciones: No tiene.
  * */
 function actualizarTabla() {
-    //Creo las alertas.
-    var divEstado = document.getElementById("divEstado");
-    var divAlert = document.getElementById("divAlert");
-    var miLlamada = new XMLHttpRequest();
-    var select;
+    //Creo la alerta y el contador de cambios.
+    var cont = 0;
+    var divAlert = document.getElementById("divAlert"); 
     for (var i = 0; i < listaPersonas.length; i++)
     {
-        select = document.getElementById(listaPersonas[i].id);
+        var select = document.getElementById(listaPersonas[i].id);
         if (listaPersonas[i].idDepartamento != select.value)
         {
+            var miLlamada = new XMLHttpRequest();
             listaPersonas[i].idDepartamento = select.value;
             var json = JSON.stringify(listaPersonas[i]);
-            miLlamada.open("PUT", "http://localhost:5119/api/examen", false);
+            miLlamada.open("PUT", "http://localhost:5119/api/examen");
             miLlamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-            //miLlamada.onreadystatechange = function () {
-            //    if (miLlamada.readyState < 4) {
-            //        divEstado.innerHTML = "Accediendo a datos...";
-            //    }
-            //    else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
-            //        divEstado.innerHTML = "";
-            //        divAlert.innerHTML = "Persona insertada con éxito.";
-            //    }
-            //    else {
-            //        divAlert.innerHTML = "Error al insertar en la BBDD.";
-            //    }
-            //};
-            //Hago la llamada y mando el JSON con la persona.
             miLlamada.send(json);
+            cont++;
         }
     }
+    divAlert.innerHTML = "Se han actualizado " + cont + " registros.";
 }
