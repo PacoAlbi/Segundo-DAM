@@ -93,18 +93,20 @@ function rellenarTablaPersonas() {
         //Creo otro elemento table data
         contenido = document.createElement("td");
         var select = document.createElement("select");
-        for (var i = 0; i < listaDepartamentos.length; i++)
+        for (var j = 0; j < listaDepartamentos.length; j++)
         {
             var option = document.createElement("option");
-            option.value = listaDepartamentos[i].id;
-            option.innerHTML = listaDepartamentos[i].nombre;
-            if (persona.idDepartamento == listaDepartamentos[i].id)
+            option.value = listaDepartamentos[j].id;
+            option.innerHTML = listaDepartamentos[j].nombre;
+            if (listaPersonas[i].idDepartamento == listaDepartamentos[j].id)
             {
                 option.selected = true;
             }
             select.appendChild(option);
         }
+        fila.appendChild(contenido);
         contenido.appendChild(select);
+
         //Añado la fila a la tabla.
         cuerpoTabla.appendChild(fila);
     }
