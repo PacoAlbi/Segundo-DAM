@@ -28,25 +28,6 @@ public class Validator {
             System.out.println("Acceso denegado, usuario o contraseña incorrectos");
         }
     }
-
-    public static class ReadBytesFromFile {
-        public static void main(String[] args) {
-            String fileName = "src/Ejercicio1/credenciales.cre";
-            File file = new File(fileName);
-            byte[] bytesArray = new byte[(int) file.length()];
-
-            FileInputStream fis;
-            try {
-                fis = new FileInputStream(file);
-                fis.read(bytesArray);
-                fis.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            System.out.println("Array de bytes del archivo " + fileName + " : " + bytesArray);
-        }
-    }
     /**
      * Precondiciones: Recibe un nombre de usuario y una contraseña.
      * Comprueba si el nombre de usuario y la contraseña son correctos sacados de un fichero llamado credenciales.cre
@@ -80,7 +61,7 @@ public class Validator {
                     if (passwordHash.equals(pass)) {
                         //Validado pasa a true
                         validado = true;
-                        //Salgo del bucle para que no tenga que recorrer todo el fichero si ya ha encontrado el usuario y la contraseña
+                        //Salgo del bucle para que no tenga que recorrer el fichero completo si ya ha encontrado el usuario y la contraseña
                         break;
                     }
                 }
@@ -122,5 +103,25 @@ public class Validator {
             System.err.println("Error de lectura");
         }
         return validado;
+    }
+
+    public static class ReadBytesFromFile {
+        public static void main(String[] args) {
+            String fileName = "src/Ejercicio1/credenciales.cre";
+            File file = new File(fileName);
+            byte[] bytesArray = new byte[(int) file.length()];
+            byte[] bytesFinal = new byte[(int) file.length()];
+
+            FileInputStream fis;
+            try {
+                fis = new FileInputStream(file);
+                fis.read(bytesArray);
+                fis.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("Array de bytes del archivo " + fileName + " : " + bytesArray);
+        }
     }
 }

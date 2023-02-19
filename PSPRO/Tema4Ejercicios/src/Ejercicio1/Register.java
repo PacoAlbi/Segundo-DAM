@@ -27,10 +27,8 @@ public class Register {
         String password2 = sc.nextLine();
         //Comprobamos que las contraseñas coinciden
         if (password.equals(password2)) {
-            //Obtenemos el resumen de la contraseña
-            byte[] resumen = Coder.getDigest(password);
             //Guardamos el nombre de usuario y el resumen de la contraseña en el fichero
-            guardarCredenciales(nombre, resumen);
+            guardarCredenciales(nombre, password);
             //Mostramos mensaje de confirmación
             System.out.println("Usuario registrado correctamente");
         } else {
@@ -45,7 +43,9 @@ public class Register {
      * @param nombre String Nombre de usuario
      * @param resumen byte[] Resumen de la contraseña
      */
-    private static void guardarCredenciales(String nombre, byte[] resumen) {
+    private static void guardarCredenciales(String nombre, String password) {
+        //Obtenemos el resumen de la contraseña
+        byte[] resumen = Coder.getDigest(password);
         //Convertimos el resumen a hexadecimal
         String passwordHash = String.format("%064x", new BigInteger(1, resumen));
         try {
