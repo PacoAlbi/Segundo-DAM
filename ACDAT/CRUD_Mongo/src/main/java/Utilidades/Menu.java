@@ -78,9 +78,9 @@ public class Menu {
             pinntar3Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> ControllerUsuario.verUsuarios();
-                case "2" -> ControllerPosts.verPosts();
-                case "3" -> ControllerLikes.verLikes();
+                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
@@ -94,8 +94,8 @@ public class Menu {
             pinntar2Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> ControllerUsuario.actualizar();
-                case "2" -> ControllerPosts.actualizarPost();
+                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
@@ -109,8 +109,8 @@ public class Menu {
             pinntar2Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> ControllerUsuario.registrarUsuario();
-                case "2" -> ControllerPosts.registrarPost();
+                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
@@ -124,9 +124,9 @@ public class Menu {
             pinntar3Tablas();
             menu = sc.next();
             switch (menu) {
-                case "1" -> ControllerUsuario.eliminar();
-                case "2" -> ControllerPosts.eliminar();
-                case "3" -> ControllerLikes.eliminar();
+                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }

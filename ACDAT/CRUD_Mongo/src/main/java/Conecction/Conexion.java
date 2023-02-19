@@ -132,7 +132,7 @@ public class Conexion {
             MongoCollection<Document> collection = database.getCollection("Alumnos");
             collection.deleteOne(doc);
         } catch (MongoException e) {
-            System.out.println("Imposible actualizar. Error: " + e);
+            System.out.println("Imposible eliminar. Error: " + e);
         }
     }
 }
