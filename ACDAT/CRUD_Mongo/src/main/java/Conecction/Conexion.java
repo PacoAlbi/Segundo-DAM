@@ -2,6 +2,7 @@ package Conecction;
 
 import com.mongodb.*;
 import com.mongodb.client.*;
+import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.model.Updates;
 import com.mongodb.client.result.UpdateResult;
@@ -134,5 +135,34 @@ public class Conexion {
         } catch (MongoException e) {
             System.out.println("Imposible eliminar. Error: " + e);
         }
+    }
+    /**
+     * Funcion que devuelve el ultimo id de la coleccion que le introduzcamos como parametro.
+     * La utilidad de esto es generar un autoincremental para los ids de las tablas.
+     * @return
+     */
+    public static int obtenerUltimoId(String nombreColeccion) {
+
+        MongoCollection<Document> collection = database.getCollection(nombreColeccion);
+        String ultimoId = "";
+        // Crear un objeto MongoCursor para obtener el último documento ordenado por _id descendente
+        MongoCursor<Document> cursor = collection.find().sort(Sorts.descending("_id")).limit(1).iterator();
+
+        // Si hay un documento, obtener el valor del campo _id y almacenarlo en una variable
+        if (cursor.hasNext()) {
+            Document ultimoDocumento = cursor.next();
+            ultimoId = ultimoDocumento.get("_id").toString();
+        }
+
+        if(ultimoId.equals("")){
+            ultimoId = "0";
+        }
+
+        // Cerrar el cursor y la conexión a MongoDB
+        cursor.close();
+
+        int ultimoIdInt = Integer.parseInt(ultimoId);
+
+        return ultimoIdInt + 1;
     }
 }
