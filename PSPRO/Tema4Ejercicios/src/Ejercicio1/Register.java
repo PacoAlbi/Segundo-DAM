@@ -56,7 +56,7 @@ public class Register {
         try {
             //Preparo el fichero para escribir
             BufferedWriter bw = new BufferedWriter(new FileWriter("src/Ejercicio1/credenciales.cre", true));
-            //Escribo el nombre de usuario, el resumen de la contraseña y el resumen de la contraseña en hexadecimal separados por ; para poder leerlos después
+            //Escribo el nombre de usuario, el resumen de la contraseña y el resumen de la contraseña en hexadecimal separados por ";" para poder leerlos después
             bw.write(nombre + ";" + Arrays.toString(resumen) + ";" + passwordHash);
             //Salto de línea
             bw.newLine();
