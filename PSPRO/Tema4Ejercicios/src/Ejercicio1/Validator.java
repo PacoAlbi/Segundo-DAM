@@ -70,8 +70,10 @@ public class Validator {
             }
         } catch (FileNotFoundException e) {
             System.err.println("Fichero no encontrado");
+            e.printStackTrace();
         } catch (IOException e) {
             System.err.println("Error de lectura");
+            e.printStackTrace();
         }
         //Devuelvo el validado
         return validado;
@@ -99,8 +101,10 @@ public class Validator {
             }
         } catch (FileNotFoundException e) {
             System.err.println("Fichero no encontrado");
+            e.printStackTrace();
         } catch (IOException e) {
             System.err.println("Error de lectura");
+            e.printStackTrace();
         }
         return validado;
     }
@@ -110,8 +114,6 @@ public class Validator {
             String fileName = "src/Ejercicio1/credenciales.cre";
             File file = new File(fileName);
             byte[] bytesArray = new byte[(int) file.length()];
-            byte[] bytesFinal = new byte[(int) file.length()];
-
             FileInputStream fis;
             try {
                 fis = new FileInputStream(file);
@@ -120,7 +122,6 @@ public class Validator {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             System.out.println("Array de bytes del archivo " + fileName + " : " + bytesArray);
         }
     }

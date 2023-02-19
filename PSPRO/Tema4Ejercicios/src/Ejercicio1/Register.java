@@ -17,13 +17,18 @@ public class Register {
      * Postcondiciones: Registra un usuario y su contraseña en el fichero credenciales.cre.
      */
     public static void main(String[] args) {
+        //Preparo el Scanner para leer por teclado
         Scanner sc = new Scanner(System.in);
+        //Muestro mensaje de registro
         System.out.println("Registro de usuario");
         System.out.println("Introduce el nombre de usuario:");
+        //Leo el nombre de usuario
         String nombre = sc.nextLine();
         System.out.println("Introduce la contraseña:");
+        //Leo la contraseña
         String password = sc.nextLine();
         System.out.println("Introduce la contraseña de nuevo:");
+        //Leo la contraseña de nuevo
         String password2 = sc.nextLine();
         //Comprobamos que las contraseñas coinciden
         if (password.equals(password2)) {
@@ -41,7 +46,7 @@ public class Register {
      * Guarda en el fichero credenciales.cre el nombre de usuario y el resumen de la contraseña.
      * Postcondiciones: Guarda en el fichero credenciales.cre el nombre de usuario y el resumen de la contraseña.
      * @param nombre String Nombre de usuario
-     * @param resumen byte[] Resumen de la contraseña
+     * @param password String Resumen de la contraseña
      */
     private static void guardarCredenciales(String nombre, String password) {
         //Obtenemos el resumen de la contraseña
@@ -59,6 +64,7 @@ public class Register {
             bw.close();
         } catch (IOException e) {
             System.err.println("Error al registrar el usuario");
+            e.printStackTrace();
         }
     }
 }
