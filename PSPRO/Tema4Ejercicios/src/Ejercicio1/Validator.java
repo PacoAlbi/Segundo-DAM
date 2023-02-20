@@ -81,38 +81,49 @@ public class Validator {
     /**
      * Precondiciones: Recibe un nombre de usuario y una contraseña.
      * Comprueba si el nombre de usuario y la contraseña son correctos sacados de un fichero llamado credenciales.cre
-     * a través de un resumen de la contraseña en un array de bytes.
+     * a través de un resumen de la contraseña en un array de bytes, partiendo la línea leida para poder separar los bytes.
      * Postcondiciones: Devuelve true si el nombre de usuario y la contraseña son correctos, false en caso contrario.
      * @param nombre   String Nombre de usuario
      * @param password String Contraseña
      * @return boolean validado
      */
     private static boolean validarUsuarioResumen(String nombre, String password) {
+        //Creo un taco de variables que voy a necesitar
         String linea;
+        String[] split;
         byte[] pass;
         boolean validado = false;
         try {
+            //Paso la contraseña a resumen con el método getDigest de la clase Coder
             byte[] resumen = Coder.getDigest(password);
+            //Creo un BufferedReader para leer el fichero
             BufferedReader br = new BufferedReader(new FileReader("src/Ejercicio1/credenciales.cre"));
+            //Leo la primera línea
             linea = br.readLine();
+            //Mientras no sea null, leo el fichero
             while (linea != null) {
-                String[] parto = linea.split(";");
-                if (parto[0].equals(nombre)) {
-                    pass = new byte[parto[2].length()];
-                    String[] cosa = parto[1].split(", ");
-                    cosa[0]=cosa[0].substring(1);
-                    byte[] cosa2=new byte[cosa.length];
-                    for (int i = 0; i < cosa.length; i++) {
-                        cosa2[i]= Byte.parseByte(cosa[i]);
+                //Si el nombre de usuario coincide con el nombre de usuario de la línea
+                if (linea.split(";")[0].equals(nombre)) {
+                    //Parto la línea para poder separar los bytes
+                    split = linea.split(";")[1].split(", ");
+                    //Quito los corchetes de los extremos
+                    split[0] = split[0].substring(1);
+                    split[split.length - 1] = split[split.length - 1].substring(0, split[split.length - 1].length() - 1);
+                    //Inicio el array de bytes
+                    pass = new byte[split.length];
+                    //Paso los bytes al array de bytes uno a uno para que no cambien.
+                    for (int i = 0; i < split.length; i++) {
+                        pass[i] = Byte.parseByte(split[i]);
                     }
-                 /*   for (int i = 0; i < linea.split(";")[2].length(); i++) {
-                        pass[i] = (byte) linea.split(";")[2].charAt(i);
-                    }*/
+                    //Uso el comparador de la clase Coder para comparar los resúmenes
                     if (Coder.compararResumenes(resumen, pass)) {
+                        //Si son iguales, validado pasa a true
                         validado = true;
+                        //Salgo del bucle para que no tenga que recorrer el fichero completo si ya ha encontrado el usuario y la contraseña
                         break;
                     }
                 }
+                //Leo la siguiente línea
                 linea = br.readLine();
             }
         } catch (FileNotFoundException e) {
@@ -122,27 +133,7 @@ public class Validator {
             System.err.println("Error de lectura");
             e.printStackTrace();
         }
+        //Devuelvo el validado
         return validado;
-    }
-
-    public static void fileStream() throws IOException {
-        String fileName = "src/Ejercicio1/credenciales.cre";
-        File file = new File(fileName);
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        FileInputStream fis;
-        byte[] bytesArray = new byte[(int) file.length()];
-        String linea = br.readLine();
-        while (linea != null) {
-            fis = new FileInputStream(file);
-            System.out.println(linea);
-        }
-        try {
-            fis = new FileInputStream(file);
-            fis.read(bytesArray);
-            fis.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Array de bytes del archivo " + fileName + " : " + bytesArray);
     }
 }
