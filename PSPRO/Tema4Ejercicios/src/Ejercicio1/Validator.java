@@ -96,11 +96,18 @@ public class Validator {
             BufferedReader br = new BufferedReader(new FileReader("src/Ejercicio1/credenciales.cre"));
             linea = br.readLine();
             while (linea != null) {
-                if (linea.split(";")[0].equals(nombre)) {
-                    pass = new byte[linea.split(";")[2].length()];
-                    for (int i = 0; i < linea.split(";")[2].length(); i++) {
-                        pass[i] = (byte) linea.split(";")[2].charAt(i);
+                String[] parto = linea.split(";");
+                if (parto[0].equals(nombre)) {
+                    pass = new byte[parto[2].length()];
+                    String[] cosa = parto[1].split(", ");
+                    cosa[0]=cosa[0].substring(1);
+                    byte[] cosa2=new byte[cosa.length];
+                    for (int i = 0; i < cosa.length; i++) {
+                        cosa2[i]= Byte.parseByte(cosa[i]);
                     }
+                 /*   for (int i = 0; i < linea.split(";")[2].length(); i++) {
+                        pass[i] = (byte) linea.split(";")[2].charAt(i);
+                    }*/
                     if (Coder.compararResumenes(resumen, pass)) {
                         validado = true;
                         break;
