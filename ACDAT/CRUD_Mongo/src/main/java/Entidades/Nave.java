@@ -1,22 +1,36 @@
 package Entidades;
 
-import java.util.Date;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 public class Nave {
 
     //Variables de la clase
+    private int _id;
     private String ganadero;
     private String ubicacion;
-    private Date fechaCreacionRegistro;
+    private Timestamp fechaCreacionRegistro;
     //Constructores
     public Nave() {
     }
-    public Nave(String ganadero, String ubicacion, Date fechaCreacionRegistro) {
+    public Nave(int _id, String ganadero, String ubicacion, Timestamp fechaCreacionRegistro) {
+        this._id = _id;
+        this.ganadero = ganadero;
+        this.ubicacion = ubicacion;
+        this.fechaCreacionRegistro = fechaCreacionRegistro;
+    }
+    public Nave(String ganadero, String ubicacion, Timestamp fechaCreacionRegistro) {
         this.ganadero = ganadero;
         this.ubicacion = ubicacion;
         this.fechaCreacionRegistro = fechaCreacionRegistro;
     }
     //Getters y Setters
+    public int get_id() {
+        return _id;
+    }
+    public void set_id(int _id) {
+        this._id = _id;
+    }
     public String getGanadero() {
         return ganadero;
     }
@@ -29,19 +43,17 @@ public class Nave {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
-    public Date getFechaCreacionRegistro() {
+    public Timestamp getFechaCreacionRegistro() {
         return fechaCreacionRegistro;
     }
-    public void setFechaCreacionRegistro(Date fechaCreacionRegistro) {
+    public void setFechaCreacionRegistro(Timestamp fechaCreacionRegistro) {
         this.fechaCreacionRegistro = fechaCreacionRegistro;
     }
     //toString
     @Override
     public String toString() {
-        return "Nave{" +
-                "ganadero='" + ganadero + '\'' +
-                ", ubicacion='" + ubicacion + '\'' +
-                ", fechaCreacionRegistro=" + fechaCreacionRegistro +
-                '}';
+        return String.format("idNave: %d, ganadero: %s, ubicación: %s" + System.lineSeparator()
+            + "fecha de creación del registro: %s", _id, ganadero, ubicacion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
+                + System.lineSeparator());
     }
 }

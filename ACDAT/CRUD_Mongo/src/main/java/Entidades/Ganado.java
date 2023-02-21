@@ -1,11 +1,13 @@
 package Entidades;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Ganado {
 
     //Variables de la clase
+    private int _id;
     private Date fechaEntrada;
     private Date fechaSacrificio;
     private String nombre;
@@ -14,6 +16,15 @@ public class Ganado {
     private Timestamp fechaCreacionRegistro;
     //Constructores
     public Ganado() {
+    }
+    public Ganado(int _id, Date fechaEntrada, Date fechaSacrificio, String nombre, int idNave, int idMadre, Timestamp fechaCreacionRegistro) {
+        this._id = _id;
+        this.fechaEntrada = fechaEntrada;
+        this.fechaSacrificio = fechaSacrificio;
+        this.nombre = nombre;
+        this.idNave = idNave;
+        this.idMadre = idMadre;
+        this.fechaCreacionRegistro = fechaCreacionRegistro;
     }
     public Ganado(Date fechaEntrada, Date fechaSacrificio, String nombre, int idNave, int idMadre, Timestamp fechaCreacionRegistro) {
         this.fechaEntrada = fechaEntrada;
@@ -24,6 +35,12 @@ public class Ganado {
         this.fechaCreacionRegistro = fechaCreacionRegistro;
     }
     //Getters y Setters
+    public int get_id() {
+        return _id;
+    }
+    public void set_id(int _id) {
+        this._id = _id;
+    }
     public Date getFechaEntrada() {
         return fechaEntrada;
     }
@@ -63,13 +80,9 @@ public class Ganado {
     //toString
     @Override
     public String toString() {
-        return "Ganado{" +
-                "fechaEntrada=" + fechaEntrada +
-                ", fechaSacrificio=" + fechaSacrificio +
-                ", nombre='" + nombre + '\'' +
-                ", idNave=" + idNave +
-                ", idMadre=" + idMadre +
-                ", fechaCreacionRegistro=" + fechaCreacionRegistro +
-                '}';
+        return String.format("idVaca: %d, nombre: %s, fecha de entrada: %s, fecha de sacrificio: %s" + System.lineSeparator()
+        + "idNave: %d, idMadre: %d, fecha de creación del registro: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
+                new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaSacrificio), idNave, idMadre,
+                new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro) + System.lineSeparator());
     }
 }
