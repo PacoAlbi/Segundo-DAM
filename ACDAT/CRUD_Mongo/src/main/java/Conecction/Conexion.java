@@ -1,5 +1,6 @@
 package Conecction;
 
+import Entidades.Ganado;
 import com.mongodb.*;
 import com.mongodb.client.*;
 import com.mongodb.client.model.Sorts;
@@ -42,7 +43,7 @@ public class Conexion {
                         .build())
                 .build();
         MongoClient mongoClient = MongoClients.create(settings);
-        database = mongoClient.getDatabase("Prueba");
+        database = mongoClient.getDatabase("Granja_Lechera");
     }
     /**
      * Precondiciones: No tiene.
@@ -79,6 +80,22 @@ public class Conexion {
     public static void insertar (){
         //Modo compacto de insertar
         database.getCollection("Alumnos").insertOne(new Document().append("nombre", "Manu").append("apellidos", "Torpedo").append("fecha", new Date(2024, 10, 10)));
+    }
+    /**
+     * Precondiciones: No tiene.
+     * Inserta un documento en la colección.
+     * Postcondiciones: No tiene.
+     */
+    public static void insertarGanado (Ganado vaca){
+        //Modo compacto de insertar
+        conectar();
+        database.getCollection("Ganado").insertOne(new Document()
+                .append("nombre", vaca.getNombre())
+                .append("fechaEntrada", vaca.getFechaEntrada())
+                .append("fechaSacrificio", vaca.getFechaSacrificio())
+                .append("idNave", vaca.getIdNave())
+                .append("idMadre", vaca.getIdMadre())
+                .append("creaciónRegistro", vaca.getFechaCreacionRegistro()));
     }
     /**
      * Precondiciones: Debe recibir el dato a cambiar y por el que lo queremos cambiar.
