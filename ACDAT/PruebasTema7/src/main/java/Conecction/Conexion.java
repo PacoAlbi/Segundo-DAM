@@ -133,4 +133,40 @@ public class Conexion {
             System.out.println("Imposible actualizar. Error: " + e);
         }
     }
+    //--------------------------FUNCIONES DE CONSULTA GENÉRICAS--------------------------
+    /**
+     * Precondiciones: Debe recibir la colección en String.
+     * Recorre una de las tablas (Colecciones en Mongo) y devuelve todas sus filas (Documentos en Mongo).
+     * Postcondiciones: No tiene.
+     */
+    public static void getList (String coleccion){
+        conectar();
+        MongoCollection<Document> collection = database.getCollection(coleccion);
+        try (MongoCursor<Document> result = collection.find().iterator()) {
+            while (result.hasNext()) {
+                System.out.println(result.next());
+            }
+        } catch (MongoException e) {
+            System.err.println("Colección no encontrada. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Precondiciones: Debe recibir el id de la vaca y el id de la nave.
+     * Recibe el id de la vaca y el id de la nave y asigna la nave a la vaca.
+     * Postcondiciones: No tiene.
+     * @param idVaca id de la vaca.
+     * @param idNave id de la nave.
+     */
+    public static void asignarNave(int idVaca,int idNave){
+        conectar();
+        MongoCollection<Document> vacas = database.getCollection("Ganado");
+        MongoCollection<Document> naves = database.getCollection("Naves");
+        Document vacaDoc = new Document("_id",idVaca);
+        Document naveDoc = new Document("_id",idNave);
+        Document asignado = new Document("idNave", naves.find(naveDoc).first().getInteger("_id"));
+        Document update = new Document("$set",asignado );
+        vacas.findOneAndUpdate(vacaDoc, update);
+        System.out.println("Nave asignada correctamente.");
+    }
 }

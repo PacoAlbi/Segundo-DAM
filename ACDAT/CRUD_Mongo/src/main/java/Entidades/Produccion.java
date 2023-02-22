@@ -59,7 +59,7 @@ public class Produccion {
     @Override
     public String toString() {
         return String.format("idVaca: %d, litros: %d, año de producción: %d, mes de producción: %d" + System.lineSeparator()
-            + "fecha de creación del registro: %s", idVaca, litros, anoProduccion, mesProduccion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
+            + "fecha última actualización: %s", idVaca, litros, anoProduccion, mesProduccion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
                 + System.lineSeparator());
     }
 }

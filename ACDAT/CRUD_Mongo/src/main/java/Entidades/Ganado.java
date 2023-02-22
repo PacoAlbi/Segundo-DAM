@@ -82,11 +82,11 @@ public class Ganado {
         String vaca;
         if (fechaSacrificio==null){
             vaca = String.format("idVaca: %d, nombre: %s, fecha de entrada: %s" + System.lineSeparator()
-                            + "idNave: %d, idMadre: %d, fecha de creación del registro: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
+                            + "idNave: %d, idMadre: %d, fecha última actualización: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
                             idNave, idMadre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro) + System.lineSeparator());
         } else {
             vaca = String.format("idVaca: %d, nombre: %s, fecha de entrada: %s, fecha de sacrificio: %s" + System.lineSeparator()
-                            + "idNave: %d, idMadre: %d, fecha de creación del registro: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
+                            + "idNave: %d, idMadre: %d, fecha última actualización: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
                             new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaSacrificio), idNave, idMadre,
                             new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro) + System.lineSeparator());
         }

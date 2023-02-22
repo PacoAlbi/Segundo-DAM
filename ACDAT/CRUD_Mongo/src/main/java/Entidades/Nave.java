@@ -53,7 +53,7 @@ public class Nave {
     @Override
     public String toString() {
         return String.format("idNave: %d, ganadero: %s, ubicación: %s" + System.lineSeparator()
-            + "fecha de creación del registro: %s", _id, ganadero, ubicacion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
+            + "fecha última actualización: %s", _id, ganadero, ubicacion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
                 + System.lineSeparator());
     }
 }

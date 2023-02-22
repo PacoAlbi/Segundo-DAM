@@ -3,16 +3,17 @@ package Conecction;
 import Entidades.*;
 import com.mongodb.*;
 import com.mongodb.client.*;
-import com.mongodb.client.model.Sorts;
-import com.mongodb.client.model.UpdateOptions;
-import com.mongodb.client.model.Updates;
+import com.mongodb.client.model.*;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
+import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
@@ -20,18 +21,6 @@ import static com.mongodb.client.model.Filters.eq;
 public class Conexion {
     //Variable de comunicación con la BBDD
     private static MongoDatabase database;
-
-    /**
-     * Precondiciones: No tiene.
-     * Conecta con la BBDD de Mongo en LocalHost.
-     * Postcondiciones: No tiene.
-     */
-    private static void conectarLocalHost (){
-        String uri = "mongodb://localhost:27017/";
-        try (MongoClient mongoClient = MongoClients.create(uri)) {
-            database = mongoClient.getDatabase("Prueba");
-        }
-    }
     /**
      * Precondiciones: No tiene.
      * Conecta con la BBDD de Mongo Atlas.
@@ -49,22 +38,26 @@ public class Conexion {
         database = mongoClient.getDatabase("Granja_Lechera");
     }
     /**
-     * Precondiciones: Debe recibir la colección en String.
-     * Recorre una de las tablas (Colecciones en Mongo) y devuelve todas sus filas (Documentos en Mongo).
+     * Precondiciones: Debe recibir la colección, el campo y el valor a buscar en String.
+     * Devuelve e imprime un valor (WHERE) de la colección.
      * Postcondiciones: No tiene.
      */
-    public static void getList (String coleccion){
+    public static void getOne (String coleccion, String campo, int valor){
         conectar();
         MongoCollection<Document> collection = database.getCollection(coleccion);
-        try (MongoCursor<Document> result = collection.find().iterator()) {
-            while (result.hasNext()) {
-                System.out.println(result.next());
-            }
-        } catch (MongoException e) {
-            System.err.println("Colección no encontrada. Error: " + e);
-            e.printStackTrace();
+        Document doc = collection.find(eq(campo, valor)).first();
+        if (doc != null) {
+            System.out.println(doc.toJson());
+        } else {
+            System.out.println("No existen documentos que coincidan.");
         }
     }
+    /**
+     * Precondiciones: No tiene.
+     * Recorre la colección de Ganado y devuelve una lista de objetos Ganado.
+     * Postcondiciones: Una lista de objetos Ganado.
+     * @return Devuelve un List con el resultado de la búsqueda.
+     */
     public static List<Ganado> getListGanado (){
         conectar();
         List<Ganado> ganadoList = new ArrayList<>();
@@ -81,7 +74,7 @@ public class Conexion {
                 vaca.setFechaSacrificio(documento.getDate("fechaSacrificio"));
                 vaca.setIdNave(documento.getInteger("idNave"));
                 vaca.setIdMadre(documento.getInteger("idMadre"));
-                vaca.setFechaCreacionRegistro(Timestamp.valueOf(documento.getString("creaciónRegistro")));
+                vaca.setFechaCreacionRegistro(Timestamp.valueOf(documento.getString("actualizaciónRegistro")));
                 ganadoList.add(vaca);
             }
         } catch (MongoException e) {
@@ -90,6 +83,107 @@ public class Conexion {
         }
         return ganadoList;
     }
+    /**
+     * Precondiciones: Debe recibir un Ganado.
+     * Inserta un nuevo documento en la colección.
+     * Postcondiciones: Inserta un Ganado en la colección.
+     */
+    public static void insertarGanado (Ganado vaca) {
+        conectar();
+        try {
+            database.getCollection("Ganado").insertOne(new Document()
+                    .append("_id", obtenerUltimoId("Ganado"))
+                    .append("nombre", vaca.getNombre())
+                    .append("fechaEntrada", vaca.getFechaEntrada())
+                    .append("fechaSacrificio", vaca.getFechaSacrificio())
+                    .append("idNave", vaca.getIdNave())
+                    .append("idMadre", vaca.getIdMadre())
+                    .append("actualizaciónRegistro", vaca.getFechaCreacionRegistro().toString()));
+        } catch (MongoException e) {
+            System.err.println("Imposible insertar la vaca. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Precondiciones: Debe recibir el id de la vaca y el nuevo nombre.
+     * Recorre la colección de Ganado y modifica el nombre de la vaca.
+     * Postcondiciones: No tiene.
+     * @param idVaca int id de la vaca
+     * @param valor String valor a modificar
+     */
+    public static void modificarNombreVaca (int idVaca, String valor){
+        conectar();
+        Document query = new Document().append("_id", idVaca);
+        Bson updates = Updates.combine(
+                Updates.set("nombre", valor),
+                Updates.set("actualizaciónRegistro",Timestamp.from(Instant.now()).toString()));
+        UpdateOptions options = new UpdateOptions().upsert(true);
+        try {
+            UpdateResult result = database.getCollection("Ganado").updateOne(query, updates, options);
+            System.out.println("Nombre modificado con éxito: " + result.getModifiedCount());
+            System.out.println("Documentos insertados nuevos por no estar con esa id antes: " + result.getUpsertedId());
+        } catch (MongoException e) {
+            System.err.println("Imposible actualizar el documento. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Precondiciones: Debe recibir el id de la vaca y el id de la nueva nave.
+     * Recorre la colección de Ganado y modifica la nave de la vaca.
+     * Postcondiciones: No tiene.
+     * @param idVaca int id de la vaca
+     * @param valor int id de la nave
+     */
+    public static void modificarNaveVaca (int idVaca, int valor){
+        conectar();
+        Document query = new Document().append("_id", idVaca);
+        Bson updates = Updates.combine(
+                Updates.set("idNave", valor),
+                Updates.set("actualizaciónRegistro",Timestamp.from(Instant.now()).toString()));
+        UpdateOptions options = new UpdateOptions().upsert(true);
+        try {
+            UpdateResult result = database.getCollection("Ganado").updateOne(query, updates, options);
+            System.out.println("Nave modificada con éxito: " + result.getModifiedCount());
+            System.out.println("Documentos insertados nuevos por no estar con esa id antes: " + result.getUpsertedId());
+        } catch (MongoException e) {
+            System.err.println("Imposible actualizar el documento. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Precondiciones: Debe recibir el id de la vaca y la fecha de sacrificio.
+     * Recorre la colección de Ganado e inserta la fecha de sacrificio.
+     * Postcondiciones: No tiene.
+     * @param idVaca int id de la vaca
+     * @param valor String fecha de sacrificio
+     */
+    public static void modificarSacrificioVaca (int idVaca, String valor){
+        conectar();
+        Document query = new Document().append("_id", idVaca);
+        Bson updates = Updates.combine(
+                Updates.set("fechaSacrificio", Date.valueOf(valor)),
+                Updates.set("actualizaciónRegistro",Timestamp.from(Instant.now()).toString()));
+        UpdateOptions options = new UpdateOptions().upsert(true);
+        try {
+            UpdateResult result = database.getCollection("Ganado").updateOne(query, updates, options);
+            System.out.println("Fecha introducida con éxito: " + result.getModifiedCount());
+            System.out.println("Documentos insertados nuevos por no estar con esa id antes: " + result.getUpsertedId());
+        } catch (MongoException e) {
+            System.err.println("Imposible actualizar el documento. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+
+    //------------------------------------NAVES------------------------------------
+
+    /**
+     * Precondiciones: No tiene.
+     * Recorre la colección de Naves y devuelve una lista con todas las naves.
+     * Postcondiciones: Devuelve una lista con todas las naves.
+     * @return List<Nave> lista de naves
+     */
     public static List<Nave> getListNaves (){
         conectar();
         List<Nave> naveList = new ArrayList<>();
@@ -103,7 +197,7 @@ public class Conexion {
                 nave.set_id(documento.getInteger("_id"));
                 nave.setGanadero(documento.getString("ganadero"));
                 nave.setUbicacion(documento.getString("ubicación"));
-                nave.setFechaCreacionRegistro(Timestamp.valueOf(documento.getString("creaciónRegistro")));
+                nave.setFechaCreacionRegistro(Timestamp.valueOf(documento.getString("actualizaciónRegistro")));
                 naveList.add(nave);
             }
         } catch (MongoException e) {
@@ -112,6 +206,56 @@ public class Conexion {
         }
         return naveList;
     }
+    /**
+     * Precondiciones: Debe recibir una Nave.
+     * Inserta un nuevo documento en la colección.
+     * Postcondiciones: Inserta una Nave en la colección.
+     */
+    public static void insertarNave (Nave nave){
+        conectar();
+        try {
+            database.getCollection("Naves").insertOne(new Document()
+                    .append("_id", obtenerUltimoId("Naves"))
+                    .append("ganadero", nave.getGanadero())
+                    .append("ubicación", nave.getUbicacion())
+                    .append("actualizaciónRegistro", nave.getFechaCreacionRegistro().toString()));
+        } catch (MongoException e) {
+            System.err.println("Imposible insertar la nave. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Precondiciones: Debe recibir el id de la nave y el nuevo propietario.
+     * Recorre la colección, busca la nave y le cambia el propietario.
+     * Postcondiciones: No tiene.
+     * @param idNave int id de la nave.
+     * @param nombre String nuevo propietario.
+     */
+    public static void modificarPropietario (int idNave, String nombre){
+        conectar();
+        Document query = new Document().append("_id", idNave);
+        Bson updates = Updates.combine(
+                Updates.set("ganadero", nombre),
+                Updates.set("actualizaciónRegistro",Timestamp.from(Instant.now()).toString()));
+        UpdateOptions options = new UpdateOptions().upsert(true);
+        try {
+            UpdateResult result = database.getCollection("Naves").updateOne(query, updates, options);
+            System.out.println("Nuevo propietario añadido con éxito: " + result.getModifiedCount());
+            System.out.println("Documentos insertados nuevos por no estar con esa id antes: " + result.getUpsertedId());
+        } catch (MongoException e) {
+            System.err.println("Imposible actualizar el documento. Error: " + e);
+            e.printStackTrace();
+        }
+    }
+
+    //------------------------------------PRODUCCION------------------------------------
+
+    /**
+     * Precondiciones: No tiene.
+     * Recorre la colección de Produccion y devuelve una lista con todas las producciones.
+     * Postcondiciones: Devuelve una lista de todas las producciones.
+     * @return List<Produccion> lista de producciones
+     */
     public static List<Produccion> getListProduccion (){
         conectar();
         List<Produccion> produccionList = new ArrayList<>();
@@ -126,7 +270,7 @@ public class Conexion {
                 produccion.setMesProduccion(documento.getInteger("mes_producción"));
                 produccion.setAnoProduccion(documento.getInteger("year_producción"));
                 produccion.setLitros(documento.getInteger("litros"));
-                produccion.setFechaCreacionRegistro(Timestamp.valueOf(documento.getString("creaciónRegistro")));
+                produccion.setFechaCreacionRegistro(Timestamp.valueOf(documento.getString("actualizaciónRegistro")));
                 produccionList.add(produccion);
             }
         } catch (MongoException e) {
@@ -134,60 +278,6 @@ public class Conexion {
             e.printStackTrace();
         }
         return produccionList;
-    }
-    /**
-     * Precondiciones: Debe recibir la colección, el campo y el valor a buscar en String.
-     * Devuelve e imprime un valor (WHERE) de la colección.
-     * Postcondiciones: No tiene.
-     */
-    public static void getOne (String coleccion, String campo, String valor){
-        conectar();
-        MongoCollection<Document> collection = database.getCollection(coleccion);
-        Document doc = collection.find(eq(campo, valor)).first();
-        if (doc != null) {
-            System.out.println(doc.toJson());
-        } else {
-            System.out.println("No existen documentos que coincidan.");
-        }
-    }
-    /**
-     * Precondiciones: Debe recibir un Ganado.
-     * Inserta un nuevo documento en la colección.
-     * Postcondiciones: Inserta un Ganado en la colección.
-     */
-    public static void insertarGanado (Ganado vaca) {
-        conectar();
-        try {
-        database.getCollection("Ganado").insertOne(new Document()
-                .append("_id", obtenerUltimoId("Ganado"))
-                .append("nombre", vaca.getNombre())
-                .append("fechaEntrada", vaca.getFechaEntrada())
-                .append("fechaSacrificio", vaca.getFechaSacrificio())
-                .append("idNave", vaca.getIdNave())
-                .append("idMadre", vaca.getIdMadre())
-                .append("creaciónRegistro", vaca.getFechaCreacionRegistro().toString()));
-        } catch (MongoException e) {
-            System.err.println("Imposible insertar la vaca. Error: " + e);
-            e.printStackTrace();
-        }
-    }
-    /**
-     * Precondiciones: Debe recibir una Nave.
-     * Inserta un nuevo documento en la colección.
-     * Postcondiciones: Inserta una Nave en la colección.
-     */
-    public static void insertarNave (Nave nave){
-        conectar();
-        try {
-            database.getCollection("Naves").insertOne(new Document()
-                    .append("_id", obtenerUltimoId("Naves"))
-                    .append("ganadero", nave.getGanadero())
-                    .append("ubicación", nave.getUbicacion())
-                    .append("creaciónRegistro", nave.getFechaCreacionRegistro().toString()));
-        } catch (MongoException e) {
-            System.err.println("Imposible insertar la nave. Error: " + e);
-            e.printStackTrace();
-        }
     }
     /**
      * Precondiciones: Debe recibir una Producción.
@@ -202,56 +292,57 @@ public class Conexion {
                     .append("mes_producción", produccion.getMesProduccion())
                     .append("litros", produccion.getLitros())
                     .append("year_producción", produccion.getAnoProduccion())
-                    .append("creaciónRegistro", produccion.getFechaCreacionRegistro().toString()));
+                    .append("actualizaciónRegistro", produccion.getFechaCreacionRegistro().toString()));
         } catch (MongoException e) {
             System.err.println("Imposible insertar la producción. Error: " + e);
             e.printStackTrace();
         }
     }
     /**
-     * Precondiciones: Debe recibir el dato a cambiar y por el que lo queremos cambiar.
-     * Recorre la colección y busca los nombres que se correspondan con el dado y los sustituye por el nuevo.
+     * Precondiciones: Debe recibir el id de la vaca.
+     * Recorre la colección, busca la vaca y devuelve la producción de esa vaca.
      * Postcondiciones: No tiene.
-     * @param antes String dato anterior.
-     * @param despues String dato nuevo.
+     * @param idVaca int id de la vaca.
      */
-    public static void modificarVarios (String antes, String despues){
-        Document query = new Document().append("nombre", antes);
-        Bson updates = Updates.combine(
-                Updates.set("nombre", despues),
-                Updates.currentTimestamp("lastUpdated"));
-        UpdateOptions options = new UpdateOptions().upsert(true);
-        try {
-            UpdateResult result = database.getCollection("Alumnos").updateMany(query, updates, options);
-            System.out.println("Cantidad de documentos modificados: " + result.getModifiedCount());
-            System.out.println("Documentos insertados nuevos por no estar con esa id antes: " + result.getUpsertedId());
-        } catch (MongoException e) {
-            System.err.println("Imposible actualizar. Error: " + e);
-            e.printStackTrace();
-        }
+    public static void getProduccionPorVaca(int idVaca) {
+        conectar();
+        MongoCollection<Document> produccion = database.getCollection("Produccion");
+        produccion.aggregate(Arrays.asList(
+                Aggregates.match(Filters.eq("idVaca", idVaca)),
+                Aggregates.group("$idVaca", Accumulators.sum("Litros totales producidos", "$litros"))
+        )).forEach( document -> System.out.println(document.toJson()));
     }
     /**
-     * Precondiciones: Debe recibir el dato a cambiar y por el que lo queremos cambiar.
-     * Recorre la colección y busca los nombres que se correspondan con el dado y sustituye el primero que encuentra por el nuevo.
+     * Precondiciones: Debe recibir el mes.
+     * Recorre la colección, busca el mes y devuelve la producción de ese mes.
      * Postcondiciones: No tiene.
-     * @param antes String dato anterior.
-     * @param despues String dato nuevo.
+     * @param mes int mes.
      */
-    public static void modificarUno (String antes, String despues){
-        Document query = new Document().append("nombre", antes);
-        Bson updates = Updates.combine(
-                Updates.set("nombre", despues),
-                Updates.currentTimestamp("lastUpdated"));
-        UpdateOptions options = new UpdateOptions().upsert(true);
-        try {
-            UpdateResult result = database.getCollection("Alumnos").updateOne(query, updates, options);
-            System.out.println("Cantidad de documentos modificados: " + result.getModifiedCount());
-            System.out.println("Documentos insertados nuevos por no estar con esa id antes: " + result.getUpsertedId());
-        } catch (MongoException e) {
-            System.err.println("Imposible actualizar el documento. Error: " + e);
-            e.printStackTrace();
-        }
+    public static void getProduccionPorMes(int mes) {
+        conectar();
+        MongoCollection<Document> produccion = database.getCollection("Produccion");
+        produccion.aggregate(Arrays.asList(
+                Aggregates.match(Filters.eq("mes_producción", mes)),
+                Aggregates.group("$mes_producción", Accumulators.sum("Litros totales producidos en ese mes", "$litros"))
+        )).forEach( document -> System.out.println(document.toJson()));
     }
+    /**
+     * Precondiciones: Debe recibir el año.
+     * Recorre la colección, busca el año y devuelve la producción de ese año.
+     * Postcondiciones: No tiene.
+     * @param anio int año.
+     */
+    public static void getProduccionPorAno(int anio) {
+        conectar();
+        MongoCollection<Document> produccion = database.getCollection("Produccion");
+        produccion.aggregate(Arrays.asList(
+                Aggregates.match(Filters.eq("year_producción", anio)),
+                Aggregates.group("$year_producción", Accumulators.sum("Litros totales producidos en ese año", "$litros"))
+        )).forEach( document -> System.out.println(document.toJson()));
+    }
+
+    //---------------------------FUNCIONES AUXILIARES---------------------------
+
     /**
      * Precondiciones: Debe recibir la colección, el campo y el valor a buscar en String.
      * Borra un documento de la colección.
@@ -273,18 +364,15 @@ public class Conexion {
         }
     }
     /**
-     * Precondiciones: Debe recibir la colección en String.
-     * Función que devuelve el último id de la colección que le introduzcamos como parámetro.
-     * La utilidad de esto es generar un autoincremental para los ids de las tablas.
-     * Postcondiciones: Devuelve un int con el último id de la colección.
+     * Precondiciones: Debe recibir la colección.
+     * Función que devuelve el último id de la colección para poder insertar un nuevo documento con un id autoincremental.
+     * Postcondiciones: Devuelve el último id de la colección.
      * @return int con el último id de la colección.
      */
     public static int obtenerUltimoId(String coleccion) {
         MongoCollection<Document> collection = database.getCollection(coleccion);
         String ultimoId = "";
-        // Crear un objeto MongoCursor para obtener el último documento ordenado por _id descendente
         MongoCursor<Document> cursor = collection.find().sort(Sorts.descending("_id")).limit(1).iterator();
-        // Si hay un documento, obtener el valor del campo _id y almacenarlo en una variable
         if (cursor.hasNext()) {
             Document ultimoDocumento = cursor.next();
             ultimoId = ultimoDocumento.get("_id").toString();
@@ -292,21 +380,8 @@ public class Conexion {
         if(ultimoId.equals("")){
             ultimoId = "0";
         }
-        // Cerrar el cursor y la conexión a MongoDB
         cursor.close();
         int ultimoIdInt = Integer.parseInt(ultimoId);
         return ultimoIdInt + 1;
-    }
-
-    public static void asignarNave(int idVaca,int idNave){
-        conectar();
-        MongoCollection<Document> vacas = database.getCollection("Ganado");
-        MongoCollection<Document> naves = database.getCollection("Naves");
-        Document vacaDoc = new Document("_id",idVaca);
-        Document naveDoc = new Document("_id",idNave);
-        Document asignado = new Document("idNave", naves.find(naveDoc).first().getInteger("_id"));
-        Document update = new Document("$set",asignado );
-        vacas.findOneAndUpdate(vacaDoc, update);
-        System.out.println("Nave asignada correctamente.");
     }
 }
