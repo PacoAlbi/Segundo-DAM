@@ -79,13 +79,14 @@ class ConversacionActivity : AppCompatActivity() {
             de = usuario
         )
 
-        // introduzco el mensaje en la coleccion de chats
-        // le paso el idChat al documento para que el mensaje se guarde solo en el chat en el que nos encontramos (si no se guardaria en todos los chats existentes)
-        database.collection("chats").document(idChat).collection("mensajes").document().set(mensajeAIntroducir)
+        if(!mensajeAIntroducir.texto.isNullOrEmpty()){
+            // introduzco el mensaje en la coleccion de chats
+            // le paso el idChat al documento para que el mensaje se guarde solo en el chat en el que nos encontramos (si no se guardaria en todos los chats existentes)
+            database.collection("chats").document(idChat).collection("mensajes").document().set(mensajeAIntroducir)
 
-        // aqui pongo vacio el edit text del mensaje para que cada vez que se envie un mensaje se borre el que se ha escrito anteriormente
-        mensajeEditText.setText("")
-
+            // aqui pongo vacio el edit text del mensaje para que cada vez que se envie un mensaje se borre el que se ha escrito anteriormente
+            mensajeEditText.setText("")
+        }
 
     }
 }

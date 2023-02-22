@@ -180,10 +180,11 @@ class ContactosActivity : AppCompatActivity() {
         val chatId = UUID.randomUUID().toString() // crea variable id random
         val elOtro = emailEditText.text.toString()
 
-        val nombreDelOtro = elOtro.split("@")[0];
+        val nombreDelOtro = elOtro.split("@")[0]
+        val miNombre = usuario.split("@")[0]
         val chatAIntroducir = Chat(
             id = chatId,
-            nombre = nombreDelOtro
+            nombre = "Chat de " + miNombre.capitalize() + " y " + nombreDelOtro.capitalize()
         )
 
         // creamos en la base de datos las colecciones con los campos que hemos creado con el objeto de tipo Chat
