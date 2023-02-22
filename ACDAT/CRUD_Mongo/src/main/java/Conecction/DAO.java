@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 public class DAO {
     public static void main(String[] args) {
         Logger.getLogger("org.mongodb").setLevel(Level.OFF);
-        //Conexion.insertarGanado(new Ganado(Date.valueOf("2015-03-01"), Date.valueOf("2020-08-22"), "Felisa", 1, 1, Timestamp.from(Instant.now())));
+        //Conexion.insertarGanado(new Ganado(Date.valueOf("2015-03-01"), "Felisa", 1, 1, Timestamp.from(Instant.now())));
         //Conexion.insertarNave(new Nave("Felix Bolaños", "Wilbur", Timestamp.from(Instant.now())));
         //Conexion.insertarProduccion(new Produccion(1, 10, 2017, 6, Timestamp.from(Instant.now())));
         //System.out.println(Conexion.getListGanado());
@@ -67,6 +67,4 @@ public class DAO {
         produccion.setFechaCreacionRegistro(Timestamp.from(Instant.now()));
         Conexion.insertarProduccion(produccion);
     }
-
-
 }

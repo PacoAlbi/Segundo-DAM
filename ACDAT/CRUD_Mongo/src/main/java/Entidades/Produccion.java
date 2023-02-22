@@ -8,7 +8,7 @@ public class Produccion {
     //Variables de la clase
     private int idVaca;
     private int mesProduccion;
-    private int AnoProduccion;
+    private int anoProduccion;
     private int litros;
     private Timestamp fechaCreacionRegistro;
 
@@ -18,7 +18,7 @@ public class Produccion {
     public Produccion(int idVaca, int mesProduccion, int anoProduccion, int litros, Timestamp fechaCreacionRegistro) {
         this.idVaca = idVaca;
         this.mesProduccion = mesProduccion;
-        AnoProduccion = anoProduccion;
+        this.anoProduccion = anoProduccion;
         this.litros = litros;
         this.fechaCreacionRegistro = fechaCreacionRegistro;
     }
@@ -37,10 +37,10 @@ public class Produccion {
         this.mesProduccion = mesProduccion;
     }
     public int getAnoProduccion() {
-        return AnoProduccion;
+        return anoProduccion;
     }
     public void setAnoProduccion(int anoProduccion) {
-        AnoProduccion = anoProduccion;
+        this.anoProduccion = anoProduccion;
     }
     public int getLitros() {
         return litros;
@@ -58,8 +58,8 @@ public class Produccion {
     //toString
     @Override
     public String toString() {
-        return String.format("idVaca: %d, litros: %d, año de producción, mes de producción: %d" + System.lineSeparator()
-            + "fecha de creación del registro: %s", idVaca, litros, AnoProduccion, mesProduccion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
+        return String.format("idVaca: %d, litros: %d, año de producción: %d, mes de producción: %d" + System.lineSeparator()
+            + "fecha de creación del registro: %s", idVaca, litros, anoProduccion, mesProduccion, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro)
                 + System.lineSeparator());
     }
 }

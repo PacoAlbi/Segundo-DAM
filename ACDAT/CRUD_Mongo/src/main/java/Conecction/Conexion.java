@@ -14,7 +14,6 @@ import org.bson.conversions.Bson;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -265,7 +264,7 @@ public class Conexion {
             MongoCollection<Document> collection = database.getCollection(coleccion);
             DeleteResult resultado = collection.deleteOne(documento);
             if (resultado.getDeletedCount() > 0)
-                System.out.println("Documento eliminado correctamente." + resultado.getDeletedCount());
+                System.out.println("Documento eliminado correctamente. Total eliminados: " + resultado.getDeletedCount());
             else
                 System.out.println("No se ha encontrado el documento.");
         } catch (MongoException e) {

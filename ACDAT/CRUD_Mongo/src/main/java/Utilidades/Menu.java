@@ -1,5 +1,7 @@
 package Utilidades;
 
+import Conecction.Conexion;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -16,14 +18,12 @@ public class Menu {
      */
     public static void pintarMenu() {
         System.out.println("""
-                
-                ---Granja la baquita feliz---
-                [1] Mostrar Datos.
-                [2] Actualizar.
-                [3] Insertar.
-                [4] Borrar.
+                ---Granja la vaca que mira con desdén---
+                [1] Gestionar Ganado.
+                [2] Gestionar Naves.
+                [3] Gestionar Producción.
                 [0] Salir.
-                ----------------------------------------------------""");
+                ----------------------------------------""");
     }
 
     /**
@@ -38,10 +38,9 @@ public class Menu {
             pintarMenu();
             menu = sc.next();
             switch (menu) {
-                case "1" -> mostrarOpcionMostrar();
-                case "2" -> mostrarActualizar();
-                case "3" -> mostrarInsertar();
-                case "4" -> mostrarBorrar();
+                case "1" -> mostrarOpcionesGanado();
+                case "2" -> mostrarOpcionesNaves();
+                case "3" -> mostrarOpcionesProduccion();
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
@@ -49,88 +48,107 @@ public class Menu {
         sc.close();
     }
 
-    public static void pinntarOpcionMostrar() {
+    //--------------------------------------------------GANADO----------------------------------------------------------
+
+    public static void pintarOpcionesGanado() {
         System.out.println("""
-                
-                ---Elija una tabla---
-                [1] Listas.
-                [2] Dato Único.
-                [0] Volver.
-                ---------------------""");
+                ------Elija una tabla------
+                [1] Ver lista del ganado.
+                [2] Buscar Vaca.
+                [3] Insertar vaquita.
+                [4] Editar Vaca.
+                [5] Eliminar Vaca.
+                [0] Volver menu anterior.
+                ---------------------------""");
     }
 
-    public static void mostrarOpcionMostrar() {
+    public static void mostrarOpcionesGanado() {
         String menu;
         boolean salir = false;
         do {
-            pinntarOpcionMostrar();
+            pintarOpcionesGanado();
             menu = sc.next();
             switch (menu) {
-                case "1" -> mostrarTablas();
-                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m"); //Llamar a
-                case "0" -> salir = true;
-                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
-            }
-        } while (!salir);
-    }
-
-    public static void pinntar3Tablas() {
-        System.out.println("""
-                
-                ---Elija una colección---
-                [1] Ganado.
-                [2] Naves.
-                [3] Producción.
-                [0] Salir.
-                ---------------------""");
-    }
-
-    public static void mostrarTablas() {
-        String menu;
-        boolean salir = false;
-        do {
-            pinntar3Tablas();
-            menu = sc.next();
-            switch (menu) {
-                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "1" -> System.out.println("\033[93m" + Conexion.getListGanado() + "\033[0m");
                 case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "4" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "5" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
         } while (!salir);
     }
 
-    public static void pinntar2Tablas() {
+    //-------------------------------------------------NAVES------------------------------------------------------------
+
+    public static void pintarOpcionesNaves() {
         System.out.println("""
-                
-                ---Elija una tabla---
-                [1] Usuarios.
-                [2] Posts.
-                [0] Salir.
-                ---------------------""");
+                -----Elija una colección-----
+                [1] Ver lista naves.
+                [2] Buscar Nave.
+                [3] Insertar Nave.
+                [4] Actualizar propietario.
+                [5] Eliminar Nave.
+                [0] Volver menu anterior.
+                -----------------------------""");
     }
 
-    public static void mostrarActualizar() {
+    public static void mostrarOpcionesNaves() {
         String menu;
         boolean salir = false;
         do {
-            pinntar2Tablas();
+            pintarOpcionesNaves();
             menu = sc.next();
             switch (menu) {
-                case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "1" -> System.out.println("\033[93m" + Conexion.getListNaves() + "\033[0m");
                 case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "4" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "5" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
                 case "0" -> salir = true;
                 default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
             }
         } while (!salir);
     }
+
+    //---------------------------------------------PRODUCCIONES---------------------------------------------------------
+
+    public static void pintarOpcionesProduccion() {
+        System.out.println("""
+                ------Elija una tabla------
+                [1] Lista producción.
+                [2] Producción por vaca/l.
+                [3] Producción por mes/l.
+                [4] Producción por año/l.
+                [0] Volver menu anterior.
+                ---------------------------""");
+    }
+
+    public static void mostrarOpcionesProduccion() {
+        String menu;
+        boolean salir = false;
+        do {
+            pintarOpcionesProduccion();
+            menu = sc.next();
+            switch (menu) {
+                case "1" -> System.out.println("\033[93m" + Conexion.getListProduccion() + "\033[0m");
+                case "2" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "3" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "4" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
+                case "0" -> salir = true;
+                default ->  System.out.println("\033[93;1;4mNo es una opción válida.\033[0m");
+            }
+        } while (!salir);
+    }
+
+    //-------------------------------------------------OTROS------------------------------------------------------------
 
     public static void mostrarInsertar() {
         String menu;
         boolean salir = false;
         do {
-            pinntar2Tablas();
+            pintarOpcionesProduccion();
             menu = sc.next();
             switch (menu) {
                 case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");
@@ -145,7 +163,7 @@ public class Menu {
         String menu;
         boolean salir = false;
         do {
-            pinntar3Tablas();
+            pintarOpcionesNaves();
             menu = sc.next();
             switch (menu) {
                 case "1" -> System.out.println("\033[93;1;4mEn Construcción\033[0m");

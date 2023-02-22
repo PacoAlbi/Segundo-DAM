@@ -26,9 +26,8 @@ public class Ganado {
         this.idMadre = idMadre;
         this.fechaCreacionRegistro = fechaCreacionRegistro;
     }
-    public Ganado(Date fechaEntrada, Date fechaSacrificio, String nombre, int idNave, int idMadre, Timestamp fechaCreacionRegistro) {
+    public Ganado(Date fechaEntrada, String nombre, int idNave, int idMadre, Timestamp fechaCreacionRegistro) {
         this.fechaEntrada = fechaEntrada;
-        this.fechaSacrificio = fechaSacrificio;
         this.nombre = nombre;
         this.idNave = idNave;
         this.idMadre = idMadre;
@@ -80,9 +79,17 @@ public class Ganado {
     //toString
     @Override
     public String toString() {
-        return String.format("idVaca: %d, nombre: %s, fecha de entrada: %s, fecha de sacrificio: %s" + System.lineSeparator()
-        + "idNave: %d, idMadre: %d, fecha de creación del registro: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
-                new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaSacrificio), idNave, idMadre,
-                new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro) + System.lineSeparator());
+        String vaca;
+        if (fechaSacrificio==null){
+            vaca = String.format("idVaca: %d, nombre: %s, fecha de entrada: %s" + System.lineSeparator()
+                            + "idNave: %d, idMadre: %d, fecha de creación del registro: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
+                            idNave, idMadre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro) + System.lineSeparator());
+        } else {
+            vaca = String.format("idVaca: %d, nombre: %s, fecha de entrada: %s, fecha de sacrificio: %s" + System.lineSeparator()
+                            + "idNave: %d, idMadre: %d, fecha de creación del registro: %s", _id, nombre, new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaEntrada),
+                            new SimpleDateFormat("EEEE, dd-MMMM-yyyy").format(fechaSacrificio), idNave, idMadre,
+                            new SimpleDateFormat("EEEE, dd-MMMM-yyyy, HH:mm:ss").format(fechaCreacionRegistro) + System.lineSeparator());
+        }
+        return vaca;
     }
 }
