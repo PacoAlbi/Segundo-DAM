@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".actividades.RegisterActivity"
+    android:background="#128C7E">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="170dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="540dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="170dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="540dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="SIGN UP"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:padding="15dp"
+        android:id="@+id/registerPassword"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/borde_escribir"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/password"
+        app:layout_constraintEnd_toStartOf="@+id/registerPassword"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="348dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/confirm"
+        app:layout_constraintEnd_toStartOf="@+id/registerRepeatPassword"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="120dp"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:padding="15dp"
+        android:background="@drawable/borde_escribir"
+        android:id="@+id/registerEmail"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="148dp"
+        android:hint="pepe@gmail.com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/user"
+        app:layout_constraintEnd_toStartOf="@+id/registerEmail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="77dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="220dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="129dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="316dp"
+        android:text="Confirm password"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="195dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="528dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="OR"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:padding="15dp"
+        android:background="@drawable/borde_escribir"
+        android:id="@+id/registerRepeatPassword"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="40dp"
+        android:hint="•••••••••••••••••"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="428dp"
+        android:backgroundTint="#25D366"
+        android:text="SIGN UP"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/registerGoLoginButton"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="596dp"
+        android:text="LOGIN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#34B7F1"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
