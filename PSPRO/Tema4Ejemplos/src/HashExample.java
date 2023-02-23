@@ -41,5 +41,4 @@ public class HashExample {
             e.printStackTrace();
         }
     }
-
 }
