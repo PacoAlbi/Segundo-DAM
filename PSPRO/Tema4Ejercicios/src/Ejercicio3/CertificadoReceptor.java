@@ -13,8 +13,13 @@ import java.security.spec.X509EncodedKeySpec;
 
 public class CertificadoReceptor {
 
-    private static final String FICHEROCLAVEPUBLICA = "publicKey.key";
-    private static final String FICHEROCLAVEPRIVADA = "privateKey.key";
+    private static final String FICHEROCLAVEPUBLICA = "publicKeyReceptor.key";
+    private static final String FICHEROCLAVEPRIVADA = "privateKeyReceptor.key";
+
+    public static void main(String[] args) {
+        KeyPair claves = generarClaves();
+        guardarClaves(claves);
+    }
 
     public static KeyPair generarClaves() {
         KeyPairGenerator generador;
@@ -27,20 +32,18 @@ public class CertificadoReceptor {
             System.err.println("No existe el algoritmo especificado");
             e.printStackTrace();
         }
-
         return claves;
     }
 
     public static void guardarClaves(KeyPair claves) {
-        FileOutputStream fos;
+        FileOutputStream fileOutputStream;
         try {
-            fos = new FileOutputStream(FICHEROCLAVEPUBLICA);
-            fos.write(claves.getPublic().getEncoded());
-            fos.close();
-
-            fos = new FileOutputStream(FICHEROCLAVEPRIVADA);
-            fos.write(claves.getPrivate().getEncoded());
-            fos.close();
+            fileOutputStream = new FileOutputStream(FICHEROCLAVEPUBLICA);
+            fileOutputStream.write(claves.getPublic().getEncoded());
+            fileOutputStream.close();
+            fileOutputStream = new FileOutputStream(FICHEROCLAVEPRIVADA);
+            fileOutputStream.write(claves.getPrivate().getEncoded());
+            fileOutputStream.close();
         } catch (FileNotFoundException e) {
             System.err.println("No se encuentra el fichero.");
             e.printStackTrace();
@@ -48,19 +51,16 @@ public class CertificadoReceptor {
             System.err.println("Se ha producido un error durante la escritura en el fichero.");
             e.printStackTrace();
         }
-
     }
 
     public static PublicKey getClavePublica() {
         File ficheroClavePublica = new File(FICHEROCLAVEPUBLICA);
         PublicKey clavePublica = null;
         try {
-
             byte[] bytesClavePublica = Files.readAllBytes(ficheroClavePublica.toPath());
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(bytesClavePublica);
             clavePublica = keyFactory.generatePublic(publicKeySpec);
-
         } catch (IOException e) {
             System.err.println("Se ha producido en la lectura del fichero");
             e.printStackTrace();
@@ -78,12 +78,10 @@ public class CertificadoReceptor {
         File ficheroClavePrivada = new File(FICHEROCLAVEPRIVADA);
         PrivateKey clavePrivada = null;
         try {
-
             byte[] bytesClavePrivada = Files.readAllBytes(ficheroClavePrivada.toPath());
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             EncodedKeySpec privateKeySpec = new PKCS8EncodedKeySpec(bytesClavePrivada);
             clavePrivada = keyFactory.generatePrivate(privateKeySpec);
-
         } catch (IOException e) {
             System.err.println("Se ha producido en la lectura del fichero");
             e.printStackTrace();
@@ -95,10 +93,5 @@ public class CertificadoReceptor {
             e.printStackTrace();
         }
         return clavePrivada;
-    }
-
-    public static void main(String[] args) {
-        KeyPair claves = generarClaves();
-        guardarClaves(claves);
     }
 }
