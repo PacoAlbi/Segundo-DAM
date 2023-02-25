@@ -11,23 +11,29 @@ import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.util.Base64;
 
 public class Descifrar {
 
     public static void main(String[] args) {
         byte [] mensaje;
-        byte [] mensajeCifrado;
+        byte [] mensajeDescifradoReceptor;
+        byte [] mensajeDescifradoEmisor;
         String linea;
         try {
             BufferedReader br = new BufferedReader(new FileReader("mensajeCifrado.txt"));
-            PrivateKey clavePrivada = CertifadoEmisor.getClavePrivada();
-            Cipher cifrador = Cipher.getInstance("RSA");
-            cifrador.init(Cipher.DECRYPT_MODE, clavePrivada);
+            PrivateKey clavePrivadaReceptor = CertificadoReceptor.getClavePrivada();
+            PublicKey clavePublicaEmisor = CertifadoEmisor.getClavePublica();
+            Cipher cifradorReceptor = Cipher.getInstance("RSA");
+            Cipher cifradorEmisor = Cipher.getInstance("RSA");
+            cifradorReceptor.init(Cipher.DECRYPT_MODE, clavePrivadaReceptor);
+            cifradorEmisor.init(Cipher.DECRYPT_MODE, clavePublicaEmisor);
             linea = br.readLine();
             while (linea != null) {
-                mensajeCifrado = Base64.getDecoder().decode(linea);
-                mensaje = cifrador.doFinal(mensajeCifrado);
+                mensajeDescifradoReceptor = Base64.getDecoder().decode(linea);
+                mensajeDescifradoEmisor = cifradorReceptor.doFinal(mensajeDescifradoReceptor);
+                mensaje = cifradorEmisor.doFinal(mensajeDescifradoEmisor);
                 System.out.println(new String(mensaje, StandardCharsets.UTF_8));
                 linea = br.readLine();
             }

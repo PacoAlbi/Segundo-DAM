@@ -8,6 +8,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -17,17 +18,22 @@ import java.util.Scanner;
 public class Cifrar {
 
     public static void main(String[] args) {
+        byte [] mensaje;
+        byte [] mensajeCifradoPrivada;
+        byte [] mensajeCifradoPublica;
         try {
-            PublicKey clavePublica = CertifadoEmisor.getClavePublica();
-            Cipher cifrador = Cipher.getInstance("RSA");
-            cifrador.init(Cipher.ENCRYPT_MODE, clavePublica);
+            PrivateKey clavePrivadaEmisor = CertifadoEmisor.getClavePrivada();
+            PublicKey clavePublicaReceptor = CertificadoReceptor.getClavePublica();
+            Cipher cifradorReceptor = Cipher.getInstance("RSA");
+            Cipher cifradorEmisor = Cipher.getInstance("RSA");
+            cifradorReceptor.init(Cipher.ENCRYPT_MODE, clavePublicaReceptor);
+            cifradorEmisor.init(Cipher.ENCRYPT_MODE, clavePrivadaEmisor);
             List<String> texto = leerFichero();
-            byte [] mensaje;
-            byte [] mensajeCifrado;
             for (String lista : texto) {
                 mensaje = lista.getBytes(StandardCharsets.UTF_8);
-                mensajeCifrado = cifrador.doFinal(mensaje);
-                guardarFichero(mensajeCifrado);
+                mensajeCifradoPrivada = cifradorEmisor.doFinal(mensaje);
+                mensajeCifradoPublica = cifradorReceptor.doFinal(mensajeCifradoPrivada);
+                guardarFichero(mensajeCifradoPublica);
             }
         } catch (NoSuchPaddingException e) {
             System.err.println("No existe el padding seleccionado");
