@@ -2,32 +2,40 @@ package com.example.piedrapapeltijera
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.inputmethod.InputBinding
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.piedrapapeltijera.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var txtvMaquina: TextView
-    private lateinit var txtvUsuario: TextView
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var eleccionUsuario: String
+    private lateinit var eleccionMaquina: String
+    private var puntuacuinUsuario = 0
+    private var puntuacionMaquina = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
 
-        txtvMaquina = findViewById(R.id.txtvMaquina);
-        txtvUsuario = findViewById(R.id.txtvUsuario);
+        //txtvMaquina = findViewById(R.id.txtvMaquina);
+        //txtvUsuario = findViewById(R.id.txtvUsuario);
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
 
-        val btnPiedra = findViewById<ImageButton>(R.id.imgPiedra)
+        val btnPiedra = binding.root.
         val btnPapel = findViewById<ImageButton>(R.id.imgPapel)
         val btnTijeras = findViewById<ImageButton>(R.id.imgTijeras)
 
         btnPiedra.setOnClickListener { jugar("piedra") }
-        btnPiedra.setOnClickListener { listener?.onClickFragmentButtonPiedra() }
+        //btnPiedra.setOnClickListener { listener?.onClickFragmentButtonPiedra() }
         btnPapel.setOnClickListener { jugar("papel") }
-        btnPapel.setOnClickListener { listener?.onClickFragmentButtonPapel() }
+        //btnPapel.setOnClickListener { listener?.onClickFragmentButtonPapel() }
         btnTijeras.setOnClickListener{ jugar("tijeras") }
-        btnTijeras.setOnClickListener{listener?.onClickFragmentButtonTijeras()}
+        //btnTijeras.setOnClickListener{listener?.onClickFragmentButtonTijeras()}
 
 
     }
