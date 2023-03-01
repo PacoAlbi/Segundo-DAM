@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#252525"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frameVideo"
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="271dp" />
+
+    <ProgressBar
+        android:id="@+id/barraProgreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameVideo2"
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/frameVideo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266">
+
+        <VideoView
+            android:id="@+id/videoView2"
+            android:layout_width="match_parent"
+            android:layout_height="271dp" />
+
+        <ProgressBar
+            android:id="@+id/barraProgreso2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+
+    
+    <Button
+        android:id="@+id/btnPlay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Audio 1"
+        android:layout_below="@id/frameVideo2"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"/>
+
+    <ImageButton
+        android:id="@+id/btnReset1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/frameVideo2"
+        android:layout_toRightOf="@id/btnPlay1"
+        android:backgroundTint="@color/purple_200"
+        android:src="@drawable/reset" />
+
+    <Button
+        android:id="@+id/btnPlay2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/btnPlay1"
+        android:text="Audio 2"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"/>
+
+    <ImageButton
+        android:id="@+id/btnReset2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlay1"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/btnPlay2"
+        android:backgroundTint="@color/purple_200"
+        android:src="@drawable/reset" />
+
+</RelativeLayout>
