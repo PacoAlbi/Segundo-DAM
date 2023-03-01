@@ -26,7 +26,7 @@ public class CertificadoReceptor {
         KeyPair claves = null;
         try {
             generador = KeyPairGenerator.getInstance("RSA");
-            generador.initialize(2048);
+            generador.initialize(4096);
             claves = generador.generateKeyPair();
         } catch (NoSuchAlgorithmException e) {
             System.err.println("No existe el algoritmo especificado");
