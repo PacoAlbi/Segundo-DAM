@@ -4,39 +4,29 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-import java.util.Base64;
+import java.util.Scanner;
 
 public class Descifrar {
 
     public static void main(String[] args) {
-        byte [] mensaje;
         byte [] mensajeDescifradoReceptor;
         byte [] mensajeDescifradoEmisor;
-        String linea;
         try {
-            BufferedReader br = new BufferedReader(new FileReader("mensajeCifrado.txt"));
             PrivateKey clavePrivadaReceptor = CertificadoReceptor.getClavePrivada();
-            PublicKey clavePublicaEmisor = CertifadoEmisor.getClavePublica();
             Cipher cifradorReceptor = Cipher.getInstance("RSA");
-            Cipher cifradorEmisor = Cipher.getInstance("RSA");
             cifradorReceptor.init(Cipher.DECRYPT_MODE, clavePrivadaReceptor);
+            PublicKey clavePublicaEmisor = CertifadoEmisor.getClavePublica();
+            Cipher cifradorEmisor = Cipher.getInstance("RSA");
             cifradorEmisor.init(Cipher.DECRYPT_MODE, clavePublicaEmisor);
-            linea = br.readLine();
-            while (linea != null) {
-                mensajeDescifradoReceptor = Base64.getDecoder().decode(linea);
-                mensajeDescifradoEmisor = cifradorReceptor.doFinal(mensajeDescifradoReceptor);
-                mensaje = cifradorEmisor.doFinal(mensajeDescifradoEmisor);
-                System.out.println(new String(mensaje, StandardCharsets.UTF_8));
-                linea = br.readLine();
-            }
+            mensajeDescifradoReceptor = cifradorReceptor.doFinal(leerFichero().readAllBytes());
+            mensajeDescifradoEmisor = cifradorEmisor.doFinal(mensajeDescifradoReceptor);
+            System.out.println(new String(mensajeDescifradoEmisor, StandardCharsets.UTF_8));
         } catch (NoSuchPaddingException e) {
             System.err.println("No existe el padding seleccionado");
             e.printStackTrace();
@@ -56,5 +46,20 @@ public class Descifrar {
             System.err.println("La clave introducida no es válida");
             e.printStackTrace();
         }
+    }
+
+    private static FileInputStream leerFichero (){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce la ruta del fichero a descifrar: ");
+        String ruta = sc.nextLine();
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = new FileInputStream("src/Ejercicio3/mensajeCifrado.txt");
+            sc.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("Fichero no encontrado");
+            e.printStackTrace();
+        }
+        return fileInputStream;
     }
 }

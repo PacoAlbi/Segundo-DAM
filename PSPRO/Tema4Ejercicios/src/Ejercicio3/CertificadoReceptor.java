@@ -13,14 +13,21 @@ import java.security.spec.X509EncodedKeySpec;
 
 public class CertificadoReceptor {
 
+    //Variables finales con los nombres de los ficheros donde se guardan las claves
     private static final String FICHEROCLAVEPUBLICA = "publicKeyReceptor.key";
     private static final String FICHEROCLAVEPRIVADA = "privateKeyReceptor.key";
-
+    /**
+     * Método principal que genera las claves y las guarda en ficheros
+     */
     public static void main(String[] args) {
         KeyPair claves = generarClaves();
         guardarClaves(claves);
     }
 
+    /**
+     * Método que genera las claves con el algoritmo RSA y el tamaño de 2048
+     * @return KeyPair con las claves generadas
+     */
     public static KeyPair generarClaves() {
         KeyPairGenerator generador;
         KeyPair claves = null;
@@ -35,6 +42,10 @@ public class CertificadoReceptor {
         return claves;
     }
 
+    /**
+     * Método que guarda las claves en ficheros
+     * @param claves KeyPair con las claves a guardar
+     */
     public static void guardarClaves(KeyPair claves) {
         FileOutputStream fileOutputStream;
         try {
@@ -53,6 +64,10 @@ public class CertificadoReceptor {
         }
     }
 
+    /**
+     * Método que lee la clave pública del fichero
+     * @return PublicKey con la clave pública
+     */
     public static PublicKey getClavePublica() {
         File ficheroClavePublica = new File(FICHEROCLAVEPUBLICA);
         PublicKey clavePublica = null;
@@ -74,6 +89,10 @@ public class CertificadoReceptor {
         return clavePublica;
     }
 
+    /**
+     * Método que lee la clave privada del fichero
+     * @return PrivateKey con la clave privada
+     */
     public static PrivateKey getClavePrivada() {
         File ficheroClavePrivada = new File(FICHEROCLAVEPRIVADA);
         PrivateKey clavePrivada = null;
