@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FranciscoAlbiñanaApp</string>
+    <string name="snare">Snare</string>
+    <string name="crash">Crash</string>
+    <string name="kick">Kick</string>
+    <string name="cowbell">Cowbell</string>
+    <string name="grabar">Grabar</string>
+    <string name="reproducir">Reproducir</string>
 </resources>
