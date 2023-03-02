@@ -18,12 +18,12 @@ public class Descifrar {
         byte [] mensajeDescifradoReceptor;
         byte [] mensajeDescifradoEmisor;
         try {
-            PrivateKey clavePrivadaReceptor = CertificadoReceptor.getClavePrivada();
-            Cipher cifradorReceptor = Cipher.getInstance("RSA");
-            cifradorReceptor.init(Cipher.DECRYPT_MODE, clavePrivadaReceptor);
             PublicKey clavePublicaEmisor = CertifadoEmisor.getClavePublica();
             Cipher cifradorEmisor = Cipher.getInstance("RSA");
             cifradorEmisor.init(Cipher.DECRYPT_MODE, clavePublicaEmisor);
+            PrivateKey clavePrivadaReceptor = CertificadoReceptor.getClavePrivada();
+            Cipher cifradorReceptor = Cipher.getInstance("RSA");
+            cifradorReceptor.init(Cipher.DECRYPT_MODE, clavePrivadaReceptor);
             mensajeDescifradoReceptor = cifradorReceptor.doFinal(leerFichero().readAllBytes());
             mensajeDescifradoEmisor = cifradorEmisor.doFinal(mensajeDescifradoReceptor);
             System.out.println("Este es el mensaje secreto: ");
@@ -55,7 +55,7 @@ public class Descifrar {
         String ruta = sc.nextLine();
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("src/Ejercicio3/mensajeCifrado.txt");
+            fileInputStream = new FileInputStream(ruta);
             sc.close();
         } catch (FileNotFoundException e) {
             System.err.println("Fichero no encontrado");
