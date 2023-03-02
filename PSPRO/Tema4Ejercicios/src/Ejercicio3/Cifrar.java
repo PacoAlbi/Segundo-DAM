@@ -26,6 +26,7 @@ public class Cifrar {
             mensajeCifradoPrivada = cifradorEmisor.doFinal(leerFichero().readAllBytes());
             mensajeCifradoPublica = cifradorReceptor.doFinal(mensajeCifradoPrivada);
             guardarFichero(mensajeCifradoPublica);
+            System.out.println("Mensaje cifrado correctamente");
         } catch (NoSuchPaddingException e) {
             System.err.println("No existe el padding seleccionado");
             e.printStackTrace();

@@ -26,6 +26,7 @@ public class Descifrar {
             cifradorEmisor.init(Cipher.DECRYPT_MODE, clavePublicaEmisor);
             mensajeDescifradoReceptor = cifradorReceptor.doFinal(leerFichero().readAllBytes());
             mensajeDescifradoEmisor = cifradorEmisor.doFinal(mensajeDescifradoReceptor);
+            System.out.println("Este es el mensaje secreto: ");
             System.out.println(new String(mensajeDescifradoEmisor, StandardCharsets.UTF_8));
         } catch (NoSuchPaddingException e) {
             System.err.println("No existe el padding seleccionado");
