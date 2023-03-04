@@ -10,7 +10,7 @@ import com.example.franciscoalbianaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    //Preparo las variables para
+    //Preparo las variables
     private lateinit var binding: ActivityMainBinding
     private lateinit var mediaPlayer: MediaPlayer
 
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
      * Postcondiciones: No tiene
      */
     suspend fun reproducir () {
-        var room = Room.databaseBuilder(this, SoundsDataBase::class.java, "Sonidos").build()
+        val room = Room.databaseBuilder(this, SoundsDataBase::class.java, "Sonidos").build()
         var sonidos = room.SoundsDao().getAll()
         //mediaPlayer = MediaPlayer.create(this, sonidos)
         mediaPlayer.start()
