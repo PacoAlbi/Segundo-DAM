@@ -5,15 +5,15 @@ import androidx.room.Room
 
 class ReproApp : Application() {
 
-    companion object{
+    companion object {
         lateinit var database: SoundsDataBase
     }
 
-override fun onCreate() {
+    override fun onCreate() {
 
         super.onCreate()
         //Inicializo la BBDD
-        database = Room.databaseBuilder(this, SoundsDataBase::class.java, "SoundsDataBase").build();
+        database = Room.databaseBuilder(this, SoundsDataBase::class.java, "SoundsDataBase").build()
     }
 
 

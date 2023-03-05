@@ -11,6 +11,5 @@ import androidx.room.*
 data class SoundsEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
-    var tiempo: Long,
-
+    var sonido: Int
 )
