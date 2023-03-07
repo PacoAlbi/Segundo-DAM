@@ -2,67 +2,144 @@ package com.example.piedrapapeltijera
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.inputmethod.InputBinding
-import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.example.piedrapapeltijera.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity(), FragmentListener {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var eleccionUsuario: String
-    private lateinit var eleccionMaquina: String
-    private var puntuacuinUsuario = 0
+    private var puntuacionUsuario = 0
     private var puntuacionMaquina = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
-
-        //txtvMaquina = findViewById(R.id.txtvMaquina);
-        //txtvUsuario = findViewById(R.id.txtvUsuario);
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        val btnPiedra = binding.root.
-        val btnPapel = findViewById<ImageButton>(R.id.imgPapel)
-        val btnTijeras = findViewById<ImageButton>(R.id.imgTijeras)
+    }
+    fun tiradaMaquina (imgMaquina: ImageView): String {
+        val tiradaMaquina = arrayOf("piedra", "papel", "tijeras").random()
+        when (tiradaMaquina) {
+            "piedra" -> imgMaquina.setImageResource(R.drawable.piedra)
+            "papel" -> imgMaquina.setImageResource(R.drawable.papel)
+            "tijeras" -> imgMaquina.setImageResource(R.drawable.tijeras)
+        }
+        return tiradaMaquina
+    }
 
-        btnPiedra.setOnClickListener { jugar("piedra") }
-        //btnPiedra.setOnClickListener { listener?.onClickFragmentButtonPiedra() }
-        btnPapel.setOnClickListener { jugar("papel") }
-        //btnPapel.setOnClickListener { listener?.onClickFragmentButtonPapel() }
-        btnTijeras.setOnClickListener{ jugar("tijeras") }
-        //btnTijeras.setOnClickListener{listener?.onClickFragmentButtonTijeras()}
-
+    override fun ClickFragmentBtnPiedra() {
+        val imgUsuario = findViewById<ImageView>(R.id.imgUsuario)
+        val imgMaquina = findViewById<ImageView>(R.id.imgMaquina)
+        val puntosMaquina = findViewById<TextView>(R.id.txtMaquina)
+        val puntosUsuario = findViewById<TextView>(R.id.txtUsuario)
+        imgUsuario.setImageResource(R.drawable.piedra)
+        tiradaMaquina(imgMaquina)
+        jugar("piedra",tiradaMaquina(imgMaquina),puntosUsuario,puntosMaquina)
 
     }
 
-    private fun jugar(eleccionUsuario: String) {
-        val eleccionMaquina = arrayOf("piedra", "papel", "tijeras").random()
+    override fun ClickFragmentBtnPapel() {
+        val imgUsuario = findViewById<ImageView>(R.id.imgUsuario)
+        val imgMaquina = findViewById<ImageView>(R.id.imgMaquina)
+        val puntosMaquina = findViewById<TextView>(R.id.txtMaquina)
+        val puntosUsuario = findViewById<TextView>(R.id.txtUsuario)
+        imgUsuario.setImageResource(R.drawable.papel)
+        jugar("papel",tiradaMaquina(imgMaquina),puntosUsuario,puntosMaquina)
+    }
 
-        when (eleccionMaquina) {
+    override fun ClickFragmentBtnTijeras() {
+        val imgUsuario = findViewById<ImageView>(R.id.imgUsuario)
+        val imgMaquina = findViewById<ImageView>(R.id.imgMaquina)
+        val puntosMaquina = findViewById<TextView>(R.id.txtMaquina)
+        val puntosUsuario = findViewById<TextView>(R.id.txtUsuario)
+        imgUsuario.setImageResource(R.drawable.tijeras)
+        jugar("tijeras",tiradaMaquina(imgMaquina),puntosUsuario,puntosMaquina)
+    }
+
+    fun jugar(tiradaUsusario: String, tiradaMaquina: String, puntosUsuario: TextView, puntosMaquina: TextView) {
+        when (tiradaMaquina) {
             "piedra" ->
-                when (eleccionUsuario) {
-                "piedra" -> txtvUsuario.text = "Empate"
-                "papel" -> txtvUsuario.text = "Has ganado"
-                "tijeras" -> txtvUsuario.text = "Has perdido"
+                when (tiradaUsusario) {
+                "papel" -> {
+                    puntuacionUsuario++
+                    puntosUsuario.text = puntuacionUsuario.toString()
+                }
+                "tijeras" -> {
+                    puntuacionMaquina++
+                    puntosMaquina.text = puntuacionMaquina.toString()
+                }
             }
             "papel" ->
-                when (eleccionUsuario) {
-                "piedra" -> txtvUsuario.text = "Has perdido"
-                "papel" -> txtvUsuario.text = "Empate"
-                "tijeras" -> txtvUsuario.text = "Has ganado"
+                when (tiradaUsusario) {
+                "piedra" -> {
+                    puntuacionMaquina++
+                    puntosMaquina.text = puntuacionMaquina.toString()
+                }
+                "tijeras" -> {
+                    puntuacionUsuario++
+                    puntosUsuario.text = puntuacionUsuario.toString()
+                }
             }
             "tijeras" ->
-                when (eleccionUsuario) {
-                "piedra" -> txtvUsuario.text = "Has ganado"
-                "papel" -> txtvUsuario.text = "Has perdido"
-                "tijeras" -> txtvUsuario.text = "Empate"
+                when (tiradaUsusario) {
+                "piedra" -> {
+                    puntuacionUsuario++
+                    puntosUsuario.text = puntuacionUsuario.toString()
+                }
+                "papel" -> {
+                    puntuacionMaquina++
+                    puntosMaquina.text = puntuacionMaquina.toString()
+                }
             }
+        }
+        comprobarGanador()
+    }
+
+    fun comprobarGanador(){
+        val alerta: AlertDialog.Builder
+        if(puntuacionUsuario == 5){
+            binding.txtResultado.text = "¡Ganaste!"
+            alerta = AlertDialog.Builder(this)
+            alerta.setTitle("Gana el usuario")
+                .setMessage("¿Que desea hacer?")
+                .setPositiveButton("¿Otra partidita?") { dialog, which ->
+                    reiniciar()
+                }
+                .setNegativeButton("Salir") { dialog, which ->
+                    finish()
+                }
+            alerta.setCancelable(false)
+            alerta.show() // esta linea es para que se muestre la alerta del usuario
+        }else if(puntuacionMaquina == 5){
+            binding.txtResultado.text = "¡Gana la maquina!"
+            alerta = AlertDialog.Builder(this)
+            alerta.setTitle("Gana la maquina")
+                .setMessage("¿Que desea hacer?")
+                .setPositiveButton("¿Otra partidita?") { dialog, which ->
+                    reiniciar()
+                }
+                .setNegativeButton("Salir") { dialog, which ->
+                    finish()
+                }
+            alerta.setCancelable(false)
+            alerta.show() // esta linea es para que se muestre la alerta de la maquina
         }
     }
 
+    fun reiniciar(){
+        puntuacionUsuario = 0
+        puntuacionMaquina = 0
+        val imgUsuario = findViewById<ImageView>(R.id.imgUsuario)
+        val imgMaquina = findViewById<ImageView>(R.id.imgMaquina)
+        val puntosMaquina = findViewById<TextView>(R.id.txtMaquina)
+        val puntosUsuario = findViewById<TextView>(R.id.txtUsuario)
+        imgUsuario.setImageResource(0)
+        imgMaquina.setImageResource(0)
+        puntosMaquina.text = puntuacionMaquina.toString()
+        puntosUsuario.text = puntuacionUsuario.toString()
+    }
 }
