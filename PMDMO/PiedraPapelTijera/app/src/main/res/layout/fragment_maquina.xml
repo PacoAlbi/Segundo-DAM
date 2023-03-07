@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF655"
+    android:background="@drawable/base_3"
     tools:context=".MaquinaFragment">
 
     <ImageView
@@ -23,8 +23,9 @@
         android:layout_height="100dp"
         android:layout_marginHorizontal="40dp"
         android:layout_marginVertical="40dp"
-        android:text="@string/textUsuario"
-        android:textSize="70sp"
+        android:text="@string/textMaquina"
+        android:textSize="60sp"
+        android:textColor="#F5E00F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
