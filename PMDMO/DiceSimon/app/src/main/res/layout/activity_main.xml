@@ -4,35 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/fragmentAmarillo"
-        android:name="com.example.dicesimon.AmarilloFragment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_amarillo" />
-    <fragment
-        android:id="@+id/fragmentAzul"
-        android:name="com.example.dicesimon.AzulFragment"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnAmarillo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/yellow"/>
+        <ImageButton
+            android:id="@+id/btnAzul"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/blue"/>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnRojo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/red"/>
+        <ImageButton
+            android:id="@+id/btnVerde"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/green"/>
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentMenu"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_azul" />
-    <fragment
-        android:id="@+id/fragmentRojo"
-        android:name="com.example.dicesimon.RojoFragment"
+        android:name="com.example.dicesimon.MenuFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_rojo" />
-    <fragment
-        android:id="@+id/fragmentVerde"
-        android:name="com.example.dicesimon.VerdeFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_verde" />
+        tools:layout="@layout/fragment_menu"/>
 
 </LinearLayout>
