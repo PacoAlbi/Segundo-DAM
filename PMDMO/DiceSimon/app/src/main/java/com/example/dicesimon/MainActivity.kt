@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isVisible
 import com.example.dicesimon.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), SimonListener {
@@ -15,8 +16,8 @@ class MainActivity : AppCompatActivity(), SimonListener {
     private val secuenciaJugador = mutableListOf<String>()
     private val TOTAL_NIVELES = 10
     private val COLORES = listOf("Amarillo","Azul","Rojo","Verde")
-    private var velocidad = 1000L
-    private var nivel = 1
+    private var velocidad = 100L
+    private var nivel = 0
     private var fallas = false
     private lateinit var binding : ActivityMainBinding
 
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity(), SimonListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //setContentView(R.layout.activity_main)
+        binding.txtNivel.isVisible = false
         onClickAmarillo()
         onClickAzul()
         onClickRojo()
@@ -32,48 +34,50 @@ class MainActivity : AppCompatActivity(), SimonListener {
     }
 
     fun iniciarPartida() {
+        binding.txtNivel.isVisible = true
         generarSecuencia()
         repetirSecuencia()
     }
 
     fun generarSecuencia() {
-        for (i in 1..nivel) {
+        for (i in 0..nivel) {
             secuenciaRandom.add(COLORES.random())
         }
         nivel++
+        binding.txtNivel.text = "Nivel $nivel"
     }
 
     fun repetirSecuencia() {
-        //apagarBotones()
+        apagarBotones()
         for (i in secuenciaRandom) {
             when (i) {
                 "Amarillo" -> {
-                    //binding.btnAmarillo.postDelayed({
-                        binding.btnAmarillo.setBackgroundColor(resources.getColor(R.color.darkyellow))
-                    //}, velocidad)
-                    binding.btnAmarillo.setBackgroundColor(resources.getColor(R.color.yellow))
+                    binding.btnAmarillo.postDelayed({
+                        binding.btnAmarillo.setBackgroundColor(getColor(R.color.darkyellow))
+                    }, velocidad)
+                    binding.btnAmarillo.setBackgroundColor(getColor(R.color.yellow))
                 }
                 "Azul" -> {
-                    //binding.btnAzul.postDelayed({
-                        binding.btnAzul.setBackgroundColor(resources.getColor(R.color.darkblue))
-                    //}, velocidad)
-                    binding.btnAzul.setBackgroundColor(resources.getColor(R.color.blue))
+                    binding.btnAzul.postDelayed({
+                        binding.btnAzul.setBackgroundColor(getColor(R.color.darkblue))
+                    }, velocidad)
+                    binding.btnAzul.setBackgroundColor(getColor(R.color.blue))
                 }
                 "Rojo" -> {
-                    //binding.btnRojo.postDelayed({
-                        binding.btnRojo.setBackgroundColor(resources.getColor(R.color.darkred))
-                    //}, velocidad)
-                    binding.btnRojo.setBackgroundColor(resources.getColor(R.color.red))
+                    binding.btnRojo.postDelayed({
+                        binding.btnRojo.setBackgroundColor(getColor(R.color.darkred))
+                    }, velocidad)
+                    binding.btnRojo.setBackgroundColor(getColor(R.color.red))
                 }
                 "Verde" -> {
-                    //binding.btnVerde.postDelayed({
-                        binding.btnVerde.setBackgroundColor(resources.getColor(R.color.darkgreen))
-                    //}, velocidad)
-                    binding.btnVerde.setBackgroundColor(resources.getColor(R.color.green))
+                    binding.btnVerde.postDelayed({
+                        binding.btnVerde.setBackgroundColor(getColor(R.color.darkgreen))
+                    }, velocidad)
+                    binding.btnVerde.setBackgroundColor(getColor(R.color.green))
                 }
             }
         }
-        //encenderBotones()
+        encenderBotones()
     }
 
     fun comprobarSecuencia () {
@@ -87,9 +91,9 @@ class MainActivity : AppCompatActivity(), SimonListener {
     fun onClickAmarillo() {
         binding.btnAmarillo.setOnClickListener {
             secuenciaJugador.add("Amarillo")
-            binding.btnAmarillo.setBackgroundColor(resources.getColor(R.color.darkyellow))
+            binding.btnAmarillo.setBackgroundColor(getColor(R.color.darkyellow))
             binding.btnAmarillo.postDelayed({
-                binding.btnAmarillo.setBackgroundColor(resources.getColor(R.color.yellow))
+                binding.btnAmarillo.setBackgroundColor(getColor(R.color.yellow))
             }, velocidad)
             //comprobarGanador()
         }
@@ -98,9 +102,9 @@ class MainActivity : AppCompatActivity(), SimonListener {
     fun onClickAzul() {
         binding.btnAzul.setOnClickListener {
             secuenciaJugador.add("Azul")
-            binding.btnAzul.setBackgroundColor(resources.getColor(R.color.darkblue))
+            binding.btnAzul.setBackgroundColor(getColor(R.color.darkblue))
             binding.btnAzul.postDelayed({
-                binding.btnAzul.setBackgroundColor(resources.getColor(R.color.blue))
+                binding.btnAzul.setBackgroundColor(getColor(R.color.blue))
             }, velocidad)
             //comprobarGanador()
         }
@@ -109,9 +113,9 @@ class MainActivity : AppCompatActivity(), SimonListener {
     fun onClickRojo() {
         binding.btnRojo.setOnClickListener {
             secuenciaJugador.add("Rojo")
-            binding.btnRojo.setBackgroundColor(resources.getColor(R.color.darkred))
+            binding.btnRojo.setBackgroundColor(getColor(R.color.darkred))
             binding.btnRojo.postDelayed({
-                binding.btnRojo.setBackgroundColor(resources.getColor(R.color.red))
+                binding.btnRojo.setBackgroundColor(getColor(R.color.red))
             }, velocidad)
             //comprobarGanador()
         }
@@ -120,9 +124,9 @@ class MainActivity : AppCompatActivity(), SimonListener {
     fun onClickVerde() {
         binding.btnVerde.setOnClickListener {
             secuenciaJugador.add("Verde")
-            binding.btnVerde.setBackgroundColor(resources.getColor(R.color.darkgreen))
+            binding.btnVerde.setBackgroundColor(getColor(R.color.darkgreen))
             binding.btnVerde.postDelayed({
-                binding.btnVerde.setBackgroundColor(resources.getColor(R.color.green))
+                binding.btnVerde.setBackgroundColor(getColor(R.color.green))
             }, velocidad)
             //comprobarGanador()
         }
@@ -197,10 +201,9 @@ class MainActivity : AppCompatActivity(), SimonListener {
     }
 
     fun reiniciar() {
-        val txtNivel = findViewById<TextView>(R.id.txtNivel)
         secuenciaJugador.clear()
         secuenciaRandom.clear()
-        txtNivel.text = "1"
+        binding.txtNivel.text = "1"
         generarSecuencia()
     }
 }

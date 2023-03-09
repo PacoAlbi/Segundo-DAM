@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">DiceSimon</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">0</string>
+    <string name="nivel">0</string>
 </resources>
